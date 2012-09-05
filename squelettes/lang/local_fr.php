@@ -12,7 +12,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'signatories' => 'signataires',
 
    // R
-   'sign_on' => "Signer l'appel de Washington",
+   'sign_on' => "Signez l'appel de Washington",
 
    // S
    'suite' => 'Lire la suite',
