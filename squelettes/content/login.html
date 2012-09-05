@@ -1,0 +1,12 @@
+<article class="landing-page article content-principal">
+	<header class="cartouche">
+		[<h1 class="h1">(#GET{prive}|?{<:login_acces_prive:>,<:lien_connecter:>})</h1>]
+	</header>
+   <section>
+   	#MENU_LANG_ECRIRE
+      <div class="form-horizontal">
+         [(#FORMULAIRE_LOGIN{#ENV{url}|sinon{#URL_ECRIRE{accueil}}})]
+      </div>
+   </section>
+
+</article>

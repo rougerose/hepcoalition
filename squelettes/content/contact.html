@@ -1,0 +1,21 @@
+<BOUCLE_content(ARTICLES){page=contact}>
+<article class="landing-page article content-principal">
+	<header class="cartouche">
+		<h1 class="h1 #EDIT{titre}">#TITRE</h1>
+	</header>
+
+	[<section class="#EDIT{chapo} chapo surlignable">(#CHAPO|image_reduire{500,0})</section>]
+	[<section class="#EDIT{texte} texte surlignable">(#TEXTE|image_reduire{500,0})</section>]
+	[<section class="#EDIT{hyperlien} hyperlien"><:voir_en_ligne:> : <a href="(#URL_SITE)" class="spip_out">[(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})]</a></section>]
+   <section>
+      <div class="form-horizontal">
+         #FORMULAIRE_ECRIRE_AUTEUR
+      </div>
+   </section>
+	[<section class="#EDIT{ps} ps surlignable"><h2><:info_ps:></h2>(#PS|image_reduire{500,0})</section>]
+
+	<footer>
+		[<aside class="notes"><h2><:info_notes:></h2>(#NOTES)</aside>]
+	</footer>
+</article>
+</BOUCLE_content>

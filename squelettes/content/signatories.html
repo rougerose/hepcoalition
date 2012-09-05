@@ -1,0 +1,34 @@
+#SET{href_d,'<a href="'} #SET{href_f,'">'}
+<BOUCLE_formulaire(FORMULAIRES){id_formulaire=1}>
+<BOUCLE_reponses(FORMULAIRES_REPONSES){id_formulaire}{statut=publie}>
+[(#COMPTEUR_BOUCLE|=={1}|oui)#SET{d,#DATE}] #SET{total,#TOTAL_BOUCLE} #SET_PUSH{reponses,#ID_FORMULAIRES_REPONSE}
+</BOUCLE_reponses>
+<BOUCLE_membres(DATA){source tableau,#GET{reponses}}>
+   <BOUCLE_identite(FORMULAIRES_REPONSES_CHAMPS){id_formulaires_reponse=#VALEUR}{nom!=input_2}>
+   [(#NOM|=={input_1}|oui)[(#SET{nom,#VALEUR})]]
+   [(#NOM|=={input_3}|oui)
+      [(#SET{nom,[(#GET{href_d}|concat{#VALEUR}|concat{#GET{href_f}}|concat{#GET{nom}}|concat{</a>})]})]
+   ]
+      <BOUCLE_cond_pays(CONDITION){si #NOM|=={pays_1}}>
+         <BOUCLE_pays(PAYS){id_pays=#VALEUR}>[(#SET{nom,[(#GET{nom}|concat{' '}|concat{\(#NOM\)})]})]</BOUCLE_pays>
+      </BOUCLE_cond_pays>
+   </BOUCLE_identite>
+   #SET_PUSH{membres,#GET{nom}}
+</BOUCLE_membres>
+
+<article class="landing-page article content-principal">
+   <header class="cartouche">
+      <h1 class="h1 #EDIT{titre}"><:local:membres_coalition:></h1>
+      <p class="info-publi"><:local:updated:> <abbr class="published" title="[(#GET{d}|date_iso)]">[(#GET{d}|affdate)]</abbr> / [<strong>(#GET{total}) <:local:membres:></strong>]</p>
+   </header>
+   <section class="#EDIT{texte} texte surlignable">
+      <B_mbres>
+      <p>
+         <BOUCLE_mbres(DATA){source tableau,#GET{membres}}{par valeur}{" &middot; "}>
+         #VALEUR
+         </BOUCLE_mbres>
+      </p>
+      </B_mbres>
+   </section>
+</article>
+</BOUCLE_formulaire>

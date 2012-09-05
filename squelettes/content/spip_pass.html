@@ -1,0 +1,13 @@
+<article class="landing-page article content-principal">
+   <section>
+   	#MENU_LANG_ECRIRE
+      <div class="form-horizontal pass">
+         [(#ENV{p}|non)
+            #FORMULAIRE_OUBLI
+         ]
+         [(#ENV{p}|oui)
+            #FORMULAIRE_MOT_DE_PASSE
+         ]
+
+      </div>
+   </section>
