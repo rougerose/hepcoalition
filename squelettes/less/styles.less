@@ -1,8 +1,8 @@
 // REPEAT VARIABLES & MIXINS
 // -------------------------
 // Required since we compile the responsive stuff separately
-@import_spip "less/variables.less";
-@import_spip "less/mixins.less";
+@import "variables.less";
+@import "mixins.less";
 
 
 /*   =MAIN
@@ -86,12 +86,9 @@
       line-height: 1.5em;
       margin-bottom: 2em;
    }
-   .landing-page .action .btn-large {
-      font-size: 26px;
-   }
-   .landing-page .action .btn-join {
+   .landing-page .action .btn-large {font-size: 26px;}
+   .landing-page .action .btn-join {}
 
-   }
    /* article */
    .landing-page.article {
       margin: 0 auto;
@@ -145,7 +142,7 @@
 /*   =FORMULAIRES
    ------------------------------------------------------ */
    .formulaire_spip ul {list-style: none; margin-left: 0;}
-.formulaire_spip legend {color: @white; margin-bottom: 0;/* bug Safari la marge est reportée sur l'élément en-dessous */}
+   .formulaire_spip legend {color: @white; margin-bottom: 0;/* bug Safari la marge est reportée sur l'élément en-dessous */}
    .box_modalbox .formulaire_spip legend {color: @black;} /* fenêtre modale */
    .form-horizontal .formulaire_spip .boutons,
    .form-horizontal .formulaire_spip .details {margin-left: 15em; margin-top: .5em;}
@@ -266,7 +263,7 @@ Wrap any associated controls in .controls for proper alignment
 
 /*   =SPIP-ADMIN
    ------------------------------------------------------ */
-   #spip-admin.spip-admin-float {top: 4em; right: 0; z-index: @zindexModal;}
+   #spip-admin.spip-admin-float {top: 4em; right: 0; left: auto; z-index: @zindexModal;}
    #spip-admin .spip-admin-boutons {
       font: 10px/16px "Menlo","Lucida Grande",Tahoma,sans-serif;
       text-align: center;
@@ -277,4 +274,9 @@ Wrap any associated controls in .controls for proper alignment
       -webkit-border-radius: 3px 0 0 3px;
          -moz-border-radius: 3px 0 0 3px;
               border-radius: 3px 0 0 3px;
+   }
+   .rtl #spip-admin .spip-admin-boutons {
+      -webkit-border-radius: 0 3px 3px 0;
+         -moz-border-radius: 0 3px 3px 0;
+              border-radius: 0 3px 3px 0;
    }
