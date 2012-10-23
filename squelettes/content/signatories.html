@@ -37,7 +37,7 @@
                <td>
                   [(#GET{url}|oui)#GET{url}]#VALEUR[(#GET{url}|oui)</a>]
                </td>
-               <td><BOUCLE_pays(PAYS){id_pays=#GET{pays}}>[(#NOM|)]</BOUCLE_pays>&ndash;<//B_pays></td>
+               <td><BOUCLE_pays(PAYS){id_pays=#GET{pays}}>[(#NOM*|extraire_multi{en})]</BOUCLE_pays>&ndash;<//B_pays></td>
             </tr>
             </BOUCLE_affichage>
          </tbody>
