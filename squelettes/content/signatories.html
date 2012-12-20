@@ -1,7 +1,7 @@
 #SET{noms,#ARRAY}
 <BOUCLE_formulaire(FORMULAIRES){id_formulaire=1}>
 <BOUCLE_reponses(FORMULAIRES_REPONSES){id_formulaire}{statut=publie}>
-[(#COMPTEUR_BOUCLE|=={1}|oui)#SET{d,#DATE}] #SET{total,#TOTAL_BOUCLE} #SET_PUSH{reponses,#ID_FORMULAIRES_REPONSE}
+[(#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|oui)#SET{d,#DATE}] #SET{total,#TOTAL_BOUCLE} #SET_PUSH{reponses,#ID_FORMULAIRES_REPONSE}
 </BOUCLE_reponses>
 
 <BOUCLE_membres(DATA){source tableau,#GET{reponses}}>
