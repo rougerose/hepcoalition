@@ -26,7 +26,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // S
    'siteweb' => 'веб-сайт',
    'suite' => 'Читать дальше',
-   'suivre_facebook' => "Читать о нас на <a href='@urlfacebook'>Facebook</a>",
+   'suivre_facebook' => "Читать о нас на <a href='@urlfacebook@'>Facebook</a>",
 
    // U
    'updated' => 'Updated'
