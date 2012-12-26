@@ -8,12 +8,12 @@
       </header>
       <div>
          [<p>
-            (#INTRODUCTION|PtoBR) <a href="[(#URL_PAGE{call}|parametre_url{id_article,#ID_ARTICLE})]" onclick="jQuery.modalbox('[(#URL_PAGE{call}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{var_zajax,content})]',{minWidth:700});return false;"><:local:suite:></a>
+            (#INTRODUCTION|PtoBR) <a href="#URL_ARTICLE"><:local:suite:></a>
          </p>]
          <p class="span5 action">
-            [<a href="(#URL_PAGE{sign}|parametre_url{lang,#LANG})" onclick="jQuery.modalbox('[(#URL_PAGE{sign}|parametre_url{lang,#LANG}|parametre_url{var_zajax,content})]',{minWidth:700});return false;" class="btn btn-large btn-block btn-join"><:local:sign_on:></a>]
+            [<a href="(#URL_PAGE{sign}|parametre_url{lang,#LANG})" class="btn btn-large btn-block btn-join"><:local:sign_on:></a>]
          </p>
-         <p><a href="#URL_PAGE{signatories}" onclick="jQuery.modalbox('[(#URL_PAGE{signatories}|parametre_url{var_zajax,content})]',{minWidth:700});return false;"><:local:signatories_coalition:></a></p>
+         <p><a href="#URL_PAGE{signatories}"><:local:signatories_coalition:></a></p>
       </div>
    </BOUCLE_article>
    </article>
