@@ -25,12 +25,20 @@
             </a>
             <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                <li><a href="#URL_RUBRIQUE">#TITRE</a></li>
-               <BOUCLE_agir(ARTICLES){id_rubrique}{lang}{id_mot=1}>
+               <BOUCLE_agir(ARTICLES){id_rubrique}{lang}{id_mot=1}{0,1}>
                <li><a href="#URL_ARTICLE">#SOUSTITRE</a></li>
                </BOUCLE_agir>
-               <BOUCLE_pr(ARTICLES){id_rubrique}{lang}{id_mot=2}>
+               <BOUCLE_agir_en(ARTICLES){id_rubrique}{lang=en}{id_mot=1}{0,1}>
+               <li><a href="#URL_ARTICLE">#SOUSTITRE</a></li>
+               </BOUCLE_agir_en>
+               <//B_agir>
+               <BOUCLE_pr(ARTICLES){id_rubrique}{lang}{id_mot=2}{0,1}>
                <li><a href="#URL_ARTICLE">#SOUSTITRE</a></li>
                </BOUCLE_pr>
+               <BOUCLE_pr_en(ARTICLES){id_rubrique}{lang=en}{id_mot=2}{0,1}>
+               <li><a href="#URL_ARTICLE">#SOUSTITRE</a></li>
+               </BOUCLE_pr_en>
+               <//B_pr>
             </ul>
          </li>
          </BOUCLE_save>
