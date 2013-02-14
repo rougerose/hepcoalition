@@ -10,7 +10,8 @@
    html {
       background: @bodyBgRed url(../img/css/degrade.png) no-repeat top center;
    }
-   html.composition_save {background: #fff url(../img/css/HepC_Save_bg.png) repeat top center;}
+   html.composition_save,
+   html.page_sommaire {background: #fff url(../img/css/HepC_Save_bg.png) repeat top center;}
    /*padding-top nécessaire pour la navigation en position fixe */
    body {padding-top: 40px;}
 
@@ -124,7 +125,6 @@
    .composition_save {
       .landing-page {color: #000;}
       h1 {color: #12d4fe;}
-      #footer {background-color: none;}
    }
    .agir {
       .action {
@@ -155,8 +155,10 @@
            -o-box-shadow: 0 1px 1px rgba(0,0,0,0.5) inset;
               box-shadow: 0 1px 1px rgba(0,0,0,0.5) inset;
    }
-   .composition_save #footer {background-color:rgba(0,0,0,0.1);}
-   .rubrique_save #footer {padding-bottom: 5em;}
+   .composition_save #footer,
+   .page_sommaire #footer {background-color:rgba(0,0,0,0.1);}
+   .rubrique_save #footer,
+   .page_sommaire #footer {padding-bottom: 5em;}
    .credits {
       margin-top: 21px;
       margin-left: 0;
