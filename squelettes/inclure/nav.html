@@ -1,6 +1,41 @@
 <div class="navbar-inner">
    <div class="container">
-      <ul class="nav nav-pills pull-right langues">
+      <a href="#" class="brand">[(#LOGO_SITE_SPIP||image_reduire{0,35})]</a>
+      <ul class="nav nav-pills principal">
+         <BOUCLE_wcall(RUBRIQUES){id_rubrique=1}>
+         <li class="dropdown[ (#EXPOSE|oui)active]">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+               #TITRE
+               <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+               <li><a href="#URL_RUBRIQUE">#TITRE</a></li>
+               <BOUCLE_signez(ARTICLES){id_rubrique}{lang}{0,1}>
+               <li><a href="#URL_ARTICLE"><:local:sign_on:></a></li>
+               </BOUCLE_signez>
+               <li><a href="#URL_PAGE{signatories}"><:local:signatories_coalition:></a></li>
+            </ul>
+         </li>
+         </BOUCLE_wcall>
+         <BOUCLE_save(RUBRIQUES){id_rubrique=2}>
+         <li class="dropdown[ (#EXPOSE|oui)active]">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+               #TITRE
+               <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+               <li><a href="#URL_RUBRIQUE">#TITRE</a></li>
+               <BOUCLE_agir(ARTICLES){id_rubrique}{lang}{id_mot=1}>
+               <li><a href="#URL_ARTICLE">#SOUSTITRE</a></li>
+               </BOUCLE_agir>
+               <BOUCLE_pr(ARTICLES){id_rubrique}{lang}{id_mot=2}>
+               <li><a href="#URL_ARTICLE">#SOUSTITRE</a></li>
+               </BOUCLE_pr>
+            </ul>
+         </li>
+         </BOUCLE_save>
+      </ul>
+      <ul class="nav nav-pills pull-right langues principal">
          <li class="dropdown active">
             <a id="langue_courante" class="dropdown-toggle" data-toggle="dropdown" role="button" href="#">
                [(#LANG|traduire_nom_langue|ucfirst)]

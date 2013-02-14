@@ -1,0 +1,26 @@
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+<B_docs>
+<div id="myCarousel" class="carousel slide">
+   <div class="carousel-inner">
+      <BOUCLE_docs(DOCUMENTS){id_rubrique}{par id_document}{titre==^save}>
+      <div class="item[ (#COMPTEUR_BOUCLE|=={1}|oui)active]">
+         [<img src="(#FICHIER)" alt="">]
+      </div>
+      </BOUCLE_docs>
+   </div>
+   <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+   <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+</B_docs>
+<B_article_agir>
+<div class="navbar navbar-inverse navbar-fixed-bottom agir">
+   <div class="navbar-inner">
+      <div class="container">
+         <BOUCLE_article_agir(ARTICLES){id_rubrique}{lang}{0,1}{id_mot=1}>
+         <p class="span3 action"><a href="#URL_ARTICLE" class="btn btn-large btn-block btn-agir">#SOUSTITRE</a></p>
+         </BOUCLE_article_agir>
+      </div>
+   </div>
+</div>
+</B_article_agir>
+</BOUCLE_rubrique>
