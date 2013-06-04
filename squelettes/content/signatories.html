@@ -1,17 +1,13 @@
-#SET{noms,#ARRAY}
+#SET{noms,#ARRAY} #SET{reponses,#ARRAY}
 <BOUCLE_formulaire(FORMULAIRES){id_formulaire=1}>
 <BOUCLE_reponses(FORMULAIRES_REPONSES){id_formulaire}{statut=publie}>
-[(#COMPTEUR_BOUCLE|=={1}|oui)#SET{d,#DATE}] #SET{total,#TOTAL_BOUCLE} #SET_PUSH{reponses,#ID_FORMULAIRES_REPONSE}
-</BOUCLE_reponses>
-
-<BOUCLE_membres(DATA){source tableau,#GET{reponses}}>
-<BOUCLE_identite(FORMULAIRES_REPONSES_CHAMPS){id_formulaires_reponse=#VALEUR}{nom=input_1}>
-[(#SET_PUSH{noms,#VALEUR})]
+[(#COMPTEUR_BOUCLE|=={#TOTAL_BOUCLE}|oui)#SET{d,#DATE}] #SET{total,#TOTAL_BOUCLE}
+<BOUCLE_identite(FORMULAIRES_REPONSES_CHAMPS){id_formulaires_reponse}{nom=input_1}>
+[(#SET{reponses,#GET{reponses}|array_merge{#ARRAY{rep#ID_FORMULAIRES_REPONSE,#VALEUR}}})]
 
 </BOUCLE_identite>
-</BOUCLE_membres>
-[(#SET{noms,#GET{noms}|tri_alpha})]
-
+</BOUCLE_reponses>
+[(#SET{reponses,#GET{reponses}|tri_alpha})]
 <article class="landing-page article content-principal">
    <header class="cartouche">
       <h1 class="h1 #EDIT{titre}"><:local:signatories_coalition:></h1>
@@ -26,11 +22,11 @@
             </tr>
          </thead>
          <tbody>
-            <BOUCLE_affichage(FORMULAIRES_REPONSES_CHAMPS){valeur IN #GET{noms}}>
+            <BOUCLE_affichage(DATA){source table,#GET{reponses}}>
             <tr>
-               #SET{url,''} #SET{pays,''}
-               <BOUCLE_supplements(FORMULAIRES_REPONSES_CHAMPS){id_formulaires_reponse=#ID_FORMULAIRES_REPONSE}>
-                  [(#NOM|=={input_3}|et{#VALEUR}|oui)#SET{url,<a href='#VALEUR'>}]
+               #SET{url,''} #SET{pays,''} [(#SET{cle,#CLE|substr{3}})]
+               <BOUCLE_supplements(FORMULAIRES_REPONSES_CHAMPS){id_formulaires_reponse=#GET{cle}}>
+                  [(#NOM|=={input_3}|et{#VALEUR|match{http:\/\/.+}}|oui)#SET{url,<a href='#VALEUR'>}]
                   [(#NOM|=={pays_1}|et{#VALEUR}|oui)#SET{pays,#VALEUR}]
                </BOUCLE_supplements>
 
@@ -43,5 +39,8 @@
          </tbody>
       </table>
    </section>
+   <p class="span5 action">
+      [<a href="(#URL_PAGE{sign}|parametre_url{lang,#LANG})" class="btn btn-large btn-block btn-join"><:local:sign_on:></a>]
+   </p>
 </article>
 </BOUCLE_formulaire>
