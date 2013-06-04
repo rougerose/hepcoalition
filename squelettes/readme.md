@@ -1,3 +1,3 @@
-Branche wcall
-==============
-squellettes pour afficher le Washington Call en page d'accueil sans opération Saint-Valentin
+Branch Valentin
+===============
+Branche Opération Valentin + Washington Call accessible dans un menu

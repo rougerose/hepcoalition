@@ -1,0 +1,7 @@
+<composition>
+   <nom>Rubrique Save my liver</nom>
+   <description>Composition pour la rubrique Save my liver</description>
+   <icon>images/objet-simple.png</icon>
+   <branche type="article" composition="save" />
+   <branche type="rubrique" composition="save" />
+</composition>

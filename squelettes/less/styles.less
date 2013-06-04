@@ -10,6 +10,8 @@
    html {
       background: @bodyBgRed url(../img/css/degrade.png) no-repeat top center;
    }
+   html.composition_save,
+   html.page_sommaire {background: #fff url(../img/css/HepC_Save_bg.png) repeat top center;}
    /*padding-top nécessaire pour la navigation en position fixe */
    body {padding-top: 40px;}
 
@@ -22,6 +24,10 @@
            -o-box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
               box-shadow: 2px 2px 10px rgba(0,0,0,0.8);
    }
+   .nav.principal {
+      top: 8px;
+   }
+
 
 /*   =MENU LANGUES -> DROPDOWN MENU
    ------------------------------------------------------ */
@@ -71,7 +77,7 @@
    }
    .landing-page h1 {
       text-align: center;
-      font-size: 30px; line-height: 1.2em;
+      font-size: 32px; line-height: 1.2em;
       font-weight: 500;
       margin-bottom: 1em;
    }
@@ -95,12 +101,48 @@
    }
    /* article contexte page */
    .page .landing-page.article {
-      width: 650px;
+      width: 600px;
    }
    /* article contexte fenêtre modale */
    .box_modalbox .landing-page.article {
       width: 600px;
    }
+
+
+/*   =COMPOSITIONS
+   ------------------------------------------------------ */
+   /*  2013-02-13 : Opération Saint-Valentin : pour les compositions wcall et pages sign, signatories, le header est vide.
+       Marge supplémentaire
+   */
+   .composition_wcall section[role=main],
+   .page_sign section[role=main],
+   .page_signatories section[role=main],
+   .composition_save section[role=main] {
+      margin-top: 4em;
+   }
+
+   /* Opération Saint-Valentin */
+   .composition_save {
+      .landing-page {color: #000;}
+      h1 {color: #12d4fe;}
+   }
+   .agir {
+      .action {
+         float:none;
+         text-align: center;
+         margin: 1em auto;
+      }
+   }
+
+
+/*   =ARTICLES
+   ------------------------------------------------------ */
+   .info-publi {
+      text-align: right;
+   }
+
+
+
 
 /*   =PIED DE PAGE
    ------------------------------------------------------ */
@@ -113,6 +155,10 @@
            -o-box-shadow: 0 1px 1px rgba(0,0,0,0.5) inset;
               box-shadow: 0 1px 1px rgba(0,0,0,0.5) inset;
    }
+   .composition_save #footer,
+   .page_sommaire #footer {background-color:rgba(0,0,0,0.1);}
+   .rubrique_save #footer,
+   .page_sommaire #footer {padding-bottom: 5em;}
    .credits {
       margin-top: 21px;
       margin-left: 0;
@@ -254,10 +300,15 @@ Wrap any associated controls in .controls for proper alignment
       }
    }
 
-/*   =BOUTON JOIN
+/*   =BOUTONS JOIN
    ------------------------------------------------------ */
+   /* Join */
    .btn-join {
      .buttonBackground(@btnJoinBackground, @btnJoinBackgroundHighlight);
+   }
+   /* Agir */
+   .btn-agir {
+      .buttonBackground(#12d4fe, #0b829c);
    }
 
 
