@@ -1,0 +1,22 @@
+/*===============================
+=            =Hentry            =
+===============================*/
+
+.hentry.resume {
+    header {
+        float: left;
+        @extend .desk-one-half;
+        padding-right: $half-spacing-unit;
+    }
+    .entry-content {
+        float: left;
+        @extend .desk-one-half;
+        padding-left: $half-spacing-unit;
+        &.plus-logo {
+            float: none;
+        }
+    }
+}
+
+/*-----  End of =Hentry  ------*/
+

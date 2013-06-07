@@ -1,0 +1,33 @@
+[(#SET{articles_carousel,#ARRAY})][(#SET{articles_selection,#ARRAY})]
+<BOUCLE_selection(ARTICLES pb_selection){lang}{par ordre}{spip_pb_selection.id_rubrique=0}>[
+(#LOGO_ARTICLE|et{[(#LOGO_ARTICLE|largeur|>={800})]}|?{
+   [(#SET_PUSH{articles_carousel,#ID_ARTICLE})],
+   [(#SET_PUSH{articles_selection,#ID_ARTICLE})]
+})]</BOUCLE_selection>[
+
+(#REM) carousel ouverture ]
+[(#GET{articles_carousel}|oui)
+<div class="grid__item">
+   #INCLURE{fond=liste/carousel,
+      selection=#GET{articles_carousel},
+      type-page=#ENV{type-page},
+      contexte=ouverture,
+      conteneur=carousel,
+      id=carouselOuverture}
+</div><!-- .grid__item -->][
+
+(#REM) selection des articles ]
+[(#GET{articles_selection}|oui)
+<div class="conteneur">
+   <div class="grid__item desk-eight-twelfths">
+      #INCLURE{fond=liste/articles-selection,
+         conteneur=principal,
+         selection=#GET{articles_selection},
+         pagination=10,
+         ajax}
+   </div><!-- .grid__item --><!--
+   
+--><div class="grid__item desk-four-twelfths">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, ratione, iusto, officiis veniam quam omnis corporis id eveniet possimus dolorem asperiores voluptas. Quam ullam provident in quaerat quis similique quos.</p>      
+   </div>
+</div><!-- .conteneur -->]

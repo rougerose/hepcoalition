@@ -1,0 +1,9 @@
+
+@font-face {
+	font-family: 'CenturyStd-BoldCondensed';
+	src: url('CenturyStd-BoldCondensed.eot?') format('eot'), 
+	     url('CenturyStd-BoldCondensed.otf')  format('opentype'),
+	     url('CenturyStd-BoldCondensed.woff') format('woff'), 
+	     url('CenturyStd-BoldCondensed.ttf')  format('truetype'),
+	     url('CenturyStd-BoldCondensed.svg#CenturyStd-BoldCondensed') format('svg');
+}

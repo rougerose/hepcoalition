@@ -1,0 +1,32 @@
+
+/*=============================
+=            =misc            =
+=============================*/
+
+/* couleur de texte sélectionné */
+::selection {
+    background-color:$secondary-color;
+    color:#fff; 
+}
+::-moz-selection {
+    background-color:$secondary-color;
+    color:#fff; 
+}
+
+/* spip-admin */
+body {
+    .spip-admin-bloc,
+    .spip-admin-float {
+        z-index: 99999; top: 10%; left: 0; right: auto;
+    }
+}
+#spip-admin .spip-admin-boutons {
+    font:10px/1 $mono-font-family;
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+    border-radius: 0 5px 5px 0;
+}
+
+/*-----  End of =misc  ------*/
+

@@ -1,0 +1,73 @@
+// @charset "UTF-8";
+/*------------------------------------*\
+    STYLE.CSS
+\*------------------------------------*/
+/**
+ *
+ * sass --watch style.scss:style.min.css --style compressed
+ *
+ * Here we pull in some variables, include the inuit.css framework, then add our
+ * project-specific components afterwards.
+ */
+
+
+/**
+ * Setup
+ */
+@import "vars";
+@import "inuit.css/inuit";
+
+/**
+ * She’s all yours, cap’n... Begin importing your stuff here.
+ */
+//@import "ui/example";
+// @import "ui/fonts";
+
+// base
+
+// @import "ui/page","ui/page-head";
+
+// divers
+// @import "ui/misc";
+
+
+/**
+*
+* Foundation
+*
+**/
+
+// @import "variables";
+// @import "foundation/scss/foundation";
+
+/**
+*
+* HepCoalition
+*
+**/
+/* mixins */
+@import "ui/mix";
+
+/* fonts */
+@import "ui/fonts";
+
+/* typo */
+@import "ui/typo";
+
+/* base */
+@import "ui/base";
+
+/* page */
+@import "ui/page";
+@import "ui/page-head";
+
+/* objets */
+@import "ui/nav";
+@import "ui/listes";
+@import "ui/hentry";
+
+/* misc */
+@import "ui/misc";
+
+
+
