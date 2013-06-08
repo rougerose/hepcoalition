@@ -1,5 +1,5 @@
 <BOUCLE_article(ARTICLES){id_article}>
-<article class="self objet article hentry">
+<article class="self objet article hentry cf">
    <div class="grid__item">
       <header>
          [(#SOUSTITRE|oui)
@@ -27,7 +27,7 @@
          [<div class="chapo txt landmark">
             (#CHAPO|image_reduire{600,0})
          </div><!-- .chapeau -->]
-         [<div class="texte txt">
+         [<div class="texte txt cf">
             (#TEXTE|image_reduire{600,0})
          </div><!-- .texte -->]
          [<div class="ps txt">
@@ -66,7 +66,7 @@
       </aside>
    </div>
 
-   <div class="grid__item">
+   <!-- <div class="grid__item">
       <aside class="objet-meta">
          <ul class="nav">
             <li><time class="updated" datetime="[(#DATE|affdate{Y-m-d})]">[(#DATE|affdate)]</time></li>
@@ -74,6 +74,6 @@
             [(#MODELE{article-self-traductions})]
          </ul>
       </aside>
-   </div>
+   </div> -->
 </article><!-- .self -->
 </BOUCLE_article>

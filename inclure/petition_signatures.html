@@ -13,7 +13,7 @@
 
 </BOUCLE_data>
 
-<div class="petition__box--supporters">
+<div class="petition__box--supporters cf">
    [<h1 class="hN">(#GET{total}|singulier_ou_pluriel{local:signatories_singular,local:signatories_plural,nb})</h1>]
    <ul class="liste--bloc sep">
       <BOUCLE_affichage(DATA){source table,#GET{reponses}}> [(#SET{cle,#CLE|substr{3}})]
