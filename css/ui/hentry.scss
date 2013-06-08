@@ -31,6 +31,9 @@
     .soustitre {
        @include font-size(36px); 
     }
+    .texte {
+        margin-bottom: $base-spacing-unit;
+    }
 
 }
 
