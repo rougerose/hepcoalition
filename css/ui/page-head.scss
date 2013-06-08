@@ -4,7 +4,8 @@
 
 .page-head {
     text-align: center;
-    position: relative
+    position: relative;
+    margin-bottom: $base-line-height*2;
 }
     .logo {
         display: inline-block;

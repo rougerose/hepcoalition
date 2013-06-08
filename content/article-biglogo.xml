@@ -1,0 +1,5 @@
+<composition>
+   <nom>Article logo grand format</nom>
+   <description>Un article avec un logo de XXX pixels large</description>
+   <icon>images/composition-test.png</icon>
+</composition>

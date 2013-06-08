@@ -2,7 +2,8 @@
 =            =Hentry            =
 ===============================*/
 
-.hentry.resume {
+/* pour les résumés */
+.resume {
     header {
         float: left;
         @extend .desk-one-half;
@@ -16,6 +17,21 @@
             float: none;
         }
     }
+}
+
+/* pour les contenus développés (objet) */
+.objet {
+    header {
+        text-align: center;
+    }
+    .titre {
+        color: $primary-color;
+        @include font-size(48px);
+    }
+    .soustitre {
+       @include font-size(36px); 
+    }
+
 }
 
 /*-----  End of =Hentry  ------*/

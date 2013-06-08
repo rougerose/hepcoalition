@@ -3,6 +3,19 @@
 =            =misc            =
 =============================*/
 
+/* push */
+@include media-query(desk){
+  // push class
+  .push--desk-one-twelfth {
+     position: relative;
+     left:8.333%;
+  }
+  .push--desk-one-third {
+    position: relative;
+    left: 33.333%;
+  }
+}
+
 /* couleur de texte sélectionné */
 ::selection {
     background-color:$secondary-color;

@@ -1,0 +1,36 @@
+/*===============================
+=            =medias            =
+===============================*/
+
+.logo--large {
+    width: 100%;
+    display: block; // annule une marge supplémentaire en bas.
+}
+
+/* box-shadow sur logo */
+.logo__box {
+    margin-bottom: $base-spacing-unit*2;
+    position: relative;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+.logo__box:after {
+    position:absolute;
+    right:10px; /* Positioned some distance in from the left and right edges to avoid the box-shadow blur from peeking through on the sides of the box */
+    bottom:0;
+    left:10px;
+    height:20px;
+    border-radius:0 0 50% 50% / 0 0 20px 20px;
+    box-shadow:0 10px 10px rgba(0, 0, 0, 0.5);
+    content:'';
+}
+.logo__box--content {
+    position:relative;
+    z-index:1; /* Make sure it’s rendered on top of the pseudo-element */
+    padding:10px;
+    background:#fff;
+}
+
+ 
+
+/*-----  End of =medias  ------*/
+

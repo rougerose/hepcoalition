@@ -47,6 +47,7 @@
 **/
 /* mixins */
 @import "ui/mix";
+@import "ui/boutons";
 
 /* fonts */
 @import "ui/fonts";
@@ -56,14 +57,20 @@
 
 /* base */
 @import "ui/base";
+@import "ui/formulaires";
+@import "ui/tableaux";
 
 /* page */
 @import "ui/page";
 @import "ui/page-head";
+@import "ui/page-foot";
 
 /* objets */
 @import "ui/nav";
 @import "ui/listes";
+@import "ui/box";
+@import "ui/objet";
+@import "ui/medias";
 @import "ui/hentry";
 
 /* misc */

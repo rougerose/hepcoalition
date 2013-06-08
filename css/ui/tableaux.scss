@@ -1,0 +1,27 @@
+/*=================================
+=            =tableaux            =
+=================================*/
+
+.table {
+    display: table;
+    width: 100%;
+}
+.table__cell {
+    display: table-cell;
+    padding-right: .5em;
+    padding: $base-spacing-unit/2 $base-spacing-unit/4 $base-spacing-unit/4 0;
+    p {
+        margin-bottom: 0;
+    }
+}
+
+/*==========  tableaux pétition  ==========*/
+.table__cell--name {
+    span {
+        text-transform: uppercase;
+        font-family: $dejavuSerifBold;
+    }
+}
+
+/*-----  End of =tableaux  ------*/
+

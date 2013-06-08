@@ -1,0 +1,23 @@
+/*============================
+=            =box            =
+============================*/
+
+/* petition */
+.petition__box {
+    background-color: darken(#fff,10%);
+    padding: 0 .8em;
+    .hN {
+        color: $secondary-color;
+    }
+}
+
+.petition__box--supporters {
+    .hN {
+        border-bottom: 3px solid $primary-color;
+        margin-bottom: 0;
+        color: $primary-color;
+    }
+}
+
+/*-----  End of =box  ------*/
+

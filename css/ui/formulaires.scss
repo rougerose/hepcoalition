@@ -1,0 +1,55 @@
+/*====================================
+=            =formulaires            =
+====================================*/
+
+/* formulaires : styles communs */
+.formulaire_spip {
+    font-family: $dejavuSans;
+    @include font-size(14px);
+    ul {
+        list-style:none;
+        margin-left:0;
+    }
+    li {
+        margin-bottom: $base-spacing-unit;
+    }
+    .text,
+    select {
+        width: 100%;
+    }
+    .boutons {
+        margin-bottom: 0;
+        input {
+            @include button-base;
+            @include button-size($padding:$button-med, $full-width:true, $is-input:true);
+            @include button-style;
+            @include radius;
+            @include single-transition;
+            @include inset-shadow($active:true);
+            font-family: $dejavuSansB;
+            font-weight: normal;
+        }
+    }
+}
+
+/* formulaires Formidable */
+.formulaire_formidable {
+    label {
+        display: none;
+    }
+}
+
+/* formulaire petition */
+.formulaire_petition {
+    .boutons {
+        input {
+            // @extend .btn--full;
+            // @extend .btn--gamma;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+/*-----  End of =formulaires  ------*/
+

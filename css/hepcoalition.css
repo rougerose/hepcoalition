@@ -2260,7 +2260,7 @@ label,
   /**
   * Halves
   */
-  .desk-one-half, .desk-two-quarters, .desk-three-sixths, .desk-four-eighths, .desk-five-tenths, .desk-six-twelfths, .hentry.resume header, .hentry.resume .entry-content {
+  .desk-one-half, .desk-two-quarters, .desk-three-sixths, .desk-four-eighths, .desk-five-tenths, .desk-six-twelfths, .resume header, .resume .entry-content {
     width: 50%; }
 
   /**
@@ -2375,15 +2375,15 @@ label,
  * any element using a handy helper class.
  */
 .brand {
-  font-family: "CenturyStd-BookCondensed", Georgia, serif!important;
-  color: #a92a18!important; }
+  font-family: "DejaVuSerifCondensed", Georgia, "Times New Roman", Times, serif!important;
+  color: #19a1ac!important; }
 
 .brand-face {
-  font-family: "CenturyStd-BookCondensed", Georgia, serif!important; }
+  font-family: "DejaVuSerifCondensed", Georgia, "Times New Roman", Times, serif!important; }
 
 .brand-color,
 .brand-colour {
-  color: #a92a18!important; }
+  color: #19a1ac!important; }
 
 /*------------------------------------*\
     $HELPER
@@ -2726,6 +2726,11 @@ label,
 ==============================*/
 /*==========  Mixin repris de Foundation  ==========*/
 /*-----  End of Mixins  ------*/
+/*================================
+=            =boutons            =
+================================*/
+/*==========  Foundation  ==========*/
+/*-----  End of =boutons  ------*/
 /* fonts */
 /*==============================
 =            =fonts           =
@@ -2747,7 +2752,7 @@ label,
   src: url("fonts/League-Gothic/LeagueGothic-Italic-webfont.eot");
   src: url("fonts/League-Gothic/LeagueGothic-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/League-Gothic/LeagueGothic-Italic-webfont.woff") format("woff"), url("fonts/League-Gothic/LeagueGothic-Italic-webfont.ttf") format("truetype"), url("fonts/League-Gothic/LeagueGothic-Italic-webfont.svg#LeagueGothicItalic") format("svg");
   font-weight: normal;
-  font-style: normal; }
+  font-style: italic; }
 
 @font-face {
   font-family: 'LeagueGothicCondensedRegular';
@@ -2761,7 +2766,7 @@ label,
   src: url("fonts/League-Gothic/LeagueGothic-CondensedItalic-webfont.eot");
   src: url("fonts/League-Gothic/LeagueGothic-CondensedItalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/League-Gothic/LeagueGothic-CondensedItalic-webfont.woff") format("woff"), url("fonts/League-Gothic/LeagueGothic-CondensedItalic-webfont.ttf") format("truetype"), url("fonts/League-Gothic/LeagueGothic-CondensedItalic-webfont.svg#LeagueGothicCondensedItalic") format("svg");
   font-weight: normal;
-  font-style: normal; }
+  font-style: italic; }
 
 /**
 *
@@ -2783,6 +2788,128 @@ label,
 @font-face {
   font-family: 'CenturyStd-BoldCondensedIt';
   src: url("fonts/CenturyStd/CenturyStd-BoldCondensedIt.eot?") format("eot"), url("fonts/CenturyStd/CenturyStd-BoldCondensedIt.otf") format("opentype"), url("fonts/CenturyStd/CenturyStd-BoldCondensedIt.woff") format("woff"), url("fonts/CenturyStd/CenturyStd-BoldCondensedIt.ttf") format("truetype"), url("fonts/CenturyStd/CenturyStd-BoldCondensedIt.svg#CenturyStd-BoldCondensedIt") format("svg"); }
+
+/**
+*
+* DejaVu serif
+*
+**/
+@font-face {
+  font-family: 'DejaVuSerifBook';
+  src: url("fonts/DejaVu-Serif/DejaVu-Serif-webfont.eot");
+  src: url("fonts/DejaVu-Serif/DejaVu-Serif-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DejaVu-Serif/DejaVu-Serif-webfont.woff") format("woff"), url("fonts/DejaVu-Serif/DejaVu-Serif-webfont.ttf") format("truetype"), url("fonts/DejaVu-Serif/DejaVu-Serif-webfont.svg#DejaVuSerifBook") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'DejaVuSerifItalic';
+  src: url("fonts/DejaVu-Serif/DejaVu-Serif-Italic-webfont.eot");
+  src: url("fonts/DejaVu-Serif/DejaVu-Serif-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DejaVu-Serif/DejaVu-Serif-Italic-webfont.woff") format("woff"), url("fonts/DejaVu-Serif/DejaVu-Serif-Italic-webfont.ttf") format("truetype"), url("fonts/DejaVu-Serif/DejaVu-Serif-Italic-webfont.svg#DejaVuSerifItalic") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'DejaVuSerifBold';
+  src: url("fonts/DejaVu-Serif/DejaVu-Serif-Bold-webfont.eot");
+  src: url("fonts/DejaVu-Serif/DejaVu-Serif-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DejaVu-Serif/DejaVu-Serif-Bold-webfont.woff") format("woff"), url("fonts/DejaVu-Serif/DejaVu-Serif-Bold-webfont.ttf") format("truetype"), url("fonts/DejaVu-Serif/DejaVu-Serif-Bold-webfont.svg#DejaVuSerifBold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'DejaVuSerifBoldItalic';
+  src: url("fonts/DejaVu-Serif/DejaVu-Serif-BoldItalic-webfont.eot");
+  src: url("fonts/DejaVu-Serif/DejaVu-Serif-BoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DejaVu-Serif/DejaVu-Serif-BoldItalic-webfont.woff") format("woff"), url("fonts/DejaVu-Serif/DejaVu-Serif-BoldItalic-webfont.ttf") format("truetype"), url("fonts/DejaVu-Serif/DejaVu-Serif-BoldItalic-webfont.svg#DejaVuSerifBoldItalic") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'DejaVuSerifCondensed';
+  src: url("fonts/DejaVu-Serif/DejaVuSerifCondensed-webfont.eot");
+  src: url("fonts/DejaVu-Serif/DejaVuSerifCondensed-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DejaVu-Serif/DejaVuSerifCondensed-webfont.woff") format("woff"), url("fonts/DejaVu-Serif/DejaVuSerifCondensed-webfont.ttf") format("truetype"), url("fonts/DejaVu-Serif/DejaVuSerifCondensed-webfont.svg#DejaVuSerifCondensed") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'DejaVuSerifCondensedItalic';
+  src: url("fonts/DejaVu-Serif/DejaVuSerifCondensed-Italic-webfont.eot");
+  src: url("fonts/DejaVu-Serif/DejaVuSerifCondensed-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DejaVu-Serif/DejaVuSerifCondensed-Italic-webfont.woff") format("woff"), url("fonts/DejaVu-Serif/DejaVuSerifCondensed-Italic-webfont.ttf") format("truetype"), url("fonts/DejaVu-Serif/DejaVuSerifCondensed-Italic-webfont.svg#DejaVuSerifCondensed") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'DejaVuSerifCondensedBold';
+  src: url("fonts/DejaVu-Serif/DejaVuSerifCondensed-Bold-webfont.eot");
+  src: url("fonts/DejaVu-Serif/DejaVuSerifCondensed-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DejaVu-Serif/DejaVuSerifCondensed-Bold-webfont.woff") format("woff"), url("fonts/DejaVu-Serif/DejaVuSerifCondensed-Bold-webfont.ttf") format("truetype"), url("fonts/DejaVu-Serif/DejaVuSerifCondensed-Bold-webfont.svg#DejaVuSerifCondensedBold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'DejaVuSerifCnBdIt';
+  src: url("fonts/DejaVu-Serif/DejaVuSerifCondensed-BoldItalic-webfont.eot");
+  src: url("fonts/DejaVu-Serif/DejaVuSerifCondensed-BoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DejaVu-Serif/DejaVuSerifCondensed-BoldItalic-webfont.woff") format("woff"), url("fonts/DejaVu-Serif/DejaVuSerifCondensed-BoldItalic-webfont.ttf") format("truetype"), url("fonts/DejaVu-Serif/DejaVuSerifCondensed-BoldItalic-webfont.svg#DejaVuSerifCnBdIt") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+/**
+*
+* DejaVu Sans
+*
+**/
+@font-face {
+  font-family: 'DejaVuSansBook';
+  src: url("fonts/DejaVu-Sans/DejaVuSans-webfont.eot");
+  src: url("fonts/DejaVu-Sans/DejaVuSans-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DejaVu-Sans/DejaVuSans-webfont.woff") format("woff"), url("fonts/DejaVu-Sans/DejaVuSans-webfont.ttf") format("truetype"), url("fonts/DejaVu-Sans/DejaVuSans-webfont.svg#DejaVuSansBook") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'DejaVuSansOblique';
+  src: url("fonts/DejaVu-Sans/DejaVuSans-Oblique-webfont.eot");
+  src: url("fonts/DejaVu-Sans/DejaVuSans-Oblique-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DejaVu-Sans/DejaVuSans-Oblique-webfont.woff") format("woff"), url("fonts/DejaVu-Sans/DejaVuSans-Oblique-webfont.ttf") format("truetype"), url("fonts/DejaVu-Sans/DejaVuSans-Oblique-webfont.svg#DejaVuSansOblique") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'DejaVuSansBold';
+  src: url("fonts/DejaVu-Sans/DejaVuSans-Bold-webfont.eot");
+  src: url("fonts/DejaVu-Sans/DejaVuSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DejaVu-Sans/DejaVuSans-Bold-webfont.woff") format("woff"), url("fonts/DejaVu-Sans/DejaVuSans-Bold-webfont.ttf") format("truetype"), url("fonts/DejaVu-Sans/DejaVuSans-Bold-webfont.svg#DejaVuSansBold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'DejaVuSansBoldOblique';
+  src: url("fonts/DejaVu-Sans/DejaVuSans-BoldOblique-webfont.eot");
+  src: url("fonts/DejaVu-Sans/DejaVuSans-BoldOblique-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DejaVu-Sans/DejaVuSans-BoldOblique-webfont.woff") format("woff"), url("fonts/DejaVu-Sans/DejaVuSans-BoldOblique-webfont.ttf") format("truetype"), url("fonts/DejaVu-Sans/DejaVuSans-BoldOblique-webfont.svg#DejaVuSansBoldOblique") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'DejaVuSansCondensed';
+  src: url("fonts/DejaVu-Sans/DejaVuSansCondensed-webfont.eot");
+  src: url("fonts/DejaVu-Sans/DejaVuSansCondensed-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DejaVu-Sans/DejaVuSansCondensed-webfont.woff") format("woff"), url("fonts/DejaVu-Sans/DejaVuSansCondensed-webfont.ttf") format("truetype"), url("fonts/DejaVu-Sans/DejaVuSansCondensed-webfont.svg#DejaVuSansCondensed") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'DejaVuSansCondensedOblique';
+  src: url("fonts/DejaVu-Sans/DejaVuSansCondensed-Oblique-webfont.eot");
+  src: url("fonts/DejaVu-Sans/DejaVuSansCondensed-Oblique-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DejaVu-Sans/DejaVuSansCondensed-Oblique-webfont.woff") format("woff"), url("fonts/DejaVu-Sans/DejaVuSansCondensed-Oblique-webfont.ttf") format("truetype"), url("fonts/DejaVu-Sans/DejaVuSansCondensed-Oblique-webfont.svg#DejaVuSansCondensedOblique") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'DejaVuSansCondensedBold';
+  src: url("fonts/DejaVu-Sans/DejaVuSansCondensed-Bold-webfont.eot");
+  src: url("fonts/DejaVu-Sans/DejaVuSansCondensed-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DejaVu-Sans/DejaVuSansCondensed-Bold-webfont.woff") format("woff"), url("fonts/DejaVu-Sans/DejaVuSansCondensed-Bold-webfont.ttf") format("truetype"), url("fonts/DejaVu-Sans/DejaVuSansCondensed-Bold-webfont.svg#DejaVuSansCondensedBold") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'DejaVuSansCnBdOb';
+  src: url("fonts/DejaVu-Sans/DejaVuSansCondensed-BoldOblique-webfont.eot");
+  src: url("fonts/DejaVu-Sans/DejaVuSansCondensed-BoldOblique-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/DejaVu-Sans/DejaVuSansCondensed-BoldOblique-webfont.woff") format("woff"), url("fonts/DejaVu-Sans/DejaVuSansCondensed-BoldOblique-webfont.ttf") format("truetype"), url("fonts/DejaVu-Sans/DejaVuSansCondensed-BoldOblique-webfont.svg#DejaVuSansCnBdOb") format("svg");
+  font-weight: bold;
+  font-style: italic; }
 
 /*-----  End of =fonts  ------*/
 /* typo */
@@ -2809,28 +2936,121 @@ a {
   -o-transition: color 0.35s ease-in-out 0.2s;
   transition: color 0.35s ease-in-out 0.2s; }
   a:hover {
-    color: #a92a18;
+    color: #19a1ac;
     text-decoration: none; }
   a:active, a:focus {
     position: relative;
     top: 1px; }
 
 /*-----  End of =Base  ------*/
+/*====================================
+=            =formulaires            =
+====================================*/
+/* formulaires : styles communs */
+.formulaire_spip {
+  font-family: "DejaVuSansCondensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429; }
+  .formulaire_spip ul {
+    list-style: none;
+    margin-left: 0; }
+  .formulaire_spip li {
+    margin-bottom: 24px; }
+  .formulaire_spip .text,
+  .formulaire_spip select {
+    width: 100%; }
+  .formulaire_spip .boutons {
+    margin-bottom: 0; }
+    .formulaire_spip .boutons input {
+      border-style: solid;
+      border-width: 1px;
+      cursor: "pointer";
+      font-family: inherit;
+      font-weight: bold;
+      line-height: 1;
+      margin: 0 0 1.25em;
+      position: relative;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+      padding-top: 0.75em;
+      padding-right: 1.5em;
+      padding-bottom: 0.8125em;
+      padding-left: 1.5em;
+      font-size: 1em;
+      padding-top: 0.75em;
+      padding-bottom: 0.8125em;
+      padding-right: 0px;
+      padding-left: 0px;
+      width: 100%;
+      padding-top: true0.0625em;
+      padding-bottom: true;
+      background-color: #19a1ac;
+      border-color: #13777f;
+      color: white;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+      -webkit-transition: all 300ms ease-out;
+      -moz-transition: all 300ms ease-out;
+      transition: all 300ms ease-out;
+      -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+      font-family: "DejaVuSansCondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: normal; }
+      .formulaire_spip .boutons input:hover, .formulaire_spip .boutons input:focus {
+        background-color: #13777f; }
+      .formulaire_spip .boutons input:hover, .formulaire_spip .boutons input:focus {
+        color: white; }
+      .formulaire_spip .boutons input:active {
+        -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
+
+/* formulaires Formidable */
+.formulaire_formidable label {
+  display: none; }
+
+/* formulaire petition */
+.formulaire_petition .boutons input {
+  text-transform: uppercase; }
+
+/*-----  End of =formulaires  ------*/
+/*=================================
+=            =tableaux            =
+=================================*/
+.table {
+  display: table;
+  width: 100%; }
+
+.table__cell {
+  display: table-cell;
+  padding-right: .5em;
+  padding: 12px 6px 6px 0; }
+  .table__cell p {
+    margin-bottom: 0; }
+
+/*==========  tableaux pétition  ==========*/
+.table__cell--name span {
+  text-transform: uppercase;
+  font-family: "DejaVuSerifCondensedBold", Georgia, "Times New Roman", Times, serif; }
+
+/*-----  End of =tableaux  ------*/
 /* page */
 /*=============================
 =            =page            =
 =============================*/
 html {
   border-top: 7px solid #c11f02;
-  font-family: "CenturyStd-BookCondensed", Georgia, serif;
-  font-weight: normal; }
+  font-family: "DejaVuSerifCondensed", Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  color: #222; }
 
 body {
   padding-top: 12px; }
 
 /*==========  =wrapper  ==========*/
 .wrapper {
-  max-width: 1000px;
+  max-width: 1100px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 24px;
@@ -2842,13 +3062,33 @@ body {
 ==================================*/
 .page-head {
   text-align: center;
-  position: relative; }
+  position: relative;
+  margin-bottom: 48px; }
 
 .logo {
   display: inline-block;
   margin-bottom: 24px; }
 
 /*-----  End of =page-head  ------*/
+/*==================================
+=            =page-foot            =
+==================================*/
+.page-foot {
+  border-top: 7px solid #c11f02;
+  padding-top: 24px;
+  background-color: #072b2e;
+  color: #fff; }
+  .page-foot .hN {
+    color: #19a1ac;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 1.6; }
+  .page-foot .logo {
+    margin: 24px 0; }
+
+/*-----  End of =page-foot  ------*/
 /* objets */
 /*============================
 =            =nav            =
@@ -2993,24 +3233,103 @@ body {
   list-style: none;
   margin-left: 0; }
 
+/*==========  separateur  ==========*/
+.sep > li {
+  border-bottom: 1px solid #f2f2f2; }
+
 /*-----  End of =Listes  ------*/
+/*============================
+=            =box            =
+============================*/
+/* petition */
+.petition__box {
+  background-color: #e6e6e6;
+  padding: 0 .8em; }
+  .petition__box .hN {
+    color: #c11f02; }
+
+.petition__box--supporters .hN {
+  border-bottom: 3px solid #19a1ac;
+  margin-bottom: 0;
+  color: #19a1ac; }
+
+/*-----  End of =box  ------*/
+/*==============================
+=            =objet            =
+==============================*/
+/*-----  End of =objet  ------*/
+/*===============================
+=            =medias            =
+===============================*/
+.logo--large {
+  width: 100%;
+  display: block; }
+
+/* box-shadow sur logo */
+.logo__box {
+  margin-bottom: 48px;
+  position: relative;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
+
+.logo__box:after {
+  position: absolute;
+  right: 10px;
+  /* Positioned some distance in from the left and right edges to avoid the box-shadow blur from peeking through on the sides of the box */
+  bottom: 0;
+  left: 10px;
+  height: 20px;
+  border-radius: 0 0 50% 50% / 0 0 20px 20px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  content: ''; }
+
+.logo__box--content {
+  position: relative;
+  z-index: 1;
+  /* Make sure it’s rendered on top of the pseudo-element */
+  padding: 10px;
+  background: #fff; }
+
+/*-----  End of =medias  ------*/
 /*===============================
 =            =Hentry            =
 ===============================*/
-.hentry.resume header {
+/* pour les résumés */
+.resume header {
   float: left;
   padding-right: 12px; }
-.hentry.resume .entry-content {
+.resume .entry-content {
   float: left;
   padding-left: 12px; }
-  .hentry.resume .entry-content.plus-logo {
+  .resume .entry-content.plus-logo {
     float: none; }
+
+/* pour les contenus développés (objet) */
+.objet header {
+  text-align: center; }
+.objet .titre {
+  color: #19a1ac;
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1; }
+.objet .soustitre {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.33333; }
 
 /*-----  End of =Hentry  ------*/
 /* misc */
 /*=============================
 =            =misc            =
 =============================*/
+/* push */
+@media only screen and (min-width: 1024px) {
+  .push--desk-one-twelfth {
+    position: relative;
+    left: 8.333%; }
+
+  .push--desk-one-third {
+    position: relative;
+    left: 33.333%; } }
 /* couleur de texte sélectionné */
 ::selection {
   background-color: #c11f02;
