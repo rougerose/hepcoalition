@@ -3289,6 +3289,10 @@ body {
   padding: 10px;
   background: #fff; }
 
+/* image insérée dans #TEXTE */
+.texte .spip_documents_left {
+  margin-right: 10px; }
+
 /*-----  End of =medias  ------*/
 /*===============================
 =            =Hentry            =
