@@ -1,4 +1,3 @@
-#CACHE{3600}
 <BOUCLE_rubrique(RUBRIQUES){id_rubrique=10}>
 <BOUCLE_article(ARTICLES){id_rubrique}{lang}{0,1}>
 <article class="self objet article hentry cf">
@@ -19,10 +18,11 @@
    </div>]
 
    <div class="grid__item desk-four-twelfths">
-      [(#IDFORMULAIRE|?{
-         [(#INCLURE{fond=inclure/petition,id_article})],
-         <br />
-      })]
+      <BOUCLE_form_petition(ARTICLES){id_article}{si #IDFORMULAIRE}>
+      <INCLURE{fond=inclure/petition,id_article} />
+      </BOUCLE_form_petition>
+      <br />
+      <//B_form_petition>
    </div><!--
 --><div class="grid__item one-whole desk-eight-twelfths push--desk--one-twelfth">
       <div class="self__body entry-content contenu surlignable">
@@ -43,9 +43,10 @@
             [(#INCLURE{fond=inclure/documents,id_article,portfolio=#GET{portfolio}})]
 
          [(#REM) signatures formulaire formidable -- petition ]
-         [(#IDFORMULAIRE|oui)
-            [(#INCLURE{fond=inclure/petition_signatures,id_article})]
-         ]
+         <BOUCLE_signatures(ARTICLES){id_article}{si #IDFORMULAIRE}>
+         <INCLURE{fond=inclure/petition_signatures,id_article} />
+         </BOUCLE_signatures>
+         
          [<aside class="notes txt">
             <div class="grid">
                <div class="grid__item desk-one-half">
