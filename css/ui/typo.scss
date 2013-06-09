@@ -6,6 +6,9 @@
 .hN {
     font-family: $leagueReg;
     font-weight: normal;
+    .ru & {
+        font-family: $helvetica;
+    }
 }
 
 /*-----  End of =Typo  ------*/
