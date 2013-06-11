@@ -19,7 +19,8 @@
 .table__cell--name {
     span {
         text-transform: uppercase;
-        font-family: $dejavuSerifBold;
+        // font-family: $dejavuSerifBold;
+        font-weight: 700;
     }
 }
 

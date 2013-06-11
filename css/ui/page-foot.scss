@@ -11,7 +11,7 @@
         color: $primary-color;
         margin-bottom: 0;
         text-transform: uppercase;
-        @include font-size($h2-size);
+        @include font-size(26px);
     }
     .logo {
         margin: $base-spacing-unit 0;

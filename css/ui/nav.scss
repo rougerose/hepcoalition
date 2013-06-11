@@ -137,8 +137,9 @@
         border-bottom: 2px solid $secondary-color;
         padding: 0 4px;
         color: #000;
-        font-family: $leagueReg;
-        font-size: emCalc(18px);
+        font-family: $CabinC;
+        font-size: emCalc(16px);
+        font-weight: 700;
     }
 
 /**
@@ -152,7 +153,7 @@
 }
 .nav-principale {
     margin-bottom: 0;
-    font-family: $leagueReg;
+    // font-family: $leagueReg;
     font-size: emCalc(24px);
     text-transform: uppercase;
     text-align: center;
