@@ -1,13 +1,10 @@
 <BOUCLE_article(ARTICLES){id_article}>
-<article class="self objet article hentry cf">
+<article class="self objet article hentry">
    <div class="grid__item">
       <header>
-         [(#SOUSTITRE|oui)
-         <hgroup>]
-            <h1 class="self__titre entry-title titre hN">#TITRE</h1>
-            [<h2 class="soustitre hN">(#SOUSTITRE)</h2>]
-         [(#SOUSTITRE|oui)
-         </hgroup>]
+         <h1 class="self__titre entry-title titre hN">
+            #TITRE[ <span class="soustitre">(#SOUSTITRE)</span>]
+         </h1>
       </header>
    </div>
 
