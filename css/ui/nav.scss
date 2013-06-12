@@ -104,7 +104,7 @@
             right: -5px;
         }
         li {
-            font-family: $arialnarrow;
+            font-family: $CabinC;
             font-size: $f-dropdown-font-size;
             font-weight: bold;
             line-height: $f-dropdown-line-height;
@@ -153,10 +153,11 @@
 }
 .nav-principale {
     margin-bottom: 0;
-    // font-family: $leagueReg;
-    font-size: emCalc(24px);
+    font-family: $CabinC;
+    @include font-size(20px);
+    line-height: 2;
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
     > li:hover .nav--dropdown {
         top: 1.5em;
         left: -5px;
@@ -164,6 +165,10 @@
     .nav__item {
         position: relative;
         text-align: left;
+    }
+    .search-site {
+        float: right;
+        margin-top: .2em;
     }
 }
 .item {
