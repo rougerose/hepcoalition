@@ -800,7 +800,7 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .nav:after {
+.cf:after, .nav:after, .media:after, .documents:after {
   content: "";
   display: table;
   clear: both; }
@@ -894,7 +894,7 @@ h2, .beta {
   font-size: 1.875rem;
   line-height: 1.6; }
 
-h3, .gamma {
+h3, .gamma, .documents .hN {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1; }
@@ -1727,6 +1727,57 @@ label,
 .nav--keywords > li:last-child:after {
   display: none; }
 
+/*------------------------------------*\
+    $MEDIA
+\*------------------------------------*/
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ * E.g.:
+ *
+   <div class=media>
+       <img src=http://placekitten.com/200/300 alt="" class=media__img>
+       <p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+   </div>
+ *
+ * Demo: jsfiddle.net/inuitcss/cf4Qs
+ *
+ */
+.media {
+  display: block; }
+
+.media__img {
+  float: left;
+  margin-right: 24px; }
+
+/**
+ * Reversed image location (right instead of left).
+ */
+.media__img--rev {
+  float: right;
+  margin-left: 24px; }
+
+.media__img img,
+.media__img--rev img {
+  display: block; }
+
+.media__body {
+  overflow: hidden; }
+
+.media__body,
+.media__body > :last-child {
+  margin-bottom: 0; }
+
+/**
+ * `.img`s in `.islet`s need an appropriately sized margin.
+ */
+.islet .media__img {
+  margin-right: 12px; }
+
+.islet .media__img--rev {
+  margin-left: 12px; }
+
 /**
  * Style trumps; helper and brand classes
  */
@@ -2375,11 +2426,11 @@ label,
  * any element using a handy helper class.
  */
 .brand {
-  font-family: "DejaVuSerifCondensed", Georgia, "Times New Roman", Times, serif!important;
+  font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif!important;
   color: #19a1ac!important; }
 
 .brand-face {
-  font-family: "DejaVuSerifCondensed", Georgia, "Times New Roman", Times, serif!important; }
+  font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif!important; }
 
 .brand-color,
 .brand-colour {
@@ -2770,27 +2821,6 @@ label,
 
 /**
 *
-* ITC Century 
-*
-**/
-@font-face {
-  font-family: 'CenturyStd-BookCondensed';
-  src: url("fonts/CenturyStd/CenturyStd-BookCondensed.eot?") format("eot"), url("fonts/CenturyStd/CenturyStd-BookCondensed.otf") format("opentype"), url("fonts/CenturyStd/CenturyStd-BookCondensed.woff") format("woff"), url("fonts/CenturyStd/CenturyStd-BookCondensed.ttf") format("truetype"), url("fonts/CenturyStd/CenturyStd-BookCondensed.svg#CenturyStd-BookCondensed") format("svg"); }
-
-@font-face {
-  font-family: 'CenturyStd-BookCondensedIt';
-  src: url("fonts/CenturyStd/CenturyStd-BookCondensedIt.eot?") format("eot"), url("fonts/CenturyStd/CenturyStd-BookCondensedIt.otf") format("opentype"), url("fonts/CenturyStd/CenturyStd-BookCondensedIt.woff") format("woff"), url("fonts/CenturyStd/CenturyStd-BookCondensedIt.ttf") format("truetype"), url("fonts/CenturyStd/CenturyStd-BookCondensedIt.svg#CenturyStd-BookCondensedIt") format("svg"); }
-
-@font-face {
-  font-family: 'CenturyStd-BoldCondensed';
-  src: url("fonts/CenturyStd/CenturyStd-BoldCondensed.eot?") format("eot"), url("fonts/CenturyStd/CenturyStd-BoldCondensed.otf") format("opentype"), url("fonts/CenturyStd/CenturyStd-BoldCondensed.woff") format("woff"), url("fonts/CenturyStd/CenturyStd-BoldCondensed.ttf") format("truetype"), url("fonts/CenturyStd/CenturyStd-BoldCondensed.svg#CenturyStd-BoldCondensed") format("svg"); }
-
-@font-face {
-  font-family: 'CenturyStd-BoldCondensedIt';
-  src: url("fonts/CenturyStd/CenturyStd-BoldCondensedIt.eot?") format("eot"), url("fonts/CenturyStd/CenturyStd-BoldCondensedIt.otf") format("opentype"), url("fonts/CenturyStd/CenturyStd-BoldCondensedIt.woff") format("woff"), url("fonts/CenturyStd/CenturyStd-BoldCondensedIt.ttf") format("truetype"), url("fonts/CenturyStd/CenturyStd-BoldCondensedIt.svg#CenturyStd-BoldCondensedIt") format("svg"); }
-
-/**
-*
 * DejaVu serif
 *
 **/
@@ -2918,8 +2948,10 @@ label,
 =============================*/
 /* Headings */
 .hN {
-  font-family: "LeagueGothicRegular", Helvetica, Arial, sans-serif;
-  font-weight: normal; }
+  font-family: "Cabin Condensed", "Arial Narrow", Arial, sans-serif;
+  font-weight: 700; }
+  .ru .hN {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 /*-----  End of =Typo  ------*/
 /* base */
@@ -2927,7 +2959,8 @@ label,
 =            =Base            =
 =============================*/
 /*==========  Liens  ==========*/
-a {
+a,
+a.spip_out {
   color: #000;
   text-decoration: none;
   -webkit-transition: color 0.35s ease-in-out 0.2s;
@@ -2935,10 +2968,13 @@ a {
   -ms-transition: color 0.35s ease-in-out 0.2s;
   -o-transition: color 0.35s ease-in-out 0.2s;
   transition: color 0.35s ease-in-out 0.2s; }
-  a:hover {
+  a:hover,
+  a.spip_out:hover {
     color: #19a1ac;
     text-decoration: none; }
-  a:active, a:focus {
+  a:active, a:focus,
+  a.spip_out:active,
+  a.spip_out:focus {
     position: relative;
     top: 1px; }
 
@@ -2946,12 +2982,72 @@ a {
 /*====================================
 =            =formulaires            =
 ====================================*/
-/* formulaires : styles communs */
+/*==========  formulaires : styles communs  ==========*/
+fieldset {
+  border: 1px solid #ddd; }
+
+legend {
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #fff; }
+
+label {
+  font-weight: bold;
+  color: #4d4d4d; }
+
+input, textarea {
+  width: 100%;
+  background-color: #fff;
+  padding: .5em;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out; }
+  input:focus, textarea:focus {
+    -webkit-box-shadow: 0 0 5px #999999;
+    -moz-box-shadow: 0 0 5px #999999;
+    box-shadow: 0 0 5px #999999;
+    border-color: #999999; }
+  input:focus, textarea:focus {
+    background: darken white, 2%;
+    border-color: #999999;
+    outline: none; }
+
+/* messages */
+.reponse_formulaire {
+  line-height: 36px;
+  font-weight: 700;
+  padding: 0 12px;
+  color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15); }
+
+.reponse_formulaire_ok {
+  background-color: #04595F; }
+
+.reponse_formulaire_erreur {
+  background-color: #a81b02; }
+
+.erreur_message {
+  display: block;
+  color: #c11f02;
+  font-style: italic; }
+
 .formulaire_spip {
-  font-family: "DejaVuSansCondensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.71429; }
+  font-family: "Cabin Condensed", "Arial Narrow", Arial, sans-serif; }
   .formulaire_spip ul {
     list-style: none;
     margin-left: 0; }
@@ -2996,8 +3092,8 @@ a {
       transition: all 300ms ease-out;
       -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
       box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
-      font-family: "DejaVuSansCondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: normal; }
+      font-weight: 700;
+      text-transform: uppercase; }
       .formulaire_spip .boutons input:hover, .formulaire_spip .boutons input:focus {
         background-color: #13777f; }
       .formulaire_spip .boutons input:hover, .formulaire_spip .boutons input:focus {
@@ -3006,13 +3102,9 @@ a {
         -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
         box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
 
-/* formulaires Formidable */
+/*==========  formulaires Formidable  ==========*/
 .formulaire_formidable label {
   display: none; }
-
-/* formulaire petition */
-.formulaire_petition .boutons input {
-  text-transform: uppercase; }
 
 /*-----  End of =formulaires  ------*/
 /*=================================
@@ -3032,7 +3124,7 @@ a {
 /*==========  tableaux pétition  ==========*/
 .table__cell--name span {
   text-transform: uppercase;
-  font-family: "DejaVuSerifCondensedBold", Georgia, "Times New Roman", Times, serif; }
+  font-weight: 700; }
 
 /*-----  End of =tableaux  ------*/
 /* page */
@@ -3041,7 +3133,8 @@ a {
 =============================*/
 html {
   border-top: 7px solid #c11f02;
-  font-family: "DejaVuSerifCondensed", Georgia, "Times New Roman", Times, serif;
+  font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Cabin',sans-serif;
   font-weight: normal;
   color: #222; }
 
@@ -3082,11 +3175,14 @@ body {
     color: #19a1ac;
     margin-bottom: 0;
     text-transform: uppercase;
-    font-size: 30px;
-    font-size: 1.875rem;
-    line-height: 1.6; }
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 1.84615; }
   .page-foot .logo {
     margin: 24px 0; }
+  .page-foot .spip_out {
+    color: #fff;
+    border-bottom: 1px solid #19a1ac; }
 
 /*-----  End of =page-foot  ------*/
 /* objets */
@@ -3195,8 +3291,9 @@ body {
   border-bottom: 2px solid #c11f02;
   padding: 0 4px;
   color: #000;
-  font-family: "LeagueGothicRegular", Helvetica, Arial, sans-serif;
-  font-size: 1.125em; }
+  font-family: "Cabin Condensed", "Arial Narrow", Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 700; }
 
 /**
 *
@@ -3209,7 +3306,6 @@ body {
 
 .nav-principale {
   margin-bottom: 0;
-  font-family: "LeagueGothicRegular", Helvetica, Arial, sans-serif;
   font-size: 1.5em;
   text-transform: uppercase;
   text-align: center; }
@@ -3246,7 +3342,11 @@ body {
   background-color: #e6e6e6;
   padding: 0 .8em; }
   .petition__box .hN {
-    color: #c11f02; }
+    color: #c11f02;
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.33333;
+    margin-bottom: .3em; }
 
 .petition__box--supporters .hN {
   border-bottom: 3px solid #19a1ac;
@@ -3265,7 +3365,7 @@ body {
   width: 100%;
   display: block; }
 
-/* box-shadow sur logo */
+/*==========  box-shadow sur logo  ==========*/
 .logo__box {
   margin-bottom: 48px;
   position: relative;
@@ -3288,6 +3388,41 @@ body {
   /* Make sure it’s rendered on top of the pseudo-element */
   padding: 10px;
   background: #fff; }
+
+/*==========  documents et images  ==========*/
+.documents .hN {
+  color: #19a1ac; }
+
+.documents {
+  margin-bottom: 0; }
+  .documents .hN {
+    border-bottom: 2px solid #19a1ac; }
+  .documents .block-list {
+    border-top: none; }
+  .documents .media__link {
+    float: left; }
+  .documents .media__img {
+    margin-bottom: 24px;
+    padding: 4px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
+  .documents .media__body {
+    margin-left: 0; }
+
+/*  tous les autres documents */
+.documents.fichiers .spip_doc_titre,
+.documents.fichiers p {
+  margin-bottom: 0; }
+
+/* image insérée dans #TEXTE */
+.texte .spip_documents_left {
+  margin-right: 10px; }
 
 /*-----  End of =medias  ------*/
 /*===============================
@@ -3312,9 +3447,14 @@ body {
   font-size: 3rem;
   line-height: 1; }
 .objet .soustitre {
-  font-size: 36px;
-  font-size: 2.25rem;
-  line-height: 1.33333; }
+  color: #222;
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 1.71429;
+  font-weight: 400;
+  display: block; }
+.objet .texte {
+  margin-bottom: 24px; }
 
 /*-----  End of =Hentry  ------*/
 /* misc */

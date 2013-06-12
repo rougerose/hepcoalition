@@ -29,7 +29,13 @@
         @include font-size(48px);
     }
     .soustitre {
-       @include font-size(36px); 
+        color: #222;
+       @include font-size(28px);
+       font-weight: 400;
+       display: block;
+    }
+    .texte {
+        margin-bottom: $base-spacing-unit;
     }
 
 }

@@ -4,8 +4,11 @@
 
 /* Headings */
 .hN {
-    font-family: $leagueReg;
-    font-weight: normal;
+    font-family: $CabinC;
+    font-weight: 700;
+    .ru & {
+        font-family: $helvetica;
+    }
 }
 
 /*-----  End of =Typo  ------*/

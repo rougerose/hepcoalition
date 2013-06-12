@@ -8,6 +8,8 @@
     padding: 0 .8em;
     .hN {
         color: $secondary-color;
+        @include font-size($h1-size);
+        margin-bottom: .3em;
     }
 }
 

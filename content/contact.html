@@ -1,11 +1,13 @@
-<BOUCLE_rubrique(RUBRIQUES){id_rubrique=10}>
-<BOUCLE_article(ARTICLES){id_rubrique}{lang}{0,1}>
-<article class="self objet article hentry">
+<BOUCLE_article(ARTICLES){page=contact}>
+<article class="self objet article hentry cf">
    <div class="grid__item">
       <header>
-         <h1 class="self__titre entry-title titre hN">
-            #TITRE[ <span class="soustitre">(#SOUSTITRE)</span>]
-         </h1>
+         [(#SOUSTITRE|oui)
+         <hgroup>]
+            <h1 class="self__titre entry-title titre hN">#TITRE</h1>
+            [<h2 class="soustitre hN">(#SOUSTITRE)</h2>]
+         [(#SOUSTITRE|oui)
+         </hgroup>]
       </header>
    </div>
 
@@ -76,6 +78,4 @@
       </aside>
    </div> -->
 </article><!-- .self -->
-
 </BOUCLE_article>
-</BOUCLE_rubrique>

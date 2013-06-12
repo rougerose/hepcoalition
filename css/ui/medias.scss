@@ -7,7 +7,8 @@
     display: block; // annule une marge supplémentaire en bas.
 }
 
-/* box-shadow sur logo */
+/*==========  box-shadow sur logo  ==========*/
+
 .logo__box {
     margin-bottom: $base-spacing-unit*2;
     position: relative;
@@ -29,6 +30,51 @@
     padding:10px;
     background:#fff;
 }
+
+/*==========  documents et images  ==========*/
+.documents {
+    .hN {
+        color: $primary-color;
+    }
+}
+
+.documents {
+  margin-bottom: 0;
+  @extend .cf;
+  .hN {
+    @extend .gamma;
+   border-bottom: 2px solid $primary-color;
+  }
+  .block-list {
+    border-top: none;
+}
+  .media__link {float: left;}
+  .media__img {
+    margin-bottom: $base-spacing-unit;
+    padding: 4px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border: 1px solid rgba(0,0,0,0.2);
+      @include vendor(box-shadow, 0 1px 3px rgba(0,0,0,.1));
+}
+  .media__body {margin-left: 0;}
+
+}
+/*  tous les autres documents */
+.documents.fichiers {
+  .spip_doc_titre,
+  p {
+   margin-bottom: 0;
+}
+}
+
+/* image insérée dans #TEXTE */
+.spip_documents_left {
+    .texte & {
+        margin-right: 10px;
+    }
+}
+
 
  
 

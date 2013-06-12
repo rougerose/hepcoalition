@@ -29,7 +29,7 @@ $use-nav:           true;
 $use-options:       false;
 $use-pagination:    false;
 $use-breadcrumb:    false;
-$use-media:         false;
+$use-media:         true;
 $use-marginalia:    false;
 $use-island:        false;
 $use-block-list:    false;
@@ -151,26 +151,33 @@ $dropdown-mobile-default-float:   0 !default;
 
 $f-dropdown-content-padding: emCalc(20px);
 
+$glowing-effect-fade-time: .45s;
+$glowing-effect-color: darken(#fff,40%);
+$input-focus-bg-color: darken (#fff, 2%);
+$input-focus-border-color: darken(#fff, 40%);
+
 
 /*-----  End of Foundation Variables  ------*/
 
 
 /*==========  =fonts  ==========*/
 $mono-font-family: Menlo,monospace;
-$centuryBook: 'CenturyStd-BookCondensed',Georgia,serif;
-$centuryItal: 'CenturyStd-BookCondensedIt';
-$leagueReg: "LeagueGothicRegular",Helvetica,Arial,sans-serif;
+// $centuryBook: 'CenturyStd-BookCondensed',Georgia,serif;
+// $centuryItal: 'CenturyStd-BookCondensedIt';
+// $leagueReg: "LeagueGothicRegular",Helvetica,Arial,sans-serif;
 $arialnarrow: "Arial Narrow", Arial, sans-serif;
 $helvetica: "Helvetica Neue",Helvetica, Arial, sans-serif;
 
 // serif
-$dejavuSerif: "DejaVuSerifCondensed", Georgia, "Times New Roman", Times, serif;
-$dejavuSerifBold: "DejaVuSerifCondensedBold",Georgia, "Times New Roman", Times, serif;
+// $dejavuSerif: "DejaVuSerifCondensed", Georgia, "Times New Roman", Times, serif;
+// $dejavuSerifBold: "DejaVuSerifCondensedBold",Georgia, "Times New Roman", Times, serif;
 
 // sans
-$dejavuSans: "DejaVuSansCondensed","Helvetica Neue",Helvetica, Arial, sans-serif;
-$dejavuSansB: "DejaVuSansCondensedBold","Helvetica Neue",Helvetica, Arial, sans-serif;
-$brand-face: $dejavuSerif;
+// $dejavuSans: "DejaVuSansCondensed","Helvetica Neue",Helvetica, Arial, sans-serif;
+// $dejavuSansB: "DejaVuSansCondensedBold","Helvetica Neue",Helvetica, Arial, sans-serif;
+$Cabin: "Cabin", "Helvetica Neue",Helvetica,Arial,sans-serif;
+$CabinC: "Cabin Condensed", "Arial Narrow",Arial,sans-serif;
+$brand-face: $Cabin;
 $body-font-family : $brand-face;
 
 
