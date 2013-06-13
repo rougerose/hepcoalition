@@ -2311,7 +2311,7 @@ label,
   /**
   * Halves
   */
-  .desk-one-half, .desk-two-quarters, .desk-three-sixths, .desk-four-eighths, .desk-five-tenths, .desk-six-twelfths, .resume header, .resume .entry-content {
+  .desk-one-half, .desk-two-quarters, .desk-three-sixths, .desk-four-eighths, .desk-five-tenths, .desk-six-twelfths {
     width: 50%; }
 
   /**
@@ -2953,6 +2953,15 @@ label,
   .ru .hN {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
+.section__title {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-bottom: 3px solid #000;
+  margin-bottom: 1rem; }
+
 /*-----  End of =Typo  ------*/
 /* base */
 /*=============================
@@ -2977,6 +2986,12 @@ a.spip_out {
   a.spip_out:focus {
     position: relative;
     top: 1px; }
+
+a.more {
+  color: #19a1ac;
+  border-bottom: 1px solid #fff; }
+  a.more:hover {
+    border-bottom-color: #19a1ac; }
 
 /*-----  End of =Base  ------*/
 /*====================================
@@ -3334,6 +3349,7 @@ body {
   font-size: 1.25rem;
   line-height: 1.2;
   line-height: 2;
+  font-weight: 700;
   text-transform: uppercase;
   text-align: left; }
   .nav-principale > li:hover .nav--dropdown {
@@ -3384,10 +3400,39 @@ body {
   color: #19a1ac; }
 
 /*-----  End of =box  ------*/
-/*==============================
-=            =objet            =
-==============================*/
-/*-----  End of =objet  ------*/
+/*===================================
+=            =pagination            =
+===================================*/
+.pagination {
+  text-align: right;
+  margin-bottom: 24px; }
+  .pagination > ul {
+    list-style: none;
+    display: inline;
+    margin-left: 6px; }
+  .pagination li {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    color: #19a1ac; }
+    .pagination li a,
+    .pagination li strong {
+      padding: 0 6px; }
+  .pagination strong {
+    font-size: 19px;
+    color: #c11f02; }
+
+.pagination-label {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: inline-block;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  color: #ccc;
+  font-weight: 400; }
+
+/*-----  End of =pagination  ------*/
 /*===============================
 =            =medias            =
 ===============================*/
@@ -3458,17 +3503,64 @@ body {
 /*===============================
 =            =Hentry            =
 ===============================*/
-/* pour les résumés */
-.resume header {
-  float: left;
-  padding-right: 12px; }
-.resume .entry-content {
-  float: left;
-  padding-left: 12px; }
-  .resume .entry-content.plus-logo {
-    float: none; }
+/*==========  éléments communs  ==========*/
+.soustitre {
+  display: block;
+  color: #12747c;
+  color: #10656C;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
+  font-weight: 400; }
 
-/* pour les contenus développés (objet) */
+/*==========  résumés  ==========*/
+.resume {
+  border-bottom: 1px solid #000;
+  padding-bottom: 12px;
+  margin-bottom: 24px; }
+  .resume > div {
+    background-position: 100% 0;
+    background-repeat: no-repeat; }
+  .resume header {
+    float: left;
+    padding-right: 12px; }
+  .resume .entry-title {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1;
+    line-height: 1;
+    margin-top: -0.2em; }
+  .resume header,
+  .resume .entry-content {
+    width: 50%; }
+  .resume .updated {
+    font-size: 13px;
+    font-size: 0.8125rem;
+    line-height: 1.84615;
+    text-transform: uppercase;
+    color: #afafaf; }
+
+.entry-content {
+  float: right;
+  padding-left: 12px; }
+  .entry-content.plus-logo {
+    float: none;
+    padding-left: 0;
+    padding-right: 12px; }
+
+@media only screen and (min-width: 481px) {
+  .resume__content.plus-logo {
+    float: left;
+    padding-right: 12px; } }
+
+@media only screen and (min-width: 481px) {
+  .resume__logo {
+    float: left;
+    padding-left: 12px; } }
+.resume__logo .spip_logo {
+  width: 100%; }
+
+/*==========  contenus développés (objet)  ==========*/
 .objet header {
   text-align: center; }
 .objet .titre {

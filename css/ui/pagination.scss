@@ -1,0 +1,39 @@
+/*===================================
+=            =pagination            =
+===================================*/
+
+.pagination {
+    text-align: right;
+    margin-bottom: $base-spacing-unit;
+   > ul {
+        list-style:none;
+        display: inline;
+        margin-left: $half-spacing-unit/2;
+   }
+   li {
+        display:inline-block;
+        *display:inline;
+        zoom:1;
+        color: $brand-color;
+        a,
+        strong {
+            padding: 0 $base-spacing-unit / 4;
+        }
+    }
+    strong {
+        font-size:19px;
+        // background-color: $primary-color;
+        color: $secondary-color;
+    }
+}
+   .pagination-label {
+      @include font-size(16px);
+      display: inline-block;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      color: #ccc;
+      font-weight: 400;
+      // color: rgba(0,0,0,0.4);
+   }
+
+/*-----  End of =pagination  ------*/

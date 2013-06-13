@@ -1,25 +1,74 @@
 /*===============================
 =            =Hentry            =
 ===============================*/
+/*==========  éléments communs  ==========*/
+.soustitre {
+    display: block;
+    color: #12747c;
+    color: #10656C;
+    @include font-size(18px);
+    font-weight: 400;
+}
 
-/* pour les résumés */
+/*==========  résumés  ==========*/
 .resume {
+    border-bottom: 1px solid #000;
+    padding-bottom: $half-spacing-unit;
+    margin-bottom: $base-spacing-unit;
+    > div {
+        background-position: 100% 0;
+        background-repeat: no-repeat;
+    }
     header {
         float: left;
-        @extend .desk-one-half;
         padding-right: $half-spacing-unit;
     }
+    .entry-title {
+        @include font-size(24px);
+        line-height: 1;
+        margin-top: -0.2em;
+    }
+    header,
     .entry-content {
-        float: left;
-        @extend .desk-one-half;
-        padding-left: $half-spacing-unit;
-        &.plus-logo {
-            float: none;
-        }
+        width: 50%;
+    }
+    .updated {
+        @include font-size(13px);
+        // font-style: italic;
+        text-transform: uppercase;
+        color: #afafaf;
+    }
+}
+.entry-content {
+    float: right;
+    padding-left: $half-spacing-unit;
+    &.plus-logo {
+        float: none;
+        padding-left: 0;
+        padding-right: $half-spacing-unit;
     }
 }
 
-/* pour les contenus développés (objet) */
+
+.resume__content {
+    &.plus-logo {
+        @include media-query(lap-and-up) {
+            float: left;
+            padding-right: $half-spacing-unit;
+        }
+    }
+}
+.resume__logo {
+    @include media-query(lap-and-up) {
+        float: left;
+        padding-left: $half-spacing-unit;
+    }
+    .spip_logo {
+        width: 100%;
+    }
+}
+
+/*==========  contenus développés (objet)  ==========*/
 .objet {
     header {
         text-align: center;

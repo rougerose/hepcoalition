@@ -4,27 +4,16 @@
    [(#SET_PUSH{articles_carousel,#ID_ARTICLE})],
    [(#SET_PUSH{articles_selection,#ID_ARTICLE})]
 })]</BOUCLE_selection>[
-
-(#REM) carousel ouverture ]
-[(#GET{articles_carousel}|oui)
-<div class="grid__item">
-   #INCLURE{fond=liste/carousel,
-      selection=#GET{articles_carousel},
-      type-page=#ENV{type-page},
-      contexte=ouverture,
-      conteneur=carousel,
-      id=carouselOuverture}
-</div><!-- .grid__item -->][
-
-(#REM) selection des articles ]
-[(#GET{articles_selection}|oui)
+(#REM) selection des articles 
+][(#GET{articles_selection}|oui)
 <div class="conteneur">
    <div class="grid__item desk-eight-twelfths">
-      #INCLURE{fond=liste/articles-selection,
+      [(#INCLURE{fond=liste/articles-selection,
          conteneur=principal,
          selection=#GET{articles_selection},
-         pagination=10,
-         ajax}
+         section__title=[(#VAL{<:local:news_last_publications:>})],
+         pagination=3,
+         ajax})]
    </div><!-- .grid__item --><!--
    
 --><div class="grid__item desk-four-twelfths">
