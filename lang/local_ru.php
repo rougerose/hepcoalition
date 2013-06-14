@@ -21,9 +21,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'pays' => 'страна',
 
    // R
-   'sign_on' => 'Подпишите обращение Вашингтона',
 
    // S
+   'sign_on' => 'Подпишите обращение',
+   'sign_on_wc' => 'Подпишите обращение Вашингтона',
    'siteweb' => 'веб-сайт',
    'suite' => 'Читать дальше',
    'suivre_facebook' => "Читать о нас на <a href='@urlfacebook@'>Facebook</a>",

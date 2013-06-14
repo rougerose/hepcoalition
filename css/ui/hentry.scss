@@ -4,10 +4,11 @@
 /*==========  éléments communs  ==========*/
 .soustitre {
     display: block;
-    color: #12747c;
-    color: #10656C;
     @include font-size(18px);
     font-weight: 400;
+    .hentry & {
+        color: #10656c;
+    }
 }
 
 /*==========  résumés  ==========*/
@@ -18,55 +19,71 @@
     > div {
         background-position: 100% 0;
         background-repeat: no-repeat;
-    }
-    header {
-        float: left;
-        padding-right: $half-spacing-unit;
+        background-size: 48% auto;
     }
     .entry-title {
         @include font-size(24px);
         line-height: 1;
         margin-top: -0.2em;
     }
-    header,
-    .entry-content {
-        width: 50%;
-    }
     .updated {
         @include font-size(13px);
-        // font-style: italic;
         text-transform: uppercase;
         color: #afafaf;
     }
 }
-.entry-content {
-    float: right;
-    padding-left: $half-spacing-unit;
-    &.plus-logo {
-        float: none;
-        padding-left: 0;
-        padding-right: $half-spacing-unit;
-    }
-}
 
-
-.resume__content {
-    &.plus-logo {
+/* résumé d'article */
+.resume.article {
+    header {
         @include media-query(lap-and-up) {
             float: left;
-            padding-right: $half-spacing-unit;
+            padding-right: 1%;
+            width: 50%;
+        }
+    }
+    .entry-content {
+        @include media-query(lap-and-up) {
+            float: right;
+            padding-left: 1%;
+            width: 50%;
+            &.plus-logo {
+                float: none;
+                padding-left: 0;
+                padding-right: 1%;
+            }
         }
     }
 }
-.resume__logo {
-    @include media-query(lap-and-up) {
+
+/* résumé d'evenement */
+.resume.vevent {
+    padding: 0 0 0 55px;
+    position: relative;
+    time[itemprop="startDate"] {
+        display: block;
+        position: absolute;
+        top: 0; left: 0;
         float: left;
-        padding-left: $half-spacing-unit;
-    }
-    .spip_logo {
-        width: 100%;
+        padding: 5px;
+        background-color: $primary-color;
+        color: #d1eff1;
+        @include vendor(border-radius,4px);
+        text-transform: uppercase;
+        text-align: center;
+        font-family: $CabinC;
+        font-size: 30px;
+        line-height: 25px;
+        font-weight: 700;
+        span {
+            display: block;
+            margin-top: -4px;
+            font-size: 20px;
+            line-height: 25px;
+        }
     }
 }
+
 
 /*==========  contenus développés (objet)  ==========*/
 .objet {

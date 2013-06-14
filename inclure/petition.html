@@ -1,7 +1,7 @@
 #CACHE{0}
 <BOUCLE_article(ARTICLES){id_article}>
 #SET{idf,#IDFORMULAIRE} <BOUCLE_formulaire(FORMULAIRES){id_formulaire=#GET{idf}}><BOUCLE_reponses(FORMULAIRES_REPONSES){id_formulaire}{statut=publie}>[(#SET{total,#TOTAL_BOUCLE})]</BOUCLE_reponses></BOUCLE_formulaire>
-<aside id="fp" class="petition__box">
+<aside id="fp" class="petition__box petition__formulaire">
     <h1 class="hN"><:local:sign_petition:></h1>
     [<p class="info__petition--supporters">
         (#GET{total}|singulier_ou_pluriel{local:signatories_singular_with,local:signatories_plural_with,nb})

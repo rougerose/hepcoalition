@@ -1,0 +1,12 @@
+<B_evenements>
+<section>
+   [<h1 class="section__title hN">(#ENV{section__title})</h1>]
+   <ul class="liste--bloc">
+      <BOUCLE_evenements(EVENEMENTS){statut=publie}{date_fin>=#ENV{date}}>
+      [<li>
+         (#INCLURE{fond=inclure/resume/evenement,id_evenement})
+      </li>]
+      </BOUCLE_evenements>
+   </ul>
+</section>
+</B_evenements>

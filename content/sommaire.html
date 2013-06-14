@@ -12,11 +12,12 @@
          conteneur=principal,
          selection=#GET{articles_selection},
          section__title=[(#VAL{<:local:news_last_publications:>})],
-         pagination=3,
+         pagination=10,
          ajax})]
    </div><!-- .grid__item --><!--
    
 --><div class="grid__item desk-four-twelfths">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, ratione, iusto, officiis veniam quam omnis corporis id eveniet possimus dolorem asperiores voluptas. Quam ullam provident in quaerat quis similique quos.</p>      
+      [(#INCLURE{fond=liste/evenements,section__title=[(#VAL{<:local:agenda:>})]})]
+      [(#INCLURE{fond=inclure/resume/washington-call,env})]
    </div>
 </div><!-- .conteneur -->]

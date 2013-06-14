@@ -31,16 +31,16 @@ input, textarea {
 }
 .boutons {
     margin-bottom: 0;
-    input {
-        @include button-base;
-        @include button-size($padding:$button-med, $full-width:true, $is-input:true);
-        @include button-style;
-        @include radius;
-        @include single-transition;
-        @include inset-shadow($active:true);
-        font-weight: 700;
-        text-transform: uppercase
-    }
+    // input {
+    //     @include button-base;
+    //     @include button-size($padding:$button-med, $full-width:true, $is-input:true);
+    //     @include button-style;
+    //     @include radius;
+    //     @include single-transition;
+    //     @include inset-shadow($active:true);
+    //     font-weight: 700;
+    //     text-transform: uppercase
+    // }
 }
 /* messages */
 .reponse_formulaire {
@@ -126,9 +126,16 @@ input, textarea {
 }
 
 /*==========  formulaires Formidable  ==========*/
-.formulaire_formidable {
+
+/* formulaire pétition */
+
+.petition__formulaire {
     label {
         display: none;
+    }
+    input,
+    select {
+        width: 100%;
     }
 }
 

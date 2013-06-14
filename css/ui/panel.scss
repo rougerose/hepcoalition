@@ -1,0 +1,26 @@
+/*==============================
+=            =panel            =
+==============================*/
+.panel {
+    padding: .5em;
+    background-color: #ccc;
+    @include border-radius(5px);
+}
+    .panel__item {
+        margin-bottom: 1.5em;
+    }
+
+/* Couleurs */
+.panel--secondary {
+    background-color: darken($secondary-color,15%);
+    color: #fff;
+}
+
+/* Alignement */
+.panel--center {
+    text-align: center;
+}
+
+
+/*-----  End of =panel  ------*/
+
