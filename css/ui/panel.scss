@@ -3,6 +3,7 @@
 ==============================*/
 .panel {
     padding: .5em;
+    
     background-color: #ccc;
     @include border-radius(5px);
 }

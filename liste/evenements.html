@@ -1,12 +1,13 @@
 <B_evenements>
 <section>
    [<h1 class="section__title hN">(#ENV{section__title})</h1>]
-   <ul class="liste--bloc">
-      <BOUCLE_evenements(EVENEMENTS){statut=publie}{date_fin>=#ENV{date}}>
-      [<li>
-         (#INCLURE{fond=inclure/resume/evenement,id_evenement})
-      </li>]
-      </BOUCLE_evenements>
-   </ul>
+   <div class="grid">
+       <ul class="liste--bloc">
+        <BOUCLE_evenements(EVENEMENTS){statut=publie}{date_fin>=#ENV{date}}>[
+            [(#COMPTEUR_BOUCLE|=={1}|non)-->]<li class="grid__item lap-one-half">
+             (#INCLURE{fond=inclure/resume/evenement,id_evenement})
+          </li>[<!--(#COMPTEUR_BOUCLE|>={1}|oui)[(#TOTAL_BOUCLE|=={#COMPTEUR_BOUCLE}|oui)-->]]]</BOUCLE_evenements>
+       </ul>
+   </div>
 </section>
 </B_evenements>
