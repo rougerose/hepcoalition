@@ -16,13 +16,14 @@
 
 [(#CHEMIN{inc-theme-head.html}|oui)
 #INCLURE{fond=inc-theme-head,env}
-][
-<link rel="stylesheet" href="(#CSS{css/hepcoalition.css})" type="text/css" />][
+]
+<link href='http://fonts.googleapis.com/css?family=Cabin:400,400italic,700,700italic|Cabin+Condensed:400,700' rel='stylesheet' type='text/css' />
+[<link rel="stylesheet" href="(#CSS{js/flexslider/flexslider.css})" type="text/css" />]
+[<link rel="stylesheet" href="(#CSS{css/hepcoalition.css})" type="text/css" />][
 
 (#REM) Balise permettant aux plugins d'inserer des appels javascript ou css ;
     C'est ici que SPIP va inserer l'appel de la librairie jQuery
     Et appeler a la fin compacte_head pour agreger et compacter tout le head dans des fichiers statiques
     si l'option est cochee dans Configuration
 ]
-<link href='http://fonts.googleapis.com/css?family=Cabin:400,400italic,700,700italic|Cabin+Condensed:400,700' rel='stylesheet' type='text/css'>
 #INSERT_HEAD

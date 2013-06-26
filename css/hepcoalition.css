@@ -800,7 +800,8 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .nav:after, .media:after, .documents:after {
+.cf:after, .nav:after, .media:after, .island:after,
+.islet:after, .documents:after {
   content: "";
   display: table;
   clear: both; }
@@ -1777,6 +1778,37 @@ label,
 
 .islet .media__img--rev {
   margin-left: 12px; }
+
+/*------------------------------------*\
+    $ISLAND
+\*------------------------------------*/
+/**
+ * Simple, boxed off content, as per: csswizardry.com/2011/10/the-island-object
+ * E.g.:
+ *
+   <div class=island>
+       I am boxed off.
+   </div>
+ *
+ * Demo: jsfiddle.net/inuitcss/u8pV3
+ *
+ */
+.island,
+.islet {
+  display: block; }
+
+.island {
+  padding: 24px; }
+
+.island > :last-child,
+.islet > :last-child {
+  margin-bottom: 0; }
+
+/**
+ * Just like `.island`, only smaller.
+ */
+.islet {
+  padding: 12px; }
 
 /**
  * Style trumps; helper and brand classes
@@ -2759,14 +2791,6 @@ label,
     width: 1px !important; } }
 /* endif */
 /**
- * She’s all yours, cap’n... Begin importing your stuff here.
- */
-/**
-*
-* Foundation
-*
-**/
-/**
 *
 * HepCoalition
 *
@@ -3368,6 +3392,42 @@ body {
 
 /*-----  End of =nav  ------*/
 /*===============================
+=            =carousel            =
+===============================*/
+.js .flexslider__container {
+  max-width: 960px;
+  margin: 0 auto;
+  overflow: visible; }
+
+.flexslider {
+  border-width: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none; }
+
+.slides__item {
+  position: relative; }
+  .slides__item header {
+    position: absolute;
+    width: 50%;
+    left: 0;
+    bottom: 0;
+    padding: 8px 12px 12px;
+    background-color: rgba(221, 177, 3, 0.7); }
+    .slides__item header,
+    .slides__item header a {
+      color: #fff; }
+    .slides__item header h1 {
+      margin-bottom: 0.3em;
+      line-height: 1; }
+    .slides__item header p {
+      margin-bottom: 0;
+      line-height: 1.2; }
+
+/*-----  End of =slider  ------*/
+/*===============================
 =            =Listes            =
 ===============================*/
 /*==========  liste--bloc  ==========*/
@@ -3404,13 +3464,9 @@ body {
 =            =panel            =
 ==============================*/
 .panel {
-  padding: .5em;
   background-color: #ccc;
   -webkit-border-radius: 5px;
   border-radius: 5px; }
-
-.panel__item {
-  margin-bottom: 1.5em; }
 
 /* Couleurs */
 .panel--secondary {

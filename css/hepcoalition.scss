@@ -18,29 +18,6 @@
 @import "inuit.css/inuit";
 
 /**
- * She’s all yours, cap’n... Begin importing your stuff here.
- */
-//@import "ui/example";
-// @import "ui/fonts";
-
-// base
-
-// @import "ui/page","ui/page-head";
-
-// divers
-// @import "ui/misc";
-
-
-/**
-*
-* Foundation
-*
-**/
-
-// @import "variables";
-// @import "foundation/scss/foundation";
-
-/**
 *
 * HepCoalition
 *
@@ -67,6 +44,7 @@
 
 /* objets */
 @import "ui/nav";
+@import "ui/carousel";
 @import "ui/listes";
 @import "ui/box";
 @import "ui/panel";

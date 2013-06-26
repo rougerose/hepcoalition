@@ -1,0 +1,42 @@
+/*===============================
+=            =carousel            =
+===============================*/
+.flexslider__container {
+    .js & {
+        max-width: 960px;
+        margin: 0 auto;
+        overflow: visible;
+    }
+}
+.flexslider {
+    border-width: 0;
+    @include vendor(box-shadow,none);
+}
+
+.slides__item {
+    position: relative;
+    header {
+        position: absolute;
+        width: 50%;
+        left: 0;
+        bottom: 0;
+        // margin-left: 24px;
+        padding: 8px 12px 12px;
+        background-color: rgba(darken(#fcce17,10%),0.7);
+        &,
+        a {
+            color: #fff;
+        }
+        h1 {
+            margin-bottom: 0.3em;
+            line-height: 1;
+        }
+        p {
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+    }
+}
+
+
+/*-----  End of =slider  ------*/

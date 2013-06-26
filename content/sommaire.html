@@ -4,20 +4,27 @@
    [(#SET_PUSH{articles_carousel,#ID_ARTICLE})],
    [(#SET_PUSH{articles_selection,#ID_ARTICLE})]
 })]</BOUCLE_selection>[
-(#REM) selection des articles 
+
+(#REM) carousel
+==================================
+][(#GET{articles_carousel}|oui)
+<div class="grid__item">
+   [(#INCLURE{fond=liste/carousel,selection=#GET{articles_carousel}})]
+</div>][
+
+
+(#REM) selection des articles
+==================================
+
 ][(#GET{articles_selection}|oui)
-<div class="conteneur">
-   <div class="grid__item desk-eight-twelfths">
-      [(#INCLURE{fond=liste/articles-selection,
-         conteneur=principal,
-         selection=#GET{articles_selection},
-         section__title=[(#VAL{<:local:news_last_publications:>})],
-         pagination=10,
-         ajax})]
-   </div><!-- .grid__item --><!--
-   
---><div class="grid__item desk-four-twelfths">
-      [(#INCLURE{fond=liste/evenements,section__title=[(#VAL{<:local:agenda:>})]})]
-      [(#INCLURE{fond=inclure/resume/washington-call,env})]
-   </div>
-</div><!-- .conteneur -->]
+<div class="grid__item desk-eight-twelfths">
+   [(#INCLURE{fond=liste/articles-selection,
+      conteneur=principal,
+      selection=#GET{articles_selection},
+      section__title=[(#VAL{<:local:news_last_publications:>})],
+      pagination=10,
+      ajax})]
+</div><!-- .grid__item --><div class="grid__item desk-four-twelfths">
+   [(#INCLURE{fond=liste/evenements,section__title=[(#VAL{<:local:agenda:>})]})]
+   [(#INCLURE{fond=inclure/resume/washington-call,env})]
+</div><!-- .grid__item -->]

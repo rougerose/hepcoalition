@@ -1,0 +1,13 @@
+<BOUCLE_article-carousel(ARTICLES){id_article}>
+<article>
+   <img src="[(#LOGO_ARTICLE||image_reduire{960}|extraire_attribut{src})]" alt="#TITRE" />
+   <header>
+   <h1 class="entry-title hN">
+     <a href="#URL_ARTICLE" rel="bookmark">#TITRE</a>
+     [<span class="soustitre">(#SOUSTITRE)</span>]
+   </h1>
+   <div class="entry-content">
+    [<p>(#INTRODUCTION|PtoBR) <a href="#URL_ARTICLE" class="more"><:local:more:></a></p>]
+   </div>
+</article>
+</BOUCLE_article-carousel>

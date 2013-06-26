@@ -1,15 +1,13 @@
 /*==============================
 =            =panel            =
 ==============================*/
-.panel {
-    padding: .5em;
-    
+.panel {  
     background-color: #ccc;
     @include border-radius(5px);
 }
-    .panel__item {
-        margin-bottom: 1.5em;
-    }
+    // .panel__item {
+    //     margin-bottom: 1.5em;
+    // }
 
 /* Couleurs */
 .panel--secondary {
