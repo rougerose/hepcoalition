@@ -1,0 +1,13 @@
+<multi>
+[en][hepCoalition.org->http://hepcoalition.org] is conceived as a tool to support the development of a global advocacy movement on access to hepatitis C diagnostics, treatment and support for people living with a high risk for HCV in low- and middle-income countries, and particularly for people who use drugs and people living with HIV/HCV.
+[hepCoalition.org->http://hepcoalition.org] is developed by [Médecins du Monde->http://www.medecinsdumonde.org] and [Treatment Action Group->http://www.treatmentactiongroup.org]. 
+
+[fr][hepCoalition.org->http://hepcoalition.org] est conçu comme un outil pour soutenir le développement d’un mouvement de plaidoyer international en faveur de l’accès au dépistage, au traitement et au soutien des personnes présentant un risque élevé d’infection au VHC dans les pays à faible revenu et à revenu intermédiaire, et en particulier pour les personnes consommant des drogues et les personnes vivant co-infectées par le VIH et le VHC.
+[hepCoalition.org->http://hepcoalition.org] est développé par [Médecins du Monde->http://www.medecinsdumonde.org] et [Treatment Action Group->http://www.treatmentactiongroup.org].
+
+[es][hepCoalition.org->http://hepcoalition.org] pretende ser una herramienta para apoyar el desarrollo de un movimiento mundial de reivindicación del acceso al diagnóstico, el tratamiento y la atención del VHC para las personas que tienen un alto riesgo de contraer el VHC en los países de ingresos medios y bajos y, en especial, para los usuarios de drogas y las personas que viven con VIH o VHC.
+[hepCoalition.org->http://hepcoalition.org] está desarrollado por [Médecins du Monde->http://www.medecinsdumonde.org] y [Treatment Action Group->http://www.treatmentactiongroup.org].
+
+[ru]Веб-сайт [hepCoalition.org->http://hepcoalition.org] создан для того, чтобы способствовать развитию глобального движения за облегчение доступа к диагностике и лечению гепатита С, а также к помощи людям, живущим в условиях высокого риска заражения  гепатитом С (HCV) в странах с низким и средним доходом населения, и в особенности для людей, потребляющих наркотики и людей, зараженных ВИЧ/HCV.
+Сайт [hepCoalition.org->http://hepcoalition.org] создан ассоциацией «[Врачи мира->http://www.medecinsdumonde.org]» и [Инициативной группой по лечению СПИДа->http://www.treatmentactiongroup.org].
+</multi>

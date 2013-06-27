@@ -49,6 +49,5 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
    // U
    'updated' => 'Updated'
-
 );
 ?>
