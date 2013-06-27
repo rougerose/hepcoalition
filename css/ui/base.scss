@@ -10,9 +10,6 @@ a.spip_out {
    @include vendor(transition, color 0.35s ease-in-out 0.2s);
    &:visited{}
    &:hover{color: $brand-color; text-decoration: none;}
-   &:active, &:focus {
-      position: relative; top: 1px;
-   }
 }
 a.more {
     color: $primary-color;
@@ -20,6 +17,12 @@ a.more {
     &:hover {
         border-bottom-color: $primary-color;
     }
+}
+a.push,
+a.spip_out {
+  &:active, &:focus {
+      position: relative; top: 1px;
+   }
 }
 
 /*-----  End of =Base  ------*/

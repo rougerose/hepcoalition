@@ -1,42 +1,53 @@
-/*===============================
-=            =carousel            =
-===============================*/
-.flexslider__container {
+/*=================================
+=            =Carousel            =
+=================================*/
+.features {
+    width: 100%;
+    height: 420px;
+    background-color: #222;
+    .js & {
+        overflow: hidden;
+    }
+}
+.flexslider-container {
     .js & {
         max-width: 960px;
         margin: 0 auto;
         overflow: visible;
     }
 }
-.flexslider {
-    border-width: 0;
-    @include vendor(box-shadow,none);
-}
-
-.slides__item {
-    position: relative;
-    header {
-        position: absolute;
-        width: 50%;
-        left: 0;
-        bottom: 0;
-        // margin-left: 24px;
-        padding: 8px 12px 12px;
-        background-color: rgba(darken(#fcce17,10%),0.7);
-        &,
+    .flexslider {
+        border-width: 0;
+    }
+        .slides__item {
+            position: relative;
+        }
+            .slides__item--holder {
+                position: absolute;
+                width: (100%/3);
+                bottom: 0;
+                padding: 10px 15px;
+                padding-left: 30px;
+                background-color: rgba(#fff,0.5);
+                p {
+                    margin-bottom: 0;
+                }
+            }
+    .flex-direction-nav {
         a {
-            color: #fff;
+            width: 42px;
+            height: 42px;
+            margin: 0;
+            background-image: url("img/icon__sprite.png");
+            opacity: 1;
         }
-        h1 {
-            margin-bottom: 0.3em;
-            line-height: 1;
+        .flex-prev {
+            left: -21px;
         }
-        p {
-            margin-bottom: 0;
-            line-height: 1.2;
+        .flex-next {
+            right: -21px;
+            background-position: 0 -42px;
         }
     }
-}
 
-
-/*-----  End of =slider  ------*/
+/*-----  End of =Carousel  ------*/

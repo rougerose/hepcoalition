@@ -1,16 +1,16 @@
 <BOUCLE_article(ARTICLES){id_article}>
 <article id="resume-art-#ID_ARTICLE" class="hentry resume article cf">
-  <div>
+  <div class="resume--holder">
     <header>
-    <h1 class="entry-title hN">
-      <a href="#URL_ARTICLE" rel="bookmark">#TITRE</a>
-      [<span class="soustitre">(#SOUSTITRE)</span>]
-    </h1>
-  </header>
-  <div class="entry-content[(#LOGO_ARTICLE|oui) plus-logo]">
-   [<p>(#INTRODUCTION|PtoBR) <a href="#URL_ARTICLE" class="more"><:local:more:></a></p>]
-  </div>
-  <time class="updated" datetime="[(#DATE|affdate{Y-m-d})]">[(#DATE|affdate)]</time>
+      <h1 class="entry-title hN">
+        <a href="#URL_ARTICLE" rel="bookmark">#TITRE</a>
+        [<span class="soustitre">(#SOUSTITRE)</span>]
+      </h1>
+    </header>
+    <div class="entry-content[(#LOGO_ARTICLE|oui) plus-logo]">
+     [<p>(#INTRODUCTION|PtoBR) <a href="#URL_ARTICLE" class="more"><:local:more:></a></p>]
+    </div>
+    <time class="updated" datetime="[(#DATE|affdate{Y-m-d})]">[(#DATE|affdate)]</time>
   </div>
 </article>
 </BOUCLE_article>

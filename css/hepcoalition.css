@@ -3002,17 +3002,18 @@ a.spip_out {
   a.spip_out:hover {
     color: #19a1ac;
     text-decoration: none; }
-  a:active, a:focus,
-  a.spip_out:active,
-  a.spip_out:focus {
-    position: relative;
-    top: 1px; }
 
 a.more {
   color: #19a1ac;
   border-bottom: 1px solid #fff; }
   a.more:hover {
     border-bottom-color: #19a1ac; }
+
+a.push:active, a.push:focus,
+a.spip_out:active,
+a.spip_out:focus {
+  position: relative;
+  top: 1px; }
 
 /*-----  End of =Base  ------*/
 /*================================
@@ -3207,9 +3208,7 @@ body {
 .wrapper {
   max-width: 1100px;
   margin-right: auto;
-  margin-left: auto;
-  padding-right: 24px;
-  padding-left: 24px; }
+  margin-left: auto; }
 
 /*-----  End of =page  ------*/
 /*==================================
@@ -3253,6 +3252,7 @@ body {
 ============================*/
 .nav--dropdown {
   position: absolute;
+  z-index: 99;
   top: -9999px;
   list-style: none;
   margin-left: 0;
@@ -3271,18 +3271,17 @@ body {
 
 .menu-lang {
   position: absolute;
+  z-index: 99;
   top: -9999px;
   list-style: none;
   width: 100%;
-  max-height: none;
+  margin-top: 2px;
+  max-width: 200px;
   height: auto;
   background: #fff;
   border: 1px solid #cccccc;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
   font-size: 1.125em;
-  z-index: 99;
-  margin-top: 2px;
-  max-width: 200px;
   text-align: left;
   opacity: 0;
   -webkit-transition: opacity .5s ease;
@@ -3377,7 +3376,7 @@ body {
   text-transform: uppercase;
   text-align: left; }
   .nav-principale > li:hover .nav--dropdown {
-    top: 1.5em;
+    top: 2em;
     left: -5px; }
   .nav-principale .nav__item {
     position: relative;
@@ -3391,42 +3390,6 @@ body {
   padding: 0 5px; }
 
 /*-----  End of =nav  ------*/
-/*===============================
-=            =carousel            =
-===============================*/
-.js .flexslider__container {
-  max-width: 960px;
-  margin: 0 auto;
-  overflow: visible; }
-
-.flexslider {
-  border-width: 0;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -ms-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none; }
-
-.slides__item {
-  position: relative; }
-  .slides__item header {
-    position: absolute;
-    width: 50%;
-    left: 0;
-    bottom: 0;
-    padding: 8px 12px 12px;
-    background-color: rgba(221, 177, 3, 0.7); }
-    .slides__item header,
-    .slides__item header a {
-      color: #fff; }
-    .slides__item header h1 {
-      margin-bottom: 0.3em;
-      line-height: 1; }
-    .slides__item header p {
-      margin-bottom: 0;
-      line-height: 1.2; }
-
-/*-----  End of =slider  ------*/
 /*===============================
 =            =Listes            =
 ===============================*/
@@ -3592,47 +3555,52 @@ body {
     color: #10656c; }
 
 /*==========  résumés  ==========*/
-.resume {
+.resume .entry-title {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+  line-height: 1; }
+.resume .updated {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.84615;
+  text-transform: uppercase;
+  color: #afafaf; }
+
+.resume--holder {
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  background-size: 48% auto; }
+
+/* résumé d'article */
+.resume.article {
   border-bottom: 1px solid #000;
   padding-bottom: 12px;
   margin-bottom: 24px; }
-  .resume > div {
-    background-position: 100% 0;
-    background-repeat: no-repeat;
-    background-size: 48% auto; }
-  .resume .entry-title {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1;
-    line-height: 1;
+  @media only screen and (min-width: 481px) {
+    .resume.article header {
+      float: left;
+      padding-right: 1%;
+      width: 50%; } }
+  .resume.article .entry-title {
     margin-top: -0.2em; }
-  .resume .updated {
-    font-size: 13px;
-    font-size: 0.8125rem;
-    line-height: 1.84615;
-    text-transform: uppercase;
-    color: #afafaf; }
-
-/* résumé d'article */
-@media only screen and (min-width: 481px) {
-  .resume.article header {
-    float: left;
-    padding-right: 1%;
-    width: 50%; } }
-@media only screen and (min-width: 481px) {
-  .resume.article .entry-content {
-    float: right;
-    padding-left: 1%;
-    width: 50%; }
-    .resume.article .entry-content.plus-logo {
-      float: none;
-      padding-left: 0;
-      padding-right: 1%; } }
+  @media only screen and (min-width: 481px) {
+    .resume.article .entry-content {
+      float: right;
+      padding-left: 1%;
+      width: 50%; }
+      .resume.article .entry-content.plus-logo {
+        float: none;
+        padding-left: 0;
+        padding-right: 1%; } }
 
 /* résumé d'evenement */
 .resume.vevent {
   padding: 0 0 0 55px;
-  position: relative; }
+  position: relative;
+  border-bottom: 1px solid #000;
+  padding-bottom: 12px;
+  margin-bottom: 24px; }
   .resume.vevent time[itemprop="startDate"] {
     display: block;
     position: absolute;
@@ -3649,15 +3617,16 @@ body {
     border-radius: 4px;
     text-transform: uppercase;
     text-align: center;
-    font-family: "Cabin Condensed", "Arial Narrow", Arial, sans-serif;
-    font-size: 30px;
-    line-height: 25px;
-    font-weight: 700; }
+    font: 700 30px/25px "Cabin Condensed", "Arial Narrow", Arial, sans-serif; }
     .resume.vevent time[itemprop="startDate"] span {
       display: block;
       margin-top: -4px;
       font-size: 20px;
       line-height: 25px; }
+
+/* résumé carousel */
+.article--carousel .entry-title {
+  margin-bottom: 0; }
 
 /*==========  contenus développés (objet)  ==========*/
 .objet header {
@@ -3678,6 +3647,50 @@ body {
   margin-bottom: 24px; }
 
 /*-----  End of =Hentry  ------*/
+/*=================================
+=            =Carousel            =
+=================================*/
+.features {
+  width: 100%;
+  height: 420px;
+  background-color: #222; }
+  .js .features {
+    overflow: hidden; }
+
+.js .flexslider-container {
+  max-width: 960px;
+  margin: 0 auto;
+  overflow: visible; }
+
+.flexslider {
+  border-width: 0; }
+
+.slides__item {
+  position: relative; }
+
+.slides__item--holder {
+  position: absolute;
+  width: 33.33333%;
+  bottom: 0;
+  padding: 10px 15px;
+  padding-left: 30px;
+  background-color: rgba(255, 255, 255, 0.5); }
+  .slides__item--holder p {
+    margin-bottom: 0; }
+
+.flex-direction-nav a {
+  width: 42px;
+  height: 42px;
+  margin: 0;
+  background-image: url("img/icon__sprite.png");
+  opacity: 1; }
+.flex-direction-nav .flex-prev {
+  left: -21px; }
+.flex-direction-nav .flex-next {
+  right: -21px;
+  background-position: 0 -42px; }
+
+/*-----  End of =Carousel  ------*/
 /* misc */
 /*=============================
 =            =misc            =
