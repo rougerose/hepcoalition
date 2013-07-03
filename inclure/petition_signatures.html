@@ -10,18 +10,17 @@
 </BOUCLE_reponses>
 [(#SET{reponses,#GET{reponses}|tri_alpha})]
 
-<BOUCLE_data(FORMULAIRES_REPONSES_CHAMPS){id_formulaires_reponse=#GET{cle}}>
-
-</BOUCLE_data>
-
 <BOUCLE_autoriser(CONDITION){si #AUTORISER{modifier, formulaires_reponse}}>
+[(#REM) autoriser la modification des signataires ?]
 [(#SET{modifier,' '})]
 </BOUCLE_autoriser>
-
+<B_affichage>
+#ANCRE_PAGINATION
 <div class="petition__box--supporters cf">
    [<h1 class="hN">(#GET{total}|singulier_ou_pluriel{local:signatories_singular,local:signatories_plural,nb})</h1>]
+   [<nav class="pagination haut[ (#ENV{pagination_align})]">(#PAGINATION{li})</nav>]
    <ul class="liste--bloc sep">
-      <BOUCLE_affichage(DATA){source table,#GET{reponses}}>[(#SET{cle,#CLE|substr{3}})]
+      <BOUCLE_affichage(DATA){source table,#GET{reponses}}{pagination 50}>[(#SET{cle,#CLE|substr{3}})]
       <li class="signature">
          <div class="table">
             <div class="table__cell table__cell--name t33">
@@ -45,6 +44,8 @@
       </li>
       </BOUCLE_affichage>
    </ul>
+   [<nav class="pagination bas[ (#ENV{pagination_align})]">(#PAGINATION{li})</nav>]
 </div>
+</B_affichage>
 </BOUCLE_formulaire>
 </BOUCLE_article>
