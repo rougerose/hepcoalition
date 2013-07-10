@@ -1,30 +1,5 @@
-[(#SET{articles_carousel,#ARRAY})][(#SET{articles_selection,#ARRAY})]
-<BOUCLE_selection(ARTICLES pb_selection){lang}{par ordre}{spip_pb_selection.id_rubrique=0}>[
-(#LOGO_ARTICLE|et{[(#LOGO_ARTICLE|largeur|>={800})]}|?{
-   [(#SET_PUSH{articles_carousel,#ID_ARTICLE})],
-   [(#SET_PUSH{articles_selection,#ID_ARTICLE})]
-})]</BOUCLE_selection>[
-
-(#REM) carousel
-==================================
-][(#GET{articles_carousel}|oui)
-<div class="grid__item">
-   [(#INCLURE{fond=liste/carousel,selection=#GET{articles_carousel}})]
-</div>][
-
-
-(#REM) selection des articles
-==================================
-
-][(#GET{articles_selection}|oui)
-<div class="grid__item desk-eight-twelfths">
-   [(#INCLURE{fond=liste/articles-selection,
-      conteneur=principal,
-      selection=#GET{articles_selection},
-      section__title=[(#VAL{<:local:news_last_publications:>})],
-      pagination=10,
-      ajax})]
-</div><!-- .grid__item --><div class="grid__item desk-four-twelfths">
-   [(#INCLURE{fond=liste/evenements,section__title=[(#VAL{<:local:agenda:>})]})]
-   [(#INCLURE{fond=inclure/resume/washington-call,env})]
-</div><!-- .grid__item -->]
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique=10}>
+<BOUCLE_article(ARTICLES){id_rubrique}{lang}{0,1}>
+<INCLURE{fond=content/article-biglogo,id_article,env} />
+</BOUCLE_article>
+</BOUCLE_rubrique>
