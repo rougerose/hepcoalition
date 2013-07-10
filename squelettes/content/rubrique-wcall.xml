@@ -1,7 +1,0 @@
-<composition>
-   <nom>Rubrique Washington Call</nom>
-   <description>Composition pour la rubrique du Washington Call</description>
-   <icon>images/objet-simple.png</icon>
-   <branche type="article" composition="wcall" />
-   <branche type="rubrique" composition="wcall" />
-</composition>
