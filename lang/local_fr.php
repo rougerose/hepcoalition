@@ -14,7 +14,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'email' => 'e-mail',
 
    // H
-   'home' => 'Accueil',
+   'home' => 'Accueil', 
 
    //M
    'more' => 'La suite',
@@ -34,6 +34,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // R
 
    // S
+   'share' => 'Partager',
    'signatories' => 'signataires',
    'signatories_coalition' => "Signataires",
    'signatories_singular' => "1 signataire",

@@ -22,6 +22,16 @@
       </BOUCLE_form_petition>
       <br />
       <//B_form_petition>
+
+      <aside>
+         <ul class="meta box-aside liste--bloc">
+            [(#PLUGIN{socialtags}|oui)
+            <li class="share mbr">
+               <h1 id="share" class="hN intertitre"><:local:share:></h1>
+            </li>]
+         </ul>
+      </aside>
+
    </div><!--
 --><div class="grid__item one-whole desk-eight-twelfths push--desk--one-twelfth">
       <div class="self__body entry-content contenu surlignable">
@@ -32,7 +42,7 @@
             (#TEXTE|image_reduire{600,0})
          </div><!-- .texte -->]
          [<div class="ps txt">
-            <h2 class="spip"><:migreurop:info_ps:></h2>
+            <h2 class="spip"><:local:info_ps:></h2>
             (#PS|image_reduire{600,0})
          </div><!-- .ps -->]
          [(#PAGE|=={contact}|oui)
@@ -56,17 +66,6 @@
          </aside>]
       </div><!-- .self__body -->
    </div><!-- .g one-whole desk-six-tenths -->
-
-   <div class="grid__item">
-      <aside>
-         <ul class="meta-publi box-aside">
-            [(#PLUGIN{socialtags}|oui)
-            <li class="share mbr">
-               <h1 id="share" class="intertitre sp sp--share"><:migreurop:info_partager:></h1>
-            </li>]
-         </ul>
-      </aside>
-   </div>
 
    <!-- <div class="grid__item">
       <aside class="objet-meta">

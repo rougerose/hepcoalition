@@ -1,7 +1,9 @@
 /*============================
 =            =box            =
 ============================*/
-
+.box {
+    @extend .landmark;
+}
 /* petition */
 .petition__box {
     background-color: darken(#fff,10%);
@@ -18,6 +20,16 @@
         border-bottom: 3px solid $primary-color;
         margin-bottom: 0;
         color: $primary-color;
+    }
+}
+
+.meta {
+    .hN {
+        border-bottom: 2px solid $secondary-color;
+        margin-bottom: .5em;
+        @include font-size($h4-size);
+        font-weight: normal;
+        color: $secondary-color;
     }
 }
 
