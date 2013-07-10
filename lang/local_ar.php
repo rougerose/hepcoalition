@@ -34,6 +34,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // R
 
    // S
+   'share' => 'Share',
    'signatories' => '&#160;&#1575;&#1604;&#1605;&#1608;&#1602;&#1593;&#1608;&#1606;',
    'signatories_coalition' => "&#160;&#1575;&#1604;&#1605;&#1608;&#1602;&#1593;&#1608;&#1606;",
    'signatories_singular' => '1 supporter',
