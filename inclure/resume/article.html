@@ -1,0 +1,26 @@
+[(#REM)
+   VARIABLES
+   =====================================
+   contexte:      ouverture (sommaire, rubrique), principal (colonne principale), extra (colonne secondaire), portfolio (article)
+   conteneur:     carousel, liste
+
+]<BOUCLE_article(ARTICLES){id_article}>
+<article class="hentry resume">
+    <header>
+       [(#SOUSTITRE|oui)<hgroup>]
+          <h1 class="entry-title hN"><a href="#URL_ARTICLE" rel="bookmark">#TITRE</a></h1>
+          [<h2 class="soustitre hN">(#SOUSTITRE)</h2>]
+       [(#SOUSTITRE|oui)</hgroup>]
+    </header>
+    <div class="entry-content[(#LOGO_ARTICLE|oui) plus-logo]">
+     [<p>(#INTRODUCTION|couper{100}|PtoBR) <a href="#URL_ARTICLE" class="suite--link"><:local:more:></a></p>]
+    </div>
+    <ul class="meta-publi">
+       <li><time class="updated" datetime="[(#DATE|affdate{Y-m-d})]">[(#DATE|journum)][ (#DATE|nom_mois{abbr})][ (#DATE|affdate{Y})]</time></li>
+       [<li class="byline author vcard">
+          (#MODELE{article-auteurs})
+       </li>]
+    </ul>
+    [(#LOGO_ARTICLE||image_reduire{200,150}|inserer_attribut{class,media__img spip_logos})]
+</article>
+</BOUCLE_article>

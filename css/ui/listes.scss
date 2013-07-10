@@ -1,0 +1,19 @@
+/*===============================
+=            =Listes            =
+===============================*/
+
+/*==========  liste--bloc  ==========*/
+.liste--bloc {
+    list-style:none;
+    margin-left:0;
+}
+
+/*==========  separateur  ==========*/
+.sep {
+    > li {
+        border-bottom: 1px solid darken(#fff,5%);
+    }
+}
+
+/*-----  End of =Listes  ------*/
+

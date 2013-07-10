@@ -1,0 +1,82 @@
+/*===============================
+=            =medias            =
+===============================*/
+
+.logo--large {
+    width: 100%;
+    display: block; // annule une marge supplémentaire en bas.
+}
+
+/*==========  box-shadow sur logo  ==========*/
+
+.logo__box {
+    margin-bottom: $base-spacing-unit*2;
+    position: relative;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+.logo__box:after {
+    position:absolute;
+    right:10px; /* Positioned some distance in from the left and right edges to avoid the box-shadow blur from peeking through on the sides of the box */
+    bottom:0;
+    left:10px;
+    height:20px;
+    border-radius:0 0 50% 50% / 0 0 20px 20px;
+    box-shadow:0 10px 10px rgba(0, 0, 0, 0.5);
+    content:'';
+}
+.logo__box--content {
+    position:relative;
+    z-index:1; /* Make sure it’s rendered on top of the pseudo-element */
+    padding:10px;
+    background:#fff;
+}
+
+/*==========  documents et images  ==========*/
+.documents {
+    .hN {
+        color: $primary-color;
+    }
+}
+
+.documents {
+  margin-bottom: 0;
+  @extend .cf;
+  .hN {
+    @extend .gamma;
+   border-bottom: 2px solid $primary-color;
+  }
+  .block-list {
+    border-top: none;
+}
+  .media__link {float: left;}
+  .media__img {
+    margin-bottom: $base-spacing-unit;
+    padding: 4px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border: 1px solid rgba(0,0,0,0.2);
+      @include vendor(box-shadow, 0 1px 3px rgba(0,0,0,.1));
+}
+  .media__body {margin-left: 0;}
+
+}
+/*  tous les autres documents */
+.documents.fichiers {
+  .spip_doc_titre,
+  p {
+   margin-bottom: 0;
+}
+}
+
+/* image insérée dans #TEXTE */
+.spip_documents_left {
+    .texte & {
+        margin-right: 10px;
+    }
+}
+
+
+ 
+
+/*-----  End of =medias  ------*/
+

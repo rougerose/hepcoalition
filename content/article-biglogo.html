@@ -1,0 +1,80 @@
+<BOUCLE_article(ARTICLES){id_article}>
+<article class="self objet article hentry cf">
+   <div class="grid__item">
+      <header>
+         [(#SOUSTITRE|oui)
+         <hgroup>]
+            <h1 class="self__titre entry-title titre hN">#TITRE</h1>
+            [<h2 class="soustitre hN">(#SOUSTITRE)</h2>]
+         [(#SOUSTITRE|oui)
+         </hgroup>]
+      </header>
+   </div>
+
+   [<div class="grid__item">
+      (#LOGO_ARTICLE|oui)
+         [<div class="logo__box"><div class="logo__box--content"><img src="(#LOGO_ARTICLE|extraire_attribut{src})" alt="" class="logo--large"></div></div>]
+   </div>]
+
+   <div class="grid__item desk-four-twelfths">
+      <BOUCLE_form_petition(ARTICLES){id_article}{si #IDFORMULAIRE}>
+      <INCLURE{fond=inclure/petition,id_article} />
+      </BOUCLE_form_petition>
+      <br />
+      <//B_form_petition>
+
+      <aside>
+         <ul class="meta box-aside liste--bloc">
+            [(#PLUGIN{socialtags}|oui)
+            <li class="share mbr">
+               <h1 id="share" class="hN intertitre"><:local:share:></h1>
+            </li>]
+         </ul>
+      </aside>
+
+   </div><!--
+--><div class="grid__item one-whole desk-eight-twelfths push--desk--one-twelfth">
+      <div class="self__body entry-content contenu surlignable">
+         [<div class="chapo txt landmark">
+            (#CHAPO|image_reduire{600,0})
+         </div><!-- .chapeau -->]
+         [<div class="texte txt cf">
+            (#TEXTE|image_reduire{600,0})
+         </div><!-- .texte -->]
+         [<div class="ps txt">
+            <h2 class="spip"><:local:info_ps:></h2>
+            (#PS|image_reduire{600,0})
+         </div><!-- .ps -->]
+         [(#PAGE|=={contact}|oui)
+            [(#FORMULAIRE_ECRIRE_AUTEUR)]]
+
+         [(#REM) Gestion du portfolio et des documents ]
+            [(#INCLURE{fond=inclure/documents,id_article,portfolio=#GET{portfolio}})]
+
+         [(#REM) signatures formulaire formidable -- petition ]
+         <BOUCLE_signatures(ARTICLES){id_article}{si #IDFORMULAIRE}>
+         <INCLURE{fond=inclure/petition_signatures,id_article,ajax} />
+         </BOUCLE_signatures>
+         
+         [<aside class="notes txt">
+            <div class="grid">
+               <div class="grid__item desk-one-half">
+                  <h1 class="spip"><:info_notes:></h1>
+                  (#NOTES)
+               </div>
+            </div>
+         </aside>]
+      </div><!-- .self__body -->
+   </div><!-- .g one-whole desk-six-tenths -->
+
+   <!-- <div class="grid__item">
+      <aside class="objet-meta">
+         <ul class="nav">
+            <li><time class="updated" datetime="[(#DATE|affdate{Y-m-d})]">[(#DATE|affdate)]</time></li>
+            <B_auteurs><li class="byline author vcard"><:caap:par:> <BOUCLE_auteurs(AUTEURS){id_article}{par nom}{", "}><span class="fn">#NOM</span></BOUCLE_auteurs></li></B_auteurs>
+            [(#MODELE{article-self-traductions})]
+         </ul>
+      </aside>
+   </div> -->
+</article><!-- .self -->
+</BOUCLE_article>

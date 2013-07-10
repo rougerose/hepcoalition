@@ -1,0 +1,94 @@
+/*====================================
+=            =formulaires            =
+====================================*/
+
+/*==========  formulaires : styles communs  ==========*/
+
+fieldset {
+    border: 1px solid #ddd;
+}
+legend {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #fff;
+}
+label {
+    font-weight: bold;
+    color: #4d4d4d;
+}
+input, textarea {
+    width: 100%;
+    background-color: #fff;
+    padding: .5em;
+    border: 1px solid #ccc;
+    @include vendor(box-shadow, inset 0 1px 2px rgba(0,0,0,0.1));
+    @include block-glowing-effect(focus, $glowing-effect-fade-time, $glowing-effect-color);
+    &:focus {
+    background: $input-focus-bg-color;
+    border-color: $input-focus-border-color;
+    outline: none;
+  }
+}
+/* messages */
+.reponse_formulaire {
+    line-height: 1.5 * $base-line-height;
+    font-weight: 700;
+    padding: 0 $base-spacing-unit/2;
+    color: #fff;
+    // border: 1px solid #000;
+    @include vendor(border-radius,4px);
+    @include vendor(box-shadow, 0 0 5px rgba(0,0,0,0.15));
+}
+.reponse_formulaire_ok {
+    background-color: #04595F;
+    // border-color: lighten(#04595f,15%) darken(#04595F,8%) darken(#04595F,8%) lighten(#04595F,8%);
+}
+.reponse_formulaire_erreur {
+    background-color: darken($secondary-color,5%);
+    // border-color: lighten($secondary-color,10%) darken($secondary-color,10%) darken($secondary-color,8%) lighten($secondary-color,5%);
+}
+
+.erreur_message {
+    display: block;
+    color: $secondary-color;
+    font-style: italic;
+}
+
+.formulaire_spip {
+    font-family: $CabinC;
+    ul {
+        list-style:none;
+        margin-left:0;
+    }
+    li {
+        margin-bottom: $base-spacing-unit;
+    }
+    .text,
+    select {
+        width: 100%;
+    }
+    .boutons {
+        margin-bottom: 0;
+        input {
+            @include button-base;
+            @include button-size($padding:$button-med, $full-width:true, $is-input:true);
+            @include button-style;
+            @include radius;
+            @include single-transition;
+            @include inset-shadow($active:true);
+            font-weight: 700;
+            text-transform: uppercase
+        }
+    }
+}
+
+/*==========  formulaires Formidable  ==========*/
+.formulaire_formidable {
+    label {
+        display: none;
+    }
+}
+
+
+/*-----  End of =formulaires  ------*/
+

@@ -1,0 +1,44 @@
+/*===============================
+=            =Hentry            =
+===============================*/
+
+/* pour les résumés */
+.resume {
+    header {
+        float: left;
+        @extend .desk-one-half;
+        padding-right: $half-spacing-unit;
+    }
+    .entry-content {
+        float: left;
+        @extend .desk-one-half;
+        padding-left: $half-spacing-unit;
+        &.plus-logo {
+            float: none;
+        }
+    }
+}
+
+/* pour les contenus développés (objet) */
+.objet {
+    header {
+        text-align: center;
+    }
+    .titre {
+        color: $primary-color;
+        @include font-size(48px);
+    }
+    .soustitre {
+        color: #222;
+       @include font-size(28px);
+       font-weight: 400;
+       display: block;
+    }
+    .texte {
+        margin-bottom: $base-spacing-unit;
+    }
+
+}
+
+/*-----  End of =Hentry  ------*/
+

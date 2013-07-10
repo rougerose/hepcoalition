@@ -1,0 +1,183 @@
+/*------------------------------------*\
+    VARS.SCSS
+\*------------------------------------*/
+/**
+ * Any variables you find set in inuit.css’ `_vars.scss` that you do not wish to
+ * keep, simply redefine here. This means that if inuit.css, for example, sets
+ * your `$base-font-size` at 16px and you wish it to be 14px, simply redeclare
+ * that variable in this file. inuit.css ignores its own variables in favour of
+ * using your own, so you can completely modify how inuit.css works without ever
+ * having to alter the framework itself.
+ */
+
+
+
+
+/*------------------------------------*\
+    $OBJECTS-AND-ABSTRACTIONS
+\*------------------------------------*/
+/**
+ * All of inuit.css’ objects and abstractions are initially turned off by
+ * default. This means that you start any project with as little as possible,
+ * and introducing objects and abstractions is as simple as switching the
+ * following variables to `true`.
+ */
+$use-grids:         true;
+$use-flexbox:       false;
+$use-columns:       false;
+$use-nav:           true;
+$use-options:       false;
+$use-pagination:    false;
+$use-breadcrumb:    false;
+$use-media:         true;
+$use-marginalia:    false;
+$use-island:        false;
+$use-block-list:    false;
+$use-matrix:        false;
+$use-split:         false;
+$use-this-or-this:  false;
+$use-link-complex:  false;
+$use-flyout:        false;
+$use-arrows:        false;
+$use-sprite:        false;
+$use-icon-text:     false;
+$use-beautons:      false;
+$use-lozenges:      false;
+$use-rules:         false;
+$use-stats:         false;
+$use-greybox:       false;
+
+
+
+
+
+/*------------------------------------*\
+    $OVERRIDES
+\*------------------------------------*/
+/**
+ * Place any variables that should override inuit.css’ defaults here.
+ */
+
+$brand-color: #19a1ac !default;
+$primary-color: $brand-color !default;
+$secondary-color: #c11f02 !default;
+$pagefoot-color: #072b2e !default;
+// $brand-face:        'CenturyStd-BookCondensed',Georgia,serif !default;
+// $body-font-family : $brand-face;
+
+
+
+/*------------------------------------*\
+    $CUSTOM
+\*------------------------------------*/
+/**
+ * Place any of your own variables that sit on top of inuit.css here.
+ */
+
+
+/*============================================
+=            Foundation Variables            =
+============================================*/
+$em-base: 16px !default;
+$default-float: left;
+$cursor-pointer-value: "pointer";
+$global-radius: 3px;
+$global-rounded: 1000px;
+
+// We use these to control text direction settings
+$text-direction: ltr !default;
+// NOTE: No need to change this conditional statement, $text-direction variable controls it all.
+$default-float: left !default;
+$opposite-direction: right !default;
+@if $text-direction == ltr {
+  $default-float: left;
+  $opposite-direction: right;
+} @else {
+  $default-float: right;
+  $opposite-direction: left;
+}
+
+/*==========  Foundation emCalc  ==========*/
+@function emCalc($pxWidth) {
+  @return $pxWidth / $em-base * 1em;
+}
+
+/*==========  Foundation triangle variables  ==========*/
+
+// Inset shadow shiny edges and depressions.
+
+$shiny-edge-size: 0 1px 0;
+$shiny-edge-color: rgba(#fff, .5);
+$shiny-edge-active-color: rgba(#000, .2);
+
+// Dropdown Variables
+//
+
+// Height and width styles.
+
+$f-dropdown-max-width: 200px;
+$f-dropdown-height: auto;
+$f-dropdown-max-height: none;
+$f-dropdown-margin-top: 2px;
+
+// Background color
+
+$f-dropdown-bg: #fff;
+
+// Border styles for dropdowns.
+
+$f-dropdown-border-style: solid;
+$f-dropdown-border-width: 1px;
+$f-dropdown-border-color: darken(#fff, 20%);
+
+// Triangle pip.
+
+$f-dropdown-triangle-size: 6px;
+$f-dropdown-triangle-color: #fff;
+$f-dropdown-triangle-side-offset: 10px;
+
+// List elements.
+
+$f-dropdown-list-style: none;
+$f-dropdown-font-color: #555;
+$f-dropdown-font-size: emCalc(14px);
+$f-dropdown-list-padding: emCalc(5px) emCalc(10px);
+$f-dropdown-line-height: emCalc(18px);
+$f-dropdown-list-hover-bg: $secondary-color;
+$dropdown-mobile-left: 0;
+$dropdown-mobile-default-float:   0 !default;
+
+// When the dropdown has custom content.
+
+$f-dropdown-content-padding: emCalc(20px);
+
+$glowing-effect-fade-time: .45s;
+$glowing-effect-color: darken(#fff,40%);
+$input-focus-bg-color: darken (#fff, 2%);
+$input-focus-border-color: darken(#fff, 40%);
+
+
+/*-----  End of Foundation Variables  ------*/
+
+
+/*==========  =fonts  ==========*/
+$mono-font-family: Menlo,monospace;
+// $centuryBook: 'CenturyStd-BookCondensed',Georgia,serif;
+// $centuryItal: 'CenturyStd-BookCondensedIt';
+// $leagueReg: "LeagueGothicRegular",Helvetica,Arial,sans-serif;
+$arialnarrow: "Arial Narrow", Arial, sans-serif;
+$helvetica: "Helvetica Neue",Helvetica, Arial, sans-serif;
+
+// serif
+// $dejavuSerif: "DejaVuSerifCondensed", Georgia, "Times New Roman", Times, serif;
+// $dejavuSerifBold: "DejaVuSerifCondensedBold",Georgia, "Times New Roman", Times, serif;
+
+// sans
+// $dejavuSans: "DejaVuSansCondensed","Helvetica Neue",Helvetica, Arial, sans-serif;
+// $dejavuSansB: "DejaVuSansCondensedBold","Helvetica Neue",Helvetica, Arial, sans-serif;
+$Cabin: "Cabin", "Helvetica Neue",Helvetica,Arial,sans-serif;
+$CabinC: "Cabin Condensed", "Arial Narrow",Arial,sans-serif;
+$brand-face: $Cabin;
+$body-font-family : $brand-face;
+
+
