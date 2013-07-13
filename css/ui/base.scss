@@ -1,7 +1,13 @@
 /*=============================
 =            =Base            =
 =============================*/
-
+img,
+img[height],
+img[width] {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+}
 /*==========  Liens  ==========*/
 a,
 a.spip_out {

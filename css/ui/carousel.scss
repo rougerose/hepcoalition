@@ -23,16 +23,13 @@
         .slides__item {
             position: relative;
         }
-            .slides__item--holder {
+            .slides__item--body {
                 position: absolute;
                 width: (100%/3);
                 bottom: 0;
                 padding: 10px 15px;
                 padding-left: 30px;
                 background-color: rgba(#10656C,0.5);
-                p {
-                    margin-bottom: 0;
-                }
             }
     .flex-direction-nav {
         a {

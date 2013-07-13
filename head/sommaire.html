@@ -21,13 +21,3 @@
 ]
 <title>[(#NOM_SITE_SPIP|typo|textebrut)][ - (#SLOGAN_SITE_SPIP|typo|textebrut)]</title>
 [<meta name="description" content="(#DESCRIPTIF_SITE_SPIP|couper{150}|textebrut)" />]
-<B_selection>
-<style type="text/css">
-    @media screen and (min-width: 481px) {
-        <BOUCLE_selection(ARTICLES pb_selection){lang}{par ordre}{spip_pb_selection.id_rubrique=0}>[
-        (#LOGO_ARTICLE|et{[(#LOGO_ARTICLE|largeur|<{800})]}|oui)
-        #resume-art-#ID_ARTICLE > div {background-image: url('[(#LOGO_ARTICLE||image_reduire{335}|extraire_attribut{src}|url_absolue)]');}
-        ]</BOUCLE_selection>
-    }
-</style>
-</B_selection>

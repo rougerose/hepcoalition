@@ -1,6 +1,15 @@
 /*===============================
 =            =medias            =
 ===============================*/
+.media-logo {
+  padding: 5px;
+  background: #fff;
+  box-shadow: 0 0 3px rgba(lighten(#000,30%),0.2);
+  @include vendor(transition, all 0.35s ease 0.2s);
+  a &:hover {
+    box-shadow: 0 0 6px $primary-color;
+  }
+}
 
 .logo--large {
     width: 100%;
@@ -8,6 +17,15 @@
 }
 
 /*==========  box-shadow sur logo  ==========*/
+
+/*  Exemple
+ *
+ *   <div class="logo__box">
+ *     <div class="logo__box--content">
+ *       <img src="" alt="">
+ *     </div>
+ *   </div>
+*/
 
 .logo__box {
     margin-bottom: $base-spacing-unit*2;

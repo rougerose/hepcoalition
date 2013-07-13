@@ -1,0 +1,30 @@
+/*============================
+=            self            =
+============================*/
+
+.self {
+    margin-bottom: $base-spacing-unit*2;
+}
+    .self__titre {
+        color: $secondary-color;
+        font-weight: normal;
+        &.text--upper {
+            @include font-size($h2-size);
+        }
+    }
+    .self__body {
+        .chapo {
+            color: #222;
+            @include font-size(18px);
+        }
+    }
+    .self__logo {
+        @include media-query(desk) {
+            .rubrique & {
+                margin-top: 1em;
+            }
+        }
+    }
+
+/*-----  End of self  ------*/
+

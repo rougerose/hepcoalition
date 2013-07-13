@@ -3,6 +3,13 @@
 ============================*/
 .box {
     @extend .landmark;
+    .hN {
+        margin-bottom: .5em;
+        border-bottom: 2px solid $secondary-color;
+        @include font-size($h2-size);
+        font-weight: normal;
+        color: $secondary-color;
+    }
 }
 /* petition */
 .petition__box {
@@ -10,7 +17,6 @@
     padding: 0 .8em;
     .hN {
         color: $secondary-color;
-        @include font-size($h1-size);
         margin-bottom: .3em;
     }
 }
@@ -20,16 +26,6 @@
         border-bottom: 3px solid $primary-color;
         margin-bottom: 0;
         color: $primary-color;
-    }
-}
-
-.meta {
-    .hN {
-        border-bottom: 2px solid $secondary-color;
-        margin-bottom: .5em;
-        @include font-size($h4-size);
-        font-weight: normal;
-        color: $secondary-color;
     }
 }
 

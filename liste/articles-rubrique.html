@@ -1,15 +1,15 @@
-<B_articles_selection>
+<B_articles_rubrique>
 <section>
    #ANCRE_PAGINATION
    [<h1 class="section__title hN">(#ENV{section__title})</h1>]
    [<nav class="pagination haut[ (#ENV{pagination_align})]">(#PAGINATION{li})</nav>]
    <ul class="liste--bloc">
-      <BOUCLE_articles_selection(ARTICLES){id_article IN #ENV{selection}}{pagination #ENV{pagination,20}}>
+      <BOUCLE_articles_rubrique(ARTICLES){id_rubrique}{pagination #ENV{pagination,20}}{doublons}>
       [<li>
          (#INCLURE{fond=inclure/resume/article,id_article})
       </li>]
-      </BOUCLE_articles_selection>
+      </BOUCLE_articles_rubrique>
    </ul>
    [<nav class="pagination bas[ (#ENV{pagination-align})]">(#PAGINATION{li})</nav>]
 </section>
-</B_articles_selection>
+</B_articles_rubrique>

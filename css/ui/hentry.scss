@@ -6,16 +6,13 @@
     display: block;
     @include font-size(18px);
     font-weight: 400;
-    .hentry & {
-        color: #10656c;
-    }
+    color: #10656c;
 }
 
 /*==========  résumés  ==========*/
 .resume {
     .entry-title {
         @include font-size(24px);
-        line-height: 1;
     }
     .updated {
         @include font-size(13px);
@@ -23,11 +20,21 @@
         color: #afafaf;
     }
 }
-    .resume--holder {
+    .resume--body {
         background-position: 100% 0;
         background-repeat: no-repeat;
-        background-size: 48% auto;
+        // background-size: 48% auto;
     }
+
+/* résumé en liste */
+.resume--liste {
+    .entry-content {
+        @include media-query(lap-and-up) {
+            width: 90%;
+        }
+    }
+}
+
 
 /* résumé d'article */
 .resume.article {
@@ -44,10 +51,26 @@
     .entry-title {
         margin-top: -0.2em;
     }
+    .soustitre {
+        margin-top: .2em;
+    }
+    .entry-logo {
+        @include media-query(lap-and-up) {
+            float: right;
+            width: 50%;
+        }
+        @include media-query(palm) {
+            
+        }
+        a,
+        img {
+            display: block
+        }
+    }
     .entry-content {
         @include media-query(lap-and-up) {
             float: right;
-            padding-left: 1%;
+            padding-left: 2%;
             width: 50%;
             &.plus-logo {
                 float: none;
@@ -87,12 +110,25 @@
     }
 }
 
-/* résumé carousel */
-.article--carousel {
+/* résumé de rubrique */
+.resume.rubrique {
+    .entry-title {
+        border-bottom: 2px solid $secondary-color;
+    }
+}
+
+
+/* hentry--carousel */
+.hentry--carousel {
     .entry-title {
         margin-bottom: 0;
-        .soustitre {
-            color: lighten(#10656c,15%);
+    }
+    .soustitre {
+        color: lighten(#10656c,15%);
+    }
+    .entry-content {
+        p {
+            margin-bottom: 0;
         }
     }
 }
