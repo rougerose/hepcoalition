@@ -7,10 +7,6 @@
 }
     .self__titre {
         color: $secondary-color;
-        font-weight: normal;
-        &.text--upper {
-            @include font-size($h2-size);
-        }
     }
     .self__body {
         .chapo {

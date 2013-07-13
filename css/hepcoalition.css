@@ -3208,6 +3208,10 @@ label,
   margin-bottom: 1.5rem;
 }
 
+.text--upper {
+  text-transform: uppercase;
+}
+
 /*-----  End of =shared  ------*/
 /* fonts */
 /*==============================
@@ -3396,7 +3400,7 @@ label,
 /* Headings */
 .hN {
   font-family: "Cabin Condensed", "Arial Narrow", Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 400;
 }
 .ru .hN {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -3449,6 +3453,13 @@ a.spip_out:active,
 a.spip_out:focus {
   position: relative;
   top: 1px;
+}
+
+.active {
+  color: #c11f02;
+}
+.active:hover {
+  color: #19a1ac;
 }
 
 /*-----  End of =Base  ------*/
@@ -3810,11 +3821,7 @@ body {
   background-color: #fff;
 }
 
-/**
-*
-* =menu-lang
-*
-**/
+/*==========  menu-lang  ==========*/
 .menu-lang--container {
   text-align: right;
   text-transform: uppercase;
@@ -3835,11 +3842,11 @@ body {
   font-size: 1.125em;
   text-align: left;
   opacity: 0;
-  -webkit-transition: opacity .5s ease;
-  -moz-transition: opacity .5s ease;
-  -ms-transition: opacity .5s ease;
-  -o-transition: opacity .5s ease;
-  transition: opacity .5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 .menu-lang:before {
   content: "";
@@ -3919,14 +3926,10 @@ body {
   color: #000;
   font-family: "Cabin Condensed", "Arial Narrow", Arial, sans-serif;
   font-size: 1em;
-  font-weight: 700;
+  font-weight: 400;
 }
 
-/**
-*
-* nav-principale
-*
-**/
+/*==========  nav-principale  ==========*/
 .nav-principale__container {
   position: relative;
   border-bottom: 4px solid #c11f02;
@@ -3939,7 +3942,7 @@ body {
   font-size: 1.25rem;
   line-height: 1.2;
   line-height: 2;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
   text-align: left;
 }
@@ -3957,8 +3960,24 @@ body {
 }
 
 .item {
-  color: #000;
   padding: 0 5px;
+}
+
+/*==========  nav-plan  ==========*/
+.nav-plan {
+  margin-bottom: 48px;
+}
+.nav-plan ul li {
+  position: relative;
+  padding-left: 0.7em;
+  font-family: "Cabin Condensed", "Arial Narrow", Arial, sans-serif;
+}
+.nav-plan ul li:before {
+  display: block;
+  position: absolute;
+  left: 0;
+  content: '/';
+  color: #ccc;
 }
 
 /*-----  End of =nav  ------*/
@@ -3977,6 +3996,195 @@ body {
 }
 
 /*-----  End of =Listes  ------*/
+/*===============================
+=            =Hentry            =
+===============================*/
+/*==========  éléments communs  ==========*/
+.entry-title {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.soustitre {
+  display: block;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
+  font-weight: 400;
+  color: #10656c;
+}
+
+.entry-content p {
+  margin-bottom: 0;
+}
+
+/*==========  résumés  ==========*/
+.resume {
+  border-bottom: 1px dotted #b21d02;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+}
+.resume .updated {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.84615;
+  text-transform: uppercase;
+  color: #afafaf;
+}
+
+@media only screen and (min-width: 481px) {
+  .entry-logo {
+    float: right;
+    width: 50%;
+    padding-left: 2%;
+  }
+}
+.entry-logo a,
+.entry-logo img {
+  display: block;
+}
+
+/* résumé d'article */
+.resume.article {
+  margin-bottom: 48px;
+}
+@media only screen and (min-width: 481px) {
+  .resume.article header {
+    float: left;
+    padding-right: 1%;
+    width: 50%;
+  }
+}
+.resume.article .entry-title {
+  margin-top: -0.2em;
+}
+.resume.article .soustitre {
+  margin-top: .2em;
+}
+@media only screen and (min-width: 481px) {
+  .resume.article .entry-content {
+    float: right;
+    padding-left: 2%;
+    width: 50%;
+  }
+  .resume.article .entry-content.plus-logo {
+    float: none;
+    padding-left: 0;
+    padding-right: 1%;
+  }
+}
+
+/* résumé d'evenement */
+.resume.vevent {
+  padding-left: 55px;
+  position: relative;
+}
+.resume.vevent time[itemprop="startDate"] {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: left;
+  padding: 5px;
+  background-color: #19a1ac;
+  color: #d1eff1;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  font: 700 30px/25px "Cabin Condensed", "Arial Narrow", Arial, sans-serif;
+}
+.resume.vevent time[itemprop="startDate"] span {
+  display: block;
+  margin-top: -4px;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+/* résumé de rubrique */
+.resume.rubrique {
+  border: none;
+  padding-bottom: 0;
+}
+.resume.rubrique:after {
+  content: '';
+  text-align: center;
+  font-size: 30px;
+  width: 50%;
+  border-bottom: 1px solid #eee;
+  margin: 0 auto;
+  padding-top: 24px;
+}
+@media only screen and (min-width: 481px) {
+  .resume.rubrique .entry-content.plus-logo {
+    padding-right: 2%;
+    width: 50%;
+  }
+}
+
+/* hentry--carousel */
+.hentry--carousel .entry-title {
+  margin-bottom: 0;
+}
+.hentry--carousel .soustitre {
+  color: #1aa3af;
+}
+.hentry--carousel .entry-content p {
+  margin-bottom: 0;
+}
+
+/*==========  contenus développés (objet)  ==========*/
+.objet header {
+  text-align: center;
+}
+.objet .titre {
+  color: #19a1ac;
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1;
+}
+.objet .soustitre {
+  color: #222;
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 1.71429;
+  font-weight: 400;
+  display: block;
+}
+.objet .texte {
+  margin-bottom: 24px;
+}
+
+/*-----  End of =Hentry  ------*/
+/*============================
+=            self            =
+============================*/
+.self {
+  margin-bottom: 48px;
+}
+
+.self__titre {
+  color: #c11f02;
+}
+
+.self__body .chapo {
+  color: #222;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+
+@media only screen and (min-width: 1024px) {
+  .rubrique .self__logo {
+    margin-top: 1em;
+  }
+}
+
+/*-----  End of self  ------*/
 /*================================
 =            =section            =
 ================================*/
@@ -3985,15 +4193,25 @@ body {
   font-size: 1.125rem;
   line-height: 1.33333;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: normal;
   border-bottom: 2px solid #c11f02;
+  color: #000;
 }
-.rubrique .section__title.plan {
+
+.plan {
   margin-top: -0.35em;
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1;
   line-height: 1.3;
+}
+
+.section__title--subsection {
+  border-bottom-width: 1px;
+}
+
+.position-intro {
+  border-bottom: 1px dotted #ccc;
 }
 
 /*-----  End of =section  ------*/
@@ -4189,190 +4407,6 @@ a .media-logo:hover {
 }
 
 /*-----  End of =medias  ------*/
-/*===============================
-=            =Hentry            =
-===============================*/
-/*==========  éléments communs  ==========*/
-.soustitre {
-  display: block;
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 1.33333;
-  font-weight: 400;
-  color: #10656c;
-}
-
-/*==========  résumés  ==========*/
-.resume .entry-title {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1;
-}
-.resume .updated {
-  font-size: 13px;
-  font-size: 0.8125rem;
-  line-height: 1.84615;
-  text-transform: uppercase;
-  color: #afafaf;
-}
-
-.resume--body {
-  background-position: 100% 0;
-  background-repeat: no-repeat;
-}
-
-/* résumé en liste */
-@media only screen and (min-width: 481px) {
-  .resume--liste .entry-content {
-    width: 90%;
-  }
-}
-
-/* résumé d'article */
-.resume.article {
-  border-bottom: 1px solid #000;
-  padding-bottom: 12px;
-  margin-bottom: 24px;
-}
-@media only screen and (min-width: 481px) {
-  .resume.article header {
-    float: left;
-    padding-right: 1%;
-    width: 50%;
-  }
-}
-.resume.article .entry-title {
-  margin-top: -0.2em;
-}
-.resume.article .soustitre {
-  margin-top: .2em;
-}
-@media only screen and (min-width: 481px) {
-  .resume.article .entry-logo {
-    float: right;
-    width: 50%;
-  }
-}
-.resume.article .entry-logo a,
-.resume.article .entry-logo img {
-  display: block;
-}
-@media only screen and (min-width: 481px) {
-  .resume.article .entry-content {
-    float: right;
-    padding-left: 2%;
-    width: 50%;
-  }
-  .resume.article .entry-content.plus-logo {
-    float: none;
-    padding-left: 0;
-    padding-right: 1%;
-  }
-}
-
-/* résumé d'evenement */
-.resume.vevent {
-  padding: 0 0 0 55px;
-  position: relative;
-  border-bottom: 1px solid #000;
-  padding-bottom: 12px;
-  margin-bottom: 24px;
-}
-.resume.vevent time[itemprop="startDate"] {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  float: left;
-  padding: 5px;
-  background-color: #19a1ac;
-  color: #d1eff1;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  text-align: center;
-  font: 700 30px/25px "Cabin Condensed", "Arial Narrow", Arial, sans-serif;
-}
-.resume.vevent time[itemprop="startDate"] span {
-  display: block;
-  margin-top: -4px;
-  font-size: 20px;
-  line-height: 25px;
-}
-
-/* résumé de rubrique */
-.resume.rubrique .entry-title {
-  border-bottom: 2px solid #c11f02;
-}
-
-/* hentry--carousel */
-.hentry--carousel .entry-title {
-  margin-bottom: 0;
-}
-.hentry--carousel .soustitre {
-  color: #1aa3af;
-}
-.hentry--carousel .entry-content p {
-  margin-bottom: 0;
-}
-
-/*==========  contenus développés (objet)  ==========*/
-.objet header {
-  text-align: center;
-}
-.objet .titre {
-  color: #19a1ac;
-  font-size: 48px;
-  font-size: 3rem;
-  line-height: 1;
-}
-.objet .soustitre {
-  color: #222;
-  font-size: 28px;
-  font-size: 1.75rem;
-  line-height: 1.71429;
-  font-weight: 400;
-  display: block;
-}
-.objet .texte {
-  margin-bottom: 24px;
-}
-
-/*-----  End of =Hentry  ------*/
-/*============================
-=            self            =
-============================*/
-.self {
-  margin-bottom: 48px;
-}
-
-.self__titre {
-  color: #c11f02;
-  font-weight: normal;
-}
-.self__titre.text--upper {
-  font-size: 30px;
-  font-size: 1.875rem;
-  line-height: 1.6;
-}
-
-.self__body .chapo {
-  color: #222;
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 1.33333;
-}
-
-@media only screen and (min-width: 1024px) {
-  .rubrique .self__logo {
-    margin-top: 1em;
-  }
-}
-
-/*-----  End of self  ------*/
 /*=================================
 =            =Carousel            =
 =================================*/

@@ -30,6 +30,12 @@ a.spip_out {
       position: relative; top: 1px;
    }
 }
+.active {
+  color: $secondary-color;
+  &:hover {
+    color: $primary-color;
+  }
+}
 
 /*-----  End of =Base  ------*/
 

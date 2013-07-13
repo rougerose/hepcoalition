@@ -1,0 +1,22 @@
+<B_rubriques>
+<nav class="nav-plan">
+   <h1 class="hN section__title"><:rubriques:></h1>
+   <ul class="nav nav--stacked">
+      <BOUCLE_rubriques(RUBRIQUES){racine}{id_secteur}{par num titre, titre}>
+      <li class="nav__item text--upper">
+         <a href="#URL_RUBRIQUE"[ class="(#ENV{id_secteur}|=={#ID_RUBRIQUE}|oui)active"]>#TITRE</a>
+         <B_sous_rubriques>
+         <ul class="nav nav--stacked">
+            <BOUCLE_sous_rubriques(RUBRIQUES){id_parent}{par num titre, titre}>
+            <li class="nav__item text--upper">
+               <a href="#URL_RUBRIQUE"[ class="(#ENV{id_rubrique}|=={#ID_RUBRIQUE}|oui)active"]>#TITRE</a>
+               <BOUCLE_re(BOUCLE_sous_rubriques)></BOUCLE_re>
+            </li>
+            </BOUCLE_sous_rubriques>
+         </ul>
+         </B_sous_rubriques>
+      </li>
+      </BOUCLE_rubriques>
+   </ul>
+</nav>
+</B_rubriques>

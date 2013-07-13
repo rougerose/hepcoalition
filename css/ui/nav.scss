@@ -1,33 +1,6 @@
 /*============================
 =            =nav            =
 ============================*/
-// .nav {
-//     list-style:none;
-//     margin-left:0;
-//     @extend .cf;
-
-//     > li{
-
-//         &,
-//         > a{
-//             display:inline-block;
-//             *display:inline;
-//             zoom:1;
-//         }
-//     }
-// }
-// .nav--banner {
-//     text-align: center;
-// }
-
-// .nav--stacked{
-//     > li{
-//         display:list-item;
-//         > a{
-//             display:block;
-//         }
-//     }
-// }
 
 .nav--dropdown {
     position: absolute;
@@ -40,12 +13,7 @@
     background-color: #fff;
 }
 
-/**
-*
-* =menu-lang
-*
-**/
-
+/*==========  menu-lang  ==========*/
 .menu-lang--container {
     text-align: right;
     text-transform: uppercase;
@@ -54,7 +22,7 @@
         position: absolute;
         z-index: 99;
         top: -9999px;
-        list-style: $f-dropdown-list-style;
+        list-style: none;
         width: 100%;
         margin-top: 2px;
         max-width: 200px;
@@ -65,11 +33,7 @@
         font-size: emCalc(18px);
         text-align: left;
         opacity: 0;
-        -webkit-transition: opacity .5s ease;
-        -moz-transition: opacity .5s ease;
-        -ms-transition: opacity .5s ease;
-        -o-transition: opacity .5s ease;
-        transition: opacity .5s ease;
+        @include vendor(transition,opacity .5s ease);
         &:before {
             @include css-triangle($f-dropdown-triangle-size, $f-dropdown-triangle-color, bottom);
             position: absolute;
@@ -139,14 +103,10 @@
         color: #000;
         font-family: $CabinC;
         font-size: emCalc(16px);
-        font-weight: 700;
+        font-weight: 400;
     }
 
-/**
-*
-* nav-principale
-*
-**/
+/*==========  nav-principale  ==========*/
 .nav-principale__container {
     position: relative;
     border-bottom: 4px solid $secondary-color;
@@ -156,7 +116,7 @@
     font-family: $CabinC;
     @include font-size(20px);
     line-height: 2;
-    font-weight: 700;
+    font-weight: 400;
     text-transform: uppercase;
     text-align: left;
     > li:hover .nav--dropdown {
@@ -173,10 +133,25 @@
     }
 }
 .item {
-    color: #000;
     padding: 0 5px;
 }
 
+/*==========  nav-plan  ==========*/
+.nav-plan {
+    margin-bottom: $base-spacing-unit*2;
+    ul li {
+        position: relative;
+        padding-left: 0.7em;
+        font-family: $CabinC;
+        &:before {
+            display: block;
+            position: absolute;
+            left: 0;
+            content: '/';
+            color: #ccc;
+        }
+    }
+}
 
 /*-----  End of =nav  ------*/
  
