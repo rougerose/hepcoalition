@@ -1,0 +1,42 @@
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+<div class="grid__item desk-two-thirds">
+   <article class="self rubrique">
+      <header>
+         <h1 class="self__titre hN text--upper">#TITRE[ <span class="soustitre">(#SOUSTITRE)</span>]</h1>
+      </header>
+      [<div class="self__body">
+         <div class="chapo txt">
+            (#TEXTE)
+         </div>
+      </div><!-- .self__body -->]
+   </article><!-- .self -->
+</div>
+<!-- /.grid__item -->
+
+[(#SET{articles_carousel,#ARRAY})][(#SET{articles_selection,#ARRAY})
+]<BOUCLE_selection(ARTICLES pb_selection){lang}{par ordre}{spip_pb_selection.id_rubrique=#ID_RUBRIQUE}{doublons}>[
+(#SET_PUSH{articles_selection,#ID_ARTICLE})
+]</BOUCLE_selection>
+<div class="grid__item desk-eight-twelfths">
+   [(#REM) sélections d'articles ]
+   [(#GET{articles_selection}|oui)
+      [(#INCLURE{fond=liste/articles-selection,
+         selection=#GET{articles_selection},
+         section__title='',
+         pagination=10,
+         ajax,lang}
+      )]
+   ]
+</div
+><!-- /.grid__item desk-eight-twelfths --><div class="grid__item desk-four-twelfths">
+   <aside class="secondary">
+      <INCLURE{fond=nav/nav-rubrique-plan,env} />
+      [(#REM) La rubrique en cours est un agenda ? ]
+      [(#AGENDA|non)
+         [(#INCLURE{fond=liste/evenements,section__title=[(#VAL{<:local:agenda:>})]})]
+      ]
+      [(#INCLURE{fond=inclure/resume/washington-call,env})]
+   </aside><!-- /.secondary -->
+</div>
+<!-- /.grid__item desk-four-twelfths -->
+</BOUCLE_rubrique>
