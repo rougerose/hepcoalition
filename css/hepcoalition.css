@@ -3473,18 +3473,31 @@ a.spip_out:focus {
   padding: 0 1em;
   border: none;
   white-space: nowrap;
-  font: 700 100%/2 "Cabin Condensed", "Arial Narrow", Arial, sans-serif;
+  font: 400 100%/2 "Cabin Condensed", "Arial Narrow", Arial, sans-serif;
   text-transform: uppercase;
   cursor: pointer;
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
   -webkit-transition: background-color 0.3s ease-out;
   -moz-transition: background-color 0.3s ease-out;
   -ms-transition: background-color 0.3s ease-out;
   -o-transition: background-color 0.3s ease-out;
   transition: background-color 0.3s ease-out;
+}
+
+/* font-size */
+.btn--alpha {
+  font-size: 3rem;
+}
+
+.btn--beta {
+  font-size: 2rem;
+}
+
+.btn--gamma {
+  font-size: 1rem;
 }
 
 /* Tailles */
@@ -3499,14 +3512,20 @@ a.spip_out:focus {
 .btn--primary {
   background-color: #19a1ac;
   color: #fff;
+  background-image: -webkit-gradient(linear, 50% 0, 50% 100%, color-stop(0%, #19a1ac), color-stop(100%, #0c4e53));
+  background-image: -webkit-linear-gradient(#19a1ac, #0c4e53);
+  background-image: -moz-linear-gradient(#19a1ac, #0c4e53);
+  background-image: -o-linear-gradient(#19a1ac, #0c4e53);
+  background-image: linear-gradient(#19a1ac, #0c4e53);
 }
 .btn--primary:hover {
-  background-color: #13777f;
+  background-color: #0c4e53;
+  background-image: none;
   color: #fff;
 }
 
 .btn--border {
-  border: 4px solid #fff;
+  border: 2px solid #fff;
 }
 
 /*-----  End of =boutons  ------*/
