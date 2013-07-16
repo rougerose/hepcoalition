@@ -3,7 +3,16 @@
 =            =misc            =
 =============================*/
 
-/* push */
+/*==========  grid  ==========*/
+  /* grid--center */
+  .grid--center{
+    text-align:center;
+    > .grid__item{
+      text-align:left;
+    }
+  }
+
+/*==========  grid : push  ==========*/
 @include media-query(desk){
   // push class
   .push--desk-one-twelfth {
@@ -16,7 +25,7 @@
   }
 }
 
-/* couleur de texte sélectionné */
+/*==========  couleur texte sélectionné  ==========*/
 ::selection {
     background-color:$secondary-color;
     color:#fff; 
@@ -26,7 +35,7 @@
     color:#fff; 
 }
 
-/* spip-admin */
+/*==========  spip-admin  ==========*/
 body {
     .spip-admin-bloc,
     .spip-admin-float {

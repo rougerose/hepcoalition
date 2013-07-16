@@ -30,6 +30,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // P
    'page' => 'page',
    'pays' => 'Country',
+   'press_release' => 'Press release',
 
    // R
 

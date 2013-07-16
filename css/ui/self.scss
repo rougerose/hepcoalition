@@ -22,6 +22,19 @@
         }
     }
 
+/*==========  self.article  ==========*/
+.self.article {
+    .self__titre {
+        @include font-size(48px);
+        text-align: center;
+    }
+    .soustitre {
+        @include font-size(24px);
+        line-height: 2;
+    }
+}
+    
+
 
 /*-----  End of self  ------*/
 

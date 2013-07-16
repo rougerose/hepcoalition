@@ -3424,8 +3424,7 @@ img[width] {
 }
 
 /*==========  Liens  ==========*/
-a,
-a.spip_out {
+a {
   color: #000;
   text-decoration: none;
   -webkit-transition: color 0.35s ease-in-out 0.2s;
@@ -3434,18 +3433,21 @@ a.spip_out {
   -o-transition: color 0.35s ease-in-out 0.2s;
   transition: color 0.35s ease-in-out 0.2s;
 }
-a:hover,
-a.spip_out:hover {
+a:hover {
   color: #19a1ac;
   text-decoration: none;
 }
 
+a.spip_out,
+a.spip_in,
 a.more {
-  color: #19a1ac;
-  border-bottom: 1px solid #fff;
+  color: #000;
+  border-bottom: 1px solid #19a1ac;
 }
+a.spip_out:hover,
+a.spip_in:hover,
 a.more:hover {
-  border-bottom-color: #19a1ac;
+  color: #19a1ac;
 }
 
 a.push:active, a.push:focus,
@@ -4031,7 +4033,7 @@ body {
   font-size: 1.125rem;
   line-height: 1.33333;
   font-weight: 400;
-  color: #10656c;
+  color: #10676e;
 }
 
 .entry-content p {
@@ -4156,28 +4158,6 @@ body {
   margin-bottom: 0;
 }
 
-/*==========  contenus développés (objet)  ==========*/
-.objet header {
-  text-align: center;
-}
-.objet .titre {
-  color: #19a1ac;
-  font-size: 48px;
-  font-size: 3rem;
-  line-height: 1;
-}
-.objet .soustitre {
-  color: #222;
-  font-size: 28px;
-  font-size: 1.75rem;
-  line-height: 1.71429;
-  font-weight: 400;
-  display: block;
-}
-.objet .texte {
-  margin-bottom: 24px;
-}
-
 /*-----  End of =Hentry  ------*/
 /*============================
 =            self            =
@@ -4201,6 +4181,20 @@ body {
   .rubrique .self__logo {
     margin-top: 1em;
   }
+}
+
+/*==========  self.article  ==========*/
+.self.article .self__titre {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1;
+  text-align: center;
+}
+.self.article .soustitre {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+  line-height: 2;
 }
 
 /*-----  End of self  ------*/
@@ -4239,28 +4233,22 @@ body {
 ============================*/
 .box .hN {
   margin-bottom: .5em;
-  border-bottom: 2px solid #c11f02;
+  border-bottom: 2px solid #127179;
   font-size: 30px;
   font-size: 1.875rem;
   line-height: 1.6;
   font-weight: normal;
-  color: #c11f02;
+  color: #127179;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
 }
 
 /* petition */
 .petition__box {
-  background-color: #e6e6e6;
+  background-color: rgba(18, 113, 121, 0.1);
   padding: 0 .8em;
 }
 .petition__box .hN {
-  color: #c11f02;
   margin-bottom: .3em;
-}
-
-.petition__box--supporters .hN {
-  border-bottom: 3px solid #19a1ac;
-  margin-bottom: 0;
-  color: #19a1ac;
 }
 
 /*-----  End of =box  ------*/
@@ -4432,11 +4420,16 @@ a .media-logo:hover {
 .features {
   width: 100%;
   height: 420px;
-  background-color: #222;
   margin-bottom: 48px;
+  background-color: #222;
+  background-color: rgba(34, 34, 34, 0.9);
 }
 .js .features {
   overflow: hidden;
+}
+
+.features--images {
+  height: auto;
 }
 
 .js .flexslider-container {
@@ -4447,6 +4440,9 @@ a .media-logo:hover {
 
 .flexslider {
   border-width: 0;
+}
+.features--images .flexslider {
+  margin-bottom: 24px;
 }
 
 .slides__item {
@@ -4460,6 +4456,11 @@ a .media-logo:hover {
   padding: 10px 15px;
   padding-left: 30px;
   background-color: rgba(16, 101, 108, 0.5);
+}
+
+.features--images .flex-control-nav {
+  bottom: -24px;
+  background-color: #fff;
 }
 
 .flex-direction-nav a {
@@ -4482,7 +4483,16 @@ a .media-logo:hover {
 /*=============================
 =            =misc            =
 =============================*/
-/* push */
+/*==========  grid  ==========*/
+/* grid--center */
+.grid--center {
+  text-align: center;
+}
+.grid--center > .grid__item {
+  text-align: left;
+}
+
+/*==========  grid : push  ==========*/
 @media only screen and (min-width: 1024px) {
   .push--desk-one-twelfth {
     position: relative;
@@ -4494,7 +4504,7 @@ a .media-logo:hover {
     left: 33.333%;
   }
 }
-/* couleur de texte sélectionné */
+/*==========  couleur texte sélectionné  ==========*/
 ::selection {
   background-color: #c11f02;
   color: #fff;
@@ -4505,7 +4515,7 @@ a .media-logo:hover {
   color: #fff;
 }
 
-/* spip-admin */
+/*==========  spip-admin  ==========*/
 body .spip-admin-bloc,
 body .spip-admin-float {
   z-index: 99999;

@@ -4,11 +4,15 @@
 .features {
     width: 100%;
     height: 420px;
-    background-color: #222;
     margin-bottom: $base-spacing-unit*2;
+    background-color: #222;
+    background-color: rgba(#222,0.9);
     .js & {
         overflow: hidden;
     }
+}
+.features--images {
+    height: auto;
 }
 .flexslider-container {
     .js & {
@@ -19,6 +23,9 @@
 }
     .flexslider {
         border-width: 0;
+        .features--images & {
+            margin-bottom: 24px;
+        }
     }
         .slides__item {
             position: relative;
@@ -31,6 +38,12 @@
                 padding-left: 30px;
                 background-color: rgba(#10656C,0.5);
             }
+    .flex-control-nav {
+        .features--images &{
+            bottom: -24px;
+            background-color: #fff;
+        }
+    }
     .flex-direction-nav {
         a {
             width: 42px;
