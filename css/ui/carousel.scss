@@ -44,6 +44,25 @@
             background-color: #fff;
         }
     }
+    .flex-control-paging {
+        a {
+            width: 11px;
+            height: 11px;
+            display: block;
+            cursor: pointer;
+            text-indent: -9999px;
+            @include vendor(border-radius,20px);
+            background: url("img/flex-control-nav-bg.png") no-repeat 0 -27px;
+            &:hover {
+                background-position: 0 -14px;
+            }
+        }
+        a.flex-active {
+            background-position: 0 -1px;
+        }
+    }
+/*.flex-control-paging li a:hover { background: #333; background: rgba(0,0,0,0.7); }*/
+/*.flex-control-paging li a.flex-active { background: #000; background: rgba(0,0,0,0.9); cursor: default; }*/
     .flex-direction-nav {
         a {
             width: 42px;
