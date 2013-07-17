@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
     $('.flexslider').flexslider({
          animation: "slide",
          slideshow: false,
-         smoothHeight: true,
+         // smoothHeight: true,
          start: function(slider){
            slider.viewport.css({"overflow":"visible"});
            slider.newSlides.css({'opacity':0.3});
