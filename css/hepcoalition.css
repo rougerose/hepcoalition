@@ -4216,6 +4216,11 @@ body {
 .section__title--subsection {
   border-bottom-width: 1px;
 }
+.section__title--subsection .soustitre {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
 
 .position-intro {
   border-bottom: 1px dotted #ccc;
