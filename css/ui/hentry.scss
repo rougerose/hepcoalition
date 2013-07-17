@@ -102,15 +102,6 @@
 .resume.rubrique {
     border: none;
     padding-bottom: 0;
-    &:after {
-        content: '';
-        text-align: center;
-        font-size: 30px;
-        width: 50%;
-        border-bottom: 1px solid #eee;
-        margin: 0 auto;
-        padding-top: $base-spacing-unit;
-    }
     .entry-content {
         &.plus-logo {
             @include media-query(lap-and-up) {
