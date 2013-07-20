@@ -5,7 +5,7 @@
        <ul class="liste--bloc">
         <BOUCLE_evenements(EVENEMENTS){statut=publie}{date_fin>=#ENV{date}}>[
             [(#COMPTEUR_BOUCLE|=={1}|non)-->]<li class="grid__item lap-one-half">
-             (#INCLURE{fond=inclure/resume/evenement,id_evenement})
+             (#INCLURE{fond=inclure/resume/evenement,id_evenement,env})
           </li>[<!--(#COMPTEUR_BOUCLE|>={1}|oui)[(#TOTAL_BOUCLE|=={#COMPTEUR_BOUCLE}|oui)-->]]]</BOUCLE_evenements>
        </ul>
    </div>

@@ -3,37 +3,44 @@
 ===================================*/
 
 .pagination {
-    text-align: right;
     margin-bottom: $base-spacing-unit;
-   > ul {
+    > ul {
         list-style:none;
         display: inline;
         margin-left: $half-spacing-unit/2;
-   }
-   li {
+    }
+}
+    .pagination-label {
+        @include font-size(16px);
+        display: inline-block;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        color: #ccc;
+        font-weight: 400;
+    }
+    .pagination-item {
+        padding: 0 $base-spacing-unit/4;
         display:inline-block;
         *display:inline;
         zoom:1;
-        color: $brand-color;
-        a,
-        strong {
-            padding: 0 $base-spacing-unit / 4;
+        &.on {
+            font-size: 19px;
+            color: $secondary-color;
+        }
+        &.disabled {
+            color: #ddd;
         }
     }
-    strong {
-        font-size:19px;
-        // background-color: $primary-color;
-        color: $secondary-color;
-    }
+
+/*==========  pagination--page  ==========*/
+.pagination--page {
+    text-align: right;
 }
-   .pagination-label {
-      @include font-size(16px);
-      display: inline-block;
-      margin-bottom: 0;
-      text-transform: uppercase;
-      color: #ccc;
-      font-weight: 400;
-      // color: rgba(0,0,0,0.4);
-   }
+/*==========  pagination--temporelle  ==========*/
+.pagination--temporelle {
+    border-top: 2px solid $secondary-color;
+    text-align: center;
+}
+
 
 /*-----  End of =pagination  ------*/

@@ -52,7 +52,7 @@
       <INCLURE{fond=nav/nav-rubrique-plan,env} />
       [(#REM) La rubrique en cours est un agenda ? ]
       [(#AGENDA|non)
-         [(#INCLURE{fond=liste/evenements-aside,section__title=[(#VAL{<:local:agenda:>})]})]
+         [(#INCLURE{fond=liste/evenements-aside,id_evenement,env,section__title=[(#VAL{<:local:agenda:>})]})]
       ]
       [(#INCLURE{fond=inclure/resume/washington-call,env})]
    </aside><!-- /.secondary -->

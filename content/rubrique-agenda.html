@@ -21,22 +21,10 @@
 </div>
 <!-- /.grid__item -->
 
-[(#SET{articles_carousel,#ARRAY})][(#SET{articles_selection,#ARRAY})
-]<BOUCLE_selection(ARTICLES pb_selection){lang}{par ordre}{spip_pb_selection.id_rubrique=#ID_RUBRIQUE}{doublons}>[
-(#SET_PUSH{articles_selection,#ID_ARTICLE})
-]</BOUCLE_selection>
 <div class="grid__item desk-eight-twelfths">
-   [(#REM) sélections d'articles ]
-   [(#GET{articles_selection}|oui)
-      [(#INCLURE{fond=liste/articles-selection,
-         selection=#GET{articles_selection},
-         section__title=[(#VAL{<:local:news_top:>})],
-         pagination=20,
-         ajax,lang}
-      )]
-   ][(#REM) les articles de la rubrique ]
+   [(#REM) les articles de la rubrique ]
    <BOUCLE_articles_rubrique(ARTICLES){id_rubrique}{lang}{0,1}>
-      <INCLURE{fond=liste/articles-rubrique,section__title=<:articles_rubrique:>,pagination=20,doublons,id_rubrique,lang,ajax} />
+      <INCLURE{fond=liste/evenements-rubrique,pagination=10,env,ajax} />
    </BOUCLE_articles_rubrique>
 
    [(#REM) sinon les sous-rubriques ]
@@ -49,10 +37,6 @@
 ><!-- /.grid__item desk-eight-twelfths --><div class="grid__item desk-four-twelfths">
    <aside class="secondary">
       <INCLURE{fond=nav/nav-rubrique-plan,env} />
-      [(#REM) La rubrique en cours est un agenda ? ]
-      [(#AGENDA|non)
-         [(#INCLURE{fond=liste/evenements-aside,id_evenement,env,section__title=[(#VAL{<:local:agenda:>})]})]
-      ]
       [(#INCLURE{fond=inclure/resume/washington-call,env})]
    </aside><!-- /.secondary -->
 </div>

@@ -68,6 +68,9 @@
                 padding-left: 0;
                 padding-right: 1%;
             }
+            p {
+                margin-right: $base-spacing-unit;
+            }
         }
     }
 }
@@ -101,9 +104,7 @@
 /* résumé de rubrique */
 .resume.rubrique {
     border: none;
-    padding-bottom: 0;
     .entry-content {
-        padding-right: $base-spacing-unit*4;
         &.plus-logo {
             @include media-query(lap-and-up) {
                 padding-right: 2%;

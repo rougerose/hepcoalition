@@ -4094,6 +4094,9 @@ body {
     padding-left: 0;
     padding-right: 1%;
   }
+  .resume.article .entry-content p {
+    margin-right: 24px;
+  }
 }
 
 /* résumé d'evenement */
@@ -4129,10 +4132,6 @@ body {
 /* résumé de rubrique */
 .resume.rubrique {
   border: none;
-  padding-bottom: 0;
-}
-.resume.rubrique .entry-content {
-  padding-right: 96px;
 }
 @media only screen and (min-width: 481px) {
   .resume.rubrique .entry-content.plus-logo {
@@ -4213,9 +4212,6 @@ body {
   line-height: 1.3;
 }
 
-.section__title--subsection {
-  border-bottom-width: 1px;
-}
 .section__title--subsection .soustitre {
   font-size: 16px;
   font-size: 1rem;
@@ -4276,27 +4272,12 @@ body {
 =            =pagination            =
 ===================================*/
 .pagination {
-  text-align: right;
   margin-bottom: 24px;
 }
 .pagination > ul {
   list-style: none;
   display: inline;
   margin-left: 6px;
-}
-.pagination li {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  color: #19a1ac;
-}
-.pagination li a,
-.pagination li strong {
-  padding: 0 6px;
-}
-.pagination strong {
-  font-size: 19px;
-  color: #c11f02;
 }
 
 .pagination-label {
@@ -4308,6 +4289,31 @@ body {
   text-transform: uppercase;
   color: #ccc;
   font-weight: 400;
+}
+
+.pagination-item {
+  padding: 0 6px;
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+.pagination-item.on {
+  font-size: 19px;
+  color: #c11f02;
+}
+.pagination-item.disabled {
+  color: #ddd;
+}
+
+/*==========  pagination--page  ==========*/
+.pagination--page {
+  text-align: right;
+}
+
+/*==========  pagination--temporelle  ==========*/
+.pagination--temporelle {
+  border-top: 2px solid #c11f02;
+  text-align: center;
 }
 
 /*-----  End of =pagination  ------*/
@@ -4500,6 +4506,32 @@ a .media-logo:hover {
 }
 
 /*-----  End of =Carousel  ------*/
+/*============================
+=            info            =
+============================*/
+.info {
+  padding: 0 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.info--small {
+  line-height: 48px;
+}
+
+.info--grey {
+  background-color: #666;
+  background-color: rgba(120, 120, 120, 0.2);
+  color: #666;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.7);
+}
+
+/*-----  End of info  ------*/
 /* misc */
 /*=============================
 =            =misc            =

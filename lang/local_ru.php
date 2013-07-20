@@ -23,6 +23,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'name_first' => 'Имя',
    'name_last' => 'Фамилия',
    'news_last_publications'  => 'Новости и недавние публикации',
+   'news_top' => 'Top news',
+   'no_event_available' => 'no event available',
 
    // O
    'organisation' => 'организация',

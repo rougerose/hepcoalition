@@ -1,0 +1,25 @@
+/*============================
+=            info            =
+============================*/
+
+.info {
+    padding: 0 $base-spacing-unit;
+    @include vendor(border-radius,3px);
+    // @include font-size(14px);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.info--small {
+    line-height: 2 * $base-line-height;
+}
+
+.info--grey {
+    background-color: #666;
+    background-color:rgba(120,120,120,0.2);
+    color: #666;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.7);
+}
+
+/*-----  End of info  ------*/
+
