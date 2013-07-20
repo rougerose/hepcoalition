@@ -18,7 +18,7 @@
     [<nav class="pagination pagination--page bas[ (#ENV{pagination-align})]">(#PAGINATION{li})</nav>]
     </B_evenements_rubrique>
     [<h1 class="section__title hN">(#ENV{date_debut}|affdate{annee})</h1>]
-    <p class="info info--grey"><:local:no_event_available:></p>
+    <p class="info info--grey info--small"><:local:no_event_available:></p>
     <//B_evenements_rubrique>
     #SET{hasprev,''}
     <BOUCLE_prev(EVENEMENTS){!evenement_a_venir #GET{date_debut}}{0,1}{id_article?}{id_rubrique?}{id_mot?}{id_evenement_source?}>#SET{hasprev,1}</BOUCLE_prev>

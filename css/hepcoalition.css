@@ -4516,19 +4516,22 @@ a .media-logo:hover {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
   text-align: center;
   text-transform: uppercase;
 }
 
 .info--small {
-  line-height: 48px;
+  line-height: 36px;
 }
 
 .info--grey {
-  background-color: #666;
-  background-color: rgba(120, 120, 120, 0.2);
-  color: #666;
-  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.7);
+  background-color: #000;
+  background-color: rgba(100, 100, 100, 0.2);
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
+  color: #777;
 }
 
 /*-----  End of info  ------*/
