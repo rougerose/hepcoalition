@@ -2,6 +2,8 @@
 =            info            =
 ============================*/
 
+/* message d'information */
+
 .info {
     padding: 0 $base-spacing-unit;
     @include vendor(border-radius,3px);

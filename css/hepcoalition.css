@@ -3478,8 +3478,7 @@ hr.spip {
 
 /*==========  quotes  ==========*/
 blockquote {
-  background-color: #f6f6f6;
-  background-color: #fbfbfb;
+  background-color: #f5f6f7;
   padding: 6px 6px 6px 12px;
   margin-left: 24px;
 }
@@ -4286,6 +4285,9 @@ body {
 }
 
 /*==========  self.article  ==========*/
+.self.article .self__header {
+  margin-bottom: 48px;
+}
 .self.article .self__titre {
   font-size: 48px;
   font-size: 3rem;
@@ -4299,6 +4301,38 @@ body {
 }
 .self.article .self__logo {
   margin-bottom: 24px;
+}
+
+/*==========  self.evenement  ==========*/
+.self.evenement {
+  margin-bottom: 12px;
+  border-bottom: 1px dotted #dfe3e4;
+}
+.self.evenement .self__titre {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.self.evenement .self__logo {
+  float: left;
+  margin-right: 12px;
+  margin-bottom: 0px;
+}
+.self.evenement .info-publi {
+  margin-bottom: 12px;
+  font-style: italic;
+  color: #19a1ac;
+}
+.self.evenement .entry-content {
+  margin-right: 24px;
+}
+.self.evenement .entry-content p {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+  line-height: 1.4;
 }
 
 /*-----  End of self  ------*/
@@ -4354,6 +4388,11 @@ body {
 
 .position-intro {
   border-bottom: 1px dotted #ccc;
+}
+
+/*==========  evenements (dans squel. article)  ==========*/
+.evenements {
+  margin-bottom: 48px;
 }
 
 /*-----  End of =section  ------*/
@@ -4696,6 +4735,7 @@ a .media-logo:hover, a .texte .spip_documents img:hover, .texte .spip_documents 
 /*============================
 =            info            =
 ============================*/
+/* message d'information */
 .info {
   padding: 0 24px;
   -webkit-border-radius: 3px;

@@ -26,6 +26,9 @@
 
 /*==========  self.article  ==========*/
 .self.article {
+    .self__header {
+        margin-bottom: $base-spacing-unit*2;
+    }
     .self__titre {
         @include font-size(48px);
     }
@@ -35,6 +38,34 @@
     }
     .self__logo {
         margin-bottom: $base-spacing-unit;
+    }
+}
+
+/*==========  self.evenement  ==========*/
+.self.evenement {
+    margin-bottom: $base-spacing-unit/2;
+    border-bottom: 1px dotted lighten($text-color,60%);
+    .self__titre {
+        @include font-size(16px);
+        margin-bottom: 12px;
+    }
+    .self__logo {
+        float: left;
+        margin-right: 12px;
+        margin-bottom: 0px;
+    }
+    .info-publi {
+        margin-bottom: $base-spacing-unit/2;
+        font-style: italic;
+        color: $primary-color;
+    }
+    .entry-content {
+        margin-right: $base-spacing-unit;
+        p {
+            margin-bottom: $base-spacing-unit/2;
+            @include font-size(14px);
+            line-height: 1.4;
+        }
     }
 }
     

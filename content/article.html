@@ -2,7 +2,7 @@
 <article class="self objet article hentry grid__item">
    <div class="grid">
       <div class="grid__item desk-eight-twelfths push--desk-four-twelfths">
-         <header>
+         <header class="self__header">
             <h1 class="self__titre entry-title titre hN">
                #TITRE[ <span class="soustitre">(#SOUSTITRE)</span>]
             </h1>
@@ -13,6 +13,15 @@
    <!-- /.grid -->
    <div class="grid grid--rev">
       <div class="grid__item desk-eight-twelfths">
+         
+         <B_ev>
+         <div class="evenements">
+            <BOUCLE_ev(EVENEMENTS){id_article}>
+            #INCLURE{fond=inclure/resume/evenement-article,id_evenement}
+            </BOUCLE_ev>
+         </div>
+         </B_ev>
+
          <div class="self__body entry-content contenu surlignable">
             [<div class="chapo txt landmark">
                (#CHAPO|image_reduire{701,0})
@@ -24,7 +33,7 @@
                [(#FORMULAIRE_ECRIRE_AUTEUR)]]
 
             [(#REM) Gestion du portfolio et des documents ]
-               [(#INCLURE{fond=inclure/documents,id_article,portfolio=#GET{portfolio}})]
+               [(#INCLURE{fond=inclure/documents,id_article,lang})]
             
             [<aside class="notes txt">
                <div class="grid">

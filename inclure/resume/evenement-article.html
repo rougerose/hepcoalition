@@ -1,0 +1,18 @@
+<BOUCLE_vevent(EVENEMENTS){id_evenement=#ENV{id,#ENV{id_evenement}}}{tout}>
+<article class="self evenement hentry vevent id_#ID_EVENEMENT"  itemscope itemtype="http://schema.org/Event">
+    #SET{intro,''} #SET{titre-art,''}<BOUCLE_art(ARTICLES){id_article}>#SET{intro,#INTRODUCTION{#ENV{coupe,300}}#SET{titre-art,#TITRE}</BOUCLE_art>
+    <meta itemprop="startDate" content="[(#DATE_DEBUT|date_iso)]" />
+    <meta itemprop="endDate" content="[(#DATE_FIN|date_iso)]" />
+    <header>
+        [<p class="info-publi"><time>(#DATE_DEBUT|agenda_affdate_debut_fin{#DATE_FIN,#HORAIRE,'hcal'})</time></p>]
+        [<h1 class="hN self__titre entry-title"><span itemprop="name">(#TITRE|=={#GET{titre-art}}|non)#TITRE</span></h1>]
+    </header>
+    <div class="entry-content">
+        [<div class="self__logo">
+            (#LOGO_EVENEMENT|image_reduire{100,0}|inserer_attribut{itemprop,image}|inserer_attribut{class,media-logo})
+        </div><!-- /.self__logo -->]
+        [<div class="introduction #EDIT{descriptif}" itemprop="description">(#DESCRIPTIF|sinon{#GET{intro}})</div>]
+        [<p class="location" itemprop="location"><span class="lieu #EDIT{lieu}">(#LIEU)</span>[<br /><span class="adresse #EDIT{adresse}">(#ADRESSE|PtoBR)</span>]</p>]
+    </div>
+</article>
+</BOUCLE_vevent>

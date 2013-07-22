@@ -81,8 +81,7 @@ hr.spip {
 
 /*==========  quotes  ==========*/
 blockquote {
-      background-color: #f6f6f6;
-      background-color: lighten($text-color,70%);
+      background-color: lighten($text-color,68%);
       padding: $base-spacing-unit/4 $base-spacing-unit/4 $base-spacing-unit/4 $half-spacing-unit;
       margin-left: $base-spacing-unit;
       p {
