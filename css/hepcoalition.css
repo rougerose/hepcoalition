@@ -4303,6 +4303,13 @@ body {
   margin-bottom: 24px;
 }
 
+/*==========  evenements  ==========*/
+.evenements {
+  margin-bottom: 48px;
+  padding-top: 12px;
+  border-top: 1px dotted #dfe3e4;
+}
+
 /*==========  self.evenement  ==========*/
 .self.evenement {
   margin-bottom: 12px;
@@ -4388,11 +4395,6 @@ body {
 
 .position-intro {
   border-bottom: 1px dotted #ccc;
-}
-
-/*==========  evenements (dans squel. article)  ==========*/
-.evenements {
-  margin-bottom: 48px;
 }
 
 /*-----  End of =section  ------*/
