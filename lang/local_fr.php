@@ -50,6 +50,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'suite' => 'Lire la suite',
    'suivre_facebook' => "Suivez-nous sur <a href='@urlfacebook@'>Facebook</a>",
 
+   // T
+   'tags' => 'Mots-clés',
+
    // U
    'updated' => 'Mise à jour le'
 );

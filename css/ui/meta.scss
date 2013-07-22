@@ -3,22 +3,25 @@
 ============================*/
 
 .meta {
+    .hN,
     .updated,
     .meta-author,
     .share {
-        @include font-size(13px);
-        text-transform: uppercase;
-        color: lighten($text-color,50%);
+        // text-transform: uppercase;
+        
+    }
+    .hN {
+        margin-bottom: 0;
+        @include font-size(17px);
     }
 }
-
-.meta-updated {
+.meta-item {
     margin-bottom: $base-spacing-unit;
-}
-.meta-share {
-    .share {
+    @include font-size(13px);
+    text-transform: uppercase;
+    color: lighten($text-color,50%);
+    &.meta-author {
         margin-bottom: 0;
-        @include font-size(16px);
     }
 }
 

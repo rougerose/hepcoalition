@@ -4297,25 +4297,23 @@ body {
 /*============================
 =            meta            =
 ============================*/
-.meta .updated,
-.meta .meta-author,
-.meta .share {
+.meta .hN {
+  margin-bottom: 0;
+  font-size: 17px;
+  font-size: 1.0625rem;
+  line-height: 1.41176;
+}
+
+.meta-item {
+  margin-bottom: 24px;
   font-size: 13px;
   font-size: 0.8125rem;
   line-height: 1.84615;
   text-transform: uppercase;
   color: #c3cacd;
 }
-
-.meta-updated {
-  margin-bottom: 24px;
-}
-
-.meta-share .share {
+.meta-item.meta-author {
   margin-bottom: 0;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.5;
 }
 
 /*-----  End of meta  ------*/
