@@ -3441,6 +3441,14 @@ h6.spip {
   padding-left: 0;
 }
 
+.txt > h2.spip:first-child,
+.txt > h3.spip:first-child,
+.txt > h4.spip:first-child,
+.txt > h5.spip:first-child,
+.txt > h6.spip:first-child {
+  margin-top: 0;
+}
+
 .intertitre {
   border-bottom: 1px solid #10656c;
   font-size: 20px;

@@ -1,64 +1,71 @@
 <BOUCLE_article(ARTICLES){id_article}>
-<article class="self objet article hentry">
-   <div class="grid__item">
-      <header>
-         <h1 class="self__titre entry-title titre hN">
-            #TITRE[ <span class="soustitre">(#SOUSTITRE)</span>]
-         </h1>
-      </header>
-   </div>
-
-   [<div class="grid__item">
-      (#LOGO_ARTICLE|oui)
+<article class="self objet article hentry grid__item">
+   <div class="grid">
+      <div class="grid__item desk-eight-twelfths push--desk-four-twelfths">
+         <header>
+            <h1 class="self__titre entry-title titre hN">
+               #TITRE[ <span class="soustitre">(#SOUSTITRE)</span>]
+            </h1>
+         </header>
+      </div>
+      <!-- /.grid__item -->
+      [<div class="grid__item">
+         (#LOGO_ARTICLE|oui)
          [<div class="logo__box"><div class="logo__box--content"><img src="(#LOGO_ARTICLE|extraire_attribut{src})" alt="" class="logo--large"></div></div>]
-   </div>]
+      </div>]
+   </div>
+   <!-- /.grid -->
+   <div class="grid grid--rev">
+      <div class="grid__item desk-eight-twelfths">
+         <div class="self__body entry-content contenu surlignable">
+            [<div class="chapo txt landmark">
+               (#CHAPO|image_reduire{701,0})
+            </div><!-- .chapeau -->]
+            [<div class="texte txt cf">
+               (#TEXTE|image_reduire{701,0})
+            </div><!-- .texte -->]
+            [(#PAGE|=={contact}|oui)
+               [(#FORMULAIRE_ECRIRE_AUTEUR)]]
 
-   <div class="grid__item desk-four-twelfths">
-      <BOUCLE_form_petition(ARTICLES){id_article}{si #IDFORMULAIRE}>
-      <INCLURE{fond=inclure/formulaire_formidable,id_article} />
-      </BOUCLE_form_petition>
-      <br />
-      <//B_form_petition>
-      [(#PLUGIN{socialtags}|oui)
-      <aside>
-         <ul class="box box-aside liste--bloc">
-            <li class="share mbr">
-               <h1 id="share" class="hN intertitre"><:local:share:></h1>
-            </li>
-         </ul>
-      </aside>]
-   </div><div class="grid__item one-whole desk-eight-twelfths push--desk--one-twelfth">
-      <div class="self__body entry-content contenu surlignable">
-         [<div class="chapo txt landmark">
-            (#CHAPO|image_reduire{600,0})
-         </div><!-- .chapeau -->]
-         [<div class="texte txt cf">
-            (#TEXTE|image_reduire{600,0})
-         </div><!-- .texte -->]
-         [<div class="ps txt">
-            <h2 class="spip"><:local:info_ps:></h2>
-            (#PS|image_reduire{600,0})
-         </div><!-- .ps -->]
-         [(#PAGE|=={contact}|oui)
-            [(#FORMULAIRE_ECRIRE_AUTEUR)]]
+            [(#REM) Gestion du portfolio et des documents ]
+               [(#INCLURE{fond=inclure/documents,id_article,portfolio=#GET{portfolio}})]
 
-         [(#REM) Gestion du portfolio et des documents ]
-            [(#INCLURE{fond=inclure/documents,id_article,portfolio=#GET{portfolio}})]
-
-         [(#REM) signatures formulaire formidable -- petition ]
-         <BOUCLE_signatures(ARTICLES){id_article}{si #IDFORMULAIRE}>
-         <INCLURE{fond=inclure/signataires_call,id_article,ajax} />
-         </BOUCLE_signatures>
-         
-         [<aside class="notes txt">
-            <div class="grid">
-               <div class="grid__item desk-one-half">
-                  <h1 class="hN intertitre spip"><:info_notes:></h1>
-                  (#NOTES)
+            [(#REM) signatures formulaire formidable -- petition ]
+               <BOUCLE_signatures(ARTICLES){id_article}{si #IDFORMULAIRE}>
+               <INCLURE{fond=inclure/signataires_call,id_article,ajax} />
+               </BOUCLE_signatures>
+            
+            [<aside class="notes txt">
+               <div class="grid">
+                  <div class="grid__item desk-one-half">
+                     <h1 class="hN intertitre spip"><:info_notes:></h1>
+                     (#NOTES)
+                  </div>
                </div>
-            </div>
-         </aside>]
-      </div><!-- .self__body -->
-   </div><!-- .g one-whole desk-six-tenths -->
+            </aside>]
+         </div><!-- .self__body -->
+      </div><!-- /.grid__item --><div class="grid__item desk-four-twelfths">
+
+         [(#REM) formulaire formmidable : pétition/washington call ]
+            <BOUCLE_form_petition(ARTICLES){id_article}{si #IDFORMULAIRE}>
+            <INCLURE{fond=inclure/formulaire_formidable,id_article} />
+            </BOUCLE_form_petition>
+
+         <aside class="meta">
+            <ul class="liste--bloc">
+               <B_auteurs>
+               <li class="meta-item meta-author byline vcard"><:caap:par:> <BOUCLE_auteurs(AUTEURS){id_article}{par nom}{", "}><span class="fn">#NOM</span></BOUCLE_auteurs>
+               </li></B_auteurs>
+               <li class="meta-item meta-updated"><time class="updated" datetime="[(#DATE|affdate{Y-m-d})]">[(#DATE|affdate)]</time></li>
+               [(#INCLURE{fond=liste/mots-objet,id_article,lang})]
+               [(#PLUGIN{socialtags}|oui)
+               <li class="meta-item meta-share">
+                  <h1 id="share" class="hN share"><:local:share:></h1>
+               </li>]
+            </ul>
+         </aside>
+
+      </div><!-- /.grid__item -->
+   </div><!-- /.grid -->
 </article><!-- .self -->
 </BOUCLE_article>

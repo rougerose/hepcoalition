@@ -42,6 +42,18 @@ h6.spip {
     padding-left: 0;
 }
 
+.txt {
+    > h2.spip,
+    > h3.spip,
+    > h4.spip,
+    > h5.spip,
+    > h6.spip {
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
 .intertitre {
     border-bottom: 1px solid $heading-color;
     @include font-size(20px);
