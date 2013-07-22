@@ -943,19 +943,19 @@ h1, .alpha {
   line-height: 1.33333;
 }
 
-h2, .beta {
+h2, .beta, h2.spip {
   font-size: 30px;
   font-size: 1.875rem;
   line-height: 1.6;
 }
 
-h3, .gamma, .documents .hN {
+h3, .gamma {
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 1;
 }
 
-h4, .delta {
+h4, .delta, h5.spip, h6.spip {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.2;
@@ -1502,25 +1502,27 @@ td {
 /**
  * Bordered tables
  */
-.table--bordered th,
-.table--bordered td {
+.table--bordered th, table.spip th,
+.table--bordered td,
+table.spip td {
   border: 1px solid #cccccc;
 }
-.table--bordered th:empty,
-.table--bordered td:empty {
+.table--bordered th:empty, table.spip th:empty,
+.table--bordered td:empty,
+table.spip td:empty {
   border: none;
 }
-.table--bordered thead tr:last-child th {
+.table--bordered thead tr:last-child th, table.spip thead tr:last-child th {
   border-bottom-width: 2px;
 }
-.table--bordered tbody tr th:last-of-type {
+.table--bordered tbody tr th:last-of-type, table.spip tbody tr th:last-of-type {
   border-right-width: 2px;
 }
 
 /**
  * Striped tables
  */
-.table--striped tbody tr:nth-of-type(odd) {
+.table--striped tbody tr:nth-of-type(odd), table.spip tbody tr:nth-of-type(odd) {
   background-color: #ffc;
   /* Override this color in your theme stylesheet */
 }
@@ -3406,8 +3408,88 @@ label,
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+h2.spip, h3.spip, h4.spip, h5.spip, h6.spip,
+.notes h1.spip,
+.documents h1.spip {
+  font-family: "Cabin Condensed", "Arial Narrow", Arial, sans-serif;
+  font-weight: 400;
+  color: #0d5056;
+  margin-top: 48px;
+  margin-top: 3rem;
+}
+
+h2.spip {
+  line-height: 1.2;
+}
+
+h3.spip {
+  font-weight: normal;
+}
+
+h4.spip {
+  font-weight: normal;
+  padding-left: 0;
+}
+
+h5.spip {
+  color: #4c6567;
+  padding-left: 0;
+}
+
+h6.spip {
+  color: #5c6667;
+  padding-left: 0;
+}
+
+.intertitre {
+  border-bottom: 1px solid #10656c;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/*==========  text  ==========*/
 .text--upper {
   text-transform: uppercase;
+}
+
+/*==========  hr  ==========*/
+hr.spip {
+  border: 0;
+  height: 1px;
+  background: #000;
+  background: -moz-linear-gradient(left, white 0%, black 50%, white 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, white), color-stop(50%, black), color-stop(100%, white));
+  background: -webkit-linear-gradient(left, white 0%, black 50%, white 100%);
+  background: -o-linear-gradient(left, white 0%, black 50%, white 100%);
+  background: -ms-linear-gradient(left, white 0%, black 50%, white 100%);
+  background: linear-gradient(to right, white 0%, black 50%, white 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#fff',GradientType=1 );
+}
+
+/*==========  quotes  ==========*/
+blockquote {
+  background-color: #f6f6f6;
+  background-color: #fbfbfb;
+  padding: 6px 6px 6px 12px;
+  margin-left: 24px;
+}
+blockquote p {
+  color: #657379;
+}
+
+/*==========  notes  ==========*/
+.notes p {
+  margin-bottom: .5em;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+  color: #708087;
+}
+
+.spip_note_ref {
+  color: #000;
 }
 
 /*-----  End of =Typo  ------*/
@@ -3440,12 +3522,14 @@ a:hover {
 
 a.spip_out,
 a.spip_in,
+a.spip_note,
 a.more {
   color: #000;
   border-bottom: 1px solid #19a1ac;
 }
 a.spip_out:hover,
 a.spip_in:hover,
+a.spip_note:hover,
 a.more:hover {
   color: #19a1ac;
 }
@@ -3760,6 +3844,34 @@ input:focus, textarea:focus {
   font-weight: 700;
 }
 
+/*==========  tableaux spip  ==========*/
+table.spip {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.84615;
+  max-width: 100%;
+}
+table.spip th {
+  color: #000;
+}
+table.spip th, table.spip td {
+  border-color: #ddd;
+  border-width: 1px 0 0;
+}
+table.spip tr:last-child th,
+table.spip tr:last-child td {
+  border-bottom-width: 1px;
+}
+table.spip tbody tr:nth-of-type(odd),
+table.spip .row_odd {
+  background: #f9f9f9;
+}
+table.spip caption {
+  color: #999;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+}
+
 /*-----  End of =tableaux  ------*/
 /* page */
 /*=============================
@@ -3770,7 +3882,7 @@ html {
   font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-family: 'Cabin',sans-serif;
   font-weight: normal;
-  color: #4f4f4f;
+  color: #424b4f;
 }
 
 body {
@@ -3784,7 +3896,6 @@ body {
   margin-left: auto;
 }
 
-/*==========  =secondary  ==========*/
 /*-----  End of =page  ------*/
 /*==================================
 =            =page-head            =
@@ -4036,22 +4147,11 @@ body {
   color: #10676e;
 }
 
-.entry-content p {
-  margin-bottom: 0;
-}
-
 /*==========  résumés  ==========*/
 .resume {
   border-bottom: 1px dotted #b21d02;
   margin-bottom: 24px;
   padding-bottom: 24px;
-}
-.resume .updated {
-  font-size: 13px;
-  font-size: 0.8125rem;
-  line-height: 1.84615;
-  text-transform: uppercase;
-  color: #afafaf;
 }
 
 @media only screen and (min-width: 481px) {
@@ -4170,8 +4270,9 @@ body {
   line-height: 1.33333;
 }
 
+/*==========  self.rubrique  ==========*/
 @media only screen and (min-width: 1024px) {
-  .rubrique .self__logo {
+  .self.rubrique .self__logo {
     margin-top: 1em;
   }
 }
@@ -4181,7 +4282,6 @@ body {
   font-size: 48px;
   font-size: 3rem;
   line-height: 1;
-  text-align: center;
 }
 .self.article .soustitre {
   font-size: 24px;
@@ -4189,8 +4289,36 @@ body {
   line-height: 1;
   line-height: 2;
 }
+.self.article .self__logo {
+  margin-bottom: 24px;
+}
 
 /*-----  End of self  ------*/
+/*============================
+=            meta            =
+============================*/
+.meta .updated,
+.meta .meta-author,
+.meta .share {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.84615;
+  text-transform: uppercase;
+  color: #c3cacd;
+}
+
+.meta-updated {
+  margin-bottom: 24px;
+}
+
+.meta-share .share {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/*-----  End of meta  ------*/
 /*================================
 =            =section            =
 ================================*/
@@ -4320,7 +4448,8 @@ body {
 /*===============================
 =            =medias            =
 ===============================*/
-.media-logo {
+.media-logo, .texte .spip_documents img,
+.media__img {
   padding: 5px;
   background: #fff;
   box-shadow: 0 0 3px rgba(77, 77, 77, 0.2);
@@ -4330,7 +4459,8 @@ body {
   -o-transition: all 0.35s ease 0.2s;
   transition: all 0.35s ease 0.2s;
 }
-a .media-logo:hover {
+a .media-logo:hover, a .texte .spip_documents img:hover, .texte .spip_documents a img:hover, a
+.media__img:hover {
   box-shadow: 0 0 6px #19a1ac;
 }
 
@@ -4375,38 +4505,60 @@ a .media-logo:hover {
 }
 
 /*==========  documents et images  ==========*/
-.documents .hN {
-  color: #19a1ac;
-}
-
 .documents {
   margin-bottom: 0;
 }
-.documents .hN {
-  border-bottom: 2px solid #19a1ac;
+.documents.portfolio .media__link {
+  display: inline-block;
 }
-.documents .block-list {
-  border-top: none;
-}
-.documents .media__link {
-  float: left;
+.documents.portfolio .media__img {
+  float: none;
+  margin-right: 12px;
 }
 .documents .media__img {
   margin-bottom: 24px;
-  padding: 4px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  -o-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 .documents .media__body {
   margin-left: 0;
 }
 
+@media only screen and (min-width: 481px) {
+  .documents.fichiers .media {
+    display: inline-block;
+    width: 48%;
+    margin-right: 2%;
+    vertical-align: top;
+  }
+}
+.documents.fichiers .spip_doc_titre,
+.documents.fichiers p {
+  margin-bottom: 0;
+}
+
+/*
+.documents {
+  margin-bottom: 0;
+  @extend .cf;
+  .hN {
+    @extend .gamma;
+   border-bottom: 2px solid $primary-color;
+  }
+  .block-list {
+    border-top: none;
+}
+  .media__link {float: left;}
+  .media__img {
+    margin-bottom: $base-spacing-unit;
+    padding: 4px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border: 1px solid rgba(0,0,0,0.2);
+      @include vendor(box-shadow, 0 1px 3px rgba(0,0,0,.1));
+}
+  .media__body {margin-left: 0;}
+
+}
+*/
 /*  tous les autres documents */
 .documents.fichiers .spip_doc_titre,
 .documents.fichiers p {
@@ -4414,8 +4566,37 @@ a .media-logo:hover {
 }
 
 /* image insérée dans #TEXTE */
+.texte .spip_documents {
+  margin-top: .3em;
+}
 .texte .spip_documents_left {
-  margin-right: 10px;
+  margin-right: 24px;
+}
+.texte .spip_documents_right {
+  margin-left: 24px;
+}
+.texte .spip_documents_center {
+  text-align: center;
+}
+.texte .spip_doc_titre,
+.texte .spip_doc_descriptif {
+  margin-left: 0;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+  line-height: 1.3;
+  color: #999;
+  text-align: center;
+}
+
+/*==========  image avec mediabox  ==========*/
+#colorbox, #colorbox:before, #colorbox:after {
+  /* content-box au lieu de border-box sur le conteneur sinon l'image est partiellement masquée. */
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  -o-box-sizing: content-box;
+  box-sizing: content-box;
 }
 
 /*-----  End of =medias  ------*/
@@ -4548,16 +4729,34 @@ a .media-logo:hover {
   text-align: left;
 }
 
+/* grid--rev */
+.grid--rev {
+  direction: rtl;
+  text-align: left;
+}
+.grid--rev > .grid__item {
+  direction: ltr;
+  text-align: left;
+}
+
 /*==========  grid : push  ==========*/
+[class*="push--"] {
+  position: relative;
+}
+
 @media only screen and (min-width: 1024px) {
   .push--desk-one-twelfth {
-    position: relative;
     left: 8.333%;
   }
 
-  .push--desk-one-third {
-    position: relative;
+  .push--desk-one-third,
+  .push--desk-four-twelfths {
     left: 33.333%;
+  }
+
+  .push--desk-two-twelfths,
+  .push--desk-one-sixth {
+    left: 16.666%;
   }
 }
 /*==========  couleur texte sélectionné  ==========*/

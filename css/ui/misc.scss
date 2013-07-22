@@ -11,17 +11,32 @@
       text-align:left;
     }
   }
+  /* grid--rev */
+  .grid--rev {
+    direction:rtl;
+    text-align:left;
+
+    > .grid__item{
+        direction:ltr;
+        text-align:left;
+    }
+  }
 
 /*==========  grid : push  ==========*/
+[class*="push--"]{ position:relative; }
+
 @include media-query(desk){
   // push class
   .push--desk-one-twelfth {
-     position: relative;
      left:8.333%;
   }
-  .push--desk-one-third {
-    position: relative;
+  .push--desk-one-third,
+  .push--desk-four-twelfths {
     left: 33.333%;
+  }
+  .push--desk-two-twelfths,
+  .push--desk-one-sixth {
+    left: 16.666%;
   }
 }
 

@@ -13,7 +13,9 @@
     <div class="entry-content[(#LOGO_ARTICLE|oui) plus-logo]">
      [<p>(#INTRODUCTION|PtoBR) <a href="#URL_ARTICLE" class="more"><:local:more:></a></p>]
     </div>
-    <time class="updated" datetime="[(#DATE|affdate{Y-m-d})]">[(#DATE|affdate)]</time>
+    <div class="meta">
+      <time class="updated" datetime="[(#DATE|affdate{Y-m-d})]">[(#DATE|affdate)]</time>
+    </div>
   </div>
 </article>
 </BOUCLE_article>

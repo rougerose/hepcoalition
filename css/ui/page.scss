@@ -7,8 +7,7 @@ html {
     font-family: $body-font-family;
     font-family: 'Cabin',sans-serif;
     font-weight: normal;
-    // color: #072f32;
-    color: #4f4f4f;
+    color: $text-color;
 }
 
 body {
@@ -21,12 +20,6 @@ body {
     margin-right:auto;
     margin-left: auto;
 }
-
-/*==========  =secondary  ==========*/
-// .secondary {
-//     margin-top: $base-spacing-unit*2;
-//     margin-top: 3rem;
-// }
 
 /*-----  End of =page  ------*/
 

@@ -1,0 +1,59 @@
+<BOUCLE_article(ARTICLES){id_article}>
+<article class="self objet article hentry grid__item">
+   <div class="grid">
+      <div class="grid__item desk-eight-twelfths push--desk-four-twelfths">
+         <header>
+            <h1 class="self__titre entry-title titre hN">
+               #TITRE[ <span class="soustitre">(#SOUSTITRE)</span>]
+            </h1>
+         </header>
+      </div>
+      <!-- /.grid__item -->
+   </div>
+   <!-- /.grid -->
+   <div class="grid grid--rev">
+      <div class="grid__item desk-eight-twelfths">
+         <div class="self__body entry-content contenu surlignable">
+            [<div class="chapo txt landmark">
+               (#CHAPO|image_reduire{701,0})
+            </div><!-- .chapeau -->]
+            [<div class="texte txt cf">
+               (#TEXTE|image_reduire{701,0})
+            </div><!-- .texte -->]
+            [(#PAGE|=={contact}|oui)
+               [(#FORMULAIRE_ECRIRE_AUTEUR)]]
+
+            [(#REM) Gestion du portfolio et des documents ]
+               [(#INCLURE{fond=inclure/documents,id_article,portfolio=#GET{portfolio}})]
+            
+            [<aside class="notes txt">
+               <div class="grid">
+                  <div class="grid__item desk-one-half">
+                     <h1 class="hN intertitre spip"><:info_notes:></h1>
+                     (#NOTES)
+                  </div>
+               </div>
+            </aside>]
+         </div><!-- .self__body -->
+      </div><!-- /.grid__item --><div class="grid__item desk-four-twelfths">
+         [<div class="self__logo">
+            (#LOGO_ARTICLE|inserer_attribut{class,media-logo})
+         </div><!-- /.self__logo -->]
+
+         <aside class="meta">
+            <ul class="liste--bloc">
+               <B_auteurs>
+               <li class="meta-author byline vcard"><:caap:par:> <BOUCLE_auteurs(AUTEURS){id_article}{par nom}{", "}><span class="fn">#NOM</span></BOUCLE_auteurs>
+               </li></B_auteurs>
+               <li class="meta-updated"><time class="updated" datetime="[(#DATE|affdate{Y-m-d})]">[(#DATE|affdate)]</time></li>
+               [(#PLUGIN{socialtags}|oui)
+               <li class="meta-share">
+                  <h1 id="share" class="hN share"><:local:share:></h1>
+               </li>]
+            </ul>
+         </aside>
+
+      </div><!-- /.grid__item -->
+   </div><!-- /.grid -->
+</article><!-- .self -->
+</BOUCLE_article>

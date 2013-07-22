@@ -1,0 +1,25 @@
+/*============================
+=            meta            =
+============================*/
+
+.meta {
+    .updated,
+    .meta-author,
+    .share {
+        @include font-size(13px);
+        text-transform: uppercase;
+        color: lighten($text-color,50%);
+    }
+}
+
+.meta-updated {
+    margin-bottom: $base-spacing-unit;
+}
+.meta-share {
+    .share {
+        margin-bottom: 0;
+        @include font-size(16px);
+    }
+}
+
+/*-----  End of meta  ------*/
