@@ -26,9 +26,6 @@
 
 /*==========  self.article  ==========*/
 .self.article {
-    .self__header {
-        margin-bottom: $base-spacing-unit*2;
-    }
     .self__titre {
         @include font-size(48px);
     }
