@@ -4285,9 +4285,6 @@ body {
 }
 
 /*==========  self.article  ==========*/
-.self.article .self__header {
-  margin-bottom: 48px;
-}
 .self.article .self__titre {
   font-size: 48px;
   font-size: 3rem;
