@@ -3,10 +3,10 @@
 =================================*/
 .features {
     width: 100%;
-    height: 420px;
+    // height: 420px;
     margin-bottom: $base-spacing-unit*2;
-    background-color: #222;
-    background-color: rgba(#222,0.9);
+    // background-color: #222;
+    // background-color: rgba(#222,0.9);
     .js & {
         overflow: hidden;
     }
@@ -33,13 +33,14 @@
             .slides__item--body {
                 position: absolute;
                 width: (100%/3);
-                bottom: 0;
+                bottom: $base-spacing-unit/2;
+                left: $base-spacing-unit/2;
                 padding: 10px 15px;
-                padding-left: 30px;
-                background-color: rgba(#10656C,0.5);
+                background-color: #ccc;
+                background-color: rgba(#fff,0.6);
             }
     .flex-control-nav {
-        .features--images &{
+        .features--images & {
             bottom: -24px;
             background-color: #fff;
         }
@@ -61,8 +62,6 @@
             background-position: 0 -1px;
         }
     }
-/*.flex-control-paging li a:hover { background: #333; background: rgba(0,0,0,0.7); }*/
-/*.flex-control-paging li a.flex-active { background: #000; background: rgba(0,0,0,0.9); cursor: default; }*/
     .flex-direction-nav {
         a {
             width: 42px;

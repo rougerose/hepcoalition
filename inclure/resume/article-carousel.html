@@ -1,6 +1,6 @@
 <BOUCLE_article-carousel(ARTICLES){id_article}>
 <article class="hentry resume hentry--carousel">
-   <img src="[(#LOGO_ARTICLE||image_reduire{960,420}|extraire_attribut{src})]" alt="#TITRE" />
+   <img src="[(#LOGO_ARTICLE||image_reduire{960,0}|image_recadre{960,500,'top left','000'}|extraire_attribut{src})]" alt="#TITRE" />
    <div class="slides__item--body">
      <header>
      <h1 class="entry-title hN">

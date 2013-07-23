@@ -12,7 +12,7 @@ img[width] {
 a {
    color: #000;
    text-decoration: none;
-   @include vendor(transition, color 0.35s ease-in-out 0.2s);
+   @include vendor(transition, all 0.35s ease-in-out 0.2s);
    &:visited{}
    &:hover{color: $brand-color; text-decoration: none;}
 }
@@ -26,13 +26,14 @@ a.more {
     color: $primary-color;
   }
 }
-// a.more {
-//     color: $primary-color;
-//     border-bottom: 1px solid #fff;
-//     &:hover {
-//         border-bottom-color: $primary-color;
-//     }
-// }
+a.more {
+  color: darken($primary-color,5%);
+  &:hover {
+    color: lighten($primary-color,10%);
+    border-bottom-color: lighten($primary-color,10%);
+  }
+}
+
 a.push,
 a.spip_out {
   &:active, &:focus {

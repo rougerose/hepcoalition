@@ -110,15 +110,21 @@
 
 /* hentry--carousel */
 .hentry--carousel {
+    &.resume {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
     .entry-title {
-        margin-bottom: 0;
+        // margin-bottom: 0;
     }
     .soustitre {
         color: lighten(#10656c,15%);
     }
     .entry-content {
+        color: #000;
         p {
-            margin-bottom: 0;
+            margin-bottom: $base-spacing-unit/2;
         }
     }
 }
