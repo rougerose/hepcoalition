@@ -9,9 +9,8 @@
       |plus{#GET{documents}|count}
       |plus{#GET{mots}|count}
 })]
-
-<article class="self objet recherche">
-   <div class="grid__item desk-eight-twelfths push--desk-four-twelfths">
+<div class="grid__item desk-eight-twelfths push--desk-four-twelfths">
+   <article class="self objet recherche">
       <header class="landmark">
          <h1 class="self__titre hN">
             <span><:resultats_recherche:></span> #RECHERCHE
@@ -25,24 +24,21 @@
             })]
          </div><!-- .texte -->
       </div><!-- .self__body -->
+   </article><!-- .self -->
 
-      [(#GET{total}|>{0}|oui)
-         [(#GET{articles}|count|>{0}|oui)
-         [<div class="liste articles recherche landmark">
-            (#INCLURE{fond=liste/articles,selection=#GET{articles},ajax})
-         </div>]][
-         (#GET{rubriques}|count|>{0}|oui)
-         [<div class="liste rubriques recherche landmark">
-            (#INCLURE{fond=liste/rubriques,selection=#GET{rubriques},ajax})
-         </div>]][(#GET{documents}|count|>{0}|oui)
-         [<div class="liste documents recherche landmark">
-            (#INCLURE{fond=liste/documents,selection=#GET{documents},ajax})
-         </div>]][
-         (#GET{mots}|count|>{0}|oui)
-         [<div class="liste mots recherche landmark">
-            (#INCLURE{fond=liste/mots,selection=#GET{mots},ajax})
-         </div>]]
-      ]
-   </div>
-   <!-- /.grid__item -->
-</article><!-- .self -->
+[(#GET{total}|>{0}|oui)
+   [(#GET{articles}|count|>{0}|oui)
+      [<div class="liste articles recherche landmark">
+         (#INCLURE{fond=liste/articles,selection=#GET{articles},ajax})
+      </div>]
+   ][(#GET{rubriques}|count|>{0}|oui)
+      [<div class="liste rubriques recherche landmark">
+         (#INCLURE{fond=liste/rubriques,selection=#GET{rubriques},ajax})
+      </div>]
+   ][(#GET{documents}|count|>{0}|oui)
+      [<div class="liste documents recherche landmark">
+         (#INCLURE{fond=liste/documents,selection=#GET{documents},ajax})
+      </div>]
+   ]
+]
+</div><!-- /.grid__item -->

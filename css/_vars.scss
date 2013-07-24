@@ -65,6 +65,7 @@ $pagefoot-color: #072b2e !default;
 $primary-dark-color: #127179;
 $heading-color: #10656C;
 $text-color: #424b4f; //#424f42;
+$text-color-light: lighten($text-color,60%);
 
 
 /*------------------------------------*\

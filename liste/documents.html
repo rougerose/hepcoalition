@@ -5,10 +5,10 @@
    url_doc : url du document
 ] #SET{selection,#ENV{selection}} #SET{url_doc,''}
 <B_documents>
-[<h2 class="delta resultats--detail">
-   (#GET{selection}|count|singulier_ou_pluriel{migreurop:info_recherche_document,migreurop:info_recherche_documents,nb})
+[<h2 class="hN resultats--decompte">
+   (#GET{selection}|count|singulier_ou_pluriel{local:info_recherche_document,local:info_recherche_documents,nb})
 </h2>]
-<ol class="objets-selection liste-items documents recherche">
+<ol class="liste--bloc recherche documents">
    #ANCRE_PAGINATION
    <BOUCLE_documents(DOCUMENTS){id_document IN #GET{selection}}{pagination 5}>
    [(#REM) calcul de l'url ]

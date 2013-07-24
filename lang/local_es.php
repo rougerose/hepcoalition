@@ -7,6 +7,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'agenda' => 'Calendario',
 
    // C
+   'campaigns_all' => 'All campaigns',
+   'campaign_last' => 'Last campaign',
    'contact' => 'Contacto',
    'credits_design' => "Design & développement <a href='@urldesign@'>christophe le drean</a> avec <a href='@urlspip@'>spip</a>",
 

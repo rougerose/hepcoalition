@@ -2,15 +2,15 @@
 ] #SET{selection,#ENV{selection}}
 <B_articles>
 #ANCRE_PAGINATION
-[<h2 class="delta resultats--detail">
+[<h2 class="hN resultats--decompte">
    (#GET{selection}|count|singulier_ou_pluriel{local:info_recherche_article,local:info_recherche_articles,nb})
 </h2>]
-<ol class="objets-selection liste-items articles recherche">
-   <BOUCLE_articles(ARTICLES){lang}{id_article IN #GET{selection}}{!par date}{pagination 5}>
-   <li class="[(#LOGO_ARTICLE|oui)oui]">
-      #INCLURE{fond=inclure/article-resume,id_article,lang}
+<ol class="liste--bloc recherche articles">
+   <BOUCLE_articles(ARTICLES){lang}{id_article IN #GET{selection}}{pagination 5}>
+   <li>
+      #INCLURE{fond=inclure/resume/article,id_article,lang}
    </li>
    </BOUCLE_articles>
 </ol>
-[<nav class="pagination bas[ (#ENV{pagination-align})] mbr">(#PAGINATION{li})</nav>]
+[<nav class="pagination bas pagination--page[ (#ENV{pagination-align})]">(#PAGINATION{li})</nav>]
 </B_articles>

@@ -14,9 +14,16 @@
 
 /*==========  résumés  ==========*/
 .resume {
-    border-bottom: 1px dotted darken($secondary-color,3%);
     margin-bottom: $base-spacing-unit;
-    padding-bottom: $base-spacing-unit;
+    .liste--bloc & {
+        &:after {
+            content: '';
+            display: block;
+            width: 50%;
+            margin: $base-spacing-unit auto 0;
+            border-bottom: 1px solid $text-color-light;
+        }
+    }
 }
     .entry-logo {
         @include media-query(lap-and-up) {
@@ -74,6 +81,11 @@
 .resume.vevent {
     padding-left: 55px;
     position: relative;
+    .liste--bloc & {
+        &:after {
+            width: 70%;
+        }
+    }
     time[itemprop="startDate"] {
         display: block;
         position: absolute;
@@ -96,12 +108,40 @@
 }
 /* résumé de rubrique */
 .resume.rubrique {
-    border: none;
+    // border: none;
     .entry-content {
         &.plus-logo {
             @include media-query(lap-and-up) {
                 padding-right: 2%;
                 width: 50%;
+            }
+        }
+    }
+}
+
+/* résumé rubrique, page résultat de recherche. Présentation identique aux articles */
+.recherche {
+    .resume.rubrique {
+        header {
+            @include media-query(lap-and-up) {
+                float: left;
+                padding-right: 1%;
+                width: 50%;
+            }
+        }
+        .entry-content {
+            @include media-query(lap-and-up) {
+                float: right;
+                padding-left: 2%;
+                width: 50%;
+                &.plus-logo {
+                    float: none;
+                    padding-left: 0;
+                    padding-right: 1%;
+                }
+                p {
+                    margin-right: $base-spacing-unit;
+                }
             }
         }
     }

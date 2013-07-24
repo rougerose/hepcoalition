@@ -7,6 +7,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'agenda' => 'Календарь событий',
 
    // C
+   'campaigns_all' => 'All campaigns',
+   'campaign_last' => 'Last campaign',
    'contact' => 'Контакт',
    'credits_design' => "Дизайн и разработка: <a href='@urldesign@'>Кристоф ле Дреан</a> при использовании системы управления контентом <a href='@urlspip@'>SPIP</a>",
 

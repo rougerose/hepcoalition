@@ -20,6 +20,7 @@
 }
 
 .section__title--subsection {
+    border-bottom-width: 1px;
     .soustitre {
         @include font-size(16px);
     }

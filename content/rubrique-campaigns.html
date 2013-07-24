@@ -21,7 +21,7 @@
 </div>
 <!-- /.grid__item -->
 
-[(#SET{articles_carousel,#ARRAY})][(#SET{articles_selection,#ARRAY})
+[(#SET{articles_selection,#ARRAY})
 ]<BOUCLE_selection(ARTICLES pb_selection){lang}{par ordre}{spip_pb_selection.id_rubrique=#ID_RUBRIQUE}{doublons}>[
 (#SET_PUSH{articles_selection,#ID_ARTICLE})
 ]</BOUCLE_selection>
@@ -30,22 +30,24 @@
    [(#GET{articles_selection}|oui)
       [(#INCLURE{fond=liste/articles-selection,
          selection=#GET{articles_selection},
-         section__title='',
+         section__title=[(#VAL{<:local:campaign_last:>})],
          pagination=10,
          ajax,lang}
       )]
    ]
-   [(#REM) sinon les sous-rubriques ]
+   [(#REM) les sous-rubriques ]
    <B_sousrubriques>
-   <ul class="liste--bloc">
+   <section>
+      <h1 class="section__title hN"><:local:campaigns_all:></h1>
+      <ul class="liste--bloc">
       <BOUCLE_sousrubriques(RUBRIQUES){id_parent}{par num titre, titre}{lang}>
       [<li>
          (#INCLURE{fond=inclure/resume/rubrique,id_rubrique,title_class='section__title section__title--subsection'})
       </li>]
       </BOUCLE_sousrubriques>
    </ul>
+   </section>
    </B_sousrubriques>
-   <//B_articles_rubrique>
 </div
 ><!-- /.grid__item desk-eight-twelfths --><div class="grid__item desk-four-twelfths">
    <aside class="secondary">
