@@ -5,8 +5,24 @@
 .resultats--decompte {
     border-bottom: 1px solid #000;
     color: #000;
-    @include font-size($h3-size);
+    @include font-size($h4-size);
+    text-transform: uppercase;
 }
+
+.resultats--total {
+    text-align: left;
+    text-transform: uppercase;
+    @include font-size(18px);
+}
+
+/*==========  documents  ==========*/
+.recherche {
+    &.documents {
+        .media__body {
+            margin-left: 140px;
+        }
+    }
+} 
 
 /*-----  End of recherche > résultats  ------*/
 

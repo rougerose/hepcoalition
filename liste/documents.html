@@ -8,7 +8,7 @@
 [<h2 class="hN resultats--decompte">
    (#GET{selection}|count|singulier_ou_pluriel{local:info_recherche_document,local:info_recherche_documents,nb})
 </h2>]
-<ol class="liste--bloc recherche documents">
+<ol class="liste--bloc recherche documents fichiers">
    #ANCRE_PAGINATION
    <BOUCLE_documents(DOCUMENTS){id_document IN #GET{selection}}{pagination 5}>
    [(#REM) calcul de l'url ]
@@ -19,35 +19,21 @@
       (#SET{url_doc,#INFO_URL{rubrique,#ID_OBJET}})
    ]</BOUCLE_lien_rubrique>
    <li class="item">
-      <article class="hentry resume">
-         [(#ENV{contexte}|=={principal}|oui)
-         <div class="media">]
+      <dl class="resume media">
+         <dt>
             [(#LOGO_DOCUMENT{vignette}|?{
-               [<a href="[(#GET{url_doc})]">(#LOGO_DOCUMENT{vignette}|image_reduire{104,0}|inserer_attribut{alt,[(#TITRE|sinon{<migreurop:info_document:> #ID_DOCUMENT})]}|inserer_attribut{class,spip_logos media__img})</a>]
+               [<a href="[(#GET{url_doc})]" class="media__link">(#LOGO_DOCUMENT{vignette}|image_reduire{104,0}|inserer_attribut{alt,[(#TITRE|sinon{<:medias:info_document:> #ID_DOCUMENT})]}|inserer_attribut{class,media__img})</a>]
                ,
-               [<a href="[(#GET{url_doc})]">(#LOGO_DOCUMENT|image_reduire{104,0}|inserer_attribut{alt,[(#TITRE|sinon{<migreurop:info_document:> #ID_DOCUMENT})]}|inserer_attribut{class,spip_logos media__img})</a>]
+               [<a href="[(#GET{url_doc})]" class="media__link">(#LOGO_DOCUMENT|image_reduire{104,0}|inserer_attribut{alt,[(#TITRE|sinon{<:medias:info_document:> #ID_DOCUMENT})]}|inserer_attribut{class,media__img})</a>]
             })]
-            [(#ENV{contexte}|=={principal}|oui)
-            <div class="media__body">]
-               <header>
-                     <h1 class="entry-title"><a href="#GET{url_doc}" rel="bookmark">[(#TITRE|sinon{<migreurop:info_document:> #ID_DOCUMENT})]</a></h1>
-               </header>
-               <div class="entry-content">
-                  <p>
-                     [(#DESCRIPTIF|PtoBR) <br />]
-                     <:migreurop:fichier:> #TYPE_DOCUMENT[ / (#TAILLE|taille_en_octets)]
-                  </p>
-               </div>
-            [(#ENV{contexte}|=={principal}|oui)
-            </div>]
-         [(#ENV{contexte}|=={principal}|oui)
-         </div>]
-         <ul class="meta-publi">
-            <li><time class="updated" datetime="[(#DATE|affdate{Y-m-d})]">[(#DATE|journum)][ (#DATE|nom_mois{abbr})][ (#DATE|affdate{Y})]</time></li>
-         </ul>
-      </article>
+         </dt>
+         <dd class="media__body">
+            <h2 class="spip_doc_titre epsilon"><a href="#GET{url_doc}" title="<:bouton_telecharger:>" type="#MIME_TYPE">[(#TITRE|sinon{<:medias:info_document:>})]</a></h2>
+            <p class="spip_doc_descriptif">[(#DESCRIPTIF|PtoBR) <br />]<span class="media-info">#TYPE_DOCUMENT[ &ndash; (#TAILLE|taille_en_octets)]</span></p>
+         </dd>
+      </dl>
    </li>
    </BOUCLE_documents>
 </ol>
-[<nav class="pagination bas[ (#ENV{pagination-align})] mbr">(#PAGINATION{li})</nav>]
+[<nav class="pagination bas pagination--page[ (#ENV{pagination-align})]">(#PAGINATION{li})</nav>]
 </B_documents>

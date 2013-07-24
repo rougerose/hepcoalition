@@ -6,6 +6,9 @@
 .liste--bloc {
     list-style:none;
     margin-left:0;
+    &.recherche {
+        margin-left: $base-spacing-unit;
+    }
 }
 
 /*==========  separateur  ==========*/

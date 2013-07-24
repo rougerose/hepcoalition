@@ -19,8 +19,8 @@
       <div class="self__body entry-content contenu surlignable">
          <div class="texte txt">
             [(#GET{total}|>{0}|?{
-               [<p class="resultats--message info">(#GET{total}|singulier_ou_pluriel{local:info_recherche_resultat,local:info_recherche_resultats,nb})</p>],
-               <p class="resultats--message"><:local:info_recherche_pas_de_resultat:></p>
+               [<p class="resultats--total info">(#GET{total}|singulier_ou_pluriel{local:info_recherche_resultat,local:info_recherche_resultats,nb})</p>],
+               <p class="resultats--total info"><:local:info_recherche_pas_de_resultat:></p>
             })]
          </div><!-- .texte -->
       </div><!-- .self__body -->
@@ -38,6 +38,10 @@
    ][(#GET{documents}|count|>{0}|oui)
       [<div class="liste documents recherche landmark">
          (#INCLURE{fond=liste/documents,selection=#GET{documents},ajax})
+      </div>]
+   ][(#GET{mots}|count|>{0}|oui)
+      [<div class="liste mots recherche landmark">
+         (#INCLURE{fond=liste/mots,selection=#GET{mots},ajax})
       </div>]
    ]
 ]
