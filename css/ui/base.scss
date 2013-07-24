@@ -12,7 +12,7 @@ img[width] {
 a {
    color: #000;
    text-decoration: none;
-   @include vendor(transition, all 0.35s ease-in-out 0.2s);
+   @include vendor(transition, color 0.35s ease-in-out 0.2s, border 0.35s ease-in-out 0.2s);
    &:visited{}
    &:hover{color: $brand-color; text-decoration: none;}
 }
