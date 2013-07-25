@@ -2,31 +2,41 @@
 =            =nav            =
 ============================*/
 
+.nav {
+    font-family: $heading-font;
+    text-transform: uppercase;
+}
+
 .nav--dropdown {
     position: absolute;
-    z-index: 99;
+    z-index: 90;
     top: -9999px;
-    list-style:none;
-    margin-left: 0;
     border: 4px solid $secondary-color;
     border-top: 0;
     background-color: #fff;
+    > li {
+        @include font-size(18px);
+        line-height: 1.5;
+    }
 }
 
 /*==========  menu-lang  ==========*/
 .menu-lang--container {
-    text-align: right;
-    text-transform: uppercase;
+    .ltr & {
+        text-align: right;
+    }
+    .rtl & {
+        text-align: left;
+    }
 }
     .menu-lang {
         position: absolute;
         z-index: 99;
         top: -9999px;
-        list-style: none;
         width: 100%;
         margin-top: 2px;
         max-width: 200px;
-        height: auto;
+        // height: auto;
         background: #fff;
         border: 1px solid darken(#fff, 20%);
         box-shadow: 1px 1px 5px rgba(0,0,0,.3);
@@ -66,17 +76,15 @@
             right: -5px;
         }
         li {
-            font-family: $heading-font;
-            font-size: $f-dropdown-font-size;
-            font-weight: bold;
-            line-height: $f-dropdown-line-height;
-            cursor: $cursor-pointer-value;
             margin: 0;
+            // font-weight: bold;
+            cursor: pointer;
+            @include font-size(15px);
+            line-height: 1.4;
             &:hover,
             &:focus { 
                 background: $f-dropdown-list-hover-bg;
             }
-
             a, strong {
                 display: block;
                 padding: $f-dropdown-list-padding;
@@ -101,9 +109,11 @@
         border-bottom: 2px solid $secondary-color;
         padding: 0 4px;
         color: #000;
-        font-family: $heading-font;
-        font-size: emCalc(16px);
-        font-weight: 400;
+        @include font-size(16px);
+        // font-family: $heading-font;
+        // font-size: emCalc(16px);
+        // font-weight: 400;
+        text-transform: uppercase;
     }
 
 /*==========  nav-principale  ==========*/
@@ -113,19 +123,19 @@
 }
 .nav-principale {
     margin-bottom: 0;
-    font-family: $heading-font;
-    @include font-size(20px);
-    line-height: 2;
     font-weight: 400;
-    text-transform: uppercase;
     text-align: left;
+    white-space: nowrap;
+    > li {
+        @include font-size(20px);
+        line-height: 2;
+    }
     > li:hover .nav--dropdown {
         top: 2em;
         left: -5px;
     }
     .nav__item {
         position: relative;
-        text-align: left;
     }
     .search-site {
         float: right;
@@ -133,7 +143,7 @@
     }
 }
 .item {
-    padding: 0 5px;
+    padding: 0 6px;
 }
 
 /*==========  nav-plan  ==========*/
@@ -142,7 +152,6 @@
     ul li {
         position: relative;
         padding-left: 0.7em;
-        font-family: $heading-font;
         &:before {
             display: block;
             position: absolute;

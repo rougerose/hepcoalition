@@ -34,10 +34,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'info_recherche_resultats' => '@nb@ results',
    'info_recherche_pas_de_resultat' => 'No result',
 
-   //M
+   // L
+   'lastest_news' => "Lastest news",
+   
+   // M
    'more' => 'more',
 
-   //N
+   // N
    'name_first' => '名',
    'name_last' => '姓',
    'news_last_publications' => '新闻及最新刊物',

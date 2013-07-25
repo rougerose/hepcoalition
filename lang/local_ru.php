@@ -34,10 +34,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // H
    'home' => 'на домашнюю страничку',
 
-   //M
+   // L
+   'lastest_news' => "Lastest news",
+
+   // M
    'more' => 'Читать дальше',
 
-   //N
+   // N
    'name_first' => 'Имя',
    'name_last' => 'Фамилия',
    'news_last_publications'  => 'Новости и недавние публикации',

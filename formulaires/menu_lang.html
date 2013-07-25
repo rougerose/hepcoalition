@@ -42,7 +42,7 @@ avec la fonction PHP 'array_diff' http://www.php.net/manual/fr/function.array-di
 [(#SET{langues_a_afficher,[(#CONFIG{langues_utilisees}|explode{","}|array_diff{#CONFIG{menu_lang_liens/langues_invisibles, #ARRAY}})]})]
 
 <BOUCLE_PlusieursLanguesUtilisees(POUR){tableau #GET{langues_a_afficher}}{1,1}>
-<[(#CONFIG{menu_lang_liens/formatliste,bloc}|=={'bloc'}|?{div,ul})] id="menu_lang" class="menu-lang right">
+<[(#CONFIG{menu_lang_liens/formatliste,bloc}|=={'bloc'}|?{div,ul})] id="menu_lang" class="nav nav--stacked menu-lang right">
 [(#REM)
 On liste les langues utilisees dans le site
 ]

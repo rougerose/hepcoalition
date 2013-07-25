@@ -6,9 +6,13 @@
       <BOUCLE_secteurs(RUBRIQUES){racine}{par num titre, titre}>
       <li id="r#ID_RUBRIQUE" class="nav__item">
          <a href="#URL_RUBRIQUE" class="item[ (#EXPOSE|oui)active]">#TITRE</a>
+         <BOUCLE_mot(MOTS){id_rubrique}{technique=oui}{titre=rubrique news}>#SET{rubrique-news,' '}</BOUCLE_mot> 
          <B_sousrubriques>
-         <ul class="nav--stacked nav--dropdown">
+         <ul class="nav nav--stacked nav--dropdown">
             <BOUCLE_sousrubriques(RUBRIQUES){id_parent}{par num titre, titre}>
+            [(#GET{rubrique-news}|oui)
+            <li class="nav__item"><a href="#_secteurs:URL_RUBRIQUE" class="item"><:local:lastest_news:></a></li>
+            ]
             <li id="r#ID_RUBRIQUE" class="nav__item">
                <a href="#URL_RUBRIQUE" class="item[ (#EXPOSE|oui)active]">#TITRE</a>
             </li>

@@ -34,6 +34,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'info_recherche_resultats' => '@nb@ results',
    'info_recherche_pas_de_resultat' => 'No result',
 
+   // L
+   'lastest_news' => "Lastest news",
+
    //M
    'more' => 'More',
 
