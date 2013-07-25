@@ -7,6 +7,7 @@
 }
     .self__titre {
         color: $primary-color;
+        @include font-size(36px);
     }
     .self__body {
         .chapo {
@@ -26,9 +27,6 @@
 
 /*==========  self.article  ==========*/
 .self.article {
-    .self__titre {
-        @include font-size(36px);
-    }
     .soustitre {
         @include font-size(24px);
     }
@@ -51,6 +49,7 @@
     .self__titre {
         @include font-size(16px);
         margin-bottom: 12px;
+        color: $secondary-color;
     }
     .self__logo {
         float: left;

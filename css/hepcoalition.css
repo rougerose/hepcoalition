@@ -1291,7 +1291,7 @@ body { padding-top: 12px; }
 ============================*/
 .self { margin-bottom: 48px; }
 
-.self__titre { color: #19a1ac; }
+.self__titre { color: #19a1ac; font-size: 36px; font-size: 2.25rem; line-height: 1.33333; }
 
 .self__body .chapo { color: #111; font-size: 18px; font-size: 1.125rem; line-height: 1.33333; }
 
@@ -1299,7 +1299,6 @@ body { padding-top: 12px; }
 @media only screen and (min-width: 1024px) { .self.rubrique .self__logo { margin-top: 1em; } }
 
 /*==========  self.article  ==========*/
-.self.article .self__titre { font-size: 36px; font-size: 2.25rem; line-height: 1.33333; }
 .self.article .soustitre { font-size: 24px; font-size: 1.5rem; line-height: 1; }
 .self.article .self__logo { margin-bottom: 24px; }
 
@@ -1308,7 +1307,7 @@ body { padding-top: 12px; }
 
 /*==========  self.evenement  ==========*/
 .self.evenement { margin-bottom: 12px; border-bottom: 1px dotted #dfe3e4; }
-.self.evenement .self__titre { font-size: 16px; font-size: 1rem; line-height: 1.5; margin-bottom: 12px; }
+.self.evenement .self__titre { font-size: 16px; font-size: 1rem; line-height: 1.5; margin-bottom: 12px; color: #c11f02; }
 .self.evenement .self__logo { float: left; margin-right: 12px; margin-bottom: 0px; }
 .self.evenement .info-publi { margin-bottom: 12px; font-style: italic; color: #19a1ac; }
 .self.evenement .entry-content { margin-right: 24px; }
