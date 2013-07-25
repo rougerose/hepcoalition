@@ -41,9 +41,11 @@
       <h1 class="section__title hN"><:local:campaigns_all:></h1>
       <ul class="liste--bloc">
       <BOUCLE_sousrubriques(RUBRIQUES){id_parent}{par num titre, titre}{lang}>
+      <BOUCLE_article_principal(ARTICLES spip_mots){id_rubrique}{id_mot=1}{0,1}{par num titre, titre}{lang}>
       [<li>
-         (#INCLURE{fond=inclure/resume/rubrique,id_rubrique,title_class='section__title section__title--subsection'})
+         (#INCLURE{fond=inclure/resume/article,id_article,lang})
       </li>]
+      </BOUCLE_article_principal>
       </BOUCLE_sousrubriques>
    </ul>
    </section>
