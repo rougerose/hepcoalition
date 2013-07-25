@@ -9,6 +9,10 @@
          </header>
       </div>
       <!-- /.grid__item -->
+      [<div class="grid__item">
+         (#ENV{carousel}|=={oui}|oui)
+         #INCLURE{fond=liste/carousel-images,id_article}
+      </div><!-- /.grid__item -->]
    </div>
    <!-- /.grid -->
    <div class="grid grid--rev">
@@ -45,8 +49,8 @@
             </aside>]
          </div><!-- .self__body -->
       </div><!-- /.grid__item --><div class="grid__item desk-four-twelfths">
-         [<div class="self__logo">
-            (#LOGO_ARTICLE|inserer_attribut{class,media-logo})
+         [<div class="self__logo">(#ENV{carousel}|non)
+            [(#LOGO_ARTICLE|inserer_attribut{class,media-logo})]
          </div><!-- /.self__logo -->]
 
          <aside class="meta">

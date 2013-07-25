@@ -28,7 +28,7 @@
                [(#FORMULAIRE_ECRIRE_AUTEUR)]]
 
             [(#REM) Gestion du portfolio et des documents ]
-               [(#INCLURE{fond=inclure/documents,id_article,portfolio=#GET{portfolio}})]
+               [(#INCLURE{fond=inclure/documents,id_article})]
 
             [(#REM) signatures formulaire formidable -- petition ]
             <BOUCLE_signatures(ARTICLES){id_article}{si #IDFORMULAIRE}>

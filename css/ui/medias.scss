@@ -50,6 +50,14 @@
     background:#fff;
 }
 
+/*==========  spip_doc élements communs  ==========*/
+.spip_doc_titre,
+.spip_doc_descriptif {
+  @include font-size(14px);
+  line-height: 1.3;
+  color: $text-color-cool;
+}
+
 /*==========  documents et images  ==========*/
 .documents {
     // margin-bottom: 0; annulé pour la page recherche
@@ -96,14 +104,6 @@
     }
 }
 
-/*  tous les autres documents */
-//.documents.fichiers {
-//  .spip_doc_titre,
-//  p {
-    // margin-bottom: 0;
-//  }
-// }
-
 /* image insérée dans #TEXTE */
 .texte {
   .spip_documents {
@@ -124,16 +124,31 @@
   .spip_doc_titre,
   .spip_doc_descriptif {
     margin-left: 0;
-    @include font-size(14px);
-    line-height: 1.3;
-    color: $text-color-cool;
     text-align: center;
   }
 }
 
-.media-info {
-  @include font-size(14px);
-  color: $text-color-cool;
+/*==========  media-caption  ==========*/
+.media-caption {
+  * {
+    margin-bottom: 0;
+  }
+}
+
+.media-caption--carousel {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 6px 12px;
+  background-color: #000;
+  background-color: rgba(#000,0.3);
+  @include vendor(transition, background-color 0.35s ease-in-out 0.2s);
+  &:hover {
+    background-color: #000;
+  }
+  .spip_doc_titre {
+    font-weight: 700;
+  }
 }
 
 /*==========  image avec mediabox  ==========*/

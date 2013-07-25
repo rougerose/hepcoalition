@@ -26,6 +26,9 @@
     }
         .slides__item {
             position: relative;
+            figure {
+                margin-bottom: 0;
+            }
         }
             .slides__item--body {
                 position: absolute;
@@ -79,5 +82,17 @@
             background-position: 0 -42px;
         }
     }
+
+/*==========  media-caption--carousel  ==========*/
+/* opacité des légendes par défaut */
+.media-caption--carousel {
+    .js & {
+        opacity: 0;
+    }
+    .js .flex-active-slide & {
+        opacity: 1;
+    }
+}
+
 
 /*-----  End of =Carousel  ------*/
