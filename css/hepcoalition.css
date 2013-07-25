@@ -1447,7 +1447,7 @@ a .media-logo:hover, a .texte .spip_documents img:hover, .texte .spip_documents 
 .documents.fichiers .spip_doc_titre, .documents.fichiers p { margin-bottom: 0; }
 .documents.fichiers .spip_doc_descriptif { font-size: 14px; font-size: 0.875rem; line-height: 1.71429; }
 
-.documents.fichiers.recherche .media { width: auto; }
+.documents.fichiers.recherche .media { display: block; width: 100%; }
 
 /* image insérée dans #TEXTE */
 .texte .spip_documents { margin-top: .3em; }
