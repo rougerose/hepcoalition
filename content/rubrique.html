@@ -30,7 +30,7 @@
    [(#GET{articles_selection}|oui)
       [(#INCLURE{fond=liste/articles-selection,
          selection=#GET{articles_selection},
-         section__title=[(#VAL{<:local:news_top:>})],
+         section__title=[(#VAL{<:local:latest_publications:>})],
          pagination=20,
          ajax,lang}
       )]

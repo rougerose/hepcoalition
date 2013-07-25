@@ -4,78 +4,83 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
    // A
-   'agenda' => '&#1571;&#1580;&#1606;&#1583;&#1577;',
-
+   'agenda'                         => 'أجندة',
+   'about_us'                       => 'من نحن',
+   
    // C
-   'campaigns_all' => 'All campaigns',
-   'campaign_last' => 'Last campaign',
-   'contact' => '&#160;&#1575;&#1604;&#1575;&#1578;&#1589;&#1575;&#1604;',
-   'credits_design' => "&#160;&#1578;&#1589;&#1605;&#1610;&#1605; &#1608;&#1578;&#1591;&#1608;&#1610;&#1585;&#1603;&#1585;&#1610;&#1587;&#1578;&#1608;&#1601; <a href='@urldesign@'></a>  &#1583;&#1585;&#1610;&#1575;&#1606;  &#1605;&#1593; <a href='@urlspip@'>spip</a>",
-
+   'campaigns_all'                  => 'All campaigns',
+   'campaign_last'                  => 'Last campaign',
+   'contact'                        => ' الاتصال',
+   'credits_design'                 => " تصميم وتطويركريستوف <a href='@urldesign@'></a>  دريان  مع <a href='@urlspip@'>spip</a>",
+   
    // E
-   'email' => '&#1575;&#1604;&#1576;&#1585;&#1610;&#1583; &#1575;&#1604;&#1573;&#1604;&#1603;&#1578;&#1585;&#1608;&#1606;&#1610;',
-
+   'email'                          => 'البريد الإلكتروني',
+   'email_send'                     => "Send us an <a href='@urlcontact@' class='spip_out'>email</a>",
+   
+   // F
+   'follow_us'                      => "Follow us", // on Facebook
+   
    // H
-   'home' => '&#1575;&#1604;&#1589;&#1601;&#1581;&#1577; &#1575;&#1604;&#1585;&#1574;&#1610;&#1587;&#1610;&#1577;',
-
+   'home'                           => 'الصفحة الرئيسية',
+   
    // I
-   'info_recherche_article' => '1 article',
-   'info_recherche_articles' => '@nb@ articles',
-   'info_recherche_document' => '1 file',
-   'info_recherche_documents' => '@nb@ files',
-   'info_recherche_label' => 'Search',
-   'info_recherche_mot' => '1 keyword',
-   'info_recherche_mots' => '@nb@ keywords',
-   'info_recherche_rubrique' => '1 section',
-   'info_recherche_rubriques' => '@nb@ sections',
-   'info_recherche_site' => '1 web site',
-   'info_recherche_sites' => '@nb@ web sites',
-   'info_recherche_resultat' => '1 result',
-   'info_recherche_resultats' => '@nb@ results',
+   'info_recherche_article'         => '1 article',
+   'info_recherche_articles'        => '@nb@ articles',
+   'info_recherche_document'        => '1 file',
+   'info_recherche_documents'       => '@nb@ files',
+   'info_recherche_label'           => 'Search',
+   'info_recherche_mot'             => '1 keyword',
+   'info_recherche_mots'            => '@nb@ keywords',
+   'info_recherche_rubrique'        => '1 section',
+   'info_recherche_rubriques'       => '@nb@ sections',
+   'info_recherche_site'            => '1 web site',
+   'info_recherche_sites'           => '@nb@ web sites',
+   'info_recherche_resultat'        => '1 result',
+   'info_recherche_resultats'       => '@nb@ results',
    'info_recherche_pas_de_resultat' => 'No result',
    
    // L
-   'lastest_news' => "Lastest news",
+   'lastest_news'                   => "Lastest news",
+   'latest_publications'            => 'Latest publications',
    
    //M
-   'more' => '&#160;&#1575;&#1602;&#1585;&#1571; &#1575;&#1604;&#1605;&#1586;&#1610;&#1583;',
+   'more'                           => ' اقرأ المزيد',
    
    // N
-   'name_first' => '&#1575;&#1604;&#1575;&#1587;&#1605; &#1575;&#1604;&#1571;&#1608;&#1604;',
-   'name_last' => '&#1575;&#1587;&#1605; &#1575;&#1604;&#1593;&#1575;&#1574;&#1604;&#1577;',
-   'news_last_publications'  => '&#1575;&#1604;&#1571;&#1582;&#1576;&#1575;&#1585; &#1608;&#1570;&#1582;&#1585; &#1575;&#1604;&#1606;&#1588;&#1585;&#1575;&#1578;',
-   'news_top' => 'Top news',
-   'no_event_available' => 'no event available',
-
+   'name_first'                     => 'الاسم الأول',
+   'name_last'                      => 'اسم العائلة',
+   'news_last_publications'         => 'الأخبار وآخر النشرات',
+   'no_event_available'             => 'no event available',
+   
    // O
-   'organisation' => '&#160;&#1575;&#1604;&#1605;&#1606;&#1592;&#1605;&#1577;',
-
+   'organisation'                   => ' المنظمة',
+   
    // P
-   'page' => '&#1589;&#1601;&#1581;&#1577;',
-   'pays' => '&#160;&#1575;&#1604;&#1576;&#1604;&#1583;',
-
+   'page'                           => 'صفحة',
+   'pays'                           => ' البلد',
+   
    // R
-
+   
    // S
-   'share' => 'Share',
-   'signatories' => '&#160;&#1575;&#1604;&#1605;&#1608;&#1602;&#1593;&#1608;&#1606;',
-   'signatories_coalition' => "&#160;&#1575;&#1604;&#1605;&#1608;&#1602;&#1593;&#1608;&#1606;",
-   'signatories_singular' => '1 supporter',
-   'signatories_plural' => "@nb@ supporters",
-   'signatories_plural_with' => '&#1575;&#1604;&#1583;&#1575;&#1593;&#1605;&#1608;&#1606; &#1605;&#1593; @nb@',
-   'signatories_singular_with' => '&#1605;&#1593; &#1583;&#1575;&#1593;&#1605; &#1608;&#1575;&#1581;&#1583;',
-   'sign_on' => '&#1575;&#1604;&#1578;&#1608;&#1602;&#1610;&#1593; &#1593;&#1604;&#1609; &#1575;&#1604;&#1606;&#1583;&#1575;&#1569;',
-   'sign_on_wc' => '&#160;&#1575;&#1604;&#1578;&#1608;&#1602;&#1610;&#1593; &#1593;&#1604;&#1609; &#1606;&#1583;&#1575;&#1569; &#1608;&#1575;&#1588;&#1606;&#1591;&#1606;',
-   'sign_petition' => '&#1608;&#1602;&#1593; &#1593;&#1604;&#1609; &#1575;&#1604;&#1593;&#1585;&#1610;&#1590;&#1577;',
-   'siteweb' => '&#160;&#1575;&#1604;&#1605;&#1608;&#1602;&#1593; &#1575;&#1604;&#1573;&#1604;&#1603;&#1578;&#1585;&#1608;&#1606;&#1610;',
-   'suite' => '&#160;&#1575;&#1602;&#1585;&#1571; &#1575;&#1604;&#1605;&#1586;&#1610;&#1583;',
-   'suivre_facebook' => "<a href='@urlfacebook@'>&#160;&#1578;&#1575;&#1576;&#1593;&#1606;&#1575; &#1593;&#1604;&#1609; &#1575;&#1604;&#1601;&#1610;&#1587;&#1576;&#1608;&#1603;</a>",
-
+   'share'                          => 'Share',
+   'signatories'                    => ' الموقعون',
+   'signatories_coalition'          => " الموقعون",
+   'signatories_singular'           => '1 supporter',
+   'signatories_plural'             => "@nb@ supporters",
+   'signatories_plural_with'        => 'الداعمون مع @nb@',
+   'signatories_singular_with'      => 'مع داعم واحد',
+   'sign_on'                        => 'التوقيع على النداء',
+   'sign_on_wc'                     => ' التوقيع على نداء واشنطن',
+   'sign_petition'                  => 'وقع على العريضة',
+   'siteweb'                        => ' الموقع الإلكتروني',
+   'suite'                          => ' اقرأ المزيد',
+   'suivre_facebook'                => "<a href='@urlfacebook@'> تابعنا على الفيسبوك</a>",
+   
    // T
-   'tags' => 'Tags',
-
+   'tags'                           => 'Tags',
+   
    // U
-   'updated' => 'Updated'
+   'updated'                        => 'Updated'
 
 );
 ?>
