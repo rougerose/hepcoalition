@@ -9,7 +9,7 @@
     display: block;
     @include font-size(18px);
     font-weight: 400;
-    color: darken($primary-color,14%);
+    color: $text-color-cool;
 }
 
 /*==========  résumés  ==========*/
@@ -97,7 +97,7 @@
         @include vendor(border-radius,4px);
         text-transform: uppercase;
         text-align: center;
-        font: 700 30px/25px $CabinC;
+        font: 700 30px/25px $heading-font;
         span {
             display: block;
             margin-top: -4px;
@@ -155,14 +155,7 @@
         margin: 0;
         padding: 0;
     }
-    .entry-title {
-        // margin-bottom: 0;
-    }
-    .soustitre {
-        color: lighten(#10656c,15%);
-    }
     .entry-content {
-        color: #000;
         p {
             margin-bottom: $base-spacing-unit/2;
         }

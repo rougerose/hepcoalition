@@ -835,9 +835,9 @@ label, .label { display: block; }
 /*------------------------------------*\ $BRAND
 \*------------------------------------*/
 /** `.brand` is a quick and simple way to apply your brand face and/or color to any element using a handy helper class. */
-.brand { font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif!important; color: #19a1ac!important; }
+.brand { font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif!important; color: #19a1ac!important; }
 
-.brand-face { font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif!important; }
+.brand-face { font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif!important; }
 
 .brand-color, .brand-colour { color: #19a1ac!important; }
 
@@ -1005,10 +1005,9 @@ label, .label { display: block; }
 =            =Typo            =
 =============================*/
 /* Headings */
-.hN { font-family: "Cabin Condensed", "Arial Narrow", Arial, sans-serif; font-weight: 400; }
-.ru .hN { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+.hN { font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif; font-weight: 400; }
 
-h2.spip, h3.spip, h4.spip, h5.spip, h6.spip, .notes h1.spip, .documents h1.spip { font-family: "Cabin Condensed", "Arial Narrow", Arial, sans-serif; font-weight: 400; color: #0d5056; margin-top: 48px; margin-top: 3rem; }
+h2.spip, h3.spip, h4.spip, h5.spip, h6.spip, .notes h1.spip, .documents h1.spip { font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif; font-weight: 300; color: #168c96; margin-top: 48px; margin-top: 3rem; }
 
 h2.spip { line-height: 1.2; }
 
@@ -1022,7 +1021,7 @@ h6.spip { color: #5c6667; padding-left: 0; }
 
 .txt > h2.spip:first-child, .txt > h3.spip:first-child, .txt > h4.spip:first-child, .txt > h5.spip:first-child, .txt > h6.spip:first-child { margin-top: 0; }
 
-.intertitre { border-bottom: 1px solid #10656c; font-size: 20px; font-size: 1.25rem; line-height: 1.2; text-transform: uppercase; }
+.intertitre { border-bottom: 1px solid #19a1ac; font-size: 20px; font-size: 1.25rem; line-height: 1.2; text-transform: uppercase; }
 
 /*==========  text  ==========*/
 .text--upper { text-transform: uppercase; }
@@ -1065,7 +1064,7 @@ a.push:active, a.push:focus, a.spip_out:active, a.spip_out:focus { position: rel
 /*================================
 =            =boutons            =
 ================================*/
-.btn { display: inline-block; vertical-align: middle; margin: 0; padding: 0 1em; border: none; white-space: nowrap; font: 400 100%/2 "Cabin Condensed", "Arial Narrow", Arial, sans-serif; text-transform: uppercase; cursor: pointer; -webkit-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); -webkit-transition: background-color 0.3s ease-out; -moz-transition: background-color 0.3s ease-out; -ms-transition: background-color 0.3s ease-out; -o-transition: background-color 0.3s ease-out; transition: background-color 0.3s ease-out; }
+.btn { display: inline-block; vertical-align: middle; margin: 0; padding: 0 1em; border: none; white-space: nowrap; font: 400 100%/2 "Roboto Condensed", "Arial Narrow", Arial, sans-serif; text-transform: uppercase; cursor: pointer; -webkit-border-radius: 3px; border-radius: 3px; -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); box-shadow: 0 0 4px rgba(0, 0, 0, 0.3); -webkit-transition: background-color 0.3s ease-out; -moz-transition: background-color 0.3s ease-out; -ms-transition: background-color 0.3s ease-out; -o-transition: background-color 0.3s ease-out; transition: background-color 0.3s ease-out; }
 
 /* font-size */
 .btn--alpha { font-size: 3rem; }
@@ -1113,7 +1112,7 @@ input:focus, textarea:focus { background: darken white, 2%; border-color: #99999
 
 .erreur_message { display: block; color: #c11f02; font-style: italic; }
 
-.formulaire_spip { font-family: "Cabin Condensed", "Arial Narrow", Arial, sans-serif; }
+.formulaire_spip { font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif; }
 .formulaire_spip ul { list-style: none; margin-left: 0; }
 .formulaire_spip li { margin-bottom: 24px; }
 
@@ -1150,7 +1149,7 @@ input:focus, textarea:focus { background: darken white, 2%; border-color: #99999
 
 /*==========  tableaux spip  ==========*/
 table.spip { font-size: 13px; font-size: 0.8125rem; line-height: 1.84615; max-width: 100%; }
-table.spip th { color: #000; }
+table.spip th { color: #000; font-weight: 700; }
 table.spip th, table.spip td { border-color: #ddd; border-width: 1px 0 0; }
 table.spip tr:last-child th, table.spip tr:last-child td { border-bottom-width: 1px; }
 table.spip tbody tr:nth-of-type(odd), table.spip .row_odd { background: #f9f9f9; }
@@ -1161,7 +1160,7 @@ table.spip caption { color: #999; margin-bottom: 1em; text-transform: uppercase;
 /*=============================
 =            =page            =
 =============================*/
-html { border-top: 7px solid #c11f02; font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif; font-family: 'Cabin',sans-serif; font-weight: normal; color: #424b4f; }
+html { border-top: 7px solid #c11f02; font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: normal; color: #424b4f; }
 
 body { padding-top: 12px; }
 
@@ -1202,19 +1201,19 @@ body { padding-top: 12px; }
 .menu-lang.right:after { left: auto; right: 9px; }
 .menu-lang.right { right: 0.9375em; }
 .menu-lang.active { opacity: 1; top: 26px; left: auto; right: -5px; }
-.menu-lang li { font-family: "Cabin Condensed", "Arial Narrow", Arial, sans-serif; font-size: 0.875em; font-weight: bold; line-height: 1.125em; cursor: "pointer"; margin: 0; }
+.menu-lang li { font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif; font-size: 0.875em; font-weight: bold; line-height: 1.125em; cursor: "pointer"; margin: 0; }
 .menu-lang li:hover, .menu-lang li:focus { background: #c11f02; }
 .menu-lang li a, .menu-lang li strong { display: block; padding: 0.3125em 0.625em; color: #555555; }
 .menu-lang li a:hover, .menu-lang li strong:hover { color: #fff; }
 .menu-lang li strong { color: #c11f02; }
 
 @media only screen and (max-width: 767px) { .menu-lang { max-width: 100%; left: 0; } }
-.menu-lang--langue { border-bottom: 2px solid #c11f02; padding: 0 4px; color: #000; font-family: "Cabin Condensed", "Arial Narrow", Arial, sans-serif; font-size: 1em; font-weight: 400; }
+.menu-lang--langue { border-bottom: 2px solid #c11f02; padding: 0 4px; color: #000; font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif; font-size: 1em; font-weight: 400; }
 
 /*==========  nav-principale  ==========*/
 .nav-principale__container { position: relative; border-bottom: 4px solid #c11f02; }
 
-.nav-principale { margin-bottom: 0; font-family: "Cabin Condensed", "Arial Narrow", Arial, sans-serif; font-size: 20px; font-size: 1.25rem; line-height: 1.2; line-height: 2; font-weight: 400; text-transform: uppercase; text-align: left; }
+.nav-principale { margin-bottom: 0; font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif; font-size: 20px; font-size: 1.25rem; line-height: 1.2; line-height: 2; font-weight: 400; text-transform: uppercase; text-align: left; }
 .nav-principale > li:hover .nav--dropdown { top: 2em; left: -5px; }
 .nav-principale .nav__item { position: relative; text-align: left; }
 .nav-principale .search-site { float: right; margin-top: .2em; }
@@ -1223,7 +1222,7 @@ body { padding-top: 12px; }
 
 /*==========  nav-plan  ==========*/
 .nav-plan { margin-bottom: 48px; }
-.nav-plan ul li { position: relative; padding-left: 0.7em; font-family: "Cabin Condensed", "Arial Narrow", Arial, sans-serif; }
+.nav-plan ul li { position: relative; padding-left: 0.7em; font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif; }
 .nav-plan ul li:before { display: block; position: absolute; left: 0; content: '/'; color: #ccc; }
 
 /*-----  End of =nav  ------*/
@@ -1244,7 +1243,7 @@ body { padding-top: 12px; }
 /*==========  éléments communs  ==========*/
 .entry-title { font-size: 24px; font-size: 1.5rem; line-height: 1; }
 
-.soustitre { display: block; font-size: 18px; font-size: 1.125rem; line-height: 1.33333; font-weight: 400; color: #10676e; }
+.soustitre { display: block; font-size: 18px; font-size: 1.125rem; line-height: 1.33333; font-weight: 400; color: #8b999f; }
 
 /*==========  résumés  ==========*/
 .resume { margin-bottom: 24px; }
@@ -1265,7 +1264,7 @@ body { padding-top: 12px; }
 /* résumé d'evenement */
 .resume.vevent { padding-left: 55px; position: relative; }
 .liste--bloc .resume.vevent:after { width: 70%; }
-.resume.vevent time[itemprop="startDate"] { display: block; position: absolute; top: 0; left: 0; float: left; padding: 5px; background-color: #19a1ac; color: #d1eff1; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; text-transform: uppercase; text-align: center; font: 700 30px/25px "Cabin Condensed", "Arial Narrow", Arial, sans-serif; }
+.resume.vevent time[itemprop="startDate"] { display: block; position: absolute; top: 0; left: 0; float: left; padding: 5px; background-color: #19a1ac; color: #d1eff1; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; -o-border-radius: 4px; border-radius: 4px; text-transform: uppercase; text-align: center; font: 700 30px/25px "Roboto Condensed", "Arial Narrow", Arial, sans-serif; }
 .resume.vevent time[itemprop="startDate"] span { display: block; margin-top: -4px; font-size: 20px; line-height: 25px; }
 
 /* résumé de rubrique */
@@ -1279,8 +1278,6 @@ body { padding-top: 12px; }
 
 /* hentry--carousel */
 .hentry--carousel.resume { border: none; margin: 0; padding: 0; }
-.hentry--carousel .soustitre { color: #1aa3af; }
-.hentry--carousel .entry-content { color: #000; }
 .hentry--carousel .entry-content p { margin-bottom: 12px; }
 
 /*-----  End of =Hentry  ------*/
@@ -1289,16 +1286,16 @@ body { padding-top: 12px; }
 ============================*/
 .self { margin-bottom: 48px; }
 
-.self__titre { color: #c11f02; }
+.self__titre { color: #19a1ac; }
 
-.self__body .chapo { color: #222; font-size: 18px; font-size: 1.125rem; line-height: 1.33333; }
+.self__body .chapo { color: #111; font-size: 18px; font-size: 1.125rem; line-height: 1.33333; }
 
 /*==========  self.rubrique  ==========*/
 @media only screen and (min-width: 1024px) { .self.rubrique .self__logo { margin-top: 1em; } }
 
 /*==========  self.article  ==========*/
-.self.article .self__titre { font-size: 48px; font-size: 3rem; line-height: 1; }
-.self.article .soustitre { font-size: 24px; font-size: 1.5rem; line-height: 1; line-height: 2; }
+.self.article .self__titre { font-size: 36px; font-size: 2.25rem; line-height: 1.33333; }
+.self.article .soustitre { font-size: 24px; font-size: 1.5rem; line-height: 1; }
 .self.article .self__logo { margin-bottom: 24px; }
 
 /*==========  evenements  ==========*/
@@ -1321,14 +1318,15 @@ body { padding-top: 12px; }
 ============================*/
 .meta .hN { margin-bottom: 0; font-size: 17px; font-size: 1.0625rem; line-height: 1.41176; }
 
-.meta-item { margin-bottom: 24px; font-size: 13px; font-size: 0.8125rem; line-height: 1.84615; text-transform: uppercase; color: #c3cacd; }
+.meta-item { margin-bottom: 24px; font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif; font-size: 13px; font-size: 0.8125rem; line-height: 1.84615; text-transform: uppercase; color: #c3cacd; }
 .meta-item.meta-author { margin-bottom: 0; }
+.self .meta-item { font-size: 14px; font-size: 0.875rem; line-height: 1.71429; }
 
 /*-----  End of meta  ------*/
 /*================================
 =            =section            =
 ================================*/
-.section__title { font-size: 18px; font-size: 1.125rem; line-height: 1.33333; text-transform: uppercase; font-weight: normal; border-bottom: 2px solid #c11f02; color: #000; }
+.section__title { font-size: 18px; font-size: 1.125rem; line-height: 1.33333; text-transform: uppercase; font-weight: 400; border-bottom: 2px solid #19a1ac; color: #168c96; }
 
 .plan { margin-top: -0.35em; font-size: 24px; font-size: 1.5rem; line-height: 1; line-height: 1.3; }
 
@@ -1363,10 +1361,10 @@ body { padding-top: 12px; }
 /*===================================
 =            =pagination            =
 ===================================*/
-.pagination { margin-bottom: 24px; }
+.pagination { margin-bottom: 24px; background-color: #f5f6f7; }
 .pagination > ul { list-style: none; display: inline; margin-left: 6px; }
 
-.pagination-label { font-size: 16px; font-size: 1rem; line-height: 1.5; display: inline-block; margin-bottom: 0; text-transform: uppercase; color: #ccc; font-weight: 400; }
+.pagination-label { font-size: 16px; font-size: 1rem; line-height: 1.5; display: inline-block; margin-bottom: 0; text-transform: uppercase; color: #8b999f; font-weight: 400; }
 
 .pagination-item { padding: 0 6px; display: inline-block; *display: inline; zoom: 1; }
 .pagination-item.on { font-size: 19px; color: #c11f02; }
@@ -1376,7 +1374,7 @@ body { padding-top: 12px; }
 .pagination--page { text-align: right; }
 
 /*==========  pagination--temporelle  ==========*/
-.pagination--temporelle { border-top: 2px solid #c11f02; text-align: center; }
+.pagination--temporelle { text-align: center; }
 
 /*-----  End of =pagination  ------*/
 /*===============================
@@ -1397,7 +1395,6 @@ a .media-logo:hover, a .texte .spip_documents img:hover, .texte .spip_documents 
 .logo__box--content { position: relative; z-index: 1; /* Make sure it’s rendered on top of the pseudo-element */ padding: 10px; background: #fff; }
 
 /*==========  documents et images  ==========*/
-.documents { margin-bottom: 0; }
 .documents.portfolio .media__link { display: inline-block; }
 .documents.portfolio .media__img { float: none; margin-right: 12px; }
 .documents .media__img { margin-bottom: 24px; }
@@ -1438,7 +1435,8 @@ a .media-logo:hover, a .texte .spip_documents img:hover, .texte .spip_documents 
 
 .slides__item { position: relative; }
 
-.slides__item--body { position: absolute; width: 33.33333%; bottom: 12px; left: 12px; padding: 10px 15px; background-color: #ccc; background-color: rgba(255, 255, 255, 0.6); }
+.slides__item--body { position: absolute; width: 33.33333%; bottom: 12px; left: 12px; padding: 10px 15px; background-color: #ccc; background-color: rgba(255, 255, 255, 0.65); -webkit-transition: background-color 0.35s ease-in-out 0.2s; -moz-transition: background-color 0.35s ease-in-out 0.2s; -ms-transition: background-color 0.35s ease-in-out 0.2s; -o-transition: background-color 0.35s ease-in-out 0.2s; transition: background-color 0.35s ease-in-out 0.2s; }
+.slides__item--body:hover { background-color: rgba(255, 255, 255, 0.95); }
 
 .features--images .flex-control-nav { bottom: -24px; background-color: #fff; }
 
@@ -1500,6 +1498,6 @@ a .media-logo:hover, a .texte .spip_documents img:hover, .texte .spip_documents 
 /*==========  spip-admin  ==========*/
 body .spip-admin-bloc, body .spip-admin-float { z-index: 99999; top: 10%; left: 0; right: auto; }
 
-#spip-admin .spip-admin-boutons { font: 10px/1 Menlo, monospace; display: block; text-align: center; margin-bottom: 5px; border-radius: 0 5px 5px 0; }
+#spip-admin .spip-admin-boutons { font: 10px/1 "Geneva", "Consolas", "Menlo", monospace; display: block; text-align: center; margin-bottom: 5px; border-radius: 0 5px 5px 0; }
 
 /*-----  End of =misc  ------*/

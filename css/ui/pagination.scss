@@ -4,6 +4,7 @@
 
 .pagination {
     margin-bottom: $base-spacing-unit;
+    background-color: lighten($text-color,68%);
     > ul {
         list-style:none;
         display: inline;
@@ -15,7 +16,7 @@
         display: inline-block;
         margin-bottom: 0;
         text-transform: uppercase;
-        color: #ccc;
+        color: $text-color-cool;
         font-weight: 400;
     }
     .pagination-item {
@@ -38,7 +39,7 @@
 }
 /*==========  pagination--temporelle  ==========*/
 .pagination--temporelle {
-    border-top: 2px solid $secondary-color;
+    // border-top: 2px solid $secondary-color;
     text-align: center;
 }
 

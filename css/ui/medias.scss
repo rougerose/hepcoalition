@@ -52,7 +52,7 @@
 
 /*==========  documents et images  ==========*/
 .documents {
-    margin-bottom: 0;
+    // margin-bottom: 0; annulé pour la page recherche
     @extend .cf;
     &.portfolio {
         .media__link {

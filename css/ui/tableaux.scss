@@ -19,7 +19,6 @@
 .table__cell--name {
     span {
         text-transform: uppercase;
-        // font-family: $dejavuSerifBold;
         font-weight: 700;
     }
 }
@@ -30,7 +29,7 @@ table.spip {
       @extend .table--striped;
       @include font-size(13px);
       max-width: 100%;
-      th {color: #000;}
+      th {color: #000; font-weight: 700;}
       th, td {
          border-color: #ddd;
          border-width: 1px 0 0;

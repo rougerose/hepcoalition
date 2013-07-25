@@ -5,12 +5,9 @@
 .section__title {
     @include font-size(18px);
     text-transform: uppercase;
-    font-weight: normal;
-    border-bottom: 2px solid $secondary-color;
-    color: #000;
-    &.plan {
-        
-    }
+    font-weight: 400;
+    border-bottom: 2px solid $primary-color;
+    color: darken($primary-color,5%);
 }
 
 .plan {

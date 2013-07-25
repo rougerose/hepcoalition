@@ -6,11 +6,11 @@
     margin-bottom: $base-spacing-unit*2;
 }
     .self__titre {
-        color: $secondary-color;
+        color: $primary-color;
     }
     .self__body {
         .chapo {
-            color: #222;
+            color: #111;
             @include font-size(18px);
         }
     }
@@ -27,11 +27,10 @@
 /*==========  self.article  ==========*/
 .self.article {
     .self__titre {
-        @include font-size(48px);
+        @include font-size(36px);
     }
     .soustitre {
         @include font-size(24px);
-        line-height: 2;
     }
     .self__logo {
         margin-bottom: $base-spacing-unit;

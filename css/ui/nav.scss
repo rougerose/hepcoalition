@@ -66,7 +66,7 @@
             right: -5px;
         }
         li {
-            font-family: $CabinC;
+            font-family: $heading-font;
             font-size: $f-dropdown-font-size;
             font-weight: bold;
             line-height: $f-dropdown-line-height;
@@ -101,7 +101,7 @@
         border-bottom: 2px solid $secondary-color;
         padding: 0 4px;
         color: #000;
-        font-family: $CabinC;
+        font-family: $heading-font;
         font-size: emCalc(16px);
         font-weight: 400;
     }
@@ -113,7 +113,7 @@
 }
 .nav-principale {
     margin-bottom: 0;
-    font-family: $CabinC;
+    font-family: $heading-font;
     @include font-size(20px);
     line-height: 2;
     font-weight: 400;
@@ -142,7 +142,7 @@
     ul li {
         position: relative;
         padding-left: 0.7em;
-        font-family: $CabinC;
+        font-family: $heading-font;
         &:before {
             display: block;
             position: absolute;

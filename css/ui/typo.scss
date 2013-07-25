@@ -4,18 +4,18 @@
 
 /* Headings */
 .hN {
-    font-family: $CabinC;
+    font-family: $heading-font;
     font-weight: 400;
-    .ru & {
-        font-family: $helvetica;
-    }
+    // .ru & {
+    //     font-family: $helvetica;
+    // }
 }
 
 h2.spip, h3.spip, h4.spip, h5.spip, h6.spip,
 .notes h1.spip,
 .documents h1.spip {
-    font-family: $CabinC;
-    font-weight: 400;
+    font-family: $heading-font;
+    font-weight: 300;
     color: darken($heading-color,5%);
     margin-top:2 * $base-spacing-unit;
     margin-top:(2 * $base-spacing-unit / $base-font-size)*1rem;
