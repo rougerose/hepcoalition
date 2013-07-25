@@ -1,11 +1,11 @@
 <BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
 <div class="grid__item">
+   <BOUCLE_article_principal_resume(ARTICLES spip_mot){id_rubrique}{id_mot=1}{lang}{0,1}>
    <article class="grid self rubrique">
       <div class="grid__item desk-two-thirds">
          <header>
             <h1 class="self__titre hN text--upper">#TITRE[ <span class="soustitre">(#SOUSTITRE)</span>]</h1>
          </header>
-         <BOUCLE_selection(ARTICLES pb_selection){lang}{par ordre}{spip_pb_selection.id_rubrique=#ID_RUBRIQUE}{0,1}>[(#SET{logo,#LOGO_ARTICLE|inserer_attribut{class,media-logo logo--large}})][(#SET{url-article,#URL_ARTICLE})]
          [<div class="self__body">
             <div class="chapo txt">
                <p>(#INTRODUCTION|PtoBR) <a href="#URL_ARTICLE" class="more"><:local:more:></a></p>
@@ -14,12 +14,13 @@
          </BOUCLE_selection>
       </div><!-- /.grid__item -->[<div class="grid__item desk-one-third">
          <div class="self__logo">
-            <a href="#GET{url-article}">(#GET{logo})</a>
+            <a href="#URL_ARTICLE">(#LOGO_ARTICLE|inserer_attribut{class,media-logo logo--large})</a>
          </div>
          <!-- /.self__logo -->
       </div>
       <!-- /.grid__item -->]
    </article><!-- .self -->
+   </BOUCLE_article_principal_resume>
 </div>
 <!-- /.grid__item -->
 </BOUCLE_rubrique>
