@@ -3,6 +3,10 @@ jQuery(document).ready(function($) {
         $("#menu_lang").toggleClass("active");
     });
 
+    $(".touch #formulaire_recherche").click(function(){
+        $(this).find("> form").toggleClass("active");
+    });
+
     // flexslider
     $('.flexslider').flexslider({
          animation: "slide",

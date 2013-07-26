@@ -125,7 +125,6 @@
     margin-bottom: 0;
     font-weight: 400;
     text-align: left;
-    white-space: nowrap;
     > li {
         @include font-size(20px);
         line-height: 2;
@@ -136,6 +135,7 @@
     }
     .nav__item {
         position: relative;
+        white-space: nowrap;
     }
     .search-site {
         float: right;

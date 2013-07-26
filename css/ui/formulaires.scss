@@ -103,7 +103,8 @@ input, textarea {
     opacity: 0;
     font-size: 12px;
     @include vendor(transition,all 200ms ease-in 0s);
-    .search__form:hover &,
+    .no-touch .search__form:hover &,
+    .touch .search__form.active,
     .search__form input[type=search]:focus {
         opacity: 1;
         width: 200px;
