@@ -1465,7 +1465,8 @@ a .media-logo:hover, a .texte .spip_documents img:hover, .texte .spip_documents 
 /*==========  media-caption  ==========*/
 .media-caption * { margin-bottom: 0; }
 
-.media-caption--carousel { position: absolute; bottom: 0; width: 100%; padding: 6px 12px; background-color: #000; background-color: rgba(0, 0, 0, 0.3); -webkit-transition: background-color 0.35s ease-in-out 0.2s; -moz-transition: background-color 0.35s ease-in-out 0.2s; -ms-transition: background-color 0.35s ease-in-out 0.2s; -o-transition: background-color 0.35s ease-in-out 0.2s; transition: background-color 0.35s ease-in-out 0.2s; }
+.media-caption--carousel { padding: 6px 12px; background-color: #000; -webkit-transition: background-color 0.35s ease-in-out 0.2s; -moz-transition: background-color 0.35s ease-in-out 0.2s; -ms-transition: background-color 0.35s ease-in-out 0.2s; -o-transition: background-color 0.35s ease-in-out 0.2s; transition: background-color 0.35s ease-in-out 0.2s; }
+@media only screen and (min-width: 740px) { .media-caption--carousel { position: absolute; bottom: 0; width: 100%; background-color: rgba(0, 0, 0, 0.3); } }
 .media-caption--carousel:hover { background-color: #000; }
 .media-caption--carousel .spip_doc_titre { font-weight: 700; }
 
