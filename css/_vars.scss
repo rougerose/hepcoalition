@@ -58,6 +58,11 @@ $use-greybox:       false;
  * Place any variables that should override inuit.css’ defaults here.
  */
 
+// breakpoints
+$lap-start:         481px!default;
+$desk-start:        740px;
+$desk-wide-start:   1200px!default;
+
 $brand-color: #19a1ac !default;
 $primary-color: $brand-color !default;
 $secondary-color: #c11f02 !default;

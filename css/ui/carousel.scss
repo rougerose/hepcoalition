@@ -23,24 +23,42 @@
         .features--images & {
             margin-bottom: 24px;
         }
+        @media screen and (max-width: 960px) {
+            &:hover {
+                .flex-prev {
+                    opacity: 1;
+                    left: 6px;
+                }
+                .flex-next {
+                    opacity: 1;
+                    right: 6px;
+                }
+            }
+        }
     }
         .slides__item {
-            position: relative;
+            position: relative; 
             figure {
                 margin-bottom: 0;
             }
         }
             .slides__item--body {
-                position: absolute;
-                width: (100%/3);
-                bottom: $base-spacing-unit/2;
-                left: $base-spacing-unit/2;
-                padding: 10px 15px;
-                background-color: #ccc;
-                background-color: rgba(#fff,0.65);
-                @include vendor(transition, background-color 0.35s ease-in-out 0.2s);
-                &:hover {
-                    background-color: rgba(#fff,0.95);
+                @include media-query(desk) {
+                    position: absolute;
+                    width: (100%/3);
+                    bottom: $base-spacing-unit/2;
+                    left: $base-spacing-unit/2;
+                    padding: 10px 15px;
+                    background-color: #ccc;
+                    background-color: rgba(#fff,0.65);
+                    @include vendor(transition, background-color 0.35s ease-in-out 0.2s);
+                    &:hover {
+                        background-color: rgba(#fff,0.95);
+                    }
+                }
+                @include media-query(portable) {
+                    background-color: rgba($text-color-light,0.4);
+                    padding: $base-spacing-unit/4;
                 }
             }
     .flex-control-nav {
@@ -72,14 +90,25 @@
             height: 42px;
             margin: 0;
             background-image: url("img/icon__sprite.png");
-            opacity: 1;
-        }
-        .flex-prev {
-            left: -21px;
         }
         .flex-next {
-            right: -21px;
             background-position: 0 -42px;
+        }
+        @media screen and (max-width: 960px) {
+            a {
+                opacity: 0;
+            }
+        }
+        @media screen and (min-width: 961px) {
+            a {
+                opacity: 1;
+            }
+            .flex-prev {
+                left: -21px;
+            }
+            .flex-next {
+                right: -21px;
+            }
         }
     }
 
