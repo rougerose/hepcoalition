@@ -1,15 +1,16 @@
 <BOUCLE_article-carousel(ARTICLES){id_article}>
 <article class="hentry resume hentry--carousel">
-   <img src="[(#LOGO_ARTICLE||image_reduire{960,0}|image_recadre{960,500,'top left','000'}|extraire_attribut{src})]" alt="#TITRE" />
-   <div class="slides__item--body">
-     <header>
-     <h1 class="entry-title hN">
-       <a href="#URL_ARTICLE" rel="bookmark">#TITRE</a>
-       [<span class="soustitre">(#SOUSTITRE)</span>]
-     </h1>
-     <div class="entry-content">
-      [<p>(#DESCRIPTIF|sinon{#INTRODUCTION|couper{200}}|PtoBR) <a href="#URL_ARTICLE" class="more"><:local:more:></a></p>]
-     </div>
-   </div>
+    <img src="[(#LOGO_ARTICLE||image_reduire{960,0}|image_recadre{960,500,'top left','000'}|extraire_attribut{src})]" alt="#TITRE" />
+    <div class="slides__item--body">
+        <header>
+            <h1 class="entry-title hN">
+                <a href="#URL_ARTICLE" rel="bookmark">#TITRE</a>
+                [<span class="soustitre">(#SOUSTITRE)</span>]
+            </h1>
+        </header>
+        <div class="entry-content">
+            [<p>(#DESCRIPTIF|sinon{#INTRODUCTION|couper{200}}|PtoBR) <a href="#URL_ARTICLE" class="more"><:local:more:></a></p>]
+        </div>
+    </div>
 </article>
 </BOUCLE_article-carousel>
