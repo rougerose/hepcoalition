@@ -9,9 +9,8 @@
 <html class="[(#GET{class})][ (#LANG_DIR)][ (#LANG)] no-js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="#LANG" lang="#LANG" dir="#LANG_DIR">
 <!--<![endif]-->
     <head>
-        <script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script>[
-        <script src="(#CHEMIN{Xcss/foundation/js/vendor/custom.modernizr.js})"></script>][
-
+        <!-- <script type='text/javascript'>/*<![CDATA[*/(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement);/*]]>*/</script> -->
+        [
         (#REM) Debut du head particulier a chaque page
         pour inserer un title, des css particulieres(mais surchargees), ou des js *inline*
         ]<INCLURE{fond=head/#ENV{type-page},env}>[
