@@ -8,40 +8,40 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'about_us'                       => 'من نحن',
    
    // C
-   'campaigns_all'                  => 'All campaigns',
-   'campaign_last'                  => 'Last campaign',
+   'campaigns_all'                  => 'كل الحملات',
+   'campaign_last'                  => 'آخر حملة',
    'contact'                        => ' الاتصال',
-   'credits_design'                 => " تصميم وتطويركريستوف <a href='@urldesign@'></a>  دريان  مع <a href='@urlspip@'>spip</a>",
+   'credits_design'                 => " تصميم وتطوير كريستوف <a href='@urldesign@'></a>  دريان  مع <a href='@urlspip@'>spip</a>",
    
    // E
    'email'                          => 'البريد الإلكتروني',
-   'email_send'                     => "Send us an <a href='@urlcontact@' class='spip_out'>email</a>",
+   'email_send'                     => "ابعث لنا <a href='@urlcontact@' class='spip_out'>بريد إلكتروني</a>",
    
    // F
-   'follow_us'                      => "Follow us", // on Facebook
+   'follow_us'                      => "تابعنا", // on Facebook
    
    // H
    'home'                           => 'الصفحة الرئيسية',
    
    // I
-   'info_recherche_article'         => '1 article',
-   'info_recherche_articles'        => '@nb@ articles',
-   'info_recherche_document'        => '1 file',
-   'info_recherche_documents'       => '@nb@ files',
-   'info_recherche_label'           => 'Search',
-   'info_recherche_mot'             => '1 keyword',
-   'info_recherche_mots'            => '@nb@ keywords',
-   'info_recherche_rubrique'        => '1 section',
-   'info_recherche_rubriques'       => '@nb@ sections',
-   'info_recherche_site'            => '1 web site',
-   'info_recherche_sites'           => '@nb@ web sites',
-   'info_recherche_resultat'        => '1 result',
-   'info_recherche_resultats'       => '@nb@ results',
-   'info_recherche_pas_de_resultat' => 'No result',
+   'info_recherche_article'         => 'مقالة واحدة',
+   'info_recherche_articles'        => '@nb@ مقالة',
+   'info_recherche_document'        => 'ملف واحد',
+   'info_recherche_documents'       => '@nb@ ملف',
+   'info_recherche_label'           => 'بحث',
+   'info_recherche_mot'             => 'كلمة دالة',
+   'info_recherche_mots'            => '@nb@ كلمة دالة',
+   'info_recherche_rubrique'        => 'فرع واحد',
+   'info_recherche_rubriques'       => '@nb@ فرع',
+   'info_recherche_site'            => 'موقع واحد',
+   'info_recherche_sites'           => '@nb@ موقع ',
+   'info_recherche_resultat'        => 'نتيجة واحدة',
+   'info_recherche_resultats'       => '@nb@ نتيجة',
+   'info_recherche_pas_de_resultat' => ' لا توجد نتائج ',
    
    // L
-   'lastest_news'                   => "Lastest news",
-   'latest_publications'            => 'Latest publications',
+   'lastest_news'                   => "آخر الأخبار",
+   'latest_publications'            => ' آخر المنشورات',
    
    //M
    'more'                           => ' اقرأ المزيد',
@@ -50,7 +50,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'name_first'                     => 'الاسم الأول',
    'name_last'                      => 'اسم العائلة',
    'news_last_publications'         => 'الأخبار وآخر النشرات',
-   'no_event_available'             => 'no event available',
+   'no_event_available'             => ' لا يوجد أي حدث ',
    
    // O
    'organisation'                   => ' المنظمة',
@@ -62,11 +62,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // R
    
    // S
-   'share'                          => 'Share',
+   'share'                          => 'اقتسم',
    'signatories'                    => ' الموقعون',
    'signatories_coalition'          => " الموقعون",
-   'signatories_singular'           => '1 supporter',
-   'signatories_plural'             => "@nb@ supporters",
+   'signatories_singular'           => 'مؤيد واحد',
+   'signatories_plural'             => "@nb@ مؤيد",
    'signatories_plural_with'        => 'الداعمون مع @nb@',
    'signatories_singular_with'      => 'مع داعم واحد',
    'sign_on'                        => 'التوقيع على النداء',
@@ -77,10 +77,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'suivre_facebook'                => "<a href='@urlfacebook@'> تابعنا على الفيسبوك</a>",
    
    // T
-   'tags'                           => 'Tags',
+   'tags'                           => 'علامات',
    
    // U
-   'updated'                        => 'Updated'
+   'updated'                        => 'محدث'
 
 );
 ?>
