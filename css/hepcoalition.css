@@ -1165,7 +1165,7 @@ html { border-top: 7px solid #c11f02; font-family: "Roboto", "Helvetica Neue", H
 body { padding-top: 12px; }
 
 /*==========  =wrapper  ==========*/
-.wrapper { max-width: 1100px; margin-right: auto; margin-left: auto; }
+.wrapper { max-width: 1100px; margin-right: auto; margin-left: auto; padding-right: 24px; padding-left: 24px; }
 
 /*-----  End of =page  ------*/
 /*==================================
