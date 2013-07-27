@@ -1124,11 +1124,12 @@ input:focus, textarea:focus { background: darken white, 2%; border-color: #99999
 .search__label--field { display: inline-block; }
 
 .search__field { display: inline-block; padding: 3px 0; border-radius: 8px; width: 1px; opacity: 0; font-size: 12px; -webkit-transition: all 200ms ease-in 0s; -moz-transition: all 200ms ease-in 0s; -ms-transition: all 200ms ease-in 0s; -o-transition: all 200ms ease-in 0s; transition: all 200ms ease-in 0s; }
-.no-touch .search__form:hover .search__field, .search__field .touch .search__form.active, .search__field .search__form input[type=search]:focus { opacity: 1; width: 200px; padding: 3px 9px; outline: 0; }
 
 .search__label--submit { display: inline-block; width: 16px; height: 16px; vertical-align: middle; background: url(img/icon__search.svg) no-repeat center center; }
 
 .search__submit { visibility: hidden; padding: 0; border: none; }
+
+.no-touch .search__form:hover input[type="search"], .no-touch .search__form input[type="search"]:valid, .no-touch .search__form input[type="search"]:focus, .open-search input[type="search"] { opacity: 1; width: 200px; padding: 3px 9px; outline: 0; }
 
 /*==========  formulaires Formidable  ==========*/
 /* formulaire pétition */
