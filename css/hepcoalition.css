@@ -1209,12 +1209,9 @@ div.nav-site nav#nav-main.nav-principale__container div.search-site nav#nav-lang
 .no-js .nav-lang strong { color: #c11f02; }
 .js .nav-lang { position: absolute; z-index: 99; top: -9999px; margin-top: 2px; border: 1px solid #cccccc; box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); opacity: 0; -webkit-transition: opacity 0.5s ease; -moz-transition: opacity 0.5s ease; -ms-transition: opacity 0.5s ease; -o-transition: opacity 0.5s ease; transition: opacity 0.5s ease; background-color: #fff; }
 .js .nav-lang.active { opacity: 1; top: 26px; left: auto; right: -5px; }
-.js .nav-lang:before { content: ""; display: block; width: 0; height: 0; border: inset 6px; border-color: transparent transparent white transparent; border-bottom-style: solid; position: absolute; top: -12px; left: 10px; z-index: 99; }
-.js .nav-lang:after { content: ""; display: block; width: 0; height: 0; border: inset 7px; border-color: transparent transparent #cccccc transparent; border-bottom-style: solid; position: absolute; top: -14px; left: 9px; z-index: 98; }
+.js .nav-lang:before { content: ""; display: block; width: 0; height: 0; border: inset 6px; border-color: transparent transparent white transparent; border-bottom-style: solid; position: absolute; top: -12px; left: auto; right: 10px; z-index: 99; }
+.js .nav-lang:after { content: ""; display: block; width: 0; height: 0; border: inset 7px; border-color: transparent transparent #cccccc transparent; border-bottom-style: solid; position: absolute; top: -14px; left: auto; right: 9px; z-index: 98; }
 .js .nav-lang a, .js .nav-lang strong { padding: 0 12px; }
-.js.ltr .nav-lang { right: 0; text-align: left; }
-.js.ltr .nav-lang:before { left: auto; right: 10px; }
-.js.ltr .nav-lang:after { left: auto; right: 9px; }
 
 .nav-lang--langue { border-bottom: 2px solid #c11f02; padding: 0 4px; color: #000; font-size: 16px; font-size: 1rem; line-height: 1.5; text-transform: uppercase; }
 .no-js .nav-lang--langue { display: none; }
