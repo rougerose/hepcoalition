@@ -6,6 +6,9 @@
     text-align: center;
     position: relative;
     margin-bottom: $base-line-height*2;
+    .no-js & {
+        padding-top: 1.5em;
+    }
 }
     .logo {
         display: inline-block;
