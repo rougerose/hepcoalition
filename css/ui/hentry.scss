@@ -26,6 +26,7 @@
     }
 }
     .entry-logo {
+        margin-bottom: $base-spacing-unit;
         @include media-query(lap-and-up) {
             float: right;
             width: 50%;

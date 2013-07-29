@@ -24,6 +24,12 @@
             [<div class="texte txt cf">
                (#TEXTE|image_reduire{701,0})
             </div><!-- .texte -->]
+
+            <BOUCLE_form(ARTICLES){id_article}{si #IDFORMULAIRE}>
+            #SET{sign,' '}
+            <p class="visuallyhidden--desk"><a href="#fp" class="btn btn--primary btn--border btn--full"><:local:sign_on:></a></p>
+            </BOUCLE_form>
+
             [(#PAGE|=={contact}|oui)
                [(#FORMULAIRE_ECRIRE_AUTEUR)]]
 
@@ -31,9 +37,9 @@
                [(#INCLURE{fond=inclure/documents,id_article})]
 
             [(#REM) signatures formulaire formidable -- petition ]
-            <BOUCLE_signatures(ARTICLES){id_article}{si #IDFORMULAIRE}>
+            [(#GET{sign}|oui)
                <INCLURE{fond=inclure/signatures_missing,id_article,ajax} />
-            </BOUCLE_signatures>
+            ]
             
             [<aside class="notes txt">
                <div class="grid">
@@ -47,9 +53,9 @@
       </div><!-- /.grid__item --><div class="grid__item desk-four-twelfths">
 
          [(#REM) formulaire formmidable : pétition/washington call ]
-         <BOUCLE_form_petition(ARTICLES){id_article}{si #IDFORMULAIRE}>
+         [(#GET{sign}|oui)
             <INCLURE{fond=inclure/formulaire_formidable,id_article} />
-         </BOUCLE_form_petition>
+         ]
 
          <aside class="meta">
             <ul class="liste--bloc">

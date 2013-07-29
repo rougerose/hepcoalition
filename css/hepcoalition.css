@@ -3196,10 +3196,8 @@ input, textarea {
 
 /*==========  formulaires Formidable  ==========*/
 /* formulaire pétition */
-.petition__formulaire label {
-  display: none; }
-.petition__formulaire input,
-.petition__formulaire select {
+.formulaire_formidable input,
+.formulaire_formidable select {
   width: 100%; }
 
 /*-----  End of =formulaires  ------*/
@@ -3512,7 +3510,7 @@ div.nav-site
         background-color: #c11f02; } }
 
 .item {
-  padding: 0 6px; }
+  padding: 0 8px; }
 
 .search-site {
   position: absolute;
@@ -3591,14 +3589,16 @@ div.nav-site
     margin: 24px auto 0;
     border-bottom: 1px solid #dfe3e4; }
 
-@media only screen and (min-width: 481px) {
-  .entry-logo {
-    float: right;
-    width: 50%;
-    padding-left: 2%; } }
-.entry-logo a,
-.entry-logo img {
-  display: block; }
+.entry-logo {
+  margin-bottom: 24px; }
+  @media only screen and (min-width: 481px) {
+    .entry-logo {
+      float: right;
+      width: 50%;
+      padding-left: 2%; } }
+  .entry-logo a,
+  .entry-logo img {
+    display: block; }
 
 /* résumé d'article */
 .resume.article {
@@ -3840,10 +3840,12 @@ div.nav-site
   background-color: #ccc;
   -webkit-border-radius: 5px;
   border-radius: 5px; }
+  .panel .soustitre {
+    color: #fff; }
 
 /* Couleurs */
 .panel--secondary {
-  background-color: #751301;
+  background-color: #a81b02;
   color: #fff; }
 
 /* Alignement */
