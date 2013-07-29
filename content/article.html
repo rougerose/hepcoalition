@@ -55,9 +55,7 @@
 
          <aside class="meta">
             <ul class="liste--bloc">
-               <B_auteurs>
-               <li class="meta-item meta-author byline vcard"><:caap:par:> <BOUCLE_auteurs(AUTEURS){id_article}{par nom}{", "}><span class="fn">#NOM</span></BOUCLE_auteurs>
-               </li></B_auteurs>
+               [(#MODELE{article-auteurs})]
                <li class="meta-item meta-updated"><time class="updated" datetime="[(#DATE|affdate{Y-m-d})]">[(#DATE|affdate)]</time></li>
                [(#INCLURE{fond=liste/mots-objet,id_article,lang})]
                [(#PLUGIN{socialtags}|oui)

@@ -1,0 +1,14 @@
+/*====================================
+=            ie9 and down            =
+====================================*/
+
+.lte9 {
+    // formulaire recherche ouvert en permanence
+    form.search__form .search__field {
+        width: 150px;
+        opacity: 1;
+    }
+}
+
+/*-----  End of ie9 and down  ------*/
+
