@@ -15,14 +15,14 @@ div.nav-site
     nav#nav-lang.nav-lang__container
 */
 .nav-site {
-    .no-touch & {
+    @include media-query(desk) {
         position: relative;
     }
 }
 
 .nav--dropdown {
     background-color: #fff;
-    .no-touch & {
+    @include media-query(desk) {
         position: absolute;
         z-index: 90;
         top: -9999px;
@@ -46,7 +46,6 @@ div.nav-site
     right: 0;
     top: 0;
     z-index: 99;
-    // width: 100%;
     text-align: right;
     .no-js & {
         @include media-query(portable) {
@@ -111,14 +110,14 @@ div.nav-site
 
 /*==========  nav-principale  ==========*/
 .nav-principale__container {
-    .no-touch & {
+    @include media-query(desk) {
         position: relative;
         border-bottom: 4px solid $secondary-color;
         a.nav-btn {
             display: none;
         }
     }
-    .touch & {
+    @include media-query(portable) {
         position: absolute;
         z-index: 90;
         left: $base-spacing-unit;
@@ -147,13 +146,13 @@ div.nav-site
             position: relative;
             right: -0.313em; /* 5 */
         }
-        .touch & {
+        @include media-query(portable) {
             &:after {
                 border-top-color: #fff;
             }
         }
     }
-    .no-touch & {
+    @include media-query(desk) {
         margin-bottom: 0;
         font-weight: 400;
         text-align: left;
@@ -170,7 +169,7 @@ div.nav-site
             white-space: nowrap;
         }
     }
-    .touch & {
+    @include media-query(portable) {
         display: none;
         background-color: $secondary-color; // #e15a1f;
         &.open {
@@ -230,7 +229,7 @@ div.nav-site
     position: absolute;
     right: 0;
     top: 0;
-    .touch & {
+    @include media-query(portable) {
         right: 3em;
         z-index: 99;
     }

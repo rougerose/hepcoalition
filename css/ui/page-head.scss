@@ -6,14 +6,16 @@
     text-align: center;
     position: relative;
     margin-bottom: $base-line-height*2;
-    .no-js &,
-    .touch & {
+    .no-js & {
+        padding-top: 3em;
+    }
+    @include media-query(portable) {
         padding-top: 3em;
     }
 }
     .logo {
         display: inline-block;
-        .no-touch & {
+        @include media-query(desk) {
             margin-bottom: $base-spacing-unit;
         }
     }
