@@ -6,9 +6,13 @@
     text-align: center;
     position: relative;
     margin-bottom: $base-line-height*2;
-    .no-js & {
+    .no-js &,
+    .touch & {
         padding-top: 1.5em;
     }
+    // @include media-query(portable) {
+    //     padding-top: 1.5em;
+    // }
 }
     .logo {
         display: inline-block;

@@ -3,6 +3,15 @@ jQuery(document).ready(function($) {
         $("#menu_lang").toggleClass("active");
     });
 
+    $("#nav-main").each(function(){
+        var $btn = $(this).find("> a"),
+        $np = $(this).find("> .nav-principale");
+        $btn.click(function(){
+            $(this).toggleClass("active");
+            $np.toggleClass("open");
+        });
+    });
+
     // flexslider
     $('.flexslider').flexslider({
          animation: "slide",

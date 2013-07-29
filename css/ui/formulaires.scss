@@ -79,7 +79,7 @@ input, textarea {
 /*==========  formulaire recherche  ==========*/
 .search__form {
     background-color: $primary-color;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 3px 8px 3px 3px;
     white-space: nowrap;
     line-height: 10px;
@@ -116,7 +116,7 @@ input, textarea {
     padding: 0;
     border: none;
 }
-
+.no-js .search__form:hover input[type="search"],
 .no-touch .search__form:hover input[type="search"],
 .no-touch .search__form input[type="search"]:valid,
 .no-touch .search__form input[type="search"]:focus,
