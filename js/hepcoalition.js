@@ -6,11 +6,14 @@ jQuery(document).ready(function($) {
     // navigation principale
     $("#nav-main").each(function(){
         var $btn = $(this).find("> a"),
-        $np = $(this).find("> .nav-principale");
+        $np = $(this).find("> .nav-principale"),
+        $hasUl = $np.find('li:has(ul)');
         $btn.click(function(){
             $(this).toggleClass("active");
             $np.toggleClass("open");
         });
+        // http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly
+        $hasUl.doubleTapToGo();
     });
 
     // flexslider
