@@ -6,6 +6,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // A
    'agenda'                         => 'Agenda',
    'about_us'                       => 'About us',
+
+   // B
+   'by'                             => 'By',
    
    // C
    'campaigns_all'                  => 'All campaigns',

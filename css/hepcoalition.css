@@ -4243,3 +4243,11 @@ body .spip-admin-float {
   border-radius: 0 5px 5px 0; }
 
 /*-----  End of =misc  ------*/
+/*====================================
+=            ie9 and down            =
+====================================*/
+.lte9 form.search__form .search__field {
+  width: 150px;
+  opacity: 1; }
+
+/*-----  End of ie9 and down  ------*/

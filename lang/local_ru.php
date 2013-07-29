@@ -6,6 +6,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // A
    'agenda'                         => 'Календарь событий',
    'about_us'                       => 'О нас',
+
+   // B
+   'by'                             => 'By',
    
    // C
    'campaigns_all'                  => 'All campaigns',
