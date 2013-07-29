@@ -49,6 +49,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // N
    'name_first'                     => 'الاسم الأول',
    'name_last'                      => 'اسم العائلة',
+   'navigation'                     => 'Navigation',
    'news_last_publications'         => 'الأخبار وآخر النشرات',
    'no_event_available'             => ' لا يوجد أي حدث ',
    

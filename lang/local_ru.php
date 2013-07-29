@@ -80,7 +80,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'tags'                           => 'Tags',
    
    // U
-   'updated'                        => 'Updated'
+   'updated'                        => 'Updated',
 
+   // 
+   'navigation'                     => 'Navigation'
 );
 ?>

@@ -129,10 +129,30 @@ div.nav-site
         a.nav-btn {
             display: inline-block;
             @include font-size(16px);
+            text-transform: uppercase;
         }
     }
 }
 .nav-principale {
+    span {
+        &:after {
+            width: 0;
+            height: 0;
+            border: 0.313em solid transparent; /* 5 */
+            border-bottom: none;
+            border-top-color: $secondary-color;
+            content: '';
+            vertical-align: middle;
+            display: inline-block;
+            position: relative;
+            right: -0.313em; /* 5 */
+        }
+        .touch & {
+            &:after {
+                border-top-color: #fff;
+            }
+        }
+    }
     .no-touch & {
         margin-bottom: 0;
         font-weight: 400;
@@ -151,7 +171,6 @@ div.nav-site
         }
     }
     .touch & {
-        $secondary-color-dark: darken($secondary-color,5%);
         display: none;
         background-color: $secondary-color; // #e15a1f;
         &.open {

@@ -72,7 +72,7 @@ $heading-color: $primary-color; // #10656C;
 $text-color: #424b4f; //#424f42;
 $text-color-light: lighten($text-color,60%);
 $text-color-cool: lighten($text-color,30%);
-
+$secondary-color-dark: darken($secondary-color,5%);
 
 /*------------------------------------*\
     $CUSTOM

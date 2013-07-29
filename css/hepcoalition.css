@@ -3300,7 +3300,8 @@ body {
     font-size: 1.625rem;
     line-height: 1.84615; }
   .page-foot .logo {
-    margin: 24px 0; }
+    margin: 24px 0;
+    display: inline; }
   .page-foot .spip_out {
     color: #fff;
     border-bottom: 1px solid #19a1ac; }
@@ -3430,8 +3431,24 @@ div.nav-site
     display: inline-block;
     font-size: 16px;
     font-size: 1rem;
-    line-height: 1.5; }
+    line-height: 1.5;
+    text-transform: uppercase; }
 
+.nav-principale span:after {
+  width: 0;
+  height: 0;
+  border: 0.313em solid transparent;
+  /* 5 */
+  border-bottom: none;
+  border-top-color: #c11f02;
+  content: '';
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  right: -0.313em;
+  /* 5 */ }
+.touch .nav-principale span:after {
+  border-top-color: #fff; }
 .no-touch .nav-principale {
   margin-bottom: 0;
   font-weight: 400;
