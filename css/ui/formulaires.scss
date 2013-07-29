@@ -125,6 +125,9 @@ input, textarea {
     width: 200px;
     padding: 3px 9px;
     outline: 0;
+    @include media-query(portable) {
+        width: 150px;
+    }
 }
 
 /*==========  formulaires Formidable  ==========*/

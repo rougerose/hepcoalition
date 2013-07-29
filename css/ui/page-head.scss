@@ -8,15 +8,14 @@
     margin-bottom: $base-line-height*2;
     .no-js &,
     .touch & {
-        padding-top: 1.5em;
+        padding-top: 3em;
     }
-    // @include media-query(portable) {
-    //     padding-top: 1.5em;
-    // }
 }
     .logo {
         display: inline-block;
-        margin-bottom: $base-spacing-unit;
+        .no-touch & {
+            margin-bottom: $base-spacing-unit;
+        }
     }
 
 /*-----  End of =page-head  ------*/

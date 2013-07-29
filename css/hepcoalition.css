@@ -3186,6 +3186,13 @@ input, textarea {
   width: 200px;
   padding: 3px 9px;
   outline: 0; }
+  @media only screen and (max-width: 739px) {
+    .no-js .search__form:hover input[type="search"],
+    .no-touch .search__form:hover input[type="search"],
+    .no-touch .search__form input[type="search"]:valid,
+    .no-touch .search__form input[type="search"]:focus,
+    .open-search input[type="search"] {
+      width: 150px; } }
 
 /*==========  formulaires Formidable  ==========*/
 /* formulaire pétition */
@@ -3269,11 +3276,12 @@ body {
   position: relative;
   margin-bottom: 48px; }
   .no-js .page-head, .touch .page-head {
-    padding-top: 1.5em; }
+    padding-top: 3em; }
 
 .logo {
-  display: inline-block;
-  margin-bottom: 24px; }
+  display: inline-block; }
+  .no-touch .logo {
+    margin-bottom: 24px; }
 
 /*-----  End of =page-head  ------*/
 /*==================================

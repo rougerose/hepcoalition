@@ -3,6 +3,7 @@ jQuery(document).ready(function($) {
         $("#menu_lang").toggleClass("active");
     });
 
+    // navigation principale
     $("#nav-main").each(function(){
         var $btn = $(this).find("> a"),
         $np = $(this).find("> .nav-principale");
