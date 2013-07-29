@@ -36,10 +36,10 @@ jQuery(document).ready(function($) {
     $("form.search__form:not:(.open-search)").bind("touchstart",function(e){
         e.preventDefault();
         $(this).addClass("open-search").unbind("touchstart");
-        $("input[type=search]").css("font-size","16px");
+        // $("input[type=search]").css("font-size","16px");
     });
     $(".touch input[type=search]").blur(function(){
-        $("input[type=search]").css("font-size","10px");
+        // $("input[type=search]").css("font-size","10px");
         $("form.main-search").removeClass("open-search");
     });
     $("form.search__form").submit(function(e){
