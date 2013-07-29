@@ -4,7 +4,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
       // A
-      'agenda'                         => 'Calendario'
+      'agenda'                         => 'Calendario',
       'about_us'                       => 'Quiénes somos',
       
       // C
