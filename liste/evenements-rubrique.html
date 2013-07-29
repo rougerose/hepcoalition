@@ -3,7 +3,7 @@
 #SET{date_debut,#ENV{date_debut,#ENV{date}}|agenda_date_debut_liste{#GET{affichage_debut}}}
 #SET{date_prev,#GET{date_debut}|agenda_moisdecal{#GET{affichage_duree}|mult{-1},'Y-m-d H:i:00'}}
 #SET{date_fin,#GET{date_debut}|agenda_moisdecal{#GET{affichage_duree},'Y-m-d H:i:00'}}
-<section>
+<section id="section-agenda">
     <B_evenements_rubrique>
     #ANCRE_PAGINATION
     [<h1 class="section__title hN">(#ENV{date_debut}|affdate{annee}|sinon{#DATE|annee})</h1>]
@@ -33,7 +33,7 @@
         page_courante=#GET{hasprev}|?{2,1},
         url_precedent=#SELF|parametre_url{date_debut,#GET{date_prev}|affdate{Y-m-d}},
         url_suivant=#SELF|parametre_url{date_debut,#GET{date_fin}|affdate{Y-m-d}},
-        ancre=agenda-liste,
+        ancre=section-agenda,
         separateur=' | '})
     </nav>]
 </section>
