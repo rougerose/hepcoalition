@@ -6,7 +6,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // A
    'agenda'                         => 'Agenda',
    'about_us'                       => 'About us',
-
+   
    // B
    'by'                             => 'By',
    
@@ -47,6 +47,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'latest_publications'            => 'Latest publications',
    
    //M
+   'message_404_title'              => "Page not found.",
+   'message_404_desc'               => "Sorry, but the page you are looking for has not been found.<br />Go back to <a href='@urlsite@' class='spip_out'>home page</a>.",
    'more'                           => 'More',
    
    //N

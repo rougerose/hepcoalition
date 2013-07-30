@@ -2950,9 +2950,9 @@ a.spip_out:focus {
   position: relative;
   top: 1px; }
 
-.active {
+a.active {
   color: #c11f02; }
-  .active:hover {
+  a.active:hover {
     color: #19a1ac; }
 
 /*-----  End of =Base  ------*/
@@ -3562,6 +3562,24 @@ div.nav-site
   border-bottom: 1px solid #f2f2f2; }
 
 /*-----  End of =Listes  ------*/
+/*==================================
+=            breadcrumb            =
+==================================*/
+.breadcrumb--path > li {
+  text-transform: uppercase;
+  margin-right: .375em;
+  /* 6px */ }
+  .breadcrumb--path > li:before {
+    content: "/ ";
+    color: #dfe3e4; }
+  .breadcrumb--path > li > a,
+  .breadcrumb--path > li > strong {
+    padding-left: .125em;
+    /* 2px */ }
+  .breadcrumb--path > li.active {
+    color: #c11f02; }
+
+/*-----  End of breadcrumb  ------*/
 /*===============================
 =            =Hentry            =
 ===============================*/

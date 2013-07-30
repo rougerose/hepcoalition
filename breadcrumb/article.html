@@ -1,0 +1,12 @@
+<BOUCLE_article(ARTICLES){id_article}>
+<div class="grid__item eight-twelfths portable-one-whole desk-eight-twelfths push--desk-four-twelfths">
+    <ul class="nav  breadcrumb--path">
+       <li><a href="#URL_SITE_SPIP/"><:accueil_site:></a></li>
+       <BOUCLE_bc(HIERARCHIE){id_article}>
+       <li><a href="#URL_RUBRIQUE">[(#TITRE)]</a></li>
+       </BOUCLE_bc>
+       <li class="active">[<strong>(#TITRE|couper{50})</strong>]</li>
+    </ul>
+</div>
+<!-- /.grid__item -->
+</BOUCLE_article>
