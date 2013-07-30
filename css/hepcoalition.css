@@ -4244,10 +4244,49 @@ body .spip-admin-float {
 
 /*-----  End of =misc  ------*/
 /*====================================
-=            ie9 and down            =
+=            ie            =
 ====================================*/
+/*==========  ie9  ==========*/
 .lte9 form.search__form .search__field {
   width: 150px;
   opacity: 1; }
 
-/*-----  End of ie9 and down  ------*/
+/*==========  ie8 and down  ==========*/
+.lte8 .nav-site {
+  position: relative; }
+.lte8 .nav--dropdown {
+  position: absolute;
+  z-index: 90;
+  top: -9999px;
+  border: 4px solid #c11f02;
+  border-top: 0; }
+  .lte8 .nav--dropdown > li {
+    display: list-item;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.33333;
+    line-height: 1.5; }
+    .lte8 .nav--dropdown > li > a {
+      display: block; }
+.lte8 .nav-principale__container {
+  position: relative;
+  border-bottom: 4px solid #c11f02; }
+  .lte8 .nav-principale__container a.nav-btn {
+    display: none; }
+.lte8 .nav-principale {
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: left; }
+  .lte8 .nav-principale > li {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    line-height: 2; }
+  .lte8 .nav-principale > li:hover .nav--dropdown {
+    top: 2em;
+    left: -5px; }
+  .lte8 .nav-principale .nav__item {
+    position: relative;
+    white-space: nowrap; }
+
+/*-----  End of ie9  ------*/
