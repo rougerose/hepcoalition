@@ -1,7 +1,7 @@
 <BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
 <div class="grid__item">
    <article class="grid self rubrique">
-      <div class="grid__item desk-two-thirds">
+      <div class="grid__item two-thirds portable-one-whole desk-two-thirds">
          <header>
             <h1 class="self__titre hN text--upper">#TITRE[ <span class="soustitre">(#SOUSTITRE)</span>]</h1>
          </header>
@@ -10,7 +10,7 @@
                (#TEXTE)
             </div>
          </div><!-- .self__body -->]
-      </div><!-- /.grid__item -->[<div class="grid__item desk-one-third">
+      </div><!-- /.grid__item -->[<div class="grid__item one-third portable-one-whole desk-one-third">
          <div class="self__logo">
             (#LOGO_RUBRIQUE|inserer_attribut{class,media-logo logo--large})
          </div>
@@ -25,7 +25,7 @@
 ]<BOUCLE_selection(ARTICLES pb_selection){lang}{par ordre}{spip_pb_selection.id_rubrique=#ID_RUBRIQUE}{doublons}>[
 (#SET_PUSH{articles_selection,#ID_ARTICLE})
 ]</BOUCLE_selection>
-<div class="grid__item desk-eight-twelfths">
+<div class="grid__item eight-twelfths portable-one-whole desk-eight-twelfths">
    [(#REM) sélections d'articles ]
    [(#GET{articles_selection}|oui)
       [(#INCLURE{fond=liste/articles-selection,
@@ -46,7 +46,7 @@
    <//B_articles_rubrique>
 
 </div
-><!-- /.grid__item desk-eight-twelfths --><div class="grid__item desk-four-twelfths">
+><!-- /.grid__item desk-eight-twelfths --><div class="grid__item four-twelfths portable-one-whole desk-four-twelfths">
    <aside class="secondary">
       <INCLURE{fond=nav/nav-rubrique-plan,env} />
       [(#REM) La rubrique en cours est un agenda ? ]

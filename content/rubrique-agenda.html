@@ -1,7 +1,7 @@
 <BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
 <div class="grid__item">
    <article class="grid self rubrique">
-      <div class="grid__item desk-two-thirds">
+      <div class="grid__item two-thirds portable-one-whole desk-two-thirds">
          <header>
             <h1 class="self__titre hN text--upper">#TITRE[ <span class="soustitre">(#SOUSTITRE)</span>]</h1>
          </header>
@@ -21,7 +21,7 @@
 </div>
 <!-- /.grid__item -->
 
-<div class="grid__item desk-eight-twelfths">
+<div class="grid__item eight-twelfths portable-one-whole desk-eight-twelfths">
    [(#REM) les articles de la rubrique ]
    <BOUCLE_articles_rubrique(ARTICLES){id_rubrique}{lang}{0,1}>
       <INCLURE{fond=liste/evenements-rubrique,pagination=10,env,ajax} />
@@ -34,7 +34,7 @@
    <//B_articles_rubrique>
 
 </div
-><!-- /.grid__item desk-eight-twelfths --><div class="grid__item desk-four-twelfths">
+><!-- /.grid__item desk-eight-twelfths --><div class="grid__item four-twelfths portable-one-whole desk-four-twelfths">
    <aside class="secondary">
       <INCLURE{fond=nav/nav-rubrique-plan,env} />
       [(#INCLURE{fond=inclure/resume/washington-call,env})]
