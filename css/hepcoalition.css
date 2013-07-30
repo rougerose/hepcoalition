@@ -4288,5 +4288,7 @@ body .spip-admin-float {
   .lte8 .nav-principale .nav__item {
     position: relative;
     white-space: nowrap; }
+.lte8 .search__label--submit {
+  background-image: url("img/icon__search.png"); }
 
 /*-----  End of ie9  ------*/
