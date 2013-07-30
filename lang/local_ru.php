@@ -11,40 +11,40 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'by'                             => 'By',
    
    // C
-   'campaigns_all'                  => 'All campaigns',
-   'campaign_last'                  => 'Last campaign',
+   'campaigns_all'                  => 'все кампании',
+   'campaign_last'                  => 'последная',
    'contact'                        => 'Контакт',
    'credits_design'                 => "Дизайн и разработка: <a href='@urldesign@'>Кристоф ле Дреан</a> при использовании системы управления контентом <a href='@urlspip@'>SPIP</a>",
    
    // E
    'email'                          => 'эл. почта',
-   'email_send'                     => "Send us an <a href='@urlcontact@' class='spip_out'>email</a>",
+   'email_send'                     => "<a href='@urlcontact@' class='spip_out'>Присылайте свои письма</a>",
    
    // F
-   'follow_us'                      => "Follow us", // on Facebook
+   'follow_us'                      => "следите за нами", // on Facebook
 
    // H
-   'home'                           => 'на домашнюю страничку',
+   'home'                           => 'на главную',
 
    // I
-   'info_recherche_article'         => '1 article',
-   'info_recherche_articles'        => '@nb@ articles',
-   'info_recherche_document'        => '1 file',
-   'info_recherche_documents'       => '@nb@ files',
-   'info_recherche_label'           => 'Search',
-   'info_recherche_mot'             => '1 keyword',
-   'info_recherche_mots'            => '@nb@ keywords',
-   'info_recherche_rubrique'        => '1 section',
-   'info_recherche_rubriques'       => '@nb@ sections',
-   'info_recherche_site'            => '1 web site',
-   'info_recherche_sites'           => '@nb@ web sites',
-   'info_recherche_resultat'        => '1 result',
-   'info_recherche_resultats'       => '@nb@ results',
-   'info_recherche_pas_de_resultat' => 'No result',
+   'info_recherche_article'         => '1 статья',
+   'info_recherche_articles'        => '@nb@ статьи',
+   'info_recherche_document'        => '1 файл',
+   'info_recherche_documents'       => '@nb@ файлы',
+   'info_recherche_label'           => 'поиск',
+   'info_recherche_mot'             => '1 ключевое слово',
+   'info_recherche_mots'            => '@nb@ ключевые слова',
+   'info_recherche_rubrique'        => '1 раздел',
+   'info_recherche_rubriques'       => '@nb@ разделы',
+   'info_recherche_site'            => '1 вебсайт',
+   'info_recherche_sites'           => '@nb@ вебсайты',
+   'info_recherche_resultat'        => '1 найдено одно упоминание',
+   'info_recherche_resultats'       => '@nb@ найдены несколько упоминаний',
+   'info_recherche_pas_de_resultat' => 'не найдено',
    
    // L
-   'lastest_news'                   => "Lastest news",
-   'latest_publications'            => 'Latest publications',
+   'lastest_news'                   => "Новости",
+   'latest_publications'            => 'публикации',
    
    // M
    'more'                           => 'Читать дальше',
@@ -53,7 +53,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'name_first'                     => 'Имя',
    'name_last'                      => 'Фамилия',
    'news_last_publications'         => 'Новости и недавние публикации',
-   'no_event_available'             => 'no event available',
+   'no_event_available'             => 'нет событий',
    
    // O
    'organisation'                   => 'организация',
@@ -65,25 +65,25 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // R
    
    // S
-   'share'                          => 'Share',
+   'share'                          => 'поделиться',
    'signatories'                    => 'подписанты',
    'signatories_coalition'          => "подписанты",
-   'signatories_singular'           => "1 supporter",
-   'signatories_plural'             => "@nb@ supporters",
+   'signatories_singular'           => "1 поддерживающий",
+   'signatories_plural'             => "@nb@ поддерживающие",
    'signatories_plural_with'        => 'С @nb@ лиц, оказывающих поддержку',
-   'signatories_singular_with'      => 'С одним лицом, оказывающим поддержку',
+   'signatories_singular_with'      => 'лицо, оказывающее поддержку',
    'sign_on'                        => 'Подпишите обращение',
    'sign_on_wc'                     => 'Подпишите обращение Вашингтона',
-   'sign_petition'                  => 'Sign the petition',
+   'sign_petition'                  => 'подпишите петицию',
    'siteweb'                        => 'веб-сайт',
    'suite'                          => 'Читать дальше',
    'suivre_facebook'                => "Читать о нас на <a href='@urlfacebook@'>Facebook</a>",
    
    // T
-   'tags'                           => 'Tags',
+   'tags'                           => 'тэги',
    
    // U
-   'updated'                        => 'Updated',
+   'updated'                        => 'обновлено',
 
    // 
    'navigation'                     => 'Navigation'
