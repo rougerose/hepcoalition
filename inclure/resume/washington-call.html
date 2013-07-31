@@ -1,7 +1,7 @@
-<BOUCLE_wc(RUBRIQUES){id_rubrique=1}>
+<BOUCLE_wc(RUBRIQUES){composition=call}>[(#REM) les rubriques avec composition Washington call ]
 <B_article>
 <div class="panel panel--center island panel--secondary">
-    <BOUCLE_article(ARTICLES){id_rubrique}{lang}{0,1}>
+    <BOUCLE_article(ARTICLES){id_rubrique}{lang}{id_mot=1}>
     <h1 class="hN text--upper panel__item">
         #TITRE
         [<span class="soustitre">(#SOUSTITRE)</span>]
