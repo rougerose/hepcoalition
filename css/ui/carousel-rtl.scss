@@ -1,0 +1,20 @@
+/*====================================
+=            carousel rtl            =
+====================================*/
+
+.rtl {
+    .flexslider {
+        direction: ltr;
+    }
+    .flex-direction-nav {
+        .flex-prev {
+            background-position: 0 -42px;
+        }
+        .flex-next {
+            background-position: 0 0;
+        }
+    }
+}
+
+/*-----  End of carousel rtl  ------*/
+
