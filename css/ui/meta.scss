@@ -22,4 +22,13 @@
     }
 }
 
+.traduction {
+    &.active {
+        color: $secondary-color;
+    }
+    span {
+        color: $text-color-light;
+    }
+}
+
 /*-----  End of meta  ------*/

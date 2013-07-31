@@ -6,7 +6,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // A
    'agenda'                         => 'Календарь событий',
    'about_us'                       => 'О нас',
-
+   
    // B
    'by'                             => 'By',
    
@@ -22,10 +22,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    
    // F
    'follow_us'                      => "следите за нами", // on Facebook
-
+   
    // H
    'home'                           => 'на главную',
-
+   
    // I
    'info_recherche_article'         => '1 статья',
    'info_recherche_articles'        => '@nb@ статьи',
@@ -86,8 +86,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    
    // U
    'updated'                        => 'обновлено',
-
-   // 
+   
+   // ajouts à traduire
+   'translations'                   => 'Translations',
    'navigation'                     => 'Navigation'
 );
 ?>

@@ -6,7 +6,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // A
    'agenda'                         => 'Agenda',
    'about_us'                       => "À propos",
-
+   
    // B
    'by'                             => 'Par',
    
@@ -21,7 +21,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'email_send'                     => "Nous envoyer un <a href='@urlcontact@' class='spip_out'>email</a>",
    // F
    'follow_us'                      => "Suivez-nous", // on Facebook
-
+   
    // H
    'home'                           => 'Accueil', 
    
@@ -83,6 +83,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    
    // T
    'tags'                           => 'Mots-clés',
+   'translation'                    => 'Translations',
    
    // U
    'updated'                        => 'Mise à jour le'

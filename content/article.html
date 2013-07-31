@@ -57,6 +57,7 @@
             <ul class="liste--bloc">
                [(#MODELE{article-auteurs})]
                <li class="meta-item meta-updated"><time class="updated" datetime="[(#DATE|affdate{Y-m-d})]">[(#DATE|affdate)]</time></li>
+               [(#MODELE{article-self-traductions})]
                [(#INCLURE{fond=liste/mots-objet,id_article,lang})]
                [(#PLUGIN{socialtags}|oui)
                <li class="meta-item meta-share">

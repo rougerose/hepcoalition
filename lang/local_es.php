@@ -87,6 +87,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
       'tags'                           => 'Etiquetas',
       
       // U
-      'updated'                        => 'Actualizado'
+      'updated'                        => 'Actualizado',
+
+      // ajouts à traduire
+      'translations'                   => 'Translations',
+      'navigation'                     => 'Navigation'
 );
 ?>
