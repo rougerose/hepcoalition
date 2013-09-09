@@ -1,10 +1,10 @@
 [(#ENV{bloc}|=={footer}|oui)
    [(#SET{fichier,
-      [<img src="(#CHEMIN{img/HepC-logo.png}|image_reduire{300,0}|extraire_attribut{src})" alt="[(#NOM_SITE_SPIP|texte_backend)[ (#SLOGAN_SITE_SPIP|texte_backend)]]">]
+      [<img src="(#LOGO_SITE_SPIP|image_reduire{300,0}|extraire_attribut{src})" alt="[(#NOM_SITE_SPIP|texte_backend)[ (#SLOGAN_SITE_SPIP|texte_backend)]]">]
    })]
 ][(#ENV{bloc}|=={header}|oui)
   [(#SET{fichier,
-     [<img src="(#CHEMIN{img/HepC-logo.png}|image_reduire{400,0}|extraire_attribut{src})" alt="[(#NOM_SITE_SPIP|texte_backend)[ (#SLOGAN_SITE_SPIP|texte_backend)]]">]
+     [<img src="(#LOGO_SITE_SPIP|image_reduire{400,0}|extraire_attribut{src})" alt="[(#NOM_SITE_SPIP|texte_backend)[ (#SLOGAN_SITE_SPIP|texte_backend)]]">]
   })]
 ]
 [<a href="#URL_SITE_SPIP" class="logo" rel="start home">
