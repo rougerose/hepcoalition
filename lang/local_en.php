@@ -4,7 +4,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
    // A
-   'agenda'                         => 'Agenda',
+   'agenda'                         => 'Calendar',
    'about_us'                       => 'About us',
    
    // B
@@ -12,7 +12,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    
    // C
    'campaigns_all'                  => 'All campaigns',
-   'campaign_last'                  => 'Last campaign',
+   'campaign_last'                  => 'Recent campaign',
    'contact'                        => 'Contact',
    'credits_design'                 => "Design & development <a href='@urldesign@'>christophe le drean</a> with <a href='@urlspip@'>spip</a>",
    
@@ -55,7 +55,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'name_first'                     => 'First name',
    'name_last'                      => 'Last name',
    'navigation'                     => 'Navigation',
-   'news_last_publications'         => 'News & last publications',
+   'news_last_publications'         => 'News & recent publications',
    'no_event_available'             => 'No event available',
    
    // O
@@ -70,7 +70,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    
    // S
    'share'                          => 'Share',
-   'signatories'                    => 'signatories',
    'signatories_coalition'          => "Signatories",
    'signatories_singular'           => "1 supporter",
    'signatories_plural'             => "@nb@ supporters",

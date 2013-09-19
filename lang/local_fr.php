@@ -68,7 +68,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    
    // S
    'share'                          => 'Partager',
-   'signatories'                    => 'signataires',
    'signatories_coalition'          => "Signataires",
    'signatories_singular'           => "1 signataire",
    'signatories_plural'             => "@nb@ signataires",

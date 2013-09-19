@@ -68,7 +68,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    
    // S
    'share'                          => '分享',
-   'signatories'                    => '签名人',
    'signatories_coalition'          => "签名人",
    'signatories_singular'           => "1 位支持者",
    'signatories_plural'             => "@nb@ 位支持者",
