@@ -77,14 +77,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'sign_on_wc'                     => "Signez l'appel de Washington",
    'sign_petition'                  => 'Signez la pétition',
    'siteweb'                        => 'Site web',
-   'suite'                          => 'Lire la suite',
-   'suivre_facebook'                => "Suivez-nous sur <a href='@urlfacebook@'>Facebook</a>",
+   //'suite'                          => 'Lire la suite',
+  // 'suivre_facebook'                => "Suivez-nous sur <a href='@urlfacebook@'>Facebook</a>",
    
    // T
    'tags'                           => 'Mots-clés',
    'translation'                    => 'Traductions',
    
    // U
-   'updated'                        => 'Mise à jour le'
+   //'updated'                        => 'Mise à jour le'
 );
 ?>

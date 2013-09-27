@@ -14,7 +14,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
       'campaigns_all'                  => 'Todas las campañas',
       'campaign_last'                  => 'Última campaña',
       'contact'                        => 'Contacto',
-      'credits_design'                 => "Diseño y desarrollo <a href='@urldesign@'>christophe le drean</a> with <a href='@urlspip@'>spip</a>",
+      'credits_design'                 => "Diseño y desarrollo <a href='@urldesign@'>christophe le drean</a> with <a href='@urlspip@'>Spip</a>",
       
       // E
       'email'                          => 'e-mail',
@@ -64,7 +64,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
       // P
       'page'                           => 'página',
       'pays'                           => 'País',
-      'press_release'                  => 'Comunicado de prensa',
+      //'press_release'                  => 'Comunicado de prensa',
       
       // R
       
@@ -73,7 +73,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
       'signatories_coalition'          => "Firmantes",
       'signatories_singular'           => "1 apoyo",
       'signatories_plural'             => "@nb@ apoyos",
-      'signatories_plural_with'        => 'Con@nb@ apoyos',
+      'signatories_plural_with'        => 'Con @nb@ apoyos',
       'signatories_singular_with'      => 'Con 1 apoyo',
       'sign_on'                        => 'Firmar',
       'sign_on_wc'                     => 'Firmar el llamamiento de Washington',
@@ -86,7 +86,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
       'tags'                           => 'Etiquetas',
       
       // U
-      'updated'                        => 'Actualizado',
+      //'updated'                        => 'Actualizado',
 
       // ajouts à traduire
       'translations'                   => 'Translations',
