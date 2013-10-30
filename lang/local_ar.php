@@ -21,7 +21,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'email_send'                     => "ابعث لنا <a href='@urlcontact@' class='spip_out'>بريد إلكتروني</a>",
    
    // F
-   'follow_us'                      => "تابعنا", // on Facebook
+   'follow_us'                      => "تابعنا",
    
    // H
    'home'                           => 'الصفحة الرئيسية',
@@ -47,14 +47,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'latest_publications'            => ' آخر المنشورات',
    
    //M
-   'message_404_title'              => "Page not found.",
-   'message_404_desc'               => "Sorry, but the page you are looking for has not been found.<br />Go back to <a href='@urlsite@' class='spip_out'>home page</a>.",
+   'message_404_title'              => "الصفحة غير موجودة",
+   'message_404_desc'               => "آسف, الصفحة المطلوبة غير موجودة. للرجوع الى  <a href='@urlsite@' class='spip_out'>الصفحة الرئيسية</a>",
    'more'                           => ' اقرأ المزيد',
    
    // N
    'name_first'                     => 'الاسم الأول',
    'name_last'                      => 'اسم العائلة',
-   'navigation'                     => 'Navigation',
+   'navigation'                     => 'تجول',
    'news_last_publications'         => 'الأخبار وآخر النشرات',
    'no_event_available'             => ' لا يوجد أي حدث ',
    
@@ -83,13 +83,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    
    // T
    'tags'                           => 'علامات',
+   'translations'                   => 'الترجمة',
    
    // U
-   'updated'                        => 'محدث',
-
-   // ajouts à traduire
-   'translations'                   => 'Translations',
-   'navigation'                     => 'Navigation'
-
+   'updated'                        => 'محدث'
 );
 ?>

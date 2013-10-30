@@ -8,7 +8,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
       'about_us'                       => 'Quiénes somos',
 
       // B
-      'by'                             => 'By',
+      'by'                             => 'Por',
       
       // C
       'campaigns_all'                  => 'Todas las campañas',
@@ -21,7 +21,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
       'email_send'                     => "Envíenos un <a href='@urlcontact@' class='spip_out'>e-mail</a>",
       
       // F
-      'follow_us'                      => "Síganos", // en Facebook
+      'follow_us'                      => "Síganos",
       
       // H
       'home'                           => 'Inicio',
@@ -47,14 +47,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
       'latest_publications'            => 'Últimas publicaciones',
       
       //M
-      'message_404_title'              => "Page not found.",
-      'message_404_desc'               => "Sorry, but the page you are looking for has not been found.<br />Go back to <a href='@urlsite@' class='spip_out'>home page</a>.",
+      'message_404_title'              => "Pagina no disponible.",
+      'message_404_desc'               => "Disculpe, la página que usted busca no está disponible. <br /> Regrese a <a href='@urlsite@' class='spip_out'>página de incio</a>.",
       'more'                           => 'Leer más',
       
       //N
       'name_first'                     => 'Nombre',
       'name_last'                      => 'Apellidos',
-      'navigation'                     => 'Navigation',
+      'navigation'                     => 'Navegación',
       'news_last_publications'         => 'Noticias y últimas publicaciones',
       'no_event_available'             => 'Ningún evento disponible',
       
@@ -84,12 +84,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
       
       // T
       'tags'                           => 'Etiquetas',
+      'translations'                   => 'Traducciones'
       
-      // U
-      //'updated'                        => 'Actualizado',
-
-      // ajouts à traduire
-      'translations'                   => 'Translations',
-      'navigation'                     => 'Navigation'
 );
 ?>

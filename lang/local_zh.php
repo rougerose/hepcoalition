@@ -8,7 +8,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'about_us'                       => '关于我们',
 
    // B
-   'by'                             => 'By',
+   'by'                             => '通过',
    
    // C
    'campaigns_all'                  => '所有的运动',
@@ -21,7 +21,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'email_send'                     => "请用 <a href='@urlcontact@' class='spip_out'>电子邮件</a>与我们联络",
    
    // F
-   'follow_us'                      => "请在脸书", // on Facebook
+   'follow_us'                      => "请在脸书",
 
    // H
    'home'                           => '主页',
@@ -47,13 +47,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'latest_publications'            => '最新报告',
    
    // M
-   'message_404_title'              => "Page not found.",
-   'message_404_desc'               => "Sorry, but the page you are looking for has not been found.<br />Go back to <a href='@urlsite@' class='spip_out'>home page</a>.",
+   'message_404_title'              => "页面无法显示",
+   'message_404_desc'               => "对不起，您请求的页面无法显示。请回到
+<a href='@urlsite@' class='spip_out'>主页</a>",
    'more'                           => '更多',
    
    // N
    'name_first'                     => '名',
    'name_last'                      => '姓',
+   'navigation'                     => '浏览器',
    'news_last_publications'         => '新闻及最新刊物',
    'no_event_available'             => '没有事件',
    
@@ -82,12 +84,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    
    // T
    'tags'                           => '标记',
+   'translations'                   => '翻译',
    
    // U
    'updated'                        => '已更新',
-
-   // ajouts à traduire
-   'translations'                   => 'Translations',
-   'navigation'                     => 'Navigation'
 );
 ?>

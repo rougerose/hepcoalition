@@ -8,7 +8,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'about_us'                       => 'О нас',
    
    // B
-   'by'                             => 'By',
+   'by'                             => 'Кем',
    
    // C
    'campaigns_all'                  => 'все кампании',
@@ -47,13 +47,14 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'latest_publications'            => 'публикации',
    
    // M
-   'message_404_title'              => "Page not found.",
-   'message_404_desc'               => "Sorry, but the page you are looking for has not been found.<br />Go back to <a href='@urlsite@' class='spip_out'>home page</a>.",
+   'message_404_title'              => "Страница не найдена",
+   'message_404_desc'               => "Приносим свои извинения, запрашиваемая страница не найдена.<br /> Вернуться на  <a href='@urlsite@' class='spip_out'>главную страницу сайта</a>.",
    'more'                           => 'Читать дальше',
    
    // N
    'name_first'                     => 'Имя',
    'name_last'                      => 'Фамилия',
+   'navigation' => 'Навигация',
    'news_last_publications'         => 'Новости и недавние публикации',
    'no_event_available'             => 'нет событий',
    
@@ -82,12 +83,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    
    // T
    'tags'                           => 'тэги',
+   'translations'                   => 'Перевод',
    
-   // U
-   'updated'                        => 'обновлено',
-   
-   // ajouts à traduire
-   'translations'                   => 'Translations',
-   'navigation'                     => 'Navigation'
 );
 ?>
