@@ -8,13 +8,13 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'about_us'                       => 'من نحن',
    
    // B
-   'by'                             => 'By',
+   'by'                             => 'من',
    
    // C
    'campaigns_all'                  => 'كل الحملات',
-   'campaign_last'                  => 'آخر حملة',
+   'campaign_last'                  => 'آخر الحملات',
    'contact'                        => ' الاتصال',
-   'credits_design'                 => " تصميم وتطوير كريستوف <a href='@urldesign@'></a>  دريان  مع <a href='@urlspip@'>spip</a>",
+   'credits_design'                 => "تصميم وتطوير كريستوف <a href='rouge-rose.net'>christophe le drean</a>  لودريان  مع <a href='@urlspip@'>spip</a>",
    
    // E
    'email'                          => 'البريد الإلكتروني',
@@ -47,7 +47,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'latest_publications'            => ' آخر المنشورات',
    
    //M
-   'message_404_title'              => "الصفحة غير موجودة",
+   'message_404_title'              => "االصفحة غير موجودة",
    'message_404_desc'               => "آسف, الصفحة المطلوبة غير موجودة. للرجوع الى  <a href='@urlsite@' class='spip_out'>الصفحة الرئيسية</a>",
    'more'                           => ' اقرأ المزيد',
    
