@@ -3,35 +3,25 @@
 ============================*/
 .box {
     @extend .landmark;
+    .hN {
+        margin-bottom: .5em;
+        border-bottom: 2px solid $primary-dark-color;
+        @include font-size($h2-size);
+        font-weight: normal;
+        color: $primary-dark-color;
+        text-shadow: 1px 1px 0px rgba(#fff,0.8);
+    }
 }
 /* petition */
 .petition__box {
-    background-color: darken(#fff,10%);
+    background-color: rgba($primary-dark-color,0.1);
     padding: 0 .8em;
     .hN {
-        color: $secondary-color;
-        @include font-size($h1-size);
         margin-bottom: .3em;
     }
 }
 
-.petition__box--supporters {
-    .hN {
-        border-bottom: 3px solid $primary-color;
-        margin-bottom: 0;
-        color: $primary-color;
-    }
-}
-
-.meta {
-    .hN {
-        border-bottom: 2px solid $secondary-color;
-        margin-bottom: .5em;
-        @include font-size($h4-size);
-        font-weight: normal;
-        color: $secondary-color;
-    }
-}
+// .petition__box--supporters {}
 
 /*-----  End of =box  ------*/
 

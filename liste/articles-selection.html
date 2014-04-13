@@ -1,14 +1,15 @@
-<B_articles>
+<B_articles_selection>
 <section>
    #ANCRE_PAGINATION
-   [<nav class="pagination haut[ (#ENV{pagination_align})]">(#PAGINATION{li})</nav>]
+   [<h1 class="section__title hN">(#ENV{section__title})</h1>]
+   [<nav class="pagination pagination--page haut[ (#ENV{pagination_align})]">(#PAGINATION{li})</nav>]
    <ul class="liste--bloc">
-      <BOUCLE_articles(ARTICLES){id_article IN #ENV{selection}}{pagination #ENV{pagination,20}}>
+      <BOUCLE_articles_selection(ARTICLES){id_article IN #ENV{selection}}{pagination #ENV{pagination,20}}>
       [<li>
-         (#INCLURE{fond=inclure/resume/article,conteneur=#ENV{conteneur},id_article})
+         (#INCLURE{fond=inclure/resume/article,id_article})
       </li>]
-      </BOUCLE_articles>
+      </BOUCLE_articles_selection>
    </ul>
-   [<nav class="pagination bas[ (#ENV{pagination-align})]">(#PAGINATION{li})</nav>]
+   [<nav class="pagination pagination--page bas[ (#ENV{pagination-align})]">(#PAGINATION{li})</nav>]
 </section>
-</B_articles>
+</B_articles_selection>

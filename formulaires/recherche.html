@@ -1,12 +1,10 @@
 <div class="formulaire_spip formulaire_recherche[ (#ENV{class})]" id="formulaire_recherche">
-   <form action="[(#ENV{action})]" method="get"><div>
-      [(#ENV{action}|form_hidden)]
-      [<input type="hidden" name="lang" value="(#ENV{lang})" />]
-      <label for="#ENV{_id_champ}">
-         <input type="search" required="required" aria-label="<:migreurop:info_recherche_label:>" placeholder="<:migreurop:info_recherche_label:>" class="search text" size="10" name="recherche" id="#ENV{_id_champ}" value="" autocapitalize="off" autocorrect="off" />
-      </label>
-      <label class="submit-search sprite sprite--search sprite--search-is-active" for="submit-search">
-         <input id="submit-search" name="submit" type="image" src="[(#CHEMIN{img/icon--search.png})]" class="submit is-hidden" alt="<:info_rechercher:>" />
-      </label>
-   </div></form>
+<form action="[(#ENV{action})]" method="get" class="search__form"><div>
+   [(#ENV{action}|form_hidden)]
+   [<input type="hidden" name="lang" value="(#ENV{lang})" />]
+   <label for="#ENV{_id_champ}" class="search__label--field">
+      <input type="[(#HTML5|?{search,text})]" class="search text search__field" size="10" name="recherche" id="#ENV{_id_champ}" value="" accesskey="4" autocapitalize="off" autocorrect="off" [(#HTML5|oui)placeholder="<:info_rechercher_02:>"] required="required" />
+   </label>
+   <label for="search__submit" class="search__label--submit"><input id="search__submit" type="submit" class="submit search__submit" value="&gt;&gt;" title="<:info_rechercher:>" /></label>
+</div></form>
 </div>

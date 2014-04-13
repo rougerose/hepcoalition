@@ -1,0 +1,25 @@
+/*====================================
+=            carousel rtl            =
+====================================*/
+
+.rtl {
+    .flexslider {
+        direction: ltr;
+    }
+    .flex-direction-nav {
+        .flex-prev {
+            background-position: 0 -42px;
+        }
+        .flex-next {
+            background-position: 0 0;
+        }
+    }
+    .slides__item--body {
+        @include media-query(desk) {
+            right: $base-spacing-unit/2; // spip le transforme en gauche, c'est ce qu'on souhaite. 
+        }
+    }
+}
+
+/*-----  End of carousel rtl  ------*/
+

@@ -4,10 +4,9 @@
 
 html {
     border-top: 7px solid $secondary-color;
-    font-family: $body-font-family;
-    font-family: 'Cabin',sans-serif;
+    font-family: $body-font;
     font-weight: normal;
-    color: #222;
+    color: $text-color;
 }
 
 body {
@@ -21,13 +20,6 @@ body {
     margin-left: auto;
     padding-right:$base-spacing-unit;
     padding-left:$base-spacing-unit;
-
-
-    // @include media-query(portable){
-    //     padding-right:$half-spacing-unit;
-    //     padding-left: $half-spacing-unit;
-    //     max-width:640px;
-    // }
 }
 
 /*-----  End of =page  ------*/

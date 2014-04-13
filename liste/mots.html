@@ -1,0 +1,30 @@
+[(#REM) VARIABLES > selection : tableau de la sélection transmis par inclure
+] #SET{selection,#ENV{selection}}
+<B_mots>
+#ANCRE_PAGINATION
+[<h2 class="hN resultats--decompte">
+   (#GET{selection}|count|singulier_ou_pluriel{local:info_recherche_mot,local:info_recherche_mots,nb})
+</h2>]
+<ol class="liste--bloc mots recherche">
+   <BOUCLE_mots(MOTS){id_mot IN #GET{selection}}{pagination 5}>
+   <li>
+      <article id="resume-mot-#ID_MOT" class="hentry resume mot cf">
+        <div class="resume--body cf">
+          <header>
+            <h1 class="entry-title hN">
+              <a href="#URL_MOT">#TITRE</a>
+            </h1>
+          </header>
+          <div class="entry-logo">
+            [<a href="#URL_MOT">(#LOGO_MOT|inserer_attribut{class,media-logo})</a>]
+          </div>
+          <div class="entry-content[(#LOGO_ARTICLE|oui) plus-logo]">
+           [<p>(#DESCRIPTIF|PtoBR) <a href="#URL_MOT" class="more"><:local:more:></a></p>]
+          </div>
+        </div>
+      </article>
+   </li>
+   </BOUCLE_mots>
+</ol>
+[<nav class="pagination bas pagination--page[ (#ENV{pagination-align})]">(#PAGINATION{li})</nav>]
+</B_mots>

@@ -18,45 +18,23 @@
 @import "inuit.css/inuit";
 
 /**
- * She’s all yours, cap’n... Begin importing your stuff here.
- */
-//@import "ui/example";
-// @import "ui/fonts";
-
-// base
-
-// @import "ui/page","ui/page-head";
-
-// divers
-// @import "ui/misc";
-
-
-/**
-*
-* Foundation
-*
-**/
-
-// @import "variables";
-// @import "foundation/scss/foundation";
-
-/**
 *
 * HepCoalition
 *
 **/
 /* mixins */
 @import "ui/mix";
-@import "ui/boutons";
+@import "ui/shared";
 
 /* fonts */
-@import "ui/fonts";
+// @import "ui/fonts";
 
 /* typo */
 @import "ui/typo";
 
 /* base */
 @import "ui/base";
+@import "ui/boutons";
 @import "ui/formulaires";
 @import "ui/tableaux";
 
@@ -68,13 +46,24 @@
 /* objets */
 @import "ui/nav";
 @import "ui/listes";
-@import "ui/box";
-@import "ui/objet";
-@import "ui/medias";
+@import "ui/breadcrumb";
 @import "ui/hentry";
+@import "ui/self";
+@import "ui/meta";
+@import "ui/section";
+@import "ui/box";
+@import "ui/panel";
+@import "ui/pagination";
+@import "ui/carousel";
+@import "ui/medias";
+@import "ui/info";
+@import "ui/recherche";
 
 /* misc */
 @import "ui/misc";
+
+// ie
+@import "ui/ie";
 
 
 

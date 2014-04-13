@@ -1,0 +1,15 @@
+<B_carousel_articles>
+<div class="features">
+    <div class="flexslider-container">
+        <div class="flexslider">
+            <ul class="slides">
+                <BOUCLE_carousel_articles(ARTICLES){id_article IN #ENV{selection}}>
+                <li class="slides__item">
+                  [(#INCLURE{fond=inclure/resume/article-carousel,id_article})]
+                </li>
+                </BOUCLE_carousel_articles>
+            </ul><!-- .slides -->
+        </div><!-- .flexslider -->
+    </div><!-- .flexslider__container -->
+</div><!-- .features -->
+</B_carousel_articles>

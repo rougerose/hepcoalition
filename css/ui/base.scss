@@ -1,18 +1,50 @@
 /*=============================
 =            =Base            =
 =============================*/
-
+img,
+img[height],
+img[width] {
+  height: auto;
+  width: auto;
+  max-width: 100%;
+}
 /*==========  Liens  ==========*/
-a,
-a.spip_out {
+a {
    color: #000;
    text-decoration: none;
-   @include vendor(transition, color 0.35s ease-in-out 0.2s);
+   @include vendor(transition, color 0.35s ease-in-out 0.2s, border 0.35s ease-in-out 0.2s);
    &:visited{}
    &:hover{color: $brand-color; text-decoration: none;}
-   &:active, &:focus {
+}
+a.spip_out,
+a.spip_in,
+a.spip_note,
+a.more {
+  color: #000;
+  border-bottom: 1px solid $primary-color;
+  &:hover {
+    color: $primary-color;
+  }
+}
+a.more {
+  color: darken($primary-color,5%);
+  &:hover {
+    color: lighten($primary-color,10%);
+    border-bottom-color: lighten($primary-color,10%);
+  }
+}
+
+a.push,
+a.spip_out {
+  &:active, &:focus {
       position: relative; top: 1px;
    }
+}
+a.active {
+  color: $secondary-color;
+  &:hover {
+    color: $primary-color;
+  }
 }
 
 /*-----  End of =Base  ------*/

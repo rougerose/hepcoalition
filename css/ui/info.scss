@@ -1,0 +1,27 @@
+/*============================
+=            info            =
+============================*/
+
+/* message d'information */
+
+.info {
+    padding: 0 $base-spacing-unit;
+    @include vendor(border-radius,3px);
+    @include font-size(14px);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.info--small {
+    line-height: 1.5 * $base-line-height;
+}
+
+.info--grey {
+    background-color: #000;
+    background-color:rgba(100,100,100,0.2);
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+    color: #777;
+}
+
+/*-----  End of info  ------*/
+

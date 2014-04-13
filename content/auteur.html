@@ -1,0 +1,59 @@
+<BOUCLE_auteur(AUTEURS){id_auteur}{tout}>
+<article class="self objet auteur grid__item">
+   <div class="grid">
+      <div class="grid__item eight-twelfths portable-one-whole desk-eight-twelfths push--desk-four-twelfths">
+         <header class="landmark">
+            <h1 class="self__titre hN">
+               #NOM
+            </h1>
+         </header>
+      </div>
+      <!-- /.grid__item -->
+   </div>
+   <!-- /.grid -->
+   <div class="grid grid--rev">
+      <div class="grid__item eight-twelfths portable-one-whole desk-eight-twelfths">
+         
+         <B_ev>
+         <div class="evenements">
+            <BOUCLE_ev(EVENEMENTS){id_article}>
+            #INCLURE{fond=inclure/resume/evenement-article,id_evenement}
+            </BOUCLE_ev>
+         </div>
+         </B_ev>
+
+         <div class="self__body entry-content contenu surlignable">
+            <div class="texte txt">
+               [(#BIO)]
+               [<p class="#EDIT{hyperlien} hyperlien"><:voir_en_ligne:> : <a href="(#URL_SITE)" class="url spip_out">(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})</a></p>]
+            </div><!-- .texte -->
+            
+            #FORMULAIRE_ECRIRE_AUTEUR
+            
+            [<aside class="notes txt">
+               <div class="grid">
+                  <div class="grid__item desk-one-half">
+                     <h1 class="hN intertitre spip"><:info_notes:></h1>
+                     (#NOTES)
+                  </div>
+               </div>
+            </aside>]
+         </div><!-- .self__body -->
+      </div><!-- /.grid__item --><div class="grid__item four-twelfths portable-one-whole desk-four-twelfths">
+         [<div class="self__logo">(#ENV{carousel}|non)
+            [(#LOGO_AUTEUR|inserer_attribut{class,media-logo})]
+         </div><!-- /.self__logo -->]
+
+         <aside class="meta">
+            <ul class="liste--bloc">
+               [(#PLUGIN{socialtags}|oui)
+               <li class="meta-item meta-share">
+                  <h1 id="share" class="hN share"><:local:share:></h1>
+               </li>]
+            </ul>
+         </aside>
+
+      </div><!-- /.grid__item -->
+   </div><!-- /.grid -->
+</article><!-- .self -->
+</BOUCLE_auteur>

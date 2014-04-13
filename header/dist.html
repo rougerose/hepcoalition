@@ -1,6 +1,5 @@
-<nav class="menu-lang--container">
-    <a href="#" class="menu-lang--langue">#LANG</a>
-    #MENU_LANG
-</nav>
 <INCLURE{fond=inclure/logo-site,bloc=header} />
-<INCLURE{fond=nav/nav-principale,env} />
+<INCLURE{fond=nav/nav-site,env} />
+<nav id="nav-lang" class="nav-lang__container">
+    #INCLURE{fond=formulaires/menu_lang,env}
+</nav>

@@ -1,0 +1,26 @@
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+<section>
+   <INCLURE{fond=inclure/resume/rubrique,id_rubrique, title_class='section__title plan'} />
+   <B_articles>
+   <ul class="liste--bloc">
+      <BOUCLE_articles(ARTICLES){id_rubrique}{!par date}{0,3}{lang}>
+      [<li>
+         (#INCLURE{fond=inclure/resume/article,id_article})
+      </li>]
+      </BOUCLE_articles>
+   </ul>
+   </B_articles>
+   [(#REM) sinon les sous-rubriques ]
+   <B_sousrubriques>
+   <ul class="liste--bloc">
+      <BOUCLE_sousrubriques(RUBRIQUES){id_parent}{par num titre, titre}{lang}>
+      [<li>
+         (#INCLURE{fond=inclure/resume/rubrique,id_rubrique,title_class='section__title section__title--subsection'})
+      </li>]
+      </BOUCLE_sousrubriques>
+   </ul>
+   </B_sousrubriques>
+   <//B_articles>
+   
+</section>
+</BOUCLE_rubrique>

@@ -1,0 +1,31 @@
+<div class="nav-site">
+   <nav id="nav-main" class="nav-principale__container">
+      <a href="#" class="nav-btn"><span class="icon--navigation">&#9776;</span> <:local:navigation:></a>
+      <ul class="nav nav-principale">
+         <li class="nav__item[ (#ENV{type-page}|=={sommaire}|oui)active]">
+            <a href="#URL_SITE_SPIP" class="item"><:local:home:></a>
+         </li>
+         <BOUCLE_secteurs(RUBRIQUES){racine}{lang}{par num titre, titre}>
+         <li id="r#ID_RUBRIQUE" class="nav__item[ (#ENV{id_secteur}|=={#ID_RUBRIQUE}|oui)active]">
+            <a href="#URL_RUBRIQUE" class="item">#TITRE</a>
+            <BOUCLE_mot(MOTS){id_rubrique}{technique=oui}{titre=rubrique news}>#SET{rubrique-news,' '}</BOUCLE_mot>
+            <B_sousrubriques>
+            <ul class="nav nav--dropdown">
+               <BOUCLE_sousrubriques(RUBRIQUES){id_parent}{lang}{par num titre, titre}>
+               [(#GET{rubrique-news}|oui)
+               <li class="nav__item"><a href="#_secteurs:URL_RUBRIQUE" class="item"><:local:lastest_news:></a></li>
+               ]
+               <li id="r#ID_RUBRIQUE" class="nav__item[ (#EXPOSE|oui)active]">
+                  <a href="#URL_RUBRIQUE" class="item">#TITRE</a>
+               </li>
+               </BOUCLE_sousrubriques>
+            </ul>
+            </B_sousrubriques>
+         </li></BOUCLE_secteurs>
+      </ul>
+   </nav><!-- nav-principale__container -->
+   <div class="search-site">
+      #FORMULAIRE_RECHERCHE
+   </div>
+</div>
+

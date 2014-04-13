@@ -1,0 +1,19 @@
+/*========================================
+=            resume-art-id               =
+========================================*/
+
+@media screen and (min-width: 481px) {
+    <BOUCLE_selection(ARTICLES pb_selection){lang}{par ordre}{spip_pb_selection.id_rubrique=#ENV{id_rubrique}}{doublons}>
+        #resume-art-#ID_ARTICLE > div {
+            background-image: url('[(#LOGO_ARTICLE|image_reduire{335}|extraire_attribut{src}|url_absolue)]');
+        }
+    </BOUCLE_selection>
+    <BOUCLE_articles(ARTICLES){id_secteur=#ENV{id_secteur}}{lang}{doublons}>
+        [#resume-art-#ID_ARTICLE > div {
+            background-image: url('(#LOGO_ARTICLE|image_reduire{335}|extraire_attribut{src}|url_absolue)');
+        }]
+    </BOUCLE_articles>
+}
+
+/*-----  End of resume-art-logos  ------*/
+

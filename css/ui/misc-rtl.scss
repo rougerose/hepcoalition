@@ -1,0 +1,22 @@
+/*================================
+=            misc rtl            =
+================================*/
+
+.rtl {
+    /* grid--rev */
+    .grid--rev {
+      direction:ltr;
+
+      > .grid__item{
+          direction:rtl;
+      }
+    }
+
+    #spip-admin .spip-admin-boutons {
+        border-radius: 5px 0 0 5px;
+    }
+
+}
+
+/*-----  End of misc rtl  ------*/
+

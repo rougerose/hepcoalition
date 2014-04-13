@@ -1,0 +1,65 @@
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+<div class="grid__item">
+   <article class="grid self rubrique">
+      <div class="grid__item two-thirds portable-one-whole desk-two-thirds">
+         <header>
+            <h1 class="self__titre hN text--upper">#TITRE[ <span class="soustitre">(#SOUSTITRE)</span>]</h1>
+         </header>
+         [<div class="self__body">
+            <div class="chapo txt">
+               (#TEXTE)
+            </div>
+         </div><!-- .self__body -->]
+      </div><!-- /.grid__item -->[<div class="grid__item one-third portable-one-whole desk-one-third">
+         <div class="self__logo">
+            (#LOGO_RUBRIQUE|inserer_attribut{class,media-logo logo--large})
+         </div>
+         <!-- /.self__logo -->
+      </div>
+      <!-- /.grid__item -->]
+   </article><!-- .self -->
+</div>
+<!-- /.grid__item -->
+
+[(#SET{articles_selection,#ARRAY})
+]<BOUCLE_selection(ARTICLES pb_selection){lang}{par ordre}{spip_pb_selection.id_rubrique=#ID_RUBRIQUE}{doublons}>[
+(#SET_PUSH{articles_selection,#ID_ARTICLE})
+]</BOUCLE_selection>
+<div class="grid__item eight-twelfths portable-one-whole desk-eight-twelfths">
+   [(#REM) sélections d'articles ]
+   [(#GET{articles_selection}|oui)
+      [(#INCLURE{fond=liste/articles-selection,
+         selection=#GET{articles_selection},
+         section__title=[(#VAL{<:local:campaign_last:>})],
+         pagination=10,
+         ajax,lang}
+      )]
+   ]
+   [(#REM) les sous-rubriques ]
+   <B_sousrubriques>
+   <section>
+      <h1 class="section__title hN"><:local:campaigns_all:></h1>
+      <ul class="liste--bloc">
+      <BOUCLE_sousrubriques(RUBRIQUES){id_parent}{par num titre, titre}{lang}>
+      <BOUCLE_article_principal(ARTICLES spip_mots){id_rubrique}{id_mot=1}{0,1}{par num titre, titre}{lang}>
+      [<li>
+         (#INCLURE{fond=inclure/resume/article,id_article,lang})
+      </li>]
+      </BOUCLE_article_principal>
+      </BOUCLE_sousrubriques>
+   </ul>
+   </section>
+   </B_sousrubriques>
+</div
+><!-- /.grid__item desk-eight-twelfths --><div class="grid__item four-twelfths portable-one-whole desk-four-twelfths">
+   <aside class="secondary">
+      <INCLURE{fond=nav/nav-rubrique-plan,env} />
+      [(#REM) La rubrique en cours est un agenda ? ]
+      [(#AGENDA|non)
+         [(#INCLURE{fond=liste/evenements-aside,env,section__title=[(#VAL{<:local:agenda:>})]})]
+      ]
+      [(#INCLURE{fond=inclure/resume/washington-call,env})]
+   </aside><!-- /.secondary -->
+</div>
+<!-- /.grid__item desk-four-twelfths -->
+</BOUCLE_rubrique>

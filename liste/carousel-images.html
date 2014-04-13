@@ -1,0 +1,24 @@
+<B_carousel_images>
+<div class="features features--images">
+    <div class="flexslider-container">
+        <div class="flexslider">
+            <ul class="slides">
+                <BOUCLE_carousel_images(DOCUMENTS){id_article ?}{id_rubrique ?}{mode=document}{media=image}{largeur>=960}>
+                <li class="slides__item">
+                    [<figure class="media-figure">
+                        (#FICHIER|image_reduire{960,0})
+                        [<figcaption class="media-caption media-caption--carousel">(#TITRE|ou{#DESCRIPTIF}|ou{#CREDITS}|oui)
+                            [<h2 class="hN spip_doc_titre">(#TITRE)</h2>]
+                            [<div class="spip_doc_descriptif">(#DESCRIPTIF|ou{#CREDITS}|oui)
+                                [(#DESCRIPTIF)]
+                                [<p><small>(#CREDITS)</small></p>]
+                            </div>]
+                        </figcaption>]
+                    </figure>]
+                </li>
+                </BOUCLE_carousel_images>
+            </ul><!-- .slides -->
+        </div><!-- .flexslider -->
+    </div><!-- .flexslider__container -->
+</div><!-- .features -->
+</B_carousel_images>

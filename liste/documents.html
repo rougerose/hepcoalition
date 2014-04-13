@@ -1,0 +1,39 @@
+[(#REM)
+   Variables
+   ----------------------------------------------
+   selection : tableau de la sélection transmis par inclure
+   url_doc : url du document
+] #SET{selection,#ENV{selection}} #SET{url_doc,''}
+<B_documents>
+[<h2 class="hN resultats--decompte">
+   (#GET{selection}|count|singulier_ou_pluriel{local:info_recherche_document,local:info_recherche_documents,nb})
+</h2>]
+<ol class="liste--bloc recherche documents fichiers">
+   #ANCRE_PAGINATION
+   <BOUCLE_documents(DOCUMENTS){id_document IN #GET{selection}}{pagination 5}>
+   [(#REM) calcul de l'url ]
+   <BOUCLE_lien_article(documents_liens){id_document}{objet=article}>[
+      (#SET{url_doc, #INFO_URL{article,#ID_OBJET}|ancre_url{documents}})
+   ]</BOUCLE_lien_article>
+   <BOUCLE_lien_rubrique(documents_liens){id_document}{objet=rubrique}>[
+      (#SET{url_doc,#INFO_URL{rubrique,#ID_OBJET}})
+   ]</BOUCLE_lien_rubrique>
+   <li class="item">
+      <dl class="resume media">
+         <dt>
+            [(#LOGO_DOCUMENT{vignette}|?{
+               [<a href="[(#GET{url_doc})]" class="media__link">(#LOGO_DOCUMENT{vignette}|image_reduire{104,0}|inserer_attribut{alt,[(#TITRE|sinon{<:medias:info_document:> #ID_DOCUMENT})]}|inserer_attribut{class,media__img})</a>]
+               ,
+               [<a href="[(#GET{url_doc})]" class="media__link">(#LOGO_DOCUMENT|image_reduire{104,0}|inserer_attribut{alt,[(#TITRE|sinon{<:medias:info_document:> #ID_DOCUMENT})]}|inserer_attribut{class,media__img})</a>]
+            })]
+         </dt>
+         <dd class="media__body">
+            <h2 class="spip_doc_titre epsilon"><a href="#GET{url_doc}" title="<:bouton_telecharger:>" type="#MIME_TYPE">[(#TITRE|sinon{<:medias:info_document:>})]</a></h2>
+            <p class="spip_doc_descriptif">[(#DESCRIPTIF|PtoBR) <br />]<span class="media-info">#TYPE_DOCUMENT[ &ndash; (#TAILLE|taille_en_octets)]</span></p>
+         </dd>
+      </dl>
+   </li>
+   </BOUCLE_documents>
+</ol>
+[<nav class="pagination bas pagination--page[ (#ENV{pagination-align})]">(#PAGINATION{li})</nav>]
+</B_documents>

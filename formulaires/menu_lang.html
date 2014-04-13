@@ -42,7 +42,7 @@ avec la fonction PHP 'array_diff' http://www.php.net/manual/fr/function.array-di
 [(#SET{langues_a_afficher,[(#CONFIG{langues_utilisees}|explode{","}|array_diff{#CONFIG{menu_lang_liens/langues_invisibles, #ARRAY}})]})]
 
 <BOUCLE_PlusieursLanguesUtilisees(POUR){tableau #GET{langues_a_afficher}}{1,1}>
-<[(#CONFIG{menu_lang_liens/formatliste,bloc}|=={'bloc'}|?{div,ul})] id="menu_lang" class="menu-lang right">
+<[(#CONFIG{menu_lang_liens/formatliste,bloc}|=={'bloc'}|?{div,ul})] id="menu_lang" class="nav nav-lang">
 [(#REM)
 On liste les langues utilisees dans le site
 ]
@@ -60,13 +60,13 @@ On liste les langues utilisees dans le site
             [(#REM)
                 url_absolue pour éviter des problèmes en urls arbo
             ] 
-            [<a href="[(#SELF|parametre_url{action,converser}|parametre_url{var_lang,#VALEUR}|parametre_url{redirect,#GET{ListeTraductions}|table_valeur{#VALEUR}|sinon{#SELF}|url_absolue})]" rel="alternate" lang="#VALEUR"[(#CONFIG{menu_lang_liens/format,abrege}|=={'abrege'}|oui) title="[(#VALEUR|traduire_nom_langue|ucfirst|attribut_html)]"] class="langue_#VALEUR">(#GET{nom_langue}|ucfirst)</a>]
+            [<a href="[(#SELF|parametre_url{action,converser}|parametre_url{var_lang,#VALEUR}|parametre_url{redirect,#GET{ListeTraductions}|table_valeur{#VALEUR}|sinon{#SELF}|url_absolue})]" rel="alternate" lang="#VALEUR"[(#CONFIG{menu_lang_liens/format,abrege}|=={'abrege'}|oui) title="[(#VALEUR|traduire_nom_langue|ucfirst|attribut_html)]"] class="langue_#VALEUR item">(#GET{nom_langue}|ucfirst)</a>]
         ]
         [(#REM)
         Si la langue est celle en cours, afficher celle-ci en gras, sans lien
         ]
         [(#VALEUR|=={#ENV{lang}}|oui)
-            [<strong class="langue_#VALEUR" title="[(#VALEUR|traduire_nom_langue|ucfirst|attribut_html)]">(#GET{nom_langue}|ucfirst)</strong>]
+            [<strong class="langue_#VALEUR active item" title="[(#VALEUR|traduire_nom_langue|ucfirst|attribut_html)]">(#GET{nom_langue}|ucfirst)</strong>]
         ]
         [(#CONFIG{menu_lang_liens/formatliste,bloc}|=={'liste'}|oui)</li>]
     </BOUCLE_ListeLangues>

@@ -3,20 +3,44 @@
 =            =misc            =
 =============================*/
 
-/* push */
+/*==========  grid  ==========*/
+  /* grid--center */
+  .grid--center{
+    text-align:center;
+    > .grid__item{
+      text-align:left;
+    }
+  }
+  /* grid--rev */
+  .grid--rev {
+    direction:rtl;
+    text-align:left;
+
+    > .grid__item{
+        direction:ltr;
+        text-align:left;
+    }
+  }
+
+/*==========  grid : push  ==========*/
+[class*="push--"]{ position:relative; }
+
 @include media-query(desk){
   // push class
   .push--desk-one-twelfth {
-     position: relative;
      left:8.333%;
   }
-  .push--desk-one-third {
-    position: relative;
+  .push--desk-one-third,
+  .push--desk-four-twelfths {
     left: 33.333%;
+  }
+  .push--desk-two-twelfths,
+  .push--desk-one-sixth {
+    left: 16.666%;
   }
 }
 
-/* couleur de texte sélectionné */
+/*==========  couleur texte sélectionné  ==========*/
 ::selection {
     background-color:$secondary-color;
     color:#fff; 
@@ -26,7 +50,7 @@
     color:#fff; 
 }
 
-/* spip-admin */
+/*==========  spip-admin  ==========*/
 body {
     .spip-admin-bloc,
     .spip-admin-float {
@@ -34,7 +58,7 @@ body {
     }
 }
 #spip-admin .spip-admin-boutons {
-    font:10px/1 $mono-font-family;
+    font:10px/1 $mono-font;
     display: block;
     text-align: center;
     margin-bottom: 5px;

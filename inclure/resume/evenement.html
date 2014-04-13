@@ -1,0 +1,37 @@
+<B_evenement_rubrique_agenda><BOUCLE_evenement_rubrique_agenda(EVENEMENTS){id_evenement}{si #ENV{composition}|=={agenda}}>
+<article id="resume-event-#ID_EVENEMENT" class="hentry resume article vevent cf" itemscope itemtype="http://schema.org/Event">
+  <div class="resume--body">
+    <header>
+      <h1 class="entry-title hN">
+        <a href="#URL_ARTICLE" rel="bookmark">#TITRE</a>
+        [<span class="soustitre">(#SOUSTITRE)</span>]
+      </h1>
+    </header>
+    <div class="entry-logo">
+        [<a href="#URL_ARTICLE">(#LOGO_EVENEMENT|sinon{#LOGO_ARTICLE}|inserer_attribut{class,media-logo})</a>]
+    </div>
+    <div class="entry-content[(#LOGO_EVENEMENT|sinon{#LOGO_ARTICLE}|oui) plus-logo]">
+        #SET{intro,''}<BOUCLE_art1(ARTICLES){id_article}>#SET{intro,#INTRODUCTION{#ENV{coupe,100}}</BOUCLE_art1>
+        [<p>(#GET{intro}|sinon{#DESCRIPTIF|couper{200}}|PtoBr) <a href="#URL_ARTICLE" class="more"><:local:more:></a></p>]
+    </div>
+    <time itemprop="startDate" datetime="[(#DATE_DEBUT|date_iso)]">[(#DATE_DEBUT|jour)][ <span>(#DATE_DEBUT|nom_mois{abbr})</span>]</time>
+  </div>
+</article>
+</BOUCLE_evenement_rubrique_agenda>
+</B_evenement_rubrique_agenda>
+<BOUCLE_evenement_rubrique_standard(EVENEMENTS){id_evenement}>
+<article id="resume-event-#ID_EVENEMENT" class="hentry vevent resume cf" itemscope itemtype="http://schema.org/Event">
+    <header>
+        <h1 class="entry-title hN" itemprop="name">
+            <a href="#URL_ARTICLE" rel="bookmark">#TITRE</a>
+            [<span class="soustitre">(#SOUSTITRE)</span>]
+        </h1>
+    </header>
+    <div class="entry-content" itemprop="description">
+        #SET{intro,''}<BOUCLE_art2(ARTICLES){id_article}>#SET{intro,#INTRODUCTION{#ENV{coupe,100}}</BOUCLE_art2>
+        [<p>(#GET{intro}|sinon{#DESCRIPTIF|couper{200}}|PtoBr) <a href="#URL_ARTICLE" class="more"><:local:more:></a></p>]
+    </div>
+    <time itemprop="startDate" datetime="[(#DATE_DEBUT|date_iso)]">[(#DATE_DEBUT|jour)][ <span>(#DATE_DEBUT|nom_mois{abbr})</span>]</time>
+</article>
+</BOUCLE_evenement_rubrique_standard>
+<//B_evenement_rubrique_agenda>

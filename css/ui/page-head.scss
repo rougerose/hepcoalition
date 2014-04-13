@@ -5,11 +5,16 @@
 .page-head {
     text-align: center;
     position: relative;
-    margin-bottom: $base-line-height*2;
+    margin-bottom: $base-spacing-unit*2;
+    padding-top: 3em;
+    @include media-query(portable) {
+        padding-top: 4.5em;
+    }
 }
     .logo {
-        display: inline-block;
-        margin-bottom: $base-spacing-unit;
+        @include media-query(desk) {
+            margin-bottom: $base-spacing-unit;
+        }
     }
 
 /*-----  End of =page-head  ------*/

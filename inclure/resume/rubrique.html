@@ -1,0 +1,17 @@
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+<article id="resume-rub-#ID_RUBRIQUE" class="hentry resume rubrique cf[ (#ENV{position_class})]">
+  <div class="resume--body cf">
+    <header>
+      <h1 class="entry-title hN[ (#ENV{title_class})]">
+        <a href="#URL_RUBRIQUE" rel="bookmark">#TITRE</a>[ <span class="soustitre">(#SOUSTITRE)</span>]
+      </h1>
+    </header>
+    [<div class="entry-logo">
+      <a href="#URL_RUBRIQUE">(#LOGO_RUBRIQUE|inserer_attribut{class,media-logo})</a>
+    </div>]
+    [<div class="entry-content[(#LOGO_RUBRIQUE|oui) plus-logo]">
+      <p>(#TEXTE|PtoBR) <a href="#URL_RUBRIQUE" class="more"><:local:more:></a></p>
+    </div>]
+  </div>
+</article>
+</BOUCLE_rubrique>

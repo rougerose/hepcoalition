@@ -31,7 +31,7 @@ $use-pagination:    false;
 $use-breadcrumb:    false;
 $use-media:         true;
 $use-marginalia:    false;
-$use-island:        false;
+$use-island:        true;
 $use-block-list:    false;
 $use-matrix:        false;
 $use-split:         false;
@@ -58,14 +58,21 @@ $use-greybox:       false;
  * Place any variables that should override inuit.css’ defaults here.
  */
 
+// breakpoints
+$lap-start:         481px!default;
+$desk-start:        740px;
+$desk-wide-start:   1200px!default;
+
 $brand-color: #19a1ac !default;
 $primary-color: $brand-color !default;
 $secondary-color: #c11f02 !default;
 $pagefoot-color: #072b2e !default;
-// $brand-face:        'CenturyStd-BookCondensed',Georgia,serif !default;
-// $body-font-family : $brand-face;
-
-
+$primary-dark-color: #127179;
+$heading-color: $primary-color; // #10656C;
+$text-color: #424b4f; //#424f42;
+$text-color-light: lighten($text-color,60%);
+$text-color-cool: lighten($text-color,30%);
+$secondary-color-dark: darken($secondary-color,5%);
 
 /*------------------------------------*\
     $CUSTOM
@@ -161,23 +168,9 @@ $input-focus-border-color: darken(#fff, 40%);
 
 
 /*==========  =fonts  ==========*/
-$mono-font-family: Menlo,monospace;
-// $centuryBook: 'CenturyStd-BookCondensed',Georgia,serif;
-// $centuryItal: 'CenturyStd-BookCondensedIt';
-// $leagueReg: "LeagueGothicRegular",Helvetica,Arial,sans-serif;
-$arialnarrow: "Arial Narrow", Arial, sans-serif;
-$helvetica: "Helvetica Neue",Helvetica, Arial, sans-serif;
-
-// serif
-// $dejavuSerif: "DejaVuSerifCondensed", Georgia, "Times New Roman", Times, serif;
-// $dejavuSerifBold: "DejaVuSerifCondensedBold",Georgia, "Times New Roman", Times, serif;
-
-// sans
-// $dejavuSans: "DejaVuSansCondensed","Helvetica Neue",Helvetica, Arial, sans-serif;
-// $dejavuSansB: "DejaVuSansCondensedBold","Helvetica Neue",Helvetica, Arial, sans-serif;
-$Cabin: "Cabin", "Helvetica Neue",Helvetica,Arial,sans-serif;
-$CabinC: "Cabin Condensed", "Arial Narrow",Arial,sans-serif;
-$brand-face: $Cabin;
-$body-font-family : $brand-face;
+$body-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$heading-font: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+$mono-font: "Geneva", "Consolas", "Menlo", monospace;
+$brand-face: $body-font;
 
 
