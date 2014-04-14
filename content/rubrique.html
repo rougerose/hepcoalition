@@ -31,12 +31,12 @@
       [(#INCLURE{fond=liste/articles-selection,
          selection=#GET{articles_selection},
          section__title=[(#VAL{<:local:latest_publications:>})],
-         pagination=20,
+         pagination=5,
          ajax,lang}
       )]
    ][(#REM) les articles de la rubrique ]
    <BOUCLE_articles_rubrique(ARTICLES){id_rubrique}{lang}{0,1}>
-      <INCLURE{fond=liste/articles-rubrique,section__title=<:articles_rubrique:>,pagination=20,doublons,id_rubrique,lang,ajax} />
+      <INCLURE{fond=liste/articles-rubrique,section__title=<:articles_rubrique:>,pagination=5,doublons,id_rubrique,lang,ajax} />
    </BOUCLE_articles_rubrique>
 
    [(#REM) sinon les sous-rubriques ]
