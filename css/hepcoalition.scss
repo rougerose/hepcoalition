@@ -1,4 +1,4 @@
-// @charset "UTF-8";
+@charset "UTF-8";
 /*------------------------------------*\
     STYLE.CSS
 \*------------------------------------*/
@@ -15,13 +15,17 @@
  * Setup
  */
 @import "vars";
-@import "inuit.css/inuit";
+@import "inuit";
+
+$fa-font-path: "fonts";
+@import "font-awesome";
 
 /**
 *
 * HepCoalition
 *
 **/
+
 /* mixins */
 @import "ui/mix";
 @import "ui/shared";
@@ -56,6 +60,7 @@
 @import "ui/pagination";
 @import "ui/carousel";
 @import "ui/medias";
+@import "ui/icon";
 @import "ui/info";
 @import "ui/recherche";
 
