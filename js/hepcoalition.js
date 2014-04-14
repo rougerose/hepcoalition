@@ -20,7 +20,7 @@ jQuery(document).ready(function($) {
     // flexslider
     $('.flexslider').flexslider({
          animation: "slide",
-         slideshow: false,
+         slideshow: true,
          // smoothHeight: true,
          start: function(slider){
            slider.viewport.css({"overflow":"visible"});
