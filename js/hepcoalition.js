@@ -12,9 +12,6 @@ jQuery(document).ready(function($) {
             $(this).toggleClass("active");
             $np.toggleClass("open");
         });
-        // http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly
-        $hasUl.find("> a").wrapInner('<span />');
-        $hasUl.doubleTapToGo();
     });
 
     // flexslider
