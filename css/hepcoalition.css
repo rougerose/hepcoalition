@@ -4546,26 +4546,34 @@ input, textarea {
 
 /*==========  tableaux spip  ==========*/
 table.spip {
+  border: 1px solid #19a1ac;
+  border-width: 2px 0;
   font-size: 13px;
   font-size: 0.8125rem;
   line-height: 1.84615;
   max-width: 100%; }
   table.spip th {
+    border-width: 0 0 2px;
+    border-color: #19a1ac;
     color: #000;
     font-weight: 700; }
-  table.spip th, table.spip td {
-    border-color: #ddd;
+  table.spip td {
+    border-color: #19a1ac;
     border-width: 1px 0 0; }
   table.spip tr:last-child th,
   table.spip tr:last-child td {
     border-bottom-width: 1px; }
   table.spip tbody tr:nth-of-type(odd),
   table.spip .row_odd {
-    background: #f9f9f9; }
+    background: #f9f9f9;
+    background: rgba(25, 161, 172, 0.1); }
   table.spip caption {
-    color: #999;
-    margin-bottom: 1em;
-    text-transform: uppercase; }
+    color: #19a1ac;
+    font-size: 16px;
+    font-size: 1rem;
+    font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: .5em; }
 
 /*-----  End of =tableaux  ------*/
 /* page */
@@ -4771,7 +4779,6 @@ div.nav-site
     .nav-principale > li:hover > a, .nav-principale:not(:hover) > li.active > a {
       background-color: #a81b02; }
     .nav-principale .nav--dropdown {
-      display: none;
       padding: 0 12px 12px;
       background-color: #a81b02; }
       .nav-principale .nav--dropdown a {

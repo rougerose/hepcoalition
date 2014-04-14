@@ -27,11 +27,18 @@
 table.spip {
       @extend .table--bordered;
       @extend .table--striped;
+      border: 1px solid $primary-color;
+      border-width: 2px 0;
       @include font-size(13px);
       max-width: 100%;
-      th {color: #000; font-weight: 700;}
-      th, td {
-         border-color: #ddd;
+      th {
+        border-width: 0 0 2px;
+        border-color: $primary-color;
+        color: #000;
+        font-weight: 700;
+      }
+      td {
+         border-color: $primary-color;
          border-width: 1px 0 0;
       }
       tr:last-child th,
@@ -41,11 +48,15 @@ table.spip {
       tbody tr:nth-of-type(odd),
       .row_odd {
          background: #f9f9f9;
+         background: rgba($primary-color,0.1);
       }
       caption {
-         color: #999;
-         margin-bottom: 1em;
+         color: $primary-color;
+         @include font-size(16px,$line-height:false);
+         // font-weight: bold;
+         font-family: $heading-font;
          text-transform: uppercase;
+         margin-bottom: .5em;
       }
    }
 
