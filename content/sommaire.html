@@ -1,5 +1,8 @@
-[(#SET{articles_carousel,#ARRAY})][(#SET{articles_selection,#ARRAY})]
-<BOUCLE_selection(ARTICLES pb_selection){lang}{par ordre}{spip_pb_selection.id_rubrique=0}>[
+[(#SET{articles_carousel,#ARRAY})] [(#SET{articles_selection,#ARRAY})] #SET{rubrique_langue,84}
+
+<BOUCLE_rubrique_langue(RUBRIQUES){titre==^00\.}{lang}{statut ?}>[(#SET{rubrique_langue,#ID_RUBRIQUE})]</BOUCLE_rubrique_langue>
+
+<BOUCLE_selection(ARTICLES pb_selection){lang}{par ordre}{spip_pb_selection.id_rubrique=#GET{rubrique_langue}}>[
 (#LOGO_ARTICLE|et{[(#LOGO_ARTICLE|largeur|>={800})]}|?{
    [(#SET_PUSH{articles_carousel,#ID_ARTICLE})],
    [(#SET_PUSH{articles_selection,#ID_ARTICLE})]
@@ -22,7 +25,7 @@
       conteneur=principal,
       selection=#GET{articles_selection},
       section__title=[(#VAL{<:local:news_last_publications:>})],
-      pagination=10,
+      pagination=5,
       ajax})]
 </div><!-- .grid__item --><div class="grid__item four-twelfths portable-one-whole desk-four-twelfths">
    <aside class="secondary">
