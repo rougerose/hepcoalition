@@ -1,0 +1,60 @@
+<div class="nettoyeur"> </div>
+<BOUCLE_index(CONDITION){si #ENV{index}}>
+        #SET{global,$GLOBALS[#ENV{index}]}
+</BOUCLE_index>
+        #SET{global,$GLOBALS}
+<//B_index>
+
+<B_form>
+<div class="liste globals">
+        <h2 class="h2">Index des $GLOBALS</h2>
+        <form method="GET" action="#SELF" class="ajax">
+        [(#SELF|parametre_url{'index',''}|parametre_url{'affichage',''}|form_hidden)]
+        <select id="index_select" name="index">
+        <BOUCLE_form(DATA) {source table, #EVAL{$GLOBALS}|array_keys} {par valeur}>[(#SET{nom_index,#VAL{"'"}|concat{#VALEUR,"'"}})] #SET{datatype,$GLOBALS[#GET{nom_index}]}
+                <option value="#VALEUR"[ (#ENV{index}|=={#VALEUR}|oui) selected="selected"] data-type="[(#EVAL{#GET{datatype}}|gettype)]">#VALEUR</option>
+        </BOUCLE_form>
+        </select>
+        <select id="affichage_select" name="affichage">
+                <option value="var_dump"[ (#ENV{affichage}|=={#VALEUR}|oui) selected="selected"]>var_dump</option>
+                <option value="cles"[ (#ENV{affichage}|=={#VALEUR}|oui) selected="selected"]>Afficher uniquement les clés</option>
+        </select>
+        <input type="submit" value="Valider" />
+        </form>
+</div>
+</B_form>
+[(#SET{nom_index,#VAL{"'"}|concat{#ENV{index},"'"}})] #SET{datatype,$GLOBALS[#GET{nom_index}]}
+
+[(#ENV{index}|non)
+<h3>$GLOBALS
+[ <br/><small>(#EVAL{$GLOBALS}|gettype)</small>]
+</h3>
+]
+[(#ENV{index}|oui)
+[<h3>(#GET{datatype})
+[ <br/><small>(#EVAL{#GET{datatype}}|gettype)</small>]
+</h3>]
+]
+
+[(#ENV{affichage}|=={var_dump}|oui)
+[<pre>(#EVAL{#GET{global}}|print|sinon{'vide'})</pre>]
+]
+[(#ENV{affichage}|=={cles}|oui)
+[<pre>(#EVAL{#GET{global}}|array_keys|foreach|sinon{'vide'})</pre>]
+]
+[(#ENV{affichage}|non)
+[<pre>(#EVAL{#GET{global}}|array_keys|foreach|sinon{'vide'})</pre>]
+]
+
+<script type="text/javascript">
+(function($) {
+        $('#index_select').change(function(){
+        var datatype = $(this).find('option:selected').attr('data-type');
+                if (datatype == 'array') {
+                        $('#affichage_select').val('cles');
+                } else {
+                        $('#affichage_select').val('var_dump');
+                }
+        });
+})(jQuery);
+</script>
