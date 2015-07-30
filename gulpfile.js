@@ -11,7 +11,7 @@ var gulp = require('gulp'),
 
 // CSS: sass; concat;
 gulp.task('css', function () {
-  gulp.src(['css/hepcoalition.scss','css/hepcoalition-rtl.scss'])
+  gulp.src(['css/scss/hepcoalition.scss','css/scss/hepcoalition-rtl.scss'])
     .pipe(plumber())
     .pipe(sass({ outputStyle: 'expanded' }))
     .pipe(sass({ sourceMap: false }))
