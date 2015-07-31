@@ -1,0 +1,56 @@
+/*  =================================================
+    citations
+    ================================================= */
+
+// Surcharger les styles d'inuit qui ne fonctionnent pas. 
+
+/**
+ * Inline quotes.
+ */
+q{
+    quotes:"" "";
+
+    &:before{
+        content:"";
+        // content:open-quote;
+    }
+    &:after{
+        content:"";
+        // content:close-quote;
+    }
+
+    q:before{
+        content:"";
+        // content:open-quote;
+    }
+    q:after{
+        content:"";
+        // content:close-quote;
+    }
+}
+
+blockquote{
+    quotes:"" "";
+
+    p:before{
+        // content:"#{$open-quote}";
+        content:"";
+    }
+    p:after{
+        // content:"";
+        content:"";
+    }
+    p:last-of-type:after{
+        // content:"#{$close-quote}";
+        content:"";
+    }
+
+    q:before{
+        content:"";
+        content:"";
+    }
+    q:after{
+        content:"";
+        content:"";
+    }
+}

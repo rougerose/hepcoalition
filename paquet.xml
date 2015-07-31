@@ -5,6 +5,6 @@
     <necessite compatibilite="[2.0.1;[" nom="Z5" />
     <necessite compatibilite="[2.2.1;[" nom="Zcore" />
     <necessite compatibilite="[3.3.2;[" nom="compositions" />
-    <utilise nom="mll" compatibilite="[1.1.9;[" />
+    <necessite nom="typoenluminee" compatibilite="[3.5.2;[" />
     <chemin path=""/>
 </paquet>

@@ -3,6 +3,10 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS['z_blocs'] = array('content','extra1','extra2','head','head_js','foot_js','header','footer','breadcrumb');
 
+# notes
+define('_NOTES_OUVRE_NOTE', '<span class="spip_note_ref">');
+define('_NOTES_FERME_NOTE','&nbsp;</span>');
+
 # Définir le mode : dev ou dist
 define('_HEPCOALITION_MODE',"dev");
 

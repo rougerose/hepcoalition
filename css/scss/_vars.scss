@@ -73,6 +73,7 @@ $text-color: #424b4f; //#424f42;
 $text-color-light: lighten($text-color,60%);
 $text-color-cool: lighten($text-color,30%);
 $secondary-color-dark: darken($secondary-color,5%);
+$color-text-print: #000;
 
 /*------------------------------------*\
     $CUSTOM
@@ -172,5 +173,3 @@ $body-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $heading-font: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
 $mono-font: "Geneva", "Consolas", "Menlo", monospace;
 $brand-face: $body-font;
-
-

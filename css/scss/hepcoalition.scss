@@ -35,7 +35,7 @@ $fa-font-path: "fonts";
 
 /* typo */
 @import "typo";
-
+@import "citations";
 /* base */
 @import "base";
 @import "boutons";
@@ -69,3 +69,6 @@ $fa-font-path: "fonts";
 
 // ie
 @import "ie";
+
+// print
+@import "print";
