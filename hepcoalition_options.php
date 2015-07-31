@@ -7,8 +7,8 @@ $GLOBALS['z_blocs'] = array('content','extra1','extra2','head','head_js','foot_j
 define('_NOTES_OUVRE_NOTE', '<span class="spip_note_ref">');
 define('_NOTES_FERME_NOTE','&nbsp;</span>');
 
-# Définir le mode : dev ou dist
-define('_HEPCOALITION_MODE',"dev");
+# Définir le mode : dev ou prod
+define('_HEPCOALITION_MODE',"prod");
 
 # Mode développement
 if (defined('_HEPCOALITION_MODE') AND _HEPCOALITION_MODE == "dev") {
