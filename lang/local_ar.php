@@ -6,26 +6,26 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // A
    'agenda'                         => 'أجندة',
    'about_us'                       => 'من نحن',
-   
+
    // B
    'by'                             => 'من',
-   
+
    // C
    'campaigns_all'                  => 'كل الحملات',
    'campaign_last'                  => 'آخر الحملات',
    'contact'                        => ' الاتصال',
    'credits_design'                 => "تصميم وتطوير كريستوف <a href='rouge-rose.net'>christophe le drean</a>  لودريان  مع <a href='@urlspip@'>spip</a>",
-   
+
    // E
    'email'                          => 'البريد الإلكتروني',
    'email_send'                     => "ابعث لنا <a href='@urlcontact@' class='spip_out'>بريد إلكتروني</a>",
-   
+
    // F
    'follow_us'                      => "تابعنا",
-   
+
    // H
    'home'                           => 'الصفحة الرئيسية',
-   
+
    // I
    'info_recherche_article'         => 'مقالة واحدة',
    'info_recherche_articles'        => '@nb@ مقالة',
@@ -41,32 +41,32 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'info_recherche_resultat'        => 'نتيجة واحدة',
    'info_recherche_resultats'       => '@nb@ نتيجة',
    'info_recherche_pas_de_resultat' => ' لا توجد نتائج ',
-   
+
    // L
    'lastest_news'                   => "آخر الأخبار",
    'latest_publications'            => ' آخر المنشورات',
-   
+
    //M
    'message_404_title'              => "االصفحة غير موجودة",
    'message_404_desc'               => "آسف, الصفحة المطلوبة غير موجودة. للرجوع الى  <a href='@urlsite@' class='spip_out'>الصفحة الرئيسية</a>",
    'more'                           => ' اقرأ المزيد',
-   
+
    // N
    'name_first'                     => 'الاسم الأول',
    'name_last'                      => 'اسم العائلة',
    'navigation'                     => 'تجول',
-   'news_last_publications'         => 'الأخبار وآخر النشرات',
+   'news_last_publications'         => 'وآخر النشرات',
    'no_event_available'             => ' لا يوجد أي حدث ',
-   
+
    // O
    'organisation'                   => ' المنظمة',
-   
+
    // P
    'page'                           => 'صفحة',
    'pays'                           => ' البلد',
-   
+
    // R
-   
+
    // S
    'share'                          => 'اقتسم',
    'signatories_coalition'          => " الموقعون",
@@ -80,11 +80,11 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'siteweb'                        => ' الموقع الإلكتروني',
    'suite'                          => ' اقرأ المزيد',
    'suivre_facebook'                => "<a href='@urlfacebook@'> تابعنا على الفيسبوك</a>",
-   
+
    // T
    'tags'                           => 'علامات',
    'translations'                   => 'الترجمة',
-   
+
    // U
    'updated'                        => 'محدث'
 );

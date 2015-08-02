@@ -8,12 +8,6 @@
 }
 
 /*==========  nav-site  ==========*/
-/* 
-div.nav-site
-    nav#nav-main.nav-principale__container
-    div.search-site
-    nav#nav-lang.nav-lang__container
-*/
 .nav-site {
     @include media-query(desk) {
         position: relative;
@@ -35,8 +29,15 @@ div.nav-site
             display: list-item;
             @include font-size(18px);
             line-height: 1.5;
+            &:before {
+                content:"/ ";
+                color: $text-color-light;
+                position: absolute;
+                left: 0.2em;
+            }
             > a {
                 display: block;
+                margin-left: 0.7em;
             }
         }
     }
@@ -56,8 +57,6 @@ div.nav-site
     }
     .no-js & {
         @include media-query(portable) {
-            // right: 3em;
-            // position: static;
             text-align: center;
         }
     }
@@ -84,7 +83,6 @@ div.nav-site
         position: absolute;
         z-index: 90;
         left: $base-spacing-unit;
-        // top: 0;
         width: 100%;
         padding-right: $base-spacing-unit;
         text-align: left;
@@ -122,6 +120,11 @@ div.nav-site
         > li {
             @include font-size(20px);
             line-height: 2;
+            position: relative;
+            &:before {
+                content:"/ ";
+                color: $text-color-light;
+            }
         }
         > li:hover .nav--dropdown {
             top: 2em;
@@ -149,7 +152,7 @@ div.nav-site
         // 1er niveau
         > li {
             > a {
-                padding: 0 $base-spacing-unit/2;
+                // padding: 0 $base-spacing-unit/2;
                 @include font-size(18px);
                 line-height: 2;
             }
@@ -185,9 +188,11 @@ div.nav-site
     }
 }
 .item {
+  margin-right: 0.5em;
+  @include media-query(portable) {
+    margin: 0;
     padding: 0 8px;
-    // &:first-child {padding-left: 0;}
-    &:last-child {padding-right: 0;}
+  }
 }
 
 .search-site {
@@ -195,7 +200,6 @@ div.nav-site
     right: 0;
     top: 0;
     @include media-query(portable) {
-        // right: 3em;
         top: auto;
         z-index: 99;
     }
@@ -215,7 +219,7 @@ div.nav-site
         border-radius: 5px 5px 0 0;
         background-color: $secondary-color;
     }
-}     
+}
 
 /*==========  nav-plan  ==========*/
 .nav-plan {
@@ -234,4 +238,3 @@ div.nav-site
 }
 
 /*-----  End of =nav  ------*/
- 

@@ -77,10 +77,11 @@ hr.spip {
    }
 
 /*==========  quotes  ==========*/
-blockquote {
+blockquote.spip {
       background-color: lighten($text-color,68%);
       padding: $base-spacing-unit/4 $base-spacing-unit/4 $base-spacing-unit/4 $half-spacing-unit;
-      margin-left: $base-spacing-unit;
+      margin-left: 0;
+      text-indent: 0;
       p {
          color: lighten($text-color,15%);
       }
@@ -96,8 +97,43 @@ blockquote {
 }
 .spip_note_ref {
     color: #000;
+    a[rev] {
+      &:after {
+        content: '↑';
+        display: inline-block;
+        margin: 0 0.5em .1em 0.5em;
+      }
+    }
 }
 
+/*==========  cadre  ==========*/
+.spip_cadre {
+  margin-bottom:$base-spacing-unit;
+  margin-bottom:($base-spacing-unit / $base-font-size)*1rem;
+  font-family: $mono-font;
+  color: $text-color;
+}
+
+/*==========  styles ajoutés par plugin typoenluminées  ==========*/
+
+// texte en évidence
+.caractencadre-spip {
+  color: $secondary-color;
+  font-weight: bold;
+}
+
+.caractencadre2-spip {
+	color: $primary-color;
+	font-weight: bold;
+}
+
+// texte encadré
+.texteencadre-spip {
+  margin-bottom:$base-spacing-unit;
+  margin-bottom:($base-spacing-unit / $base-font-size)*1rem;
+  padding: 0.5em 1em;
+  color: #fff;
+  background-color: desaturate($primary-color,50%);
+}
 
 /*-----  End of =Typo  ------*/
-

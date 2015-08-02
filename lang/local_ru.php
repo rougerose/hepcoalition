@@ -6,26 +6,26 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // A
    'agenda'                         => 'Календарь событий',
    'about_us'                       => 'О нас',
-   
+
    // B
    'by'                             => 'Кем',
-   
+
    // C
    'campaigns_all'                  => 'все кампании',
    'campaign_last'                  => 'последная',
    'contact'                        => 'Контакт',
    'credits_design'                 => "Дизайн и разработка: <a href='@urldesign@'>Кристоф ле Дреан</a> при использовании системы управления контентом <a href='@urlspip@'>SPIP</a>",
-   
+
    // E
    'email'                          => 'эл. почта',
    'email_send'                     => "<a href='@urlcontact@' class='spip_out'>Присылайте свои письма</a>",
-   
+
    // F
    'follow_us'                      => "следите за нами", // on Facebook
-   
+
    // H
    'home'                           => 'на главную',
-   
+
    // I
    'info_recherche_article'         => '1 статья',
    'info_recherche_articles'        => '@nb@ статьи',
@@ -41,32 +41,32 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'info_recherche_resultat'        => '1 найдено одно упоминание',
    'info_recherche_resultats'       => '@nb@ найдены несколько упоминаний',
    'info_recherche_pas_de_resultat' => 'не найдено',
-   
+
    // L
    'lastest_news'                   => "Новости",
    'latest_publications'            => 'публикации',
-   
+
    // M
    'message_404_title'              => "Страница не найдена",
    'message_404_desc'               => "Приносим свои извинения, запрашиваемая страница не найдена.<br /> Вернуться на  <a href='@urlsite@' class='spip_out'>главную страницу сайта</a>.",
    'more'                           => 'Читать дальше',
-   
+
    // N
    'name_first'                     => 'Имя',
    'name_last'                      => 'Фамилия',
    'navigation' => 'Навигация',
-   'news_last_publications'         => 'Новости и недавние публикации',
+   'news_last_publications'         => 'недавние публикации',
    'no_event_available'             => 'нет событий',
-   
+
    // O
    'organisation'                   => 'организация',
-   
+
    // P
    'page'                           => 'страница',
    'pays'                           => 'страна',
-   
+
    // R
-   
+
    // S
    'share'                          => 'поделиться',
    'signatories_coalition'          => "подписанты",
@@ -80,10 +80,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'siteweb'                        => 'веб-сайт',
    'suite'                          => 'Читать дальше',
    'suivre_facebook'                => "Читать о нас на <a href='@urlfacebook@'>Facebook</a>",
-   
+
    // T
    'tags'                           => 'тэги',
    'translations'                   => 'Перевод',
-   
+
 );
 ?>

@@ -23,12 +23,19 @@
 }
 
 .traduction {
-    &.active {
-        color: $secondary-color;
-    }
-    span {
-        color: $text-color-light;
-    }
+  position: relative;
+  &.active {
+    color: $secondary-color;
+  }
+  span {
+    position: absolute;
+    left: 0;
+    color: $text-color-light;
+  }
+  a {
+    display: inline-block;
+    margin-left: 1.5em
+  }
 }
 
 /*-----  End of meta  ------*/

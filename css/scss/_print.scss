@@ -1,0 +1,117 @@
+/*  =================================================
+    #PRINT
+    ================================================= */
+
+@media print {
+  @page {
+    margin: 0.5cm;
+  }
+
+  html {
+    border: none;
+    font: 12pt/1.3 $brand-face
+  }
+
+  body {
+    padding: 0;
+    margin: 0 5%;
+  }
+
+  .wrapper {
+    max-width: auto;
+    padding: 0;
+  }
+
+  /*  page-head
+      =================================================== */
+  .page-head {
+    text-align: left;
+  }
+  .nav-site,
+  .nav-lang__container {
+    display: none;
+  }
+  .logo {
+    display: block;
+    width: 25%;
+    &:after {
+      content: 'http://hepcoalition.org'
+    }
+  }
+
+  /*  texte
+      =================================================== */
+      .self__titre,
+      h2.spip, h3.spip, h4.spip, h5.spip, h6.spip,
+      .notes h1.spip,
+      .documents h1.spip,
+      .notes p,
+      .caractencadre-spip,
+      .caractencadre2-spip {
+        color: $color-text-print;
+      }
+      .texteencadre-spip {
+        color: $color-text-print;
+        background-color: lighten($color-text-print,70%);
+      }
+
+  /*  page-foot
+      =================================================== */
+  .page-foot {
+      border-top: 1px solid #bbb;
+      padding-top: 0;
+      background: none;
+      color: $color-text-print;
+      .spip_out {
+        color: $color-text-print;
+        border-bottom-color: $color-text-print;
+      }
+      .icon,
+      .logo {
+        display: none;
+      }
+  }
+  /*  breadcrumb
+      =================================================== */
+  .breadcrumb--path {
+    > li {
+      &.active {
+        color: $color-text-print;
+      }
+    }
+  }
+
+  /*  pagination
+      =================================================== */
+  .pagination-item {
+    &.on {
+      color: $color-text-print;
+    }
+  }
+
+  /*  liens
+      =================================================== */
+    a,
+    a.spip_out,
+    a.spip_in,
+    a.spip_note,
+    a.more,
+    a.active {
+      color: $color-text-print;
+      border-bottom: 1px solid $color-text-print;
+    }
+    p {
+      & a {
+        word-wrap: break-word;
+      }
+      & a[href^="http://"],
+      .spip_out {
+        &:after {
+          content: " (" attr(href) ")";
+          font-size: 90%;
+        }
+      }
+    }
+
+
+}
