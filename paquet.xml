@@ -1,4 +1,4 @@
-<paquet categorie="squelette" compatibilite="[3.0.10;[" etat="dev" logo="img/HepC-logo-plugin-128.png" prefix="hepcoalition" version="2.0.1">
+<paquet categorie="squelette" compatibilite="[3.0.10;[" etat="dev" logo="img/HepC-logo-plugin-128.png" prefix="hepcoalition" version="2.0.2">
     <nom>HepCoalition</nom>
     <auteur lien="http://rouge-rose.net">christophe le drean</auteur>
     <licence>GNU/GPL</licence>
