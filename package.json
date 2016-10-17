@@ -13,13 +13,13 @@
   "homepage": "https://bitbucket.org/rougerose/hepcoalition",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^2.3.1",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-concat": "^2.6.0",
-    "gulp-cssnano": "^1.1.0",
+    "gulp-cssnano": "^2.1.2",
     "gulp-plumber": "^1.0.1",
-    "gulp-postcss": "^5.1.9",
+    "gulp-postcss": "^6.2.0",
     "gulp-sass": "^2.0.4",
-    "gulp-uglify": "^1.2.0",
+    "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.6"
   }
 }
