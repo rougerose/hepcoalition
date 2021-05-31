@@ -1,6 +1,10 @@
 # fichiers systemes
 .DS_Store
 
-/bower_components
-/node_modules
-.sass-cache
+# yarn
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
