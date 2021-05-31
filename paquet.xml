@@ -1,10 +1,15 @@
-<paquet categorie="squelette" compatibilite="[3.0.10;[" etat="dev" logo="img/HepC-logo-plugin-128.png" prefix="hepcoalition" version="2.0.2">
+<paquet
+    categorie="squelette"
+    compatibilite="[4.0.0-alpha;4.9.*]"
+    etat="dev"
+    logo="img/HepC-logo-plugin-128.png"
+    prefix="hepcoalition"
+    version="3.0.0"
+>
     <nom>HepCoalition</nom>
     <auteur lien="http://rouge-rose.net">christophe le drean</auteur>
     <licence>GNU/GPL</licence>
-    <necessite compatibilite="[2.0.1;[" nom="Z5" />
     <necessite compatibilite="[2.2.1;[" nom="Zcore" />
-    <necessite compatibilite="[3.3.2;[" nom="compositions" />
-    <necessite nom="typoenluminee" compatibilite="[3.5.2;[" />
-    <chemin path=""/>
+    <!-- <necessite compatibilite="[3.3.2;[" nom="compositions" /> -->
+    <!-- <necessite nom="typoenluminee" compatibilite="[3.5.2;[" /> -->
 </paquet>
