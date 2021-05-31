@@ -1,10 +1,10 @@
-<?php 
+<?php
 
-// $GLOBALS['z_blocs'] = array('content','extra1','extra2','head','head_js','foot_js','header','footer');
+if (!defined('_ECRIRE_INC_VERSION')) {
+  return;
+}
 
 function tri_alpha($array) {
-      natcasesort($array);
-      return $array;
-   }
-
-?>
+   natcasesort($array);
+   return $array;
+}
