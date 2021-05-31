@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/rougerose/hepcoalition/issues"
   },
-  "homepage": "https://github.com/rougerose/hepcoalition#readme"
+  "homepage": "https://github.com/rougerose/hepcoalition#readme",
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest"
+  }
 }
