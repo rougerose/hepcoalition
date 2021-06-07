@@ -8,35 +8,47 @@
 @include RobotoCondensed.fontFace(
   $weight: 300,
   $display: swap,
-  $style: normal
+  $style: normal,
+  $fontName: "hepC",
+  $fontId: "roboto-condensed",
 );
 
 @include RobotoCondensed.fontFace(
   $weight: 300,
   $display: swap,
-  $style: italic
+  $style: italic,
+  $fontName: "hepC",
+  $fontId: "roboto-condensed",
 );
 
 @include RobotoCondensed.fontFace(
   $weight: 400,
   $display: swap,
-  $style: normal
+  $style: normal,
+  $fontName: "hepC",
+  $fontId: "roboto-condensed",
 );
 
 @include RobotoCondensed.fontFace(
   $weight: 400,
   $display: swap,
-  $style: italic
+  $style: italic,
+  $fontName: "hepC",
+  $fontId: "roboto-condensed",
 );
 
 @include RobotoCondensed.fontFace(
   $weight: 700,
   $display: swap,
-  $style: normal
+  $style: normal,
+  $fontName: "hepC",
+  $fontId: "roboto-condensed",
 );
 
 @include RobotoCondensed.fontFace(
   $weight: 700,
   $display: swap,
-  $style: italic
+  $style: italic,
+  $fontName: "hepC",
+  $fontId: "roboto-condensed",
 );

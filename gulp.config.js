@@ -7,7 +7,6 @@ module.exports = {
   css: {
     src: "src/css/",
     dist: "dist/css/",
-    watch: "src/css/**/*.css",
   },
   cssVendor: {
     src: [],
