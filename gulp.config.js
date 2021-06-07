@@ -20,7 +20,7 @@ module.exports = {
       },
       {
         src: "node_modules/@fontsource/almarai/files/almarai-arabic-*.{woff,woff2}",
-        name: "almaria",
+        name: "almarai",
       },
       {
         src: [
