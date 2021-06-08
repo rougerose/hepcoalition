@@ -29,3 +29,24 @@ define('SPIP_ERREUR_REPORT', E_ALL^E_NOTICE);
 // define('_DEBUG_AUTORISER', true);
 // define('_DEBUG_SLOW_QUERIES', true);
 // define('_BOUCLE_PROFILER', 5000);
+
+// Stocker la langue d'arrivee pour que le sommaire affiche
+// la langue souhaitee et on ajoute la langue dans le contexte
+// systematiquement.
+if (!$langue = _request('lang')) {
+	if (empty($_COOKIE['spip_lang']) or !$langue = $_COOKIE['spip_lang']) {
+		include_spip('inc/lang');
+		$langues = explode(',', $GLOBALS['meta']['langues_multilingue']);
+		$langue = utiliser_langue_visiteur();
+		if (!in_array($langue, $langues)) {
+			$langue = $GLOBALS['meta']['langue_site'];
+		}
+	}
+	set_request('lang', $langue);
+}
+
+// stocker la langue...
+if (empty($_COOKIE['spip_lang']) or $langue != $_COOKIE['spip_lang']) {
+	include_spip('inc/cookie');
+	spip_setcookie('spip_lang', $langue);
+}
