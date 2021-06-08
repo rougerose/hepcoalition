@@ -30,6 +30,14 @@ module.exports = {
       lg: "1100px",
     },
     extend: {
+      colors: {
+        primary: {
+          "500": "#19a1ac",
+        },
+        secondary: {
+          "500": "#c11f02",
+        },
+      },
       fontSize: {
         "2xs": ".625rem",
       },
