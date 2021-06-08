@@ -20,7 +20,7 @@ const css = function (done) {
   if (!config.tasks.css) return done();
 
   return (
-    src(config.css.src + "**/*.scss")
+    src(config.css.src + "styles.scss")
       .pipe(sass({includePaths: ["node_modules"]}))
       .pipe(dest(config.css.src))
       .pipe(postcss())
@@ -132,6 +132,7 @@ const watchSource = function (done) {
   watch(config.css.src + "**/*.scss", series(css));
   watch(config.tailwind, series(css));
   watch(config.js.src, series(js, reloadBrowser));
+  watch(config.html.src, reloadBrowser);
 
   // Signal completion
   done();
