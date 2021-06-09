@@ -20,7 +20,7 @@ const css = function (done) {
   if (!config.tasks.css) return done();
 
   return (
-    src(config.css.src + "styles.scss")
+    src(config.css.src + "**/*.scss")
       .pipe(sass({includePaths: ["node_modules"]}))
       .pipe(dest(config.css.src))
       .pipe(postcss())

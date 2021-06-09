@@ -13,7 +13,7 @@ module.exports = {
     dist: "src/css/vendor",
   },
   html: {
-    src: ["*.html", "content/*.html", "inclure/**/*.html"],
+    src: ["*.html", "content/*.html", "inclure/**/*.html", "header/*.html", "overlay/*.html"],
   },
   fonts: {
     src: [
