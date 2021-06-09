@@ -12,10 +12,6 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    fontFamily: {
-      sans: ['"HepC"', ...defaultTheme.fontFamily.sans],
-      mono: defaultTheme.fontFamily.mono,
-    },
     container: {
       center: true,
       padding: {
@@ -23,6 +19,10 @@ module.exports = {
         md: "1.5rem",
         lg: "1.5rem",
       },
+    },
+    fontFamily: {
+      sans: ['"HepC"', ...defaultTheme.fontFamily.sans],
+      mono: defaultTheme.fontFamily.mono,
     },
     screens: {
       sm: "640px",
@@ -32,10 +32,10 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          "500": "#19a1ac",
+          500: "#19a1ac",
         },
         secondary: {
-          "500": "#c11f02",
+          500: "#c11f02",
         },
       },
       fontSize: {

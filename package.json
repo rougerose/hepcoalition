@@ -38,6 +38,8 @@
     "gulp-size": "^4.0.0",
     "hamburgers": "https://github.com/rougerose/hamburgers#v1.1.3-rougerose.001",
     "postcss": "latest",
+    "postcss-dir-pseudo-class": "^5.0.0",
+    "postcss-logical": "^4.0.2",
     "rollup": "^2.50.5",
     "rollup-plugin-terser": "^7.0.2",
     "tailwindcss": "^2.1.4"
