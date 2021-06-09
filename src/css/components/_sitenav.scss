@@ -1,0 +1,32 @@
+// ========================================
+// sitenav
+// ========================================
+
+// .sitenav {}
+
+// .sitenav_logo {
+//   margin-inline-end: 1rem;
+// }
+
+.sitenav_langPrefTrigger {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.875rem; // 14px
+  line-height: 1.125rem; // 18px
+  transition: background-color 0.3s ease-in;
+
+  .ar & {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    @apply bg-primary-500;
+  }
+}
+
+.sitenav_langPrefIcon {
+  margin-inline-end: 2px;
+  width: 18px;
+  height: 18px;
+
+}

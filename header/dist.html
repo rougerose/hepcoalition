@@ -1,6 +1,11 @@
 <div class="container">
-  <div class="flex">
-    <a class="w-2/4 mr-2" href="#URL_SITE_SPIP"><INCLURE{fond=img/HepCoalition.svg} /></a>
-    <button class="" type="button">#LANG</button>
+  <div class="sitenav flex justify-between items-center">
+    <a class="sitenav_logo w-2/4" href="#URL_SITE_SPIP"><INCLURE{fond=img/HepCoalition.svg} /></a>
+    <button class="sitenav_langPrefTrigger flex p-2 rounded" type="button">
+      <INCLURE{fond=img/icons/icon-langues-64.svg, class=sitenav_langPrefIcon}/> [(#LANG|traduire_nom_langue)]
+    </button>
+    <button class="hamburger hamburger--squeeze flex flex-col p-2" type="button">
+      <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+    </button>
   </div>
 </div>
