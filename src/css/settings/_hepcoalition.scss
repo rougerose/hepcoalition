@@ -1,0 +1,12 @@
+// ========================================
+// HepCoalition settings
+// ========================================
+
+//! Attention aux variables à reporter également dans tailwind.config.js
+
+// Mediaqueries
+$mq-breakpoints: (
+  sm: 640px,
+  md: 768px,
+  lg: 1100px,
+);
