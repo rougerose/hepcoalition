@@ -54,7 +54,7 @@ const js = function (done) {
     .rollup({
       input: config.js.src,
       plugins: [
-        multiEntry(),
+        // multiEntry(),
         nodeResolve(),
         terser(),
       ],

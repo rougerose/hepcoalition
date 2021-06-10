@@ -17,11 +17,13 @@
   },
   "author": "christophe le drean",
   "license": "GPL-3.0",
+  "private": "true",
   "bugs": {
     "url": "https://github.com/rougerose/hepcoalition/issues"
   },
   "homepage": "https://github.com/rougerose/hepcoalition#readme",
   "devDependencies": {
+    "@accede-web/overlay": "^1.0.2",
     "@fontsource/almarai": "^4.4.2",
     "@fontsource/noto-sans-tc": "^4.4.5",
     "@fontsource/roboto-condensed": "^4.4.2",
@@ -42,6 +44,7 @@
     "postcss-logical": "^4.0.2",
     "rollup": "^2.50.5",
     "rollup-plugin-terser": "^7.0.2",
+    "sass-mq": "^5.0.1",
     "tailwindcss": "^2.1.4"
   }
 }
