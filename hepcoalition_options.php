@@ -21,7 +21,7 @@ define('_NOTES_FERME_NOTE', '&nbsp;</span>');
 
 error_reporting(E_ALL^E_NOTICE);
 ini_set('display_errors', 'On');
-define('SPIP_ERREUR_REPORT', E_ALL^E_NOTICE);
+define('SPIP_ERREUR_REPORT', E_ALL);
 // //$GLOBALS['taille_des_logs'] = 50000;
 // // define('_MAX_LOG', 500000);
 // define('_LOG_FILELINE', true);
