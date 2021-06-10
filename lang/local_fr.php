@@ -19,7 +19,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // E
    'email'                          => 'e-mail',
    'email_send'                     => "Nous envoyer un <a href='@urlcontact@' class='spip_out'>email</a>",
-   // F
+
+	 // F
+	 'fermer' => 'Fermer',
    'follow_us'                      => "Suivez-nous", // on Facebook
 
    // H
@@ -42,6 +44,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'info_recherche_pas_de_resultat' => 'Aucun résultat',
 
    // L
+	 'langue_preferee_titre' => 'Sélectionnez votre langue préférée',
    'lastest_news'                   => "Dernières actualités",
    'latest_publications'            => 'Dernières publications',
 

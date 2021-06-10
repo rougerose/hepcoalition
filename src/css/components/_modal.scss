@@ -1,0 +1,72 @@
+// ========================================
+// modal
+// ========================================
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  transition-property: opacity, transform;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(.25,.46,.45,.94);
+
+  .overlay.is-closed & {
+    opacity: 0;
+    transform: translateY(35%);
+    transition-timing-function: cubic-bezier(.55,.085,.68,.53);
+  }
+
+  &--language {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 37.5rem; // 600px
+    background-color: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0, 0.25);
+  }
+}
+
+// modal_header
+// ========================================
+
+.modal_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem 0;
+}
+
+.modal_title {
+  order: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125rem; // 18px
+  line-height: 1.25rem; // 20px
+}
+
+.modal_btnClose {
+  &.hamburger {
+    order: 2;
+    padding: 0.5rem;
+    position: relative;
+    inset-inline-end: -0.5rem;
+  }
+
+  & .hamburger-box {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    .hamburger-box {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+// modal_content
+// ========================================
+
+.modal_content {
+  padding: 0 1rem 1rem;
+  font-size: 1.125rem; // 18px
+  line-height: 1.5rem; // 24px
+}

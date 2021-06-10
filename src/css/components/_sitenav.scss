@@ -8,7 +8,7 @@
 //   margin-inline-end: 1rem;
 // }
 
-.sitenav_langPrefTrigger {
+.sitenav_triggerModalLanguage {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.875rem; // 14px
@@ -19,14 +19,26 @@
     font-size: 1rem;
   }
 
-  &:hover {
+  &:hover,
+  &.is-active {
     @apply bg-primary-500;
   }
 }
 
-.sitenav_langPrefIcon {
+.sitenav_languageIcon {
   margin-inline-end: 2px;
   width: 18px;
   height: 18px;
 
+}
+
+.sitenav_triggerMenu {
+  // Priorité à ces styles par rapport à ceux de la classe .hamburger
+  &.hamburger {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    position: relative;
+    inset-inline-end: -0.5rem;
+  }
 }

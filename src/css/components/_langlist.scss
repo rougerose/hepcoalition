@@ -1,0 +1,21 @@
+// ========================================
+// langlist
+// ========================================
+
+
+.langlist {
+  margin-top: 1rem;
+}
+
+.langlist_item {
+  padding-inline-start: 0.25rem;
+  margin-inline-start: -0.23rem;
+
+  &.on {
+    @apply bg-primary-500;
+  }
+}
+
+.langlist_link {
+  transition: color 0.3s ease-in;
+}
