@@ -1,0 +1,40 @@
+// ========================================
+// sitenavOverlay
+// ========================================
+
+.sitenavOverlay {
+  color: $color-white;
+  visibility: hidden;
+  transition: visibility 0.1s ease 0s;
+
+  &.is-visible {
+    visibility: visible;
+    transition: visibility 0.2s ease 0.5s;
+  }
+}
+
+// .sitenavOverlay_list {
+//   &--section {}
+//   &--subsections {}
+// }
+
+.sitenavOverlay_item {
+
+  &--section {
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: opacity 0s ease 0s, transform 0s ease 0s;
+
+    > a,
+    > span {
+      text-transform: uppercase;
+      color: $color-secondary-500;
+    }
+
+    .sitenavOverlay.is-visible & {
+      transform: translateX(0);
+      opacity: 1;
+      transition: opacity 0.3s ease 0.7s, transform 0.5s ease 0.7s;
+    }
+  }
+}

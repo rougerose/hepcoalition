@@ -16,6 +16,13 @@
   justify-content: center;
   background-color: rgba(0,0,0, 0.35);
 
+  &--full {
+    padding: 0;
+    justify-content: flex-start;
+    align-items: stretch;
+    background-color: transparent;
+  }
+
   &[aria-hidden="true"] {
     display: none;
   }
