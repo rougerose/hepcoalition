@@ -1,9 +1,10 @@
 <body class="border-t-4 border-secondary-500">
-  <header class="pt-2" role="banner">
+  <header class="pt-4" role="banner">
     <INCLURE{fond=header/#ENV{type-page}, env} />
   </header>
   <main>
     <INCLURE{fond=content/#ENV{type-page}, env} />
   </main>
+  <INCLURE{fond=overlay/menu, env} />
   <INCLURE{fond=overlay/language, env} />
 </body>
