@@ -70,6 +70,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // R
 
    // S
+	 'search_type_here' => 'Écrivez ici',
    'share'                          => 'Partager',
    'signatories_coalition'          => "Signataires",
    'signatories_singular'           => "1 signataire",

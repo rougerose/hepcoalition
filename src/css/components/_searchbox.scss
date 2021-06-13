@@ -1,0 +1,60 @@
+// ========================================
+// searchbox
+// ========================================
+
+$searchbox-btn-width: 6.5rem;
+
+// .searchbox {}
+
+.searchbox_form {
+  position: relative;
+  overflow: hidden;
+}
+
+.searchbox_label {
+  display: block;
+  text-transform: uppercase;
+  color: $color-secondary-500;
+}
+
+.searchbox_input {
+  width: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0.5rem;
+  padding-inline-end: calc(#{$searchbox-btn-width} + 0.5rem);
+  -webkit-appearance: none;
+  background-color: rgba($color-white, 0.1);
+  transition: background-color 0.3s ease-in;
+
+  &::placeholder {
+    color: $color-white;
+  }
+
+  &:focus {
+    color: $color-black;
+    background-color: rgba($color-white, 1);
+  }
+
+  [dir="ltr"] &:not(:placeholder-shown) {
+    & ~ .searchbox_btn {
+      transform: translateX(-100%);
+    }
+  }
+
+  [dir="rtl"] &:not(:placeholder-shown) {
+    & ~ .searchbox_btn {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.searchbox_btn {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 100%;
+  width: $searchbox-btn-width;
+  padding: 0.5rem;
+  background-color: $color-primary-500;
+  transition: transform 0.4s ease;
+}

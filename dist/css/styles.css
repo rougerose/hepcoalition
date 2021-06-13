@@ -5309,6 +5309,10 @@ html {
   transition: opacity 0.3s ease 0.7s, transform 0.5s ease 0.7s;
 }
 
+.sitenavOverlay_item--search {
+  grid-column: 1/span 2;
+}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -5465,6 +5469,93 @@ body.has-overlay {
 
 .langlist_link {
   transition: color 0.3s ease-in;
+}
+
+.searchbox_form {
+  position: relative;
+  overflow: hidden;
+}
+
+.searchbox_label {
+  display: block;
+  text-transform: uppercase;
+  color: #c11f02;
+}
+
+[dir="ltr"] .searchbox_input {
+  padding-right: calc(6.5rem + 0.5rem);
+}
+
+[dir="rtl"] .searchbox_input {
+  padding-left: calc(6.5rem + 0.5rem);
+}
+
+.searchbox_input {
+  width: 100%;
+  border: 0;
+  margin: 0;
+  padding: 0.5rem;
+  -webkit-appearance: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease-in;
+}
+
+.searchbox_input::-moz-placeholder {
+  color: #fff;
+}
+
+.searchbox_input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.searchbox_input::placeholder {
+  color: #fff;
+}
+
+.searchbox_input:focus {
+  color: #000;
+  background-color: white;
+}
+
+[dir=ltr] .searchbox_input:not(:-moz-placeholder-shown) ~ .searchbox_btn {
+  transform: translateX(-100%);
+}
+
+[dir=ltr] .searchbox_input:not(:-ms-input-placeholder) ~ .searchbox_btn {
+  transform: translateX(-100%);
+}
+
+[dir=ltr] .searchbox_input:not(:placeholder-shown) ~ .searchbox_btn {
+  transform: translateX(-100%);
+}
+
+[dir=rtl] .searchbox_input:not(:-moz-placeholder-shown) ~ .searchbox_btn {
+  transform: translateX(100%);
+}
+
+[dir=rtl] .searchbox_input:not(:-ms-input-placeholder) ~ .searchbox_btn {
+  transform: translateX(100%);
+}
+
+[dir=rtl] .searchbox_input:not(:placeholder-shown) ~ .searchbox_btn {
+  transform: translateX(100%);
+}
+
+[dir="ltr"] .searchbox_btn {
+  left: 100%;
+}
+
+[dir="rtl"] .searchbox_btn {
+  right: 100%;
+}
+
+.searchbox_btn {
+  position: absolute;
+  bottom: 0;
+  width: 6.5rem;
+  padding: 0.5rem;
+  background-color: #19a1ac;
+  transition: transform 0.4s ease;
 }
 
 /*!

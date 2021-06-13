@@ -1,0 +1,13 @@
+<div id="formulaire_recherche" class="formulaire_spip formulaire_recherche searchbox[ (#ENV{class})]">
+  <form action="[(#ENV{action})]" class="searchbox_form" method="get">
+    <div class="editer-groupe">
+      [(#ENV{action}|form_hidden)]
+      [<input type="hidden" name="lang" value="(#ENV{lang})" />]
+      <label class="searchbox_label" for="#ENV{_id_champ}">
+        <:info_rechercher:>
+      </label>
+      <input type="[(#HTML5|?{search,text})]" class="search text searchbox_input" name="recherche" id="#ENV{_id_champ}" placeholder="<:local:search_type_here:>" accesskey="4" autocapitalize="off" autocorrect="off" />
+      <button type="submit" class="searchbox_btn"><:info_rechercher:></button>
+    </div>
+  </form>
+</div>

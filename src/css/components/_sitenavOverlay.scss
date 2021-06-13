@@ -37,4 +37,8 @@
       transition: opacity 0.3s ease 0.7s, transform 0.5s ease 0.7s;
     }
   }
+
+  &--search {
+    grid-column: 1 / span 2;
+  }
 }
