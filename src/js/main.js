@@ -21,7 +21,7 @@ if (overlays.length >= 1) {
       className = "overlay overlay--full is-closed";
       closeSelector = ".sitenav_closeMenu";
       closeBtn = modal.querySelector("button");
-      sitenav = modal.querySelector(".sitenavOverlay");
+      sitenav = modal.querySelector(".sitenavOverlay_container");
     }
 
     let overlay = new Overlay({

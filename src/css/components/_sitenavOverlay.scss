@@ -2,7 +2,9 @@
 // sitenavOverlay
 // ========================================
 
-.sitenavOverlay {
+// .sitenavOverlay {}
+
+.sitenavOverlay_container {
   color: $color-white;
   visibility: hidden;
   transition: visibility 0.1s ease 0s;
@@ -31,7 +33,7 @@
       color: $color-secondary-500;
     }
 
-    .sitenavOverlay.is-visible & {
+    .sitenavOverlay_container.is-visible & {
       transform: translateX(0);
       opacity: 1;
       transition: opacity 0.3s ease 0.7s, transform 0.5s ease 0.7s;

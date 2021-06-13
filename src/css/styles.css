@@ -2698,12 +2698,12 @@ html {
   background-color: #fff;
 }
 
-.sitenavOverlay {
+.sitenavOverlay_container {
   color: #fff;
   visibility: hidden;
   transition: visibility 0.1s ease 0s;
 }
-.sitenavOverlay.is-visible {
+.sitenavOverlay_container.is-visible {
   visibility: visible;
   transition: visibility 0.2s ease 0.5s;
 }
@@ -2718,7 +2718,7 @@ html {
   text-transform: uppercase;
   color: #c11f02;
 }
-.sitenavOverlay.is-visible .sitenavOverlay_item--section {
+.sitenavOverlay_container.is-visible .sitenavOverlay_item--section {
   transform: translateX(0);
   opacity: 1;
   transition: opacity 0.3s ease 0.7s, transform 0.5s ease 0.7s;
