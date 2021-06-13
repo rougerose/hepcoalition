@@ -50,7 +50,9 @@ if (overlays.length >= 1) {
 
     overlay.addEventListener("close", () => {
       overlay.el.style.display = "flex";
-      sitenav.classList.remove("is-visible");
+      if (sitenav) {
+        sitenav.classList.remove("is-visible");
+      }
       overlay.el.addEventListener("transitionend", handleModalTransition);
       overlay.el.classList.add("is-closed");
       body.classList.remove("has-overlay");
