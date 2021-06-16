@@ -2,11 +2,124 @@
 // sitenav
 // ========================================
 
-// .sitenav {}
+// Variables
+$btn-padding: 0.5rem;  // 0.75rem;
+$icon-caret-margin: 0.5rem;
 
-// .sitenav_logo {
-//   margin-inline-end: 1rem;
-// }
+.sitenav {
+  display: grid;
+  grid-template-columns: 50% auto auto;
+  justify-items: end;
+  align-items: center;
+}
+
+.sitenav_logo {
+  justify-self: stretch;
+}
+
+.sitenav_list {
+  display: none;
+  font-size: 1.125rem; // 18px
+
+  & a,
+  & button {
+    padding: $btn-padding;
+    background-color: transparent;
+
+    &:hover,
+    &.active {
+      color: $color-primary-500;
+    }
+
+    &:focus {
+      outline: 1px dotted;
+    }
+  }
+
+  // &--sections {}
+
+  &--subsections {
+    flex-direction: column;
+    position: absolute;
+    z-index: -1;
+    inset-block-start: 100%;
+    inset-inline-start: 0;
+    margin-block-start: 0.25rem;
+    visibility: hidden;
+    min-width: 100%;
+    width: auto;
+    box-shadow: 0px 4px 4px 0 rgba($color-black,0.25);
+    transform: translateY(-2rem);
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+
+    &[aria-hidden="false"] {
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+      transform: translateY(0);
+      transition-delay: 0s, 0s, 0.3s;
+    }
+
+    & a {
+      display: block;
+      white-space: nowrap;
+      padding: 0.25rem 0.75rem;
+    }
+  }
+}
+
+.sitenav_item {
+
+  // Sans JS
+  .no-js & {
+    &:hover,
+    &:focus-within {
+      & > ul.sitenav_list--subsections {
+        visibility: visible;
+      }
+    }
+  }
+
+  &--section {
+    position: relative;
+    display: flex;
+    position: relative;
+    flex: 1 1 auto;
+    margin-inline-start: 0.5rem;
+
+    & > a,
+    & > button {
+      flex: 1 0 auto;
+      display: flex;
+      align-items: center;
+      border: 0;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+
+    &:last-child {
+      margin-inline-end: $btn-padding * -1;
+    }
+  }
+
+  & svg {
+    width: 1em;
+    height: 1em;
+    margin-inline-start: $icon-caret-margin;
+    transition: transform 0.3s ease;
+
+    path {
+      stroke: $color-primary-500;
+    }
+  }
+
+  & [aria-expanded="true"] {
+    & svg {
+      transform: scaleY(-1);
+    }
+  }
+}
 
 .sitenav_triggerModalLanguage {
   text-transform: uppercase;
@@ -40,6 +153,10 @@
     padding: 0.5rem;
     position: relative;
     inset-inline-end: -0.5rem;
+
+    @include mq(lg) {
+      display: none;
+    }
   }
 
   &.sitenav_closeMenu.is-active {
@@ -51,4 +168,36 @@
       }
     }
   }
+}
+
+@include mq(lg) {
+  .sitenav {
+    grid-template-columns: 30% auto;
+    grid-template-rows: auto;
+    gap: 0 1.5rem;
+  }
+
+  .sitenav_logo {
+    grid-area: 2 / 1;
+  }
+
+  .sitenav_list {
+    grid-area: 2 / 2;
+    display: flex;
+  }
+
+  .sitenav_item {
+
+    // &--section {}
+
+    // &--subsections {}
+
+  }
+
+  .sitenav_triggerModalLanguage {
+    grid-area: 1 / 2;
+    position: relative;
+    inset-inline-end: -0.5rem;
+  }
+
 }

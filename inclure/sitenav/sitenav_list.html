@@ -1,0 +1,22 @@
+<ul class="sitenav_list sitenav_list--sections clicky-menu hidden lg:flex">
+  <BOUCLE_menu_sections(RUBRIQUES){id_parent=#ENV{id_secteur}}{lang}>
+    <B_menu_rubriques>
+      <li class="sitenav_item sitenav_item--section">
+        <a href="#" class="[(#EXPOSE{'active', ''})]">#TITRE
+          <INCLURE{fond=img/icons/icon-caret-64.svg} />
+        </a>
+        <ul id="section-#ID_RUBRIQUE-subsections" class="sitenav_list sitenav_list--subsections">
+          <li class="sitenav_item"><a href="#URL_RUBRIQUE" class="[(#EXPOSE{'active', ''})]">#TITRE</a></li>
+          <BOUCLE_menu_rubriques(RUBRIQUES){id_parent}{lang}>
+            <li class="sitenav_item"><a href="#URL_RUBRIQUE" class="[(#EXPOSE{'active', ''})]">#TITRE</a></li>
+            </BOUCLE_menu_rubriques>
+        </ul>
+      </li>
+    </B_menu_rubriques>
+      <li class="sitenav_item sitenav_item--section"><a href="#URL_RUBRIQUE" class="[(#EXPOSE{'active', ''})]">#TITRE</a></li>
+    <//B_menu_rubriques>
+  </BOUCLE_menu_sections>
+    <li class="sitenav_item sitenav_item--section">
+      <a href="#"><:info_rechercher:></a>
+    </li>
+</ul>

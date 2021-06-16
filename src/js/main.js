@@ -1,4 +1,5 @@
 import Overlay from "@accede-web/overlay";
+import {ClickyMenu} from "./modules/clicky-menus";
 
 /**
  * Gestion des fenetres modales (y compris menu principal, version smartphone)
@@ -21,7 +22,7 @@ if (overlays.length >= 1) {
       className = "overlay overlay--full is-closed";
       closeSelector = ".sitenav_closeMenu";
       closeBtn = modal.querySelector("button");
-      sitenav = modal.querySelector(".sitenavOverlay_container");
+      sitenav = modal.querySelector(".sitenavOverlay_menu");
     }
 
     let overlay = new Overlay({
@@ -76,20 +77,15 @@ if (overlays.length >= 1) {
 }
 
 /**
- * Animation du menu principal (version smartphone)
+ * ClickyMenu
  *
- * code à supprimer
+ * Navigation principale, à partir de 800px
  *
  */
-// const modalMenu = document.getElementById("modalMenu");
 
-// if (modalMenu) {
-//   Array.prototype.forEach.call(
-//     modalMenu.querySelectorAll(
-//       ".sitenavOverlay_list > li.sitenavOverlay_item--section"
-//     ), function (item, index) {
-//       console.log(item, index);
-//       item.style.transitionDelay = (index + 2) / 10 + "s";
-//     }
-//   );
-// }
+const menus = document.querySelectorAll(".clicky-menu");
+
+menus.forEach(menu => {
+  let clickyMenu = new ClickyMenu(menu);
+  clickyMenu.init();
+});
