@@ -131,7 +131,7 @@ const reloadBrowser = function (done) {
 const watchSource = function (done) {
   watch(config.css.src + "**/*.scss", series(css));
   watch(config.tailwind, series(css));
-  watch(config.js.src, series(js, reloadBrowser));
+  watch(config.js.watch, series(js, reloadBrowser));
   watch(config.html.src, reloadBrowser);
 
   // Signal completion
