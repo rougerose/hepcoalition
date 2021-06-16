@@ -8,7 +8,8 @@
 $mq-breakpoints: (
   sm: 640px,
   md: 768px,
-  lg: 1100px,
+  lg: 800px,
+  xl: 1100px,
 );
 
 
@@ -16,6 +17,7 @@ $mq-breakpoints: (
 $color-black: #000;
 $color-white: #fff;
 
+$color-primary-100: #78ffff;
 $color-primary-500: #19a1ac;
 $color-primary-900: #0a3f43;
 $color-secondary-500: #c11f02;
