@@ -4,7 +4,14 @@
 
 // .sitenavOverlay {}
 
-.sitenavOverlay_container {
+.sitenavOverlay_header {
+  display: grid;
+  grid-template-columns: 50% auto;
+  justify-items: end;
+  align-items: center;
+}
+
+.sitenavOverlay_menu {
   color: $color-white;
   visibility: hidden;
   transition: visibility 0.1s ease 0s;
@@ -16,7 +23,7 @@
 }
 
 // .sitenavOverlay_list {
-//   &--section {}
+//   &--sections {}
 //   &--subsections {}
 // }
 
@@ -33,7 +40,7 @@
       color: $color-secondary-500;
     }
 
-    .sitenavOverlay_container.is-visible & {
+    .sitenavOverlay_menu.is-visible & {
       transform: translateX(0);
       opacity: 1;
       transition: opacity 0.3s ease 0.7s, transform 0.5s ease 0.7s;

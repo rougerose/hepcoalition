@@ -1,18 +1,18 @@
 <section id="modalLanguage" class="modal modal--language" data-label="<:local:langue_preferee_titre:>">
   <header class="modal_header modal_header--language">
+    <h2 id="modal_language_title" class="modal_title">
+      <:local:langue_preferee_titre:>
+    </h2>
     <button class="hamburger hamburger--squeeze modal_btnClose is-active" type="button">
       <span class="hamburger-label sr-only">
         <:local:fermer:>
       </span>
       <span class="hamburger-box"><span class="hamburger-inner"></span></span>
     </button>
-    <h2 id="modal_language_title" class="modal_title">
-      <:local:langue_preferee_titre:>
-    </h2>
   </header>
   <div class="modal_content modal_content--language">
     <B_secteur_langue>
-      <ul class="langlist grid grid-cols-2 gap-2">
+      <ul class="langlist grid grid-cols-2 gap-x-6 gap-y-3">
         <BOUCLE_secteur_langue(RUBRIQUES){racine}{par lang}>
           <li xml:lang="#LANG" lang="#LANG" dir="#LANG_DIR" class="langlist_item [(#EXPOSE)]">
             [(#EXPOSE{'', <a
