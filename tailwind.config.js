@@ -3,6 +3,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   corePlugins: {
     fontSmoothing: false,
+    container: false,
   },
   purge: [
     "./body.html",
@@ -12,14 +13,6 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    container: {
-      center: true,
-      padding: {
-        DEFAULT: "1rem",
-        md: "1.5rem",
-        lg: "1.5rem",
-      },
-    },
     fontFamily: {
       sans: ['"HepC"', ...defaultTheme.fontFamily.sans],
       mono: defaultTheme.fontFamily.mono,
