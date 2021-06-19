@@ -18,7 +18,7 @@ module.exports = {
       mono: defaultTheme.fontFamily.mono,
     },
     screens: {
-      sm: "640px",
+      sm: "568px",
       md: "768px",
       lg: "800px",
       xl: "1100px",

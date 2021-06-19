@@ -1,5 +1,7 @@
 import Overlay from "@accede-web/overlay";
-import {ClickyMenu} from "./modules/clicky-menus";
+import { ClickyMenu } from "./modules/clicky-menus";
+// import SwiperCore, { Navigation, Pagination } from "swiper/core";
+import {Swiper, Navigation, Pagination} from "swiper/swiper.esm.js";
 
 /**
  * Gestion des fenetres modales (y compris menu principal, version smartphone)
@@ -82,10 +84,32 @@ if (overlays.length >= 1) {
  * Navigation principale, à partir de 800px
  *
  */
-
 const menus = document.querySelectorAll(".clicky-menu");
 
 menus.forEach(menu => {
   let clickyMenu = new ClickyMenu(menu);
   clickyMenu.init();
+});
+
+
+Swiper.use([Navigation, Pagination]);
+const swiper = new Swiper(".swiper-container", {
+  slidesPerView: "auto",
+  // spaceBetween: 16,
+  loop: true,
+  // centeredSlides: true,
+  breakpoints: {
+    568: {
+      centeredSlides: true,
+      // spaceBetween: 32,
+    },
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });

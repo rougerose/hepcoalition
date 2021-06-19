@@ -1,0 +1,25 @@
+// ========================================
+// resume
+// ========================================
+
+
+// .resume {}
+
+.resume_link {
+
+  &-more {
+    color: $color-primary-500;
+
+    &::before {
+      content: "\2014\00A0";
+    }
+
+    & span {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      color: $color-primary-200;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+[(#REM)
+  <!-- Sélections slider -->
+][
+  (#SET{idSlider, #VAL{slider-}|concat{#ENV{lang}}})
+]
+
+<BOUCLE_slider(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
+  <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}{0,1}>
+    <INCLURE{fond=inclure/resume/slider, id_selection}/>
+  </BOUCLE_slider_contenu>
+</BOUCLE_slider>
+
+[(#REM)
+  <!-- Sélections Features -->
+][
+  (#SET{idFeatures, #VAL{features-}|concat{#ENV{lang}}})
+]
+
+<BOUCLE_features(SELECTIONS){id_rubrique}{identifiant=#GET{idFeatures}}>
+  <BOUCLE_features_contenu(SELECTIONS_CONTENUS){id_selection}{0,1}>
+    <INCLURE{fond=inclure/resume/features, id_selection} />
+  </BOUCLE_features_contenu>
+</BOUCLE_features>

@@ -1,0 +1,56 @@
+// ========================================
+// article-resume-slider
+// ========================================
+
+.article-resume-slider {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(md) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.article-resume-slider_logo {
+  @include mq(md) {
+    margin-right: 1.5rem;
+    flex: 1 0 auto;
+    width: 60%;
+    max-width: 700px;
+  }
+}
+
+.article-resume-slider_texte {
+  margin-top: 1rem;
+  color: $color-white;
+
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.article-resume-slider_titre {
+  font-size: 1.25rem; // 20px
+  line-height: 1.5rem; // 24px
+  font-weight: 700;
+
+  & a {
+    &:hover {
+      color: $color-primary-100;
+    }
+  }
+}
+
+.article-resume-slider_desc {
+  margin-top: 1rem;
+  line-height: 1.25rem; // 20px;
+
+  & .resume_link-more {
+    color: $color-primary-100;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+}
