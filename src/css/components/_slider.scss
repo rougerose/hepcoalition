@@ -49,6 +49,10 @@ $swiper-pagination-color-active: $color-secondary-500;
   & .swiper-pagination-bullet-active {
     background: $swiper-pagination-color-active;
   }
+
+  @include mq(sm) {
+    padding-bottom: 0;
+  }
 }
 
 // .slider_list {}
@@ -65,8 +69,14 @@ $swiper-pagination-color-active: $color-secondary-500;
     opacity: 1;
   }
 
+  @include mq(sm) {
+    padding: 1.5rem 1rem 1rem;
+    margin-bottom: 2.5rem;
+  }
+
   @include mq(md) {
-    padding: 1rem 1.5rem 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     max-width: calc(100% - 8rem);
   }
 
