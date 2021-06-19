@@ -5,6 +5,7 @@ module.exports = {
     fontSmoothing: false,
     container: false,
   },
+  mode: "jit",
   purge: [
     "./body.html",
     "./content/*.html",
