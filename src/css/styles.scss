@@ -11,6 +11,8 @@
 @tailwind base;
 
 @import "base/html";
+@import "base/body";
+@import "base/header";
 @import "base/a";
 @import "base/font-face-almarai";
 @import "base/font-face-noto-sans-tc";
@@ -25,6 +27,7 @@
 // Components //
 @tailwind components;
 @import "components/container";
+@import "components/link";
 @import "components/spip-admin";
 @import "components/sitenav";
 @import "components/sitenavOverlay";
@@ -32,9 +35,13 @@
 @import "components/modal";
 @import "components/langlist";
 @import "components/searchbox";
+@import "components/section";
 @import "components/slider";
+@import "components/slider-rubrique";
+@import "components/slider-agenda";
 @import "components/resume";
 @import "components/article-resume-slider";
+@import "components/event-resume-slider";
 
 // Utilities //
 @tailwind utilities;
