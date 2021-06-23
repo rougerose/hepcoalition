@@ -19,6 +19,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // E
    'email'                          => 'e-mail',
    'email_send'                     => "Send us an <a href='@urlcontact@' class='spip_out'>email</a>",
+	 'events_all' => 'All events',
 
    // F
 	 'fermer' => 'Close',
