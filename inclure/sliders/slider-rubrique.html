@@ -4,11 +4,11 @@
       <div class="swiper-wrapper slider_list slider-rubrique_list">
         <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}>
           <div class="swiper-slide slider_item slider-rubrique_item">
-            <article class="article-resume-slider">
-              [<div class="article-resume-slider_logo"><a href="[(#URL)]">(#LOGO_SELECTIONS_CONTENU|image_reduire{700,395}|image_recadre{700,395})</a></div>]
-              <div class="article-resume-slider_texte">
-                <h1 class="article-resume-slider_titre"><a href="#URL">#TITRE</a></h1>
-                [<div class="article-resume-slider_desc"><p>(#DESCRIPTIF|couper{250}) <a href="#URL" class="resume_link-more"><span><:local:more:></span></a></p></div>]
+            <article class="resume-slider">
+              [<div class="resume-slider_logo"><a href="[(#URL)]">(#LOGO_SELECTIONS_CONTENU|image_reduire{700,395}|image_recadre{700,395})</a></div>]
+              <div class="resume-slider_texte">
+                <h1 class="resume-slider_titre"><a href="#URL">#TITRE</a></h1>
+                [<div class="resume-slider_desc"><p>(#DESCRIPTIF|couper{250}) <a href="#URL" class="resume_link-more"><span><:local:more:></span></a></p></div>]
               </div>
             </article>
           </div>

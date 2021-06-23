@@ -4426,16 +4426,16 @@ body.has-overlay {
   color: #62e7ea;
 }
 
-.article-resume-slider {
+.resume-slider {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 48em) {
-  .article-resume-slider {
+  .resume-slider {
     flex-direction: row;
     align-items: flex-start;
   }
-  .article-resume-slider_logo {
+  .resume-slider_logo {
     margin-right: 0.75rem;
     flex: 1 0 auto;
     width: 60%;
@@ -4443,48 +4443,48 @@ body.has-overlay {
   }
 }
 
-.article-resume-slider_texte {
+.resume-slider_texte {
   margin-top: 1rem;
   color: #fff;
 }
 @media (min-width: 48em) {
-  .article-resume-slider_texte {
+  .resume-slider_texte {
     margin-top: 0;
   }
 }
 
-.article-resume-slider_titre {
+.resume-slider_titre {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-weight: 700;
 }
-.article-resume-slider_titre a:hover {
+.resume-slider_titre a:hover {
   color: #78ffff;
 }
 
-.article-resume-slider_desc {
+.resume-slider_desc {
   margin-top: 1rem;
   line-height: 1.25rem;
 }
-.article-resume-slider_desc .resume_link-more {
+.resume-slider_desc .resume_link-more {
   color: #78ffff;
 }
-.article-resume-slider_desc .resume_link-more:hover {
+.resume-slider_desc .resume_link-more:hover {
   color: #fff;
 }
 
-.event-resume-slider {
+.resume-event-slider {
   padding-bottom: 2rem;
   line-height: 1.25rem;
 }
 
-.event-resume-slider_date {
+.resume-event-slider_date {
   margin-bottom: 0.5rem;
   color: #c11f02;
   font-weight: 700;
 }
 
-.event-resume-slider_title {
+.resume-event-slider_title {
   font-size: 1.125rem;
   margin-bottom: 0.5rem;
   font-weight: 700;

@@ -1,8 +1,8 @@
 // ========================================
-// article-resume-slider
+// resume-slider
 // ========================================
 
-.article-resume-slider {
+.resume-slider {
   display: flex;
   flex-direction: column;
 
@@ -12,7 +12,7 @@
   }
 }
 
-.article-resume-slider_logo {
+.resume-slider_logo {
   @include mq(md) {
     margin-right: 0.75rem;
     flex: 1 0 auto;
@@ -21,7 +21,7 @@
   }
 }
 
-.article-resume-slider_texte {
+.resume-slider_texte {
   margin-top: 1rem;
   color: $color-white;
 
@@ -30,7 +30,7 @@
   }
 }
 
-.article-resume-slider_titre {
+.resume-slider_titre {
   font-size: 1.25rem; // 20px
   line-height: 1.5rem; // 24px
   font-weight: 700;
@@ -42,7 +42,7 @@
   }
 }
 
-.article-resume-slider_desc {
+.resume-slider_desc {
   margin-top: 1rem;
   line-height: 1.25rem; // 20px;
 
