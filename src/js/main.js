@@ -91,23 +91,33 @@ menus.forEach(menu => {
   clickyMenu.init();
 });
 
-
+/**
+ * Sliders
+ */
 Swiper.use([Navigation, Pagination]);
-const swiper = new Swiper(".swiper-container", {
+
+const sliderRubrique = new Swiper(".slider_container.swiper-container", {
   slidesPerView: "auto",
-  // spaceBetween: 16,
   loop: true,
-  // centeredSlides: true,
   breakpoints: {
     568: {
       centeredSlides: true,
-      // spaceBetween: 32,
     },
   },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+const sliderAgenda = new Swiper(".slider-agenda_container.swiper-container", {
+  slidesPerView: "auto",
+  grabCursor: true,
+  resistanceRatio: 0.4,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,

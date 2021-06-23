@@ -1,0 +1,26 @@
+
+.link-all {
+  display: block;
+  padding: 0.5rem 0.5rem 0.5rem;
+  line-height: 1rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $color-white;
+  background-color: $color-primary-500;
+  transition: background-color 0.3s;
+  transition-timing-function: ease;
+  box-shadow: 0 3px 5px -1px rgba($color-black, 0.2);
+
+  &:hover {
+    background-color: $color-primary-300;
+  }
+
+  &--events {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    transform: translateY(50%);
+  }
+}

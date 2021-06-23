@@ -1,10 +1,10 @@
 <B_slider_contenu>
-  <div class="slider">
-    <div class="swiper-container">
-      <div class="swiper-wrapper slider_list">
+  <div class="slider slider-rubrique">
+    <div class="slider_container slider-rubrique_container swiper-container [swiper-container-(#LANG_DIR)]">
+      <div class="swiper-wrapper slider_list slider-rubrique_list">
         <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}>
-          <div class="swiper-slide slider_item">
-            <article class="slider_article article-resume-slider">
+          <div class="swiper-slide slider_item slider-rubrique_item">
+            <article class="article-resume-slider">
               [<div class="article-resume-slider_logo"><a href="[(#URL)]">(#LOGO_SELECTIONS_CONTENU|image_reduire{700,395}|image_recadre{700,395})</a></div>]
               <div class="article-resume-slider_texte">
                 <h1 class="article-resume-slider_titre"><a href="#URL">#TITRE</a></h1>
@@ -16,11 +16,15 @@
       </div>
       [(#REM)
       <!-- pagination --> ]
-      <div class="swiper-pagination"></div>
+      <div class="slider_pagination slider-rubrique_pagination swiper-pagination"></div>
       [(#REM)
       <!-- navigation --> ]
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+      <div class="slider-rubrique_navigation">
+        <div class="container">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
     </div>
   </div>
 </B_slider_contenu>

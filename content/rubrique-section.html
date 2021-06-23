@@ -5,19 +5,38 @@
 ]
 
 <BOUCLE_slider(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
-  <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}{0,1}>
-    <INCLURE{fond=inclure/resume/slider, id_selection}/>
-  </BOUCLE_slider_contenu>
+  <div class="section-selections">
+    <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}{0,1}>
+      <INCLURE{fond=inclure/sliders/slider-rubrique, id_selection} />
+    </BOUCLE_slider_contenu>
+  </div>
 </BOUCLE_slider>
 
 [(#REM)
-  <!-- Sélections Features -->
-][
-  (#SET{idFeatures, #VAL{features-}|concat{#ENV{lang}}})
+<!-- Agenda -->
 ]
+<BOUCLE_rubrique_agenda(RUBRIQUES){id_secteur}{agenda=1}>
+  <section class="section-events">
+    <div class="container">
+      [<h1 class="section-events_title"><a href="(#URL_RUBRIQUE)"><:local:agenda:></a></h1>]
+    </div>
+    <BOUCLE_agenda(EVENEMENTS){statut=publie}{id_rubrique}{lang}{date_fin>=#ENV{date}}{par date_debut}{0,1}> </BOUCLE_agenda>
+      <INCLURE{fond=inclure/sliders/slider-agenda, id_rubrique, lang} />
+    </B_agenda>
+  </section>
+</BOUCLE_rubrique_agenda>
 
-<BOUCLE_features(SELECTIONS){id_rubrique}{identifiant=#GET{idFeatures}}>
-  <BOUCLE_features_contenu(SELECTIONS_CONTENUS){id_selection}{0,1}>
-    <INCLURE{fond=inclure/resume/features, id_selection} />
-  </BOUCLE_features_contenu>
-</BOUCLE_features>
+<div class="container">
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora architecto sunt, necessitatibus, culpa adipisci nihil voluptate neque fuga quam voluptatibus aperiam blanditiis animi totam consequuntur repudiandae dolorem at corporis quas.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate obcaecati laborum, eaque nisi excepturi sunt soluta aut laudantium accusamus sint consectetur! Provident fugit dolor, rerum laboriosam voluptates animi atque quod?</p>
+
+  [(#REM)
+  <!-- Sélections Features -->
+  ][(#SET{idFeatures, #VAL{features-}|concat{#ENV{lang}}})]
+  <BOUCLE_features(SELECTIONS){id_rubrique}{identifiant=#GET{idFeatures}}>
+    <BOUCLE_features_contenu(SELECTIONS_CONTENUS){id_selection}{0,1}>
+      <INCLURE{fond=inclure/resume/features, id_selection} />
+    </BOUCLE_features_contenu>
+  </BOUCLE_features>
+</div>

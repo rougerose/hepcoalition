@@ -4,83 +4,34 @@
 // ========================================
 
 // variables
-$swiper-navigation-fontsize-sm: 24px;
+$swiper-navigation-fontsize-sm: 20px;
+$swiper-navigation-size-sm: 36px;
 $swiper-navigation-size: 44px;
 $swiper-navigation-bg: $color-white;
 $swiper-navigation-color: $color-primary-500;
-$swiper-pagination-color: $color-white;
+$swiper-pagination-color: $color-black;
 $swiper-pagination-color-active: $color-secondary-500;
 
-.slider {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  padding-bottom: 1rem;
-  width: 100%;
-  background-color: $color-primary-500;
+// .slider {}
 
-  & .swiper-container {
-    width: 100%;
-  }
+// .slider_list {}
 
-  & .swiper-button-prev,
-  & .swiper-button-next {
-    top: auto;
-    bottom: 0;
-    border-radius: 50%;
-    background-color: $swiper-navigation-bg;
-    color: $swiper-navigation-color;
-    width: $swiper-navigation-size;
+// .slider_item {}
 
-    &::after {
-      font-size: $swiper-navigation-fontsize-sm;
-    }
+// .slider_navigation {}
 
-    @include mq(sm) {
-      top: 50%;
-      bottom: auto;
-    }
-  }
-
+.slider_pagination {
   & .swiper-pagination-bullet {
     background-color: $swiper-pagination-color;
-    opacity: 1;
+    opacity: 0.35;
   }
 
   & .swiper-pagination-bullet-active {
     background: $swiper-pagination-color-active;
-  }
-
-  @include mq(sm) {
-    padding-bottom: 0;
-  }
-}
-
-// .slider_list {}
-
-.slider_item {
-  display: flex;
-  padding: 1rem 1rem 0;
-  margin-bottom: 3.5rem;
-  max-width: 75%;
-  opacity: 0.5;
-  transition: opacity .5s ease-in;
-
-  &.swiper-slide-active {
     opacity: 1;
   }
 
   @include mq(sm) {
-    padding: 1.5rem 1rem 1rem;
-    margin-bottom: 2.5rem;
-  }
-
-  @include mq(md) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    max-width: calc(100% - 8rem);
-  }
-
-  @include mq(xl) {
-    max-width: 1052px;
+    padding-bottom: 0;
   }
 }
