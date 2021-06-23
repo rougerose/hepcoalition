@@ -18,9 +18,13 @@
 
   &--events {
     position: absolute;
-    right: 0;
+    inset-inline-end: 0;
     bottom: 0;
     z-index: 2;
     transform: translateY(50%);
+
+    @include mq(container) {
+      inset-inline-end: 0.375rem;
+    }
   }
 }

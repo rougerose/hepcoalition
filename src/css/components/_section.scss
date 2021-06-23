@@ -6,27 +6,26 @@
 // Section s'entend au sens de rubriques du site
 //
 
-.section-selections {
+.section {
   margin-bottom: 3rem;
 }
+
+.section_title {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 1.5rem; // 24px
+  color: $color-primary-500;
+}
+
+
+// section-selections
+// ========================================
+
+// .section-selections {}
+
 
 // section-events
 // ========================================
 
-.section-events {
-  margin-bottom: 3rem;
-}
-
-.section-events_title {
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  font-size: 1.5rem; // 24px
-
-  & > a {
-    color: $color-primary-500;
-
-    &:hover {
-      color: $color-primary-300;
-    }
-  }
-}
+// .section-events {}
+// .section-events_title {}
