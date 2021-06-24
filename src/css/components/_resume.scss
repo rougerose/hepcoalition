@@ -3,7 +3,60 @@
 // ========================================
 
 
-// .resume {}
+.resume {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+
+
+  &::after {
+    content: "";
+    width: calc(50% - 16px);
+    height: 1px;
+    margin: 3rem auto 0;
+    background-color: $color-primary-500;
+  }
+
+  @include mq(md) {
+    flex-direction: row;
+    align-items: flex-start;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.resume_logo {
+  margin-top: 1rem;
+
+  @include mq(md) {
+    margin-top: 0;
+    margin-inline-start: 1.5rem;
+    flex: 1 0 auto;
+    width: 60%;
+    max-width: 700px;
+  }
+}
+
+.resume_texte {
+
+  @include mq(md) {
+    margin-top: 0;
+  }
+}
+
+.resume_titre {
+  font-size: 1.25rem; // 20px
+  line-height: 1.5rem; // 24px
+  font-weight: 700;
+}
+
+.resume_desc,
+.resume_metas {
+  margin-top: 1rem;
+  line-height: 1.25rem; // 20px;
+}
 
 .resume_link {
   color: $color-black;
@@ -25,6 +78,28 @@
 
     &:hover {
       color: $color-primary-200;
+    }
+  }
+}
+
+.resume_metas {
+  font-weight: 300;
+  font-size: 0.875rem; // 14px;
+  line-height: 1rem;
+  text-transform: uppercase;
+  color: $color-primary-600;
+
+  & > time {
+    &::after {
+      content: "\2022";
+      margin: 0 0.25rem;
+    }
+  }
+
+  & > a {
+    &::after {
+      content: "\002F";
+      margin: 0 0.25rem;
     }
   }
 }

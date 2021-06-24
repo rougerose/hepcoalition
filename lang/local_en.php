@@ -70,6 +70,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    //'press_release'                  => 'Press release',
 
    // R
+	 'recent_materials' => 'Recent materials',
 
    // S
 	 'search_type_here' => 'Type here',

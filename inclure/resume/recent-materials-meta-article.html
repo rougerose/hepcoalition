@@ -1,0 +1,5 @@
+<BOUCLE_meta_article(ARTICLES){id_article}>
+  [<time datetime="[(#DATE|date_iso)]">(#DATE|affdate)</time>]
+  <BOUCLE_hierarchie(HIERARCHIE){id_article}>[(#ID_RUBRIQUE|=={#_meta_article:ID_SECTEUR}|?{'', <a href="#URL_RUBRIQUE">#TITRE</a>})]</BOUCLE_hierarchie>
+</BOUCLE_meta_article>
+#FILTRE{mini_html}

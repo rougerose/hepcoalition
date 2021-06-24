@@ -14,7 +14,7 @@
 
 .resume-slider_logo {
   @include mq(md) {
-    margin-right: 0.75rem;
+    margin-inline-end: 0.75rem;
     flex: 1 0 auto;
     width: 60%;
     max-width: 700px;

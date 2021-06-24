@@ -1,0 +1,7 @@
+<BOUCLE_meta_rubrique(RUBRIQUES){id_rubrique}>
+  [<time datetime="[(#DATE|date_iso)]">(#DATE|affdate)</time>]
+  <BOUCLE_hierarchie(HIERARCHIE){id_rubrique}>
+    [(#ID_RUBRIQUE|=={#_meta_article:ID_SECTEUR}|?{'', <a href="#URL_RUBRIQUE">#TITRE</a>})]
+  </BOUCLE_hierarchie>
+</BOUCLE_meta_rubrique>
+#FILTRE{mini_html}
