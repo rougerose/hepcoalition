@@ -9,7 +9,10 @@ module.exports = {
   purge: [
     "./body.html",
     "./content/*.html",
+    "./formulaires/*.html",
+    "./head/*.html",
     "./header/*.html",
+    "./overlay/*.html",
     "./inclure/**/*.html",
   ],
   darkMode: false, // or 'media' or 'class'
