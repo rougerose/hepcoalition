@@ -4,19 +4,22 @@ html {
   @apply font-sans;
 }
 
-body {
+.page {
   border-top-width: 0.25rem;
   border-color: #c11f02;
 }
 
-header[role=banner] {
+.page_header {
   padding-top: 1rem;
-  margin-bottom: 3rem;
 }
 @media (min-width: 50em) {
-  header[role=banner] {
+  .page_header {
     padding-top: 0.25rem;
   }
+}
+
+.page_content {
+  margin-top: 2rem;
 }
 
 a {
@@ -3579,7 +3582,6 @@ body.has-overlay {
 }
 
 .slider-rubrique {
-  margin-top: 3rem;
   margin-bottom: 3rem;
   width: 100%;
   background-color: #19a1ac;

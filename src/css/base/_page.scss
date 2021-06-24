@@ -1,0 +1,22 @@
+// ========================================
+// page
+// ========================================
+
+.page {
+  border-top-width: 0.25rem;
+  border-color: $color-secondary-500;
+}
+
+.page_header {
+  padding-top: 1rem;
+
+  @include mq(lg) {
+    padding-top: 0.25rem;
+  }
+}
+
+.page_content {
+  margin-top: 2rem;
+}
+
+// .page_footer {}
