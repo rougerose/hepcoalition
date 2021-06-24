@@ -10,6 +10,7 @@ if (!isset($GLOBALS['z_blocs'])) {
 		'head',
 		'head_js',
 		'header',
+		'footer',
 	);
 }
 

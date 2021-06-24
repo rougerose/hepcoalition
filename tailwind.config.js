@@ -10,6 +10,7 @@ module.exports = {
     "./body.html",
     "./content/*.html",
     "./formulaires/*.html",
+    "./footer/*.html",
     "./head/*.html",
     "./header/*.html",
     "./overlay/*.html",
