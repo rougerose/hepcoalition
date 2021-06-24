@@ -3,21 +3,18 @@
 // ========================================
 
 .resume-slider {
-  display: flex;
-  flex-direction: column;
+  margin-top: 0;
 
-  @include mq(md) {
-    flex-direction: row;
-    align-items: flex-start;
+  &::after {
+    display: none;
   }
 }
 
 .resume-slider_logo {
+  margin-top: 0;
+
   @include mq(md) {
-    margin-inline-end: 0.75rem;
-    flex: 1 0 auto;
-    width: 60%;
-    max-width: 700px;
+    margin-inline: 0 0.75rem;
   }
 }
 
@@ -31,9 +28,6 @@
 }
 
 .resume-slider_titre {
-  font-size: 1.25rem; // 20px
-  line-height: 1.5rem; // 24px
-  font-weight: 700;
 
   & a {
     &:hover {
@@ -43,8 +37,6 @@
 }
 
 .resume-slider_desc {
-  margin-top: 1rem;
-  line-height: 1.25rem; // 20px;
 
   & .resume_link-more {
     color: $color-primary-100;

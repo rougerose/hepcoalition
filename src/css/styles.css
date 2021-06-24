@@ -3840,22 +3840,18 @@ body.has-overlay {
 }
 
 .resume-slider {
-  display: flex;
-  flex-direction: column;
+  margin-top: 0;
 }
-@media (min-width: 48em) {
-  .resume-slider {
-    flex-direction: row;
-    align-items: flex-start;
-  }
+.resume-slider::after {
+  display: none;
 }
 
+.resume-slider_logo {
+  margin-top: 0;
+}
 @media (min-width: 48em) {
   .resume-slider_logo {
-    margin-inline-end: 0.75rem;
-    flex: 1 0 auto;
-    width: 60%;
-    max-width: 700px;
+    margin-inline: 0 0.75rem;
   }
 }
 
@@ -3869,19 +3865,10 @@ body.has-overlay {
   }
 }
 
-.resume-slider_titre {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-  font-weight: 700;
-}
 .resume-slider_titre a:hover {
   color: #78ffff;
 }
 
-.resume-slider_desc {
-  margin-top: 1rem;
-  line-height: 1.25rem;
-}
 .resume-slider_desc .resume_link-more {
   color: #78ffff;
 }
