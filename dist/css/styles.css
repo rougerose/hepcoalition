@@ -3839,6 +3839,9 @@ button.swiper-pagination-bullet {
 }
 
 .sitenav_triggerModalLanguage {
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.875rem;
@@ -3848,9 +3851,8 @@ button.swiper-pagination-bullet {
 .ar .sitenav_triggerModalLanguage {
   font-size: 1rem;
 }
-.sitenav_triggerModalLanguage:hover, .sitenav_triggerModalLanguage.is-active{
-	--tw-bg-opacity: 1;
-	background-color: rgba(25, 161, 172, var(--tw-bg-opacity));
+.sitenav_triggerModalLanguage:hover, .sitenav_triggerModalLanguage.is-active {
+  background-color: #19a1ac;
 }
 
 [dir="ltr"] .sitenav_languageIcon{
@@ -3921,7 +3923,6 @@ button.swiper-pagination-bullet {
 	}
 
   .sitenav_triggerModalLanguage {
-    grid-area: 1/2;
     position: relative;
   }
 }
@@ -4738,10 +4739,6 @@ body.has-overlay {
 	border-width: 0;
 }
 
-.flex{
-	display: flex;
-}
-
 .grid{
 	display: grid;
 }
@@ -4761,14 +4758,6 @@ body.has-overlay {
 
 .gap-y-3{
 	row-gap: 0.75rem;
-}
-
-.rounded{
-	border-radius: 0.25rem;
-}
-
-.p-2{
-	padding: 0.5rem;
 }
 
 .text-black{

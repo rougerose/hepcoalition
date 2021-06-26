@@ -135,6 +135,9 @@ $icon-caret-margin: 0.5rem;
 }
 
 .sitenav_triggerModalLanguage {
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.875rem; // 14px
@@ -147,7 +150,7 @@ $icon-caret-margin: 0.5rem;
 
   &:hover,
   &.is-active {
-    @apply bg-primary-500;
+    background-color: $color-primary-500;
   }
 }
 
@@ -215,7 +218,6 @@ $icon-caret-margin: 0.5rem;
   // }
 
   .sitenav_triggerModalLanguage {
-    grid-area: 1 / 2;
     position: relative;
     inset-inline-end: -0.5rem;
   }

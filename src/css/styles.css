@@ -3305,6 +3305,9 @@ button.swiper-pagination-bullet {
 }
 
 .sitenav_triggerModalLanguage {
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.875rem;
@@ -3315,7 +3318,7 @@ button.swiper-pagination-bullet {
   font-size: 1rem;
 }
 .sitenav_triggerModalLanguage:hover, .sitenav_triggerModalLanguage.is-active {
-  @apply bg-primary-500;
+  background-color: #19a1ac;
 }
 
 .sitenav_languageIcon {
@@ -3364,7 +3367,6 @@ button.swiper-pagination-bullet {
   }
 
   .sitenav_triggerModalLanguage {
-    grid-area: 1/2;
     position: relative;
     inset-inline-end: -0.5rem;
   }
