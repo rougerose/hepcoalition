@@ -12,25 +12,18 @@
         <BOUCLE_menu_sections(RUBRIQUES){id_parent=#ENV{id_secteur}}{lang}>
           <li class="sitenav-footer_item sitenav-footer_item--section"><a class="sitefooter_heading" href="#URL_RUBRIQUE">#TITRE</a>
             <BOUCLE_mapCrowd(MOTS){id_rubrique}{technique=oui}{titre=mapcrowd}>
-              <div>#DESCRIPTIF</div>
+              <p>[<a href="#URL_RUBRIQUE{#ID_RUBRIQUE}">(#DESCRIPTIF|PtoBR)</a>]</p>
             </BOUCLE_mapCrowd>
             <B_menu_rubriques>
               <ul class="sitenav-footer_list sitenav-footer_list--subsections">
                 <BOUCLE_menu_rubriques(RUBRIQUES){id_parent}{lang}>
-                  <li class="sitenav-footer_item"><a class="" href="#URL_RUBRIQUE">#TITRE</a></li>
+                  <li class="sitenav-footer_item"><a href="#URL_RUBRIQUE">#TITRE</a></li>
                 </BOUCLE_menu_rubriques>
               </ul>
             </B_menu_rubriques>
           </li>
         </BOUCLE_menu_sections>
       </ul>
-    </div>
-    <div class="sitefooter_lang">
-      <h2 class="sitefooter_heading">
-        <INCLURE{fond=img/icons/icon-langues-64.svg} />
-        <:local:langues_label:>
-      </h2>
-      <button data-open-modal-id="modalLanguage">[(#LANG|traduire_nom_langue)]</button>
     </div>
     <div class="sitefooter_social">
       <h2 class="sitefooter_heading"><:local:follow_us:></h2>

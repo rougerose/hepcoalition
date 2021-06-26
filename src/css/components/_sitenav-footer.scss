@@ -24,9 +24,11 @@
 }
 
 .sitenav-footer_item {
-  &--section {
-    & > a {
-      display: inline-block;
+  & a {
+    display: inline-block;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $color-primary-100;
     }
   }
 }
