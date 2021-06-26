@@ -20,7 +20,8 @@ $searchbox-btn-width: 6.5rem;
   text-transform: uppercase;
   color: $color-primary-500;
 
-  .searchbox--sitenavOverlay & {
+  .searchbox--sitenavOverlay &,
+  .searchbox--modal & {
     margin-bottom: 0.25rem;
   }
 }
@@ -55,11 +56,20 @@ $searchbox-btn-width: 6.5rem;
       transform: translateX(100%);
     }
   }
+
+  .searchbox--modal & {
+    background-color: rgba($color-white, 0.5);
+    border: 1px solid rgba($color-primary-500, 0.2);
+
+    &::placeholder {
+      color: $color-black;
+    }
+  }
 }
 
 .searchbox_btn {
   position: absolute;
-  inset-block-end: 0;
+  inset-block-end: 1px;
   inset-inline-start: 100%;
   width: $searchbox-btn-width;
   padding: 0.5rem;

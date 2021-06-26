@@ -19,12 +19,14 @@ if (overlays.length >= 1) {
     let closeSelector = ".modal_btnClose";
     let closeBtn = "";
     let sitenav = "";
+    let label = "";
 
     if (selector === "modalMenu") {
       className = "overlay overlay--full is-closed";
       closeSelector = ".sitenav_closeMenu";
       closeBtn = modal.querySelector("button");
       sitenav = modal.querySelector(".sitenavOverlay_menu");
+      label = modal.dataset.title
     }
 
     let overlay = new Overlay({
@@ -34,6 +36,7 @@ if (overlays.length >= 1) {
       role: "dialog",
       closeSelector: closeSelector,
       modal: true,
+      label: label,
     });
 
     btn.addEventListener("click", (event) => {

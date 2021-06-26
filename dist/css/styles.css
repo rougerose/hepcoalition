@@ -4182,12 +4182,21 @@ body.has-overlay {
   transition-duration: 0.5s;
   transition-timing-function: cubic-bezier(0.26, 0.02, 0, 0.99);
 }
+.modal--search {
+  width: 100%;
+  padding: 1.5rem 1.5rem 4rem;
+}
 
 .modal_header--language {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1rem 0;
+}
+.modal_header--search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .modal_title {
@@ -4262,7 +4271,7 @@ body.has-overlay {
   text-transform: uppercase;
   color: #19a1ac;
 }
-.searchbox--sitenavOverlay .searchbox_label {
+.searchbox--sitenavOverlay .searchbox_label, .searchbox--modal .searchbox_label {
   margin-bottom: 0.25rem;
 }
 
@@ -4314,6 +4323,19 @@ body.has-overlay {
 [dir=rtl] .searchbox_input:not(:placeholder-shown) ~ .searchbox_btn {
   transform: translateX(100%);
 }
+.searchbox--modal .searchbox_input {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(25, 161, 172, 0.2);
+}
+.searchbox--modal .searchbox_input::-moz-placeholder {
+  color: #000;
+}
+.searchbox--modal .searchbox_input:-ms-input-placeholder {
+  color: #000;
+}
+.searchbox--modal .searchbox_input::placeholder {
+  color: #000;
+}
 
 [dir="ltr"] .searchbox_btn{
   left: 100%;
@@ -4325,7 +4347,7 @@ body.has-overlay {
 
 .searchbox_btn {
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   width: 6.5rem;
   padding: 0.5rem;
   background-color: #19a1ac;
