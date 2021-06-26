@@ -6,7 +6,9 @@
 
 $searchbox-btn-width: 6.5rem;
 
-// .searchbox {}
+// .searchbox {
+//   &--sitenavOverlay {}
+// }
 
 .searchbox_form {
   position: relative;
@@ -16,7 +18,11 @@ $searchbox-btn-width: 6.5rem;
 .searchbox_label {
   display: block;
   text-transform: uppercase;
-  color: $color-secondary-500;
+  color: $color-primary-500;
+
+  .searchbox--sitenavOverlay & {
+    margin-bottom: 0.25rem;
+  }
 }
 
 .searchbox_input {

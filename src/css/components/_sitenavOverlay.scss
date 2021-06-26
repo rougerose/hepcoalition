@@ -12,6 +12,7 @@
 }
 
 .sitenavOverlay_menu {
+  padding-top: 4rem;
   color: $color-white;
   visibility: hidden;
   transition: visibility 0.1s ease 0s;
@@ -22,10 +23,14 @@
   }
 }
 
-// .sitenavOverlay_list {
-//   &--sections {}
-//   &--subsections {}
-// }
+.sitenavOverlay_list {
+  &--sections {
+    display: grid;
+    gap: 2rem 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  // &--subsections {}
+}
 
 .sitenavOverlay_item {
 
@@ -37,7 +42,7 @@
     > a,
     > span {
       text-transform: uppercase;
-      color: $color-secondary-500;
+      color: $color-primary-500;
     }
 
     .sitenavOverlay_menu.is-visible & {
@@ -49,5 +54,22 @@
 
   &--search {
     grid-column: 1 / span 2;
+  }
+
+  & a,
+  & span {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    transition: color 0.3s ease;
+  }
+
+  & a {
+    &:hover {
+      color: $color-primary-100;
+    }
+  }
+
+  & span.active {
+    color: $color-primary-100;
   }
 }

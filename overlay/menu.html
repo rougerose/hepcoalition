@@ -2,19 +2,19 @@
   <div class="container">
     <nav class="sitenavOverlay">
       <div class="modal_header sitenavOverlay_header">
-        <a class="sitenav_logo xw-2/4" href="#URL_SITE_SPIP">
+        <a class="sitenav_logo" href="#URL_SITE_SPIP">
           <INCLURE{fond=img/HepCoalition.svg} />
         </a>
         <button class="hamburger hamburger--squeeze sitenav_triggerMenu sitenav_closeMenu" type="button">
           <span class="hamburger-box"><span class="hamburger-inner"></span></span>
         </button>
       </div>
-      <div class="modal_content sitenavOverlay_menu pt-16">
-        <ul class="sitenavOverlay_list sitenavOverlay_list--section grid grid-cols-2 gap-x-4 gap-y-8">
+      <div class="modal_content sitenavOverlay_menu">
+        <ul class="sitenavOverlay_list sitenavOverlay_list--sections">
           <BOUCLE_menu_sections(RUBRIQUES){id_parent=#ENV{id_secteur}}{lang}>
             <li class="sitenavOverlay_item sitenavOverlay_item--section">[(#URL_RUBRIQUE|lien_ou_expose{#TITRE, #ENV{id_rubrique}|=={#ID_RUBRIQUE}|?{span.active}})]
               <B_menu_rubriques>
-                <ul class="sitenavOverlay_list sitenavOverlay_list--subsections mt-1">
+                <ul class="sitenavOverlay_list sitenavOverlay_list--subsections">
                   <BOUCLE_menu_rubriques(RUBRIQUES){id_parent}{lang}>
                     <li class="sitenavOverlay_item">[(#URL_RUBRIQUE|lien_ou_expose{#TITRE,
                       #ENV{id_rubrique}|=={#ID_RUBRIQUE}|?{span.active}})]</li>
@@ -22,8 +22,8 @@
                 </ul>
               </B_menu_rubriques>
             </li>
-            </BOUCLE_menu_sections>
-            <li class="sitenavOverlay_item sitenavOverlay_item--section sitenavOverlay_item--search">#FORMULAIRE_RECHERCHE
+          </BOUCLE_menu_sections>
+            <li class="sitenavOverlay_item sitenavOverlay_item--section sitenavOverlay_item--search">#FORMULAIRE_RECHERCHE{'', searchbox--sitenavOverlay}
             </li>
         </ul>
       </div>

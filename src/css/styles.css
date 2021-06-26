@@ -3362,6 +3362,7 @@ button.swiper-pagination-bullet {
 }
 
 .sitenavOverlay_menu {
+  padding-top: 4rem;
   color: #fff;
   visibility: hidden;
   transition: visibility 0.1s ease 0s;
@@ -3369,6 +3370,12 @@ button.swiper-pagination-bullet {
 .sitenavOverlay_menu.is-visible {
   visibility: visible;
   transition: visibility 0.2s ease 0.5s;
+}
+
+.sitenavOverlay_list--sections {
+  display: grid;
+  gap: 2rem 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .sitenavOverlay_item--section {
@@ -3379,7 +3386,7 @@ button.swiper-pagination-bullet {
 .sitenavOverlay_item--section > a,
 .sitenavOverlay_item--section > span {
   text-transform: uppercase;
-  color: #c11f02;
+  color: #19a1ac;
 }
 .sitenavOverlay_menu.is-visible .sitenavOverlay_item--section {
   transform: translateX(0);
@@ -3388,6 +3395,17 @@ button.swiper-pagination-bullet {
 }
 .sitenavOverlay_item--search {
   grid-column: 1/span 2;
+}
+.sitenavOverlay_item a, .sitenavOverlay_item span {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  transition: color 0.3s ease;
+}
+.sitenavOverlay_item a:hover {
+  color: #78ffff;
+}
+.sitenavOverlay_item span.active {
+  color: #78ffff;
 }
 
 .sitefooter {
@@ -3638,7 +3656,10 @@ body.has-overlay {
 .searchbox_label {
   display: block;
   text-transform: uppercase;
-  color: #c11f02;
+  color: #19a1ac;
+}
+.searchbox--sitenavOverlay .searchbox_label {
+  margin-bottom: 0.25rem;
 }
 
 .searchbox_input {
