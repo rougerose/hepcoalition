@@ -19,6 +19,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // E
    'email'                          => 'эл. почта',
    'email_send'                     => "<a href='@urlcontact@' class='spip_out'>Присылайте свои письма</a>",
+   'email_send_label'                     => "Присылайте свои письма",
 
    // F
    'follow_us'                      => "следите за нами", // on Facebook

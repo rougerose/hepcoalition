@@ -19,6 +19,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // E
    'email'                          => 'e-mail',
    'email_send'                     => "Send us an <a href='@urlcontact@' class='spip_out'>email</a>",
+   'email_send_label'                     => "Send us an email",
 	 'events_all' => 'All events',
 
    // F
@@ -26,6 +27,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'follow_us'                      => "Follow us",
 
    // H
+	 'hepcoalition_on_facebook_label' => 'HepCoalition on Facebook',
+	 'hepcoalition_on_twitter_label' => 'HepCoalition on Twitter',
    'home'                           => 'home',
 
    // I
@@ -45,6 +48,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'info_recherche_pas_de_resultat' => 'No result',
 
    // L
+	 'langues_label' => 'Languages',
 	 'langue_preferee_titre' => 'Select your preferred language',
    'lastest_news'                   => "Lastest news",
    'latest_publications'            => 'Latest publications',
