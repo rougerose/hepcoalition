@@ -7,9 +7,9 @@
       </div>]
       <p class="resume_metas">
         [(#OBJET|=={article}|oui)
-          #INCLURE{fond=inclure/resume/recent-materials-meta-article, id_article=#ID_OBJET} ]
+          #INCLURE{fond=inclure/selections/recent-materials-meta-article, id_article=#ID_OBJET} ]
         [(#OBJET|=={rubrique}|oui)
-          #INCLURE{fond=inclure/resume/recent-materials-meta-rubrique, id_rubrique=#ID_OBJET} ]
+          #INCLURE{fond=inclure/selections/recent-materials-meta-rubrique, id_rubrique=#ID_OBJET} ]
         [(#LISTE{article, rubrique}|find{#OBJET}|non)
           [<time datetime="[(#MAJ|date_iso)]">(#MAJ|affdate)</time>]
         ]
