@@ -54,6 +54,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'latest_publications'            => 'Latest publications',
 
    //M
+	 'materials_section' => 'Materials in this section',
+	 'materials_recent' => 'Recent materials',
    'message_404_title'              => "Page not found.",
    'message_404_desc'               => "Sorry, but the page you are looking for has not been found.<br />Go back to <a href='@urlsite@' class='spip_out'>home page</a>.",
    'more'                           => 'More',
@@ -74,7 +76,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    //'press_release'                  => 'Press release',
 
    // R
-	 'recent_materials' => 'Recent materials',
 
    // S
 	 'search_type_here' => 'Type here',

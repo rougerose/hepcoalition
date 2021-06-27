@@ -4614,7 +4614,7 @@ body.has-overlay {
   margin: 3rem auto 0;
   background-color: #19a1ac;
 }
-@media (min-width: 48em) {
+@media (min-width: 35.5em) {
   .resume {
     flex-direction: row;
     align-items: flex-start;
@@ -4627,7 +4627,7 @@ body.has-overlay {
 .resume_logo {
   margin-top: 1rem;
 }
-@media (min-width: 48em) {
+@media (min-width: 35.5em) {
   [dir="ltr"] .resume_logo{
     margin-left: 1.5rem;
 	}
@@ -4637,8 +4637,8 @@ body.has-overlay {
   .resume_logo {
     margin-top: 0;
     flex: 1 0 auto;
-    width: 60%;
-    max-width: 700px;
+    width: 50%;
+    max-width: 450px;
   }
   .resume_texte {
     margin-top: 0;

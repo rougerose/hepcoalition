@@ -32,7 +32,7 @@
 <BOUCLE_recent_materials(SELECTIONS){id_rubrique}{identifiant=#GET{idRecentMaterials}}>
   <section class="section">
     <div class="container">
-      <h1 class="section_title"><:local:recent_materials:></h1>
+      <h1 class="section_title"><:local:materials_recent:></h1>
       <BOUCLE_recent_materials_contenu(SELECTIONS_CONTENUS){id_selection}{0,1}>
         <INCLURE{fond=inclure/selections/recent-materials, id_selection} />
       </BOUCLE_recent_materials_contenu>

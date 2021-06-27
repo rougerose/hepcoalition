@@ -17,7 +17,7 @@
     background-color: $color-primary-500;
   }
 
-  @include mq(md) {
+  @include mq(sm) {
     flex-direction: row;
     align-items: flex-start;
 
@@ -30,18 +30,18 @@
 .resume_logo {
   margin-top: 1rem;
 
-  @include mq(md) {
+  @include mq(sm) {
     margin-top: 0;
     margin-inline-start: 1.5rem;
     flex: 1 0 auto;
-    width: 60%;
-    max-width: 700px;
+    width: 50%;
+    max-width: 450px;
   }
 }
 
 .resume_texte {
 
-  @include mq(md) {
+  @include mq(sm) {
     margin-top: 0;
   }
 }
