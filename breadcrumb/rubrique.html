@@ -1,0 +1,18 @@
+<div class="container">
+  <nav class="breadcrumb">
+    <h2 class="sr-only"><:local:you_are_here_label:></h2>
+    <ul class="breadcrumb_list">
+      <BOUCLE_composition_section(CONDITION){si #COMPOSITION|=={section}}>
+        <li class="breadcrumb_item is-active"><:accueil_site:></li>
+      </BOUCLE_composition_section>
+        <BOUCLE_breadcrumb(RUBRIQUES){id_rubrique}>
+          <li class="breadcrumb_item"><a href="#URL_SITE_SPIP" class="breadcrumb_link"><:accueil_site:></a></li>
+          <BOUCLE_hierarchie(HIERARCHIE){id_rubrique}>
+            [(#ID_RUBRIQUE|=={#_breadcrumb:ID_SECTEUR}|?{'', <li class="breadcrumb_item"><a href="#URL_RUBRIQUE" class="breadcrumb_link">[(#TITRE|couper{60})]</a></li>})]
+          </BOUCLE_hierarchie>
+          <li class="breadcrumb_item is-active">[(#TITRE|couper{60})]</li>
+        </BOUCLE_breadcrumb>
+      <//B_composition_section>
+    </ul>
+  </nav>
+</div>

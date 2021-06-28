@@ -8,6 +8,7 @@ module.exports = {
   mode: "jit",
   purge: [
     "./body.html",
+    "./breadcrumb/*.html",
     "./content/*.html",
     "./formulaires/*.html",
     "./footer/*.html",

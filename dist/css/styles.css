@@ -4135,6 +4135,37 @@ button.swiper-pagination-bullet {
   color: #78ffff;
 }
 
+.breadcrumb {
+  margin: 0 0 2rem;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+}
+
+.breadcrumb_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumb_item.is-active {
+  color: #19a1ac;
+}
+.breadcrumb_item::after {
+  content: ">";
+  margin: 0 0.25rem;
+  color: rgba(17, 107, 115, 0.5);
+}
+.breadcrumb_item:last-child::after {
+  content: "";
+  margin: 0;
+}
+
+.breadcrumb_link {
+  color: #0d5156;
+}
+.breadcrumb_link:hover {
+  color: #19a1ac;
+}
+
 .overlay {
   position: fixed;
   top: 0;

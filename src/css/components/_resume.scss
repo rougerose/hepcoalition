@@ -113,7 +113,6 @@
 
   & > a {
     &::after {
-      // content: "\002F";
       content: "\00003E";
       margin: 0 0.25rem;
     }

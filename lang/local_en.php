@@ -92,5 +92,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // T
    'tags'                           => 'Keywords',
    'translations'                   => 'Translations',
+
+	 'you_are_here_label' => 'You are here:',
 );
 ?>

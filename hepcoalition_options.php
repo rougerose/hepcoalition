@@ -11,6 +11,7 @@ if (!isset($GLOBALS['z_blocs'])) {
 		'head_js',
 		'header',
 		'footer',
+		'breadcrumb',
 	);
 }
 
