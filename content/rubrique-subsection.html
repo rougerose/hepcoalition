@@ -2,6 +2,9 @@
   <article class="rubrique">
     <div class="container">
       <header class="rubrique_header">
+        <BOUCLE_section(RUBRIQUES){id_secteur}{profondeur=1}{0,1}>
+          [(#ENV{id_rubrique}|=={#ID_RUBRIQUE}|non) <p class="rubrique_section"><a href="#URL_RUBRIQUE">#TITRE</a></p>]
+        </BOUCLE_section>
         <h1 class="rubrique_title">#TITRE</h1>
       </header>
       [<div class="rubrique_description">

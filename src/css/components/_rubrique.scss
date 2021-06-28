@@ -4,9 +4,17 @@
 
 // .rubrique {}
 
+.rubrique_header {
+  font-weight: 700;
+}
+
+.rubrique_section {
+  font-size: 20px;
+  color: $color-primary-800;
+}
+
 .rubrique_title {
   font-size: 2.25rem; // 36px
-  font-weight: 700;
   color: $color-primary-500;
 }
 
