@@ -28,7 +28,11 @@ html {
 }
 
 a {
+  color: currentColor;
   transition: color 0.3s ease;
+}
+a:hover {
+  color: #19a1ac;
 }
 
 @font-face {
@@ -3550,7 +3554,6 @@ button.swiper-pagination-bullet {
 
 .sitenav-footer_item a {
   display: inline-block;
-  transition: color 0.3s ease;
 }
 .sitenav-footer_item a:hover {
   color: #78ffff;
@@ -3582,9 +3585,6 @@ button.swiper-pagination-bullet {
 
 .breadcrumb_link {
   color: #0d5156;
-}
-.breadcrumb_link:hover {
-  color: #19a1ac;
 }
 
 .overlay {
@@ -3725,7 +3725,7 @@ body.has-overlay {
 }
 
 .langlist_link {
-  transition: color 0.3s ease-in;
+  transition-timing-function: ease-in;
 }
 
 .searchbox_form {
@@ -3894,7 +3894,7 @@ body.has-overlay {
   width: 36px;
   height: 36px;
   box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 .slider-rubrique_navigation .swiper-button-prev::after, .slider-rubrique_navigation .swiper-button-next::after {
   font-size: 20px;
@@ -4071,12 +4071,6 @@ body.has-overlay {
   line-height: 1.375rem;
 }
 
-.resume_link {
-  color: #000;
-}
-.resume_link:hover {
-  color: #19a1ac;
-}
 .resume_link-more {
   color: #19a1ac;
 }
@@ -4164,9 +4158,17 @@ body.has-overlay {
   font-weight: 700;
 }
 
+.rubrique_header {
+  font-weight: 700;
+}
+
+.rubrique_section {
+  font-size: 20px;
+  color: #0d5156;
+}
+
 .rubrique_title {
   font-size: 2.25rem;
-  font-weight: 700;
   color: #19a1ac;
 }
 

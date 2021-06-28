@@ -71,7 +71,7 @@
     width: $swiper-navigation-size-sm;
     height: $swiper-navigation-size-sm;
     box-shadow: 0 3px 5px -1px rgba($color-black, 0.2);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
 
     &::after {
       font-size: $swiper-navigation-fontsize-sm;
