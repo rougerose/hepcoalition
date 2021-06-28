@@ -41,16 +41,19 @@
   @include mq(sm) {
     margin-top: 0;
     margin-inline-start: 1.5rem;
-    flex: 1 0 auto;
+    flex: 1;
     width: 50%;
     max-width: 450px;
   }
 }
 
 .resume_texte {
+  width: 100%;
 
   @include mq(sm) {
     margin-top: 0;
+    width: 50%;
+    flex: 1;
   }
 }
 
@@ -119,3 +122,19 @@
     }
   }
 }
+
+.resume_list-articles {
+  list-style: square;
+  margin-top: 1rem;
+  padding-inline-start: 1rem;
+
+  & > li {
+    font-weight: 700;
+
+    &::marker {
+      color: $color-primary-500;
+    }
+  }
+}
+
+// .resume_list-article {}

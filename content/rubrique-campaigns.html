@@ -2,8 +2,8 @@
   <article class="rubrique">
     <div class="container">
       <header class="rubrique_header">
-        <BOUCLE_section(RUBRIQUES){id_secteur}{profondeur=1}{0,1}>
-          [(#ENV{id_rubrique}|=={#ID_RUBRIQUE}|non) <p class="rubrique_section-title"><a href="#URL_RUBRIQUE">#TITRE</a></p>]
+        <BOUCLE_section(HIERARCHIE){id_rubrique}{1,1}>
+          <p class="rubrique_section-title"><a href="#URL_RUBRIQUE">#TITRE</a></p>
         </BOUCLE_section>
         <h1 class="rubrique_title">#TITRE</h1>
       </header>
@@ -31,7 +31,7 @@
         [(#REM)
           <!-- Sous-rubriques -->
         ]<B_sousrubriques>
-          <BOUCLE_sousrubriques(RUBRIQUES){id_parent}{par num titre, !date}{id_rubrique !IN #GET{rubriques_slider}}>
+          <BOUCLE_sousrubriques(RUBRIQUES){id_parent}{!par date}{id_rubrique !IN #GET{rubriques_slider}}>
             <INCLURE{fond=inclure/resume/campagne, id_rubrique} />
           </BOUCLE_sousrubriques>
         </B_sousrubriques>
