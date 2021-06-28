@@ -4769,8 +4769,12 @@ body.has-overlay {
   margin: 0 0.25rem;
 }
 .resume_metas > a::after {
-  content: "/";
+  content: ">";
   margin: 0 0.25rem;
+}
+.resume_metas > a:last-child::after {
+  content: "";
+  margin: 0;
 }
 
 .resume-slider {
