@@ -1,0 +1,35 @@
+<BOUCLE_rubrique_campagne(RUBRIQUES){id_rubrique}>
+  <article class="rubrique">
+    <div class="container">
+      <header class="rubrique_header">
+        <B_section>
+          <p class="rubrique_section-title">
+            <BOUCLE_section(HIERARCHIE){id_rubrique}{1, n}>
+              <a href="#URL_RUBRIQUE">#TITRE</a>
+            </BOUCLE_section>
+          </p>
+        </B_section>
+        <h1 class="rubrique_title">#TITRE</h1>
+      </header>
+      [<div class="rubrique_description">
+        (#TEXTE)
+      </div>]
+      [<div class="rubrique_logo">
+        (#LOGO_RUBRIQUE|image_reduire{1004, 567}|image_recadre{1004, 567, center, '#0a3f43'})
+      </div>]
+    </div>
+    <div class="rubrique_content">
+      <div class="container">
+        [(#REM)
+          <!-- Materials -->
+        ]<B_materials>
+          <div class="section">
+            <BOUCLE_materials(ARTICLES){id_rubrique}{par num titre}>
+              <INCLURE{fond=inclure/resume/article, id_article, lang} />
+            </BOUCLE_materials>
+          </div>
+        </B_materials>
+      </div>
+    </div>
+  </article>
+</BOUCLE_rubrique_campagne>
