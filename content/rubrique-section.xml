@@ -2,4 +2,5 @@
     <nom><multi>[fr]Secteur page d'accueil [en]Home page</multi></nom>
     <description><multi>[fr]Composition pour chaque secteur (langue) utilisé comme page d'accueil principale [en]Layout for each language section</multi></description>
     <icon>images/objet-liste-contenus.png</icon>
+    <branche type="rubrique" composition="subsection" />
 </composition>

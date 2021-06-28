@@ -99,9 +99,17 @@ menus.forEach(menu => {
  */
 Swiper.use([Navigation, Pagination]);
 
+/**
+ * Déterminer le nombre de slides et si le parametre loop est nécessaire
+ */
+const evaluerNombreSlides = () => {
+  let Slides = document.querySelectorAll(".slider_container.swiper-container .swiper-slide");
+  return (Slides.length > 1 ? true : false);
+};
+
 const sliderRubrique = new Swiper(".slider_container.swiper-container", {
   slidesPerView: "auto",
-  loop: true,
+  loop: evaluerNombreSlides(),
   breakpoints: {
     568: {
       centeredSlides: true,
