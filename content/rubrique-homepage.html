@@ -1,0 +1,41 @@
+[(#REM)
+  <!-- Sélections slider -->
+][
+  (#SET{idSlider, #VAL{slider-}|concat{#ENV{lang}}})
+]
+<BOUCLE_slider(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
+  <div class="section">
+    <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}{0,1}>
+      <INCLURE{fond=inclure/sliders/slider-rubrique, id_selection} />
+    </BOUCLE_slider_contenu>
+  </div>
+</BOUCLE_slider>
+
+[(#REM)
+<!-- Agenda -->
+]
+<BOUCLE_rubrique_agenda(RUBRIQUES){id_secteur}{agenda=1}>
+  <section class="section">
+    <div class="container">
+      <h1 class="section_title"><:local:agenda:></h1>
+    </div>
+    <BOUCLE_agenda(EVENEMENTS){statut=publie}{id_rubrique}{lang}{date_fin>=#ENV{date}}{par date_debut}{0,1}> </BOUCLE_agenda>
+      <INCLURE{fond=inclure/sliders/slider-agenda, id_rubrique, lang} />
+    </B_agenda>
+  </section>
+</BOUCLE_rubrique_agenda>
+
+
+[(#REM)
+<!-- Recent materials -->
+][(#SET{idRecentMaterials, #VAL{recent-materials-}|concat{#ENV{lang}}})]
+<BOUCLE_recent_materials(SELECTIONS){id_rubrique}{identifiant=#GET{idRecentMaterials}}>
+  <section class="section">
+    <div class="container">
+      <h1 class="section_title"><:local:materials_recent:></h1>
+      <BOUCLE_recent_materials_contenu(SELECTIONS_CONTENUS){id_selection}{0,1}>
+        <INCLURE{fond=inclure/selections/recent-materials, id_selection} />
+      </BOUCLE_recent_materials_contenu>
+    </div>
+  </section>
+</BOUCLE_recent_materials>

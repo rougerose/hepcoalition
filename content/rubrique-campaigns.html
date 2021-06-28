@@ -1,0 +1,41 @@
+<BOUCLE_rubrique_subsection(RUBRIQUES){id_rubrique}>
+  <article class="rubrique">
+    <div class="container">
+      <header class="rubrique_header">
+        <BOUCLE_section(RUBRIQUES){id_secteur}{profondeur=1}{0,1}>
+          [(#ENV{id_rubrique}|=={#ID_RUBRIQUE}|non) <p class="rubrique_section-title"><a href="#URL_RUBRIQUE">#TITRE</a></p>]
+        </BOUCLE_section>
+        <h1 class="rubrique_title">#TITRE</h1>
+      </header>
+      [<div class="rubrique_description">
+        (#TEXTE)
+      </div>]
+    </div>
+    <div class="rubrique_content">
+      [(#REM)
+        <!-- Sélections slider -->
+      ][(#SET{idSlider, #VAL{slider-}|concat{#ID_RUBRIQUE}})][(#SET{articles_slider, #ARRAY})]
+      <BOUCLE_slider(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
+        <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}>
+          [(#OBJET|=={rubrique}|oui)
+            [(#SET{rubriques_slider, #GET{rubriques_slider}|push{#ID_OBJET}})]
+          ]
+        </BOUCLE_slider_contenu>
+          <div class="section">
+            <INCLURE{fond=inclure/sliders/slider-rubrique, id_selection} />
+          </div>
+        </B_slider_contenu>
+      </BOUCLE_slider>
+
+      <div class="container">
+        [(#REM)
+          <!-- Sous-rubriques -->
+        ]<B_sousrubriques>
+          <BOUCLE_sousrubriques(RUBRIQUES){id_parent}{par num titre, !date}{id_rubrique !IN #GET{rubriques_slider}}>
+            <INCLURE{fond=inclure/resume/campagne, id_rubrique} />
+          </BOUCLE_sousrubriques>
+        </B_sousrubriques>
+      </div>
+    </div>
+  </article>
+</BOUCLE_rubrique_subsection>

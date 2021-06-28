@@ -1,0 +1,5 @@
+<composition>
+  <nom><multi>[fr]Rubrique Campagnes [en]Campaigns subsection</multi></nom>
+  <description><multi>[fr]Composition pour la sous-rubrique Campagnes [en]Layout for Campaigns subsection</multi></description>
+  <icon>images/objet-liste-contenus.png</icon>
+</composition>
