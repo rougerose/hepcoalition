@@ -110,16 +110,49 @@ const evaluerNombreSlides = () => {
   return Slides.length > 1 ? true : false;
 };
 
-const sliderRubrique = new Swiper(
-  "slider-rubrique_container.swiper-container",
-  {
-    slidesPerView: "auto",
-    loop: evaluerNombreSlides(),
-    breakpoints: {
-      568: {
-        centeredSlides: true,
-      },
+/**
+ * Slider principal de page d'accueil.
+ */
+const sliderRubrique = new Swiper(".slider-rubrique .swiper-container", {
+  slidesPerView: "auto",
+  loop: evaluerNombreSlides(),
+  breakpoints: {
+    568: {
+      centeredSlides: true,
     },
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+/**
+ * Slider Agenda, page d'accueil.
+ */
+const sliderAgenda = new Swiper(".slider-agenda_container.swiper-container", {
+  slidesPerView: "auto",
+  grabCursor: true,
+  resistanceRatio: 0.4,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+/**
+ * Slider rubrique campagne Have a heart
+ */
+const sliderHaveAHeart = new Swiper(
+  ".slider-portfolio--heartCampaign .swiper-container",
+  {
+    slidesPerView: 1,
+    centeredSlides: true,
+    loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -130,13 +163,3 @@ const sliderRubrique = new Swiper(
     },
   }
 );
-
-const sliderAgenda = new Swiper(".slider-agenda_container.swiper-container", {
-  slidesPerView: "auto",
-  grabCursor: true,
-  resistanceRatio: 0.4,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
