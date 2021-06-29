@@ -1,7 +1,6 @@
 import Overlay from "@accede-web/overlay";
 import { ClickyMenu } from "./modules/clicky-menus";
-// import SwiperCore, { Navigation, Pagination } from "swiper/core";
-import {Swiper, Navigation, Pagination} from "swiper/swiper.esm.js";
+import { Swiper, Navigation, Pagination } from "swiper/swiper.esm.js";
 
 /**
  * Gestion des fenetres modales (y compris menu principal, version smartphone)
@@ -26,7 +25,7 @@ if (overlays.length >= 1) {
       closeSelector = ".sitenav_closeMenu";
       closeBtn = modal.querySelector("button");
       sitenav = modal.querySelector(".sitenavOverlay_menu");
-      label = modal.dataset.title
+      label = modal.dataset.title;
     }
 
     let overlay = new Overlay({
@@ -68,13 +67,15 @@ if (overlays.length >= 1) {
         closeBtn.classList.remove("is-active");
       }
     });
-
   });
 
   function handleModalTransition(event) {
     let overlay = event.target.closest("[aria-hidden]");
     // test cible ".modal" et transition "transform" ou "max-height"
-    if (event.target.classList[0] === "modal" && event.propertyName !== "opacity") {
+    if (
+      event.target.classList[0] === "modal" &&
+      event.propertyName !== "opacity"
+    ) {
       overlay.removeEventListener("transitionend", handleModalTransition);
       overlay.removeAttribute("style");
     }
@@ -89,7 +90,7 @@ if (overlays.length >= 1) {
  */
 const menus = document.querySelectorAll(".clicky-menu");
 
-menus.forEach(menu => {
+menus.forEach((menu) => {
   let clickyMenu = new ClickyMenu(menu);
   clickyMenu.init();
 });
@@ -103,27 +104,32 @@ Swiper.use([Navigation, Pagination]);
  * Déterminer le nombre de slides et si le parametre loop est nécessaire
  */
 const evaluerNombreSlides = () => {
-  let Slides = document.querySelectorAll(".slider_container.swiper-container .swiper-slide");
-  return (Slides.length > 1 ? true : false);
+  let Slides = document.querySelectorAll(
+    ".slider_container.swiper-container .swiper-slide"
+  );
+  return Slides.length > 1 ? true : false;
 };
 
-const sliderRubrique = new Swiper(".slider_container.swiper-container", {
-  slidesPerView: "auto",
-  loop: evaluerNombreSlides(),
-  breakpoints: {
-    568: {
-      centeredSlides: true,
+const sliderRubrique = new Swiper(
+  "slider-rubrique_container.swiper-container",
+  {
+    slidesPerView: "auto",
+    loop: evaluerNombreSlides(),
+    breakpoints: {
+      568: {
+        centeredSlides: true,
+      },
     },
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  }
+);
 
 const sliderAgenda = new Swiper(".slider-agenda_container.swiper-container", {
   slidesPerView: "auto",
