@@ -3,7 +3,7 @@
     <div class="resume_texte">
       <h2 class="resume_titre"><a href="#URL_RUBRIQUE" class="resume_link">#TITRE</a></h2>
       <div class="resume_desc">
-        [<p>(#TEXTE|couper{250}) <a href="#URL" class="resume_link-more"><span><:local:more:></span></a></p>]
+        [<p>(#TEXTE|couper{250}) <a href="#URL_RUBRIQUE" class="resume_link-more"><span><:local:more:></span></a></p>]
         <B_articles_campagne>
           <ul class="resume_list-articles">
             <BOUCLE_articles_campagne(ARTICLES){id_rubrique}{lang}{par num titre, titre}>
@@ -16,8 +16,8 @@
         [(#INCLURE{fond=inclure/selections/recent-materials-meta-rubrique, id_rubrique})]
       </p>
     </div>
-    [<div class="resume_logo">
-      <a href="#URL_ARTICLE">(#LOGO_RUBRIQUE|image_reduire{450, 254}|image_recadre{450, 254, center, '#0a3f43'})</a>
+    [<div class="resume_logo thumbnail">
+      <a href="#URL_RUBRIQUE" class="thumbnail_link">(#LOGO_RUBRIQUE|image_reduire{450, 254}|image_recadre{450, 254}|inserer_attribut{class, thumbnail_img})</a>
     </div>]
   </article>
 </BOUCLE_campagne>
