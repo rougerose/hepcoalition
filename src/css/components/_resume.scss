@@ -16,7 +16,7 @@
       content: "";
       width: calc(50% - 16px);
       height: 1px;
-      margin: 2.5rem auto 0.5rem;
+      margin: 3rem auto 0.5rem;
       background-color: rgba($color-primary-500, 0.4);
     }
   }
@@ -24,12 +24,19 @@
   @include mq(sm) {
     flex-direction: row;
     align-items: flex-start;
-    margin-bottom: 4rem;
 
     &--recent-material {
+      margin-bottom: 4rem;
+
       &::after {
         display: none;
       }
+    }
+  }
+
+  @include mq(lg) {
+    &--recent-material {
+      margin-bottom: 6rem;
     }
   }
 }
