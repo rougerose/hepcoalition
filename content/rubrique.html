@@ -32,7 +32,7 @@
           <section class="section">
             <h2 class="section_title"><:local:materials_section:></h2>
             <BOUCLE_materials(ARTICLES){id_rubrique}{!par date}{id_article !IN #GET{articles_slider}}>
-              <INCLURE{fond=inclure/resume/article, id_article, lang} />
+              <INCLURE{fond=inclure/resume/article, id_article, lang, class=resume--recent-material} />
             </BOUCLE_materials>
           </section>
         </B_materials>
@@ -51,7 +51,7 @@
               </BOUCLE_selections_slider>
             </B_selections_slider>
               <BOUCLE_dernier_article(ARTICLES){id_rubrique}{0,1}>
-                <INCLURE{fond=inclure/resume/article, id_article, lang, class=resume--subsection-preview} />
+                <INCLURE{fond=inclure/resume/article, id_article, lang} />
               </BOUCLE_dernier_article>
             <//B_selections_slider>
             <div class="section_more">

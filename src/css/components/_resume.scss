@@ -7,20 +7,17 @@
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
+  margin-bottom: 3rem;
 
-  &::after {
-    content: "";
-    width: calc(50% - 16px);
-    height: 1px;
-    margin: 2.5rem auto 0.5rem;
-    background-color: rgba($color-primary-500, 0.4);
-  }
-
-  &--subsection-preview {
-    margin-bottom: 3rem;
+  &--recent-material {
+    margin-bottom: 0;
 
     &::after {
-      display: none;
+      content: "";
+      width: calc(50% - 16px);
+      height: 1px;
+      margin: 2.5rem auto 0.5rem;
+      background-color: rgba($color-primary-500, 0.4);
     }
   }
 
@@ -29,8 +26,10 @@
     align-items: flex-start;
     margin-bottom: 4rem;
 
-    &::after {
-      display: none;
+    &--recent-material {
+      &::after {
+        display: none;
+      }
     }
   }
 }
