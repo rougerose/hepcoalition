@@ -1,0 +1,5 @@
+<composition>
+  <nom><multi>[fr]Rubrique Actualités [en]News section</multi></nom>
+  <description><multi>[fr]Composition pour la rubrique Actualités [en]Layout for News section</multi></description>
+  <icon>images/objet-liste-contenus.png</icon>
+</composition>
