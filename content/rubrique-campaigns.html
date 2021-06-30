@@ -14,7 +14,7 @@
     <div class="rubrique_content">
       [(#REM)
         <!-- Sélections slider -->
-      ][(#SET{idSlider, #VAL{slider-}|concat{#ID_RUBRIQUE}})][(#SET{articles_slider, #ARRAY})]
+      ][(#SET{idSlider, #VAL{slider-}|concat{#ID_RUBRIQUE}})][(#SET{rubriques_slider, #ARRAY})]
       <BOUCLE_slider(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
         <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}>
           [(#OBJET|=={rubrique}|oui)
