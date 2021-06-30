@@ -103,48 +103,71 @@ Swiper.use([Navigation, Pagination]);
 /**
  * Déterminer le nombre de slides et si le parametre loop est nécessaire
  */
-const evaluerNombreSlides = () => {
-  let Slides = document.querySelectorAll(
-    ".slider_container.swiper-container .swiper-slide"
-  );
-  return Slides.length > 1 ? true : false;
+const evaluerNombreSlides = (wrapper) => {
+  let slides = wrapper.querySelectorAll(".swiper-slide");
+  return slides.length > 1 ? true : false;
+};
+
+const definirPremierSlide = (wrapper) => {
+  let slides = wrapper.querySelectorAll(".swiper-slide");
+  let slidesArray = Array.prototype.slice.call(slides),
+    slideIndex = 0;
+
+  for (let i = 0; i < slidesArray.length; i++) {
+    if (slidesArray[i].classList.contains("is-coming")) {
+      slideIndex = i;
+      break;
+    }
+  }
+
+  return slideIndex;
 };
 
 /**
  * Slider principal
  * Compositions rubrique, rubrique-homepage, rubrique-campaigns, rubrique-news
  */
-const sliderRubrique = new Swiper(".slider-rubrique .swiper-container", {
-  slidesPerView: "auto",
-  loop: evaluerNombreSlides(),
-  breakpoints: {
-    568: {
-      centeredSlides: true,
+
+const sliderRubrique = document.querySelector(".slider-rubrique");
+
+if (sliderRubrique) {
+  const sliderRubriqueWrapper =
+    sliderRubrique.querySelector(".swiper-container");
+  const swiperRubrique = new Swiper(sliderRubriqueWrapper, {
+    slidesPerView: "auto",
+    loop: evaluerNombreSlides(sliderRubriqueWrapper),
+    breakpoints: {
+      568: {
+        centeredSlides: true,
+      },
     },
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+}
 
 /**
  * Slider Calendar
  * Composition rubirque-homepage, rubrique-news
  */
-const sliderCalendar = new Swiper(".slider-calendar .swiper-container", {
-  slidesPerView: "auto",
-  grabCursor: true,
-  resistanceRatio: 0.4,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+const sliderCalendar = new Swiper(
+  ".slider-calendar-selection .swiper-container",
+  {
+    slidesPerView: "auto",
+    grabCursor: true,
+    resistanceRatio: 0.4,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  }
+);
 
 /**
  * Slider Rubrique campagne Have a heart
@@ -165,3 +188,26 @@ const sliderHaveAHeart = new Swiper(
     },
   }
 );
+
+const calendars = document.querySelectorAll(
+  ".rubrique-content--calendar .slider-calendar-annual"
+);
+
+if (calendars) {
+  calendars.forEach((calendar) => {
+    let calendarID = calendar.id,
+      wrapper = calendar.children[0],
+      index = definirPremierSlide(wrapper);
+
+    const swiperCalendar = new Swiper(wrapper, {
+      slidesPerView: "auto",
+      initialSlide: definirPremierSlide(wrapper),
+      grabCursor: true,
+      resistanceRatio: 0.4,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  });
+}
