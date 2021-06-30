@@ -1,11 +1,11 @@
-// slider-agenda
+// slider-calendar
 // ========================================
 
-.slider-agenda {
+.slider-calendar {
   margin-top: 2rem;
 }
 
-.slider-agenda_container {
+.slider-calendar_container {
   padding-bottom: 1.5rem;
 
   @include mq(container) {
@@ -15,11 +15,11 @@
   }
 }
 
-.slider-agenda_list {
+.slider-calendar_list {
   margin-bottom: 1rem;
 }
 
-.slider-agenda_item {
+.slider-calendar_item {
   position: relative;
   width: 75%;
   padding-inline-end: 1rem;
@@ -63,7 +63,7 @@
   }
 }
 
-.slider-agenda_pagination {
+.slider-calendar_pagination {
   &.swiper-pagination-bullets {
     bottom: 0;
   }

@@ -111,7 +111,8 @@ const evaluerNombreSlides = () => {
 };
 
 /**
- * Slider principal de page d'accueil.
+ * Slider principal
+ * Compositions rubrique, rubrique-homepage, rubrique-campaigns, rubrique-news
  */
 const sliderRubrique = new Swiper(".slider-rubrique .swiper-container", {
   slidesPerView: "auto",
@@ -132,9 +133,10 @@ const sliderRubrique = new Swiper(".slider-rubrique .swiper-container", {
 });
 
 /**
- * Slider Agenda, page d'accueil.
+ * Slider Calendar
+ * Composition rubirque-homepage, rubrique-news
  */
-const sliderAgenda = new Swiper(".slider-agenda_container.swiper-container", {
+const sliderCalendar = new Swiper(".slider-calendar .swiper-container", {
   slidesPerView: "auto",
   grabCursor: true,
   resistanceRatio: 0.4,
@@ -145,7 +147,7 @@ const sliderAgenda = new Swiper(".slider-agenda_container.swiper-container", {
 });
 
 /**
- * Slider rubrique campagne Have a heart
+ * Slider Rubrique campagne Have a heart
  */
 const sliderHaveAHeart = new Swiper(
   ".slider-portfolio--heartCampaign .swiper-container",

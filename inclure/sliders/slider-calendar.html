@@ -1,9 +1,9 @@
 <B_evenements>
-  <div class="slider-agenda">
-    <div class="container swiper-container slider-agenda_container">
-      <div class="swiper-wrapper slider_list slider-agenda_list">
+  <div class="slider-calendar">
+    <div class="container swiper-container slider-calendar_container">
+      <div class="swiper-wrapper slider_list slider-calendar_list">
         <BOUCLE_evenements(EVENEMENTS){id_rubrique}{statut=publie}{lang}{date_fin>=#ENV{date}}{par date_debut}{0,6}>
-          <div class="swiper-slide slider_item slider-agenda_item">
+          <div class="swiper-slide slider_item slider-calendar_item">
             <article class="resume-event-slider">
               [<p class="resume-event-slider_date"><time datetime="[(#DATE_DEBUT|date_iso)]">(#DATE_DEBUT|affdate)</time></p>]
               <BOUCLE_article_evenement(ARTICLES){id_article=#ID_ARTICLE}>
@@ -20,7 +20,7 @@
       </div>
       [(#REM)
       <!-- pagination --> ]
-      <div class="slider_pagination slider-agenda_pagination swiper-pagination"></div>
+      <div class="slider_pagination slider-calendar_pagination swiper-pagination"></div>
     </div>
   </div>
 </B_evenements>

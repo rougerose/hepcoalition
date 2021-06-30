@@ -20,7 +20,7 @@
       <h1 class="section_title"><:local:agenda:></h1>
     </div>
     <BOUCLE_agenda(EVENEMENTS){statut=publie}{id_rubrique}{lang}{date_fin>=#ENV{date}}{par date_debut}{0,1}> </BOUCLE_agenda>
-      <INCLURE{fond=inclure/sliders/slider-agenda, id_rubrique, lang} />
+      <INCLURE{fond=inclure/sliders/slider-calendar, id_rubrique, lang} />
     </B_agenda>
   </section>
 </BOUCLE_rubrique_agenda>
