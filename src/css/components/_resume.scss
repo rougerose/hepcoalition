@@ -52,7 +52,7 @@
 
   @include mq(sm) {
     margin-top: 0;
-    width: 50%;
+    max-width: 70%;
     flex: 1;
   }
 }

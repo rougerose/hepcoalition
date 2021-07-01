@@ -8,12 +8,12 @@
   text-transform: uppercase;
   color: $color-white;
   background-color: $color-primary-500;
-  transition: background-color 0.3s;
-  transition-timing-function: ease;
+  transition: background-color 0.3s ease;
   box-shadow: 0 3px 5px -1px rgba($color-black, 0.2);
 
   &:hover {
-    background-color: $color-primary-300;
+    background-color: $color-primary-400;
+    color: $color-white;
   }
 
   &--events {
