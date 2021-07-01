@@ -26,9 +26,5 @@
 .sitenav-footer_item {
   & a {
     display: inline-block;
-
-    &:hover {
-      color: $color-primary-100;
-    }
   }
 }

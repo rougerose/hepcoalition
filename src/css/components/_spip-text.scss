@@ -1,0 +1,17 @@
+// ========================================
+// spip-text
+// ========================================
+
+// styles des contenus issus des champs textes de Spip
+
+.spip-text {
+  a {
+    color: currentColor;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-primary-500;
+    }
+  }
+}

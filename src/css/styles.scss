@@ -27,7 +27,6 @@
 @tailwind components;
 @import "components/container";
 @import "components/link";
-@import "components/spip-admin";
 @import "components/sitenav";
 @import "components/sitenavOverlay";
 @import "components/sitefooter";
@@ -48,6 +47,8 @@
 @import "components/resume-event-slider";
 @import "components/thumbnail";
 @import "components/rubrique";
+@import "components/spip-text";
+@import "components/spip-admin";
 
 // Utilities //
 @tailwind utilities;
