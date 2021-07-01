@@ -1,3 +1,7 @@
+#SET{idsecteur, #ENV{id_secteur}}
+<BOUCLE_secteur(RUBRIQUES){lang}{racine}{si #GET{idsecteur}|=={''}}>
+  #SET{idsecteur, #ID_RUBRIQUE}
+</BOUCLE_secteur>
 <div class="container">
   <div class="sitefooter">
     <div class="sitefooter_logo">
@@ -9,7 +13,7 @@
     </div>
     <div class="sitefooter_nav">
       <ul class="sitenav-footer_list sitenav-footer_list--sections">
-        <BOUCLE_menu_sections(RUBRIQUES){id_parent=#ENV{id_secteur}}{lang}>
+        <BOUCLE_menu_sections(RUBRIQUES){id_parent=#GET{idsecteur}}{lang}>
           <li class="sitenav-footer_item sitenav-footer_item--section"><a class="sitefooter_heading" href="#URL_RUBRIQUE">#TITRE</a>
             <BOUCLE_mapCrowd(MOTS){id_rubrique}{technique=oui}{titre=mapcrowd}>
               <p>[<a href="#URL_RUBRIQUE{#ID_RUBRIQUE}">(#DESCRIPTIF|PtoBR)</a>]</p>
