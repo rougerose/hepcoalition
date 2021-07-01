@@ -12,8 +12,7 @@
       </div>]
     </div>
     <div class="rubrique_content">
-      [(#REM)
-        <!-- Sélections slider -->
+      [(#REM) <!-- Sélections slider -->
       ][(#SET{idSlider, #VAL{slider-}|concat{#ID_RUBRIQUE}})][(#SET{rubriques_slider, #ARRAY})]
       <BOUCLE_slider(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
         <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}>
@@ -27,15 +26,13 @@
         </B_slider_contenu>
       </BOUCLE_slider>
 
-      <div class="container">
-        [(#REM)
-          <!-- Sous-rubriques -->
-        ]<B_sousrubriques>
-          <BOUCLE_sousrubriques(RUBRIQUES){id_parent}{!par date}{id_rubrique !IN #GET{rubriques_slider}}>
-            <INCLURE{fond=inclure/resume/campagne, id_rubrique} />
-          </BOUCLE_sousrubriques>
-        </B_sousrubriques>
-      </div>
+      [(#REM) <!-- Sous-rubriques --> ]
+      <B_sousrubriques>
+        <div class="container">
+          <BOUCLE_sousrubriques(RUBRIQUES){id_parent}{!par date}{id_rubrique !IN #GET{rubriques_slider}}{0,1}> </BOUCLE_sousrubriques>
+            <INCLURE{fond=inclure/resumes/campagnes, id_rubrique, rubriques_slider=#GET{rubriques_slider}, pagination=5, ajax, env} />
+        </div>
+      </B_sousrubriques>
     </div>
   </article>
 </BOUCLE_rubrique_subsection>

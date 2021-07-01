@@ -28,14 +28,10 @@
       <div class="container">
         [(#REM)
           <!-- Materials -->
-        ]<B_materials>
-          <section class="section">
-            <h2 class="section_title"><:local:materials_section:></h2>
-            <BOUCLE_materials(ARTICLES){id_rubrique}{!par date}{id_article !IN #GET{articles_slider}}>
-              <INCLURE{fond=inclure/resume/article, id_article, lang, class=resume--recent-material} />
-            </BOUCLE_materials>
-          </section>
-        </B_materials>
+        ]
+        <BOUCLE_materials(ARTICLES){id_rubrique}{id_article !IN #GET{articles_slider}}{0,1}>
+          <INCLURE{fond=inclure/resumes/articles, articles_slider=#GET{articles_slider}, pagination=10, ajax, env} />
+        </BOUCLE_materials>
 
         [(#REM)
           <!-- Aperçu sous-rubriques -->
@@ -45,12 +41,12 @@
             [(#SET{idSlider, #VAL{slider-}|concat{#ID_RUBRIQUE}})]
             <B_selections_slider>
               <BOUCLE_selections_slider(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
-                <BOUCLE_selection_article(SELECTIONS_CONTENUS){id_selection}{0,1}>
+                <BOUCLE_selection_article(SELECTIONS_CONTENUS){id_selection}{0,2}>
                   <INCLURE{fond=inclure/selections/recent-materials, id_selection} />
                 </BOUCLE_selection_article>
               </BOUCLE_selections_slider>
             </B_selections_slider>
-              <BOUCLE_dernier_article(ARTICLES){id_rubrique}{0,1}>
+              <BOUCLE_dernier_article(ARTICLES){id_rubrique}{0,2}>
                 <INCLURE{fond=inclure/resume/article, id_article, lang} />
               </BOUCLE_dernier_article>
             <//B_selections_slider>

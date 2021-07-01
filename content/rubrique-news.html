@@ -29,15 +29,11 @@
 
       <div class="container">
         [(#REM)
-          <!-- Materials -->
-        ]<B_materials>
-          <section class="section">
-            <h2 class="section_title"><:local:materials_section:></h2>
-            <BOUCLE_materials(ARTICLES){id_rubrique}{!par date}{id_article !IN #GET{articles_slider}}>
-              <INCLURE{fond=inclure/resume/article, id_article, lang, class=resume--recent-material} />
-            </BOUCLE_materials>
-          </section>
-        </B_materials>
+        <!-- Materials -->
+        ]
+        <BOUCLE_materials(ARTICLES){id_rubrique}{id_article !IN #GET{articles_slider}}{0,1}>
+          <INCLURE{fond=inclure/resumes/articles, articles_slider=#GET{articles_slider}, pagination=5, ajax, env} />
+        </BOUCLE_materials>
       </div>
 
       [(#REM)

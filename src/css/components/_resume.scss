@@ -33,12 +33,6 @@
       }
     }
   }
-
-  @include mq(lg) {
-    &--recent-material {
-      margin-bottom: 6rem;
-    }
-  }
 }
 
 .resume_logo {

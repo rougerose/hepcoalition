@@ -1,0 +1,10 @@
+<B_recent_materials>
+  <section class="section[(#GRAND_TOTAL|<={#ENV{pagination}}|oui) section--sep]">
+    #ANCRE_PAGINATION
+    <h2 class="section_title"><:local:materials_section:></h2>
+    <BOUCLE_recent_materials(ARTICLES){id_rubrique}{lang}{!par date}{id_article !IN #ENV{articles_slider}}{pagination #ENV{pagination, 10}}>
+      <INCLURE{fond=inclure/resume/article, id_article, lang, class=resume--recent-material} />
+    </BOUCLE_recent_materials>
+    [<nav class='pagination' role='navigation'>(#PAGINATION)</nav>]
+  </section>
+</B_recent_materials>
