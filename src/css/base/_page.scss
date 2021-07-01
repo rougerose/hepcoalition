@@ -3,6 +3,9 @@
 // ========================================
 
 .page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   border-top-width: 0.25rem;
   border-color: $color-secondary-500;
 }
@@ -20,6 +23,7 @@
 }
 
 .page_footer {
+  margin-top: auto;
   background-color: $color-primary-900;
   color: $color-white;
 }
