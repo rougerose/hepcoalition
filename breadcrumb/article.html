@@ -1,5 +1,5 @@
-<div class="container">
-  <nav class="breadcrumb">
+<nav class="breadcrumb">
+  <div class="container">
     <h2 class="sr-only"><:local:you_are_here_label:></h2>
     <ul class="breadcrumb_list">
       <BOUCLE_breadcrumb(ARTICLES){id_article}>
@@ -10,5 +10,5 @@
         <li class="breadcrumb_item is-active">[(#TITRE|couper{60})]</li>
       </BOUCLE_breadcrumb>
     </ul>
-  </nav>
-</div>
+  </div>
+</nav>
