@@ -1,0 +1,16 @@
+<BOUCLE_resume_rubrique(RUBRIQUES){id_rubrique}{lang=#ENV{lang}}>
+  <article class="resume[ (#ENV{class})]">
+    <div class="resume_texte">
+      <h2 class="resume_titre"><a href="#URL_RUBRIQUE" class="resume_link">#TITRE</a></h2>
+      [<div class="resume_desc">
+        <p>(#INTRODUCTION|couper{250}) <a href="#URL_RUBRIQUE" class="resume_link-more"><span><:local:more:></span></a></p>
+      </div>]
+      <p class="resume_metas">
+        [(#INCLURE{fond=inclure/selections/recent-materials-meta-rubrique, id_rubrique})]
+      </p>
+    </div>
+    [<div class="resume_logo thumbnail">
+      <a href="#URL_RUBRIQUE" class="thumbnail_link">(#LOGO_RUBRIQUE|image_reduire{450, 254}|image_recadre{450, 254}|inserer_attribut{class, thumbnail_img})</a>
+    </div>]
+  </article>
+</BOUCLE_resume_rubrique>

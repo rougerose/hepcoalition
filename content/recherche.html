@@ -1,0 +1,58 @@
+[(#REM) <!-- Variable --> ]
+  #SET{total, 0}
+  #SET{articles, #ARRAY}
+  #SET{rubriques, #ARRAY}
+  #SET{documents, #ARRAY}
+
+[(#REM) <!-- Récupérer les résultats --> ]
+  <BOUCLE_articles(ARTICLES){recherche}{!par points}{lang}>
+    [(#SET{articles, #GET{articles}|push{#ID_ARTICLE}})]</BOUCLE_articles>
+  <BOUCLE_rubriques(RUBRIQUES){recherche}{lang}{!par points}>
+    [(#SET{rubriques, #GET{rubriques}|push{#ID_RUBRIQUE}})]</BOUCLE_rubriques>
+  <BOUCLE_documents(DOCUMENTS){recherche}{!par points}>
+    [(#REM)
+      <!--
+        Dans l'hypothèse où le document a été publié dans plusieurs articles,
+        ne conserver que l'article le plus récent et dans la langue sélectionnée par le visiteur
+      --> ]
+    <BOUCLE_articles_lies(documents_liens ARTICLES){id_document}{objet=article}{articles.lang=#ENV{lang}}{!par date}{0,1}>
+      [(#SET{documents, #GET{documents}|push{#ID_DOCUMENT}})]
+    </BOUCLE_articles_lies>
+  </BOUCLE_documents>
+
+[(#REM) <!-- Calculer la somme des résultats --> ]
+  [(#SET{total, #GET{articles}|count
+    |plus{#GET{rubriques}|count}
+    |plus{#GET{documents}|count}
+  })]
+
+<article class="searchResults">
+  <div class="container">
+    <header class="searchResults_header">
+      <h1 class="searchResults_title">
+        [(#GET{total}|>{0}|?{
+          [(#GET{total}|singulier_ou_pluriel{local:recherche_label_resultat, local:recherche_label_resultats, nb})],
+          <:local:recherche_label_aucun_resultat:>
+        })]
+        <span class="searchResults_term">#RECHERCHE</span>
+      </h1>
+    </header>
+    <p>ARTICLES [(#GET{articles}|count)]</p>
+    <p>RUBRIQUES [(#GET{rubriques}|count)]</p>
+    <p>DOCUMENT [(#GET{documents}|count)]</p>
+    <BOUCLE_total(CONDITION){si #GET{total}|>{0}}>
+
+      <BOUCLE_resultats_articles(CONDITION){si #GET{articles}|count|>{0}}>
+        <INCLURE{fond=inclure/recherche/articles, articles=#GET{articles}, pagination=5, ajax, env}/>
+      </BOUCLE_resultats_articles>
+
+      <BOUCLE_resultats_rubriques(CONDITION){si #GET{rubriques}|count|>{0}}>
+        <INCLURE{fond=inclure/recherche/rubriques, rubriques=#GET{rubriques}, pagination=5, ajax, env} />
+      </BOUCLE_resultats_rubriques>
+
+      <BOUCLE_resultats_documents(CONDITION){si #GET{documents}|count|>{0}}>
+        <INCLURE{fond=inclure/recherche/documents, documents=#GET{documents}, pagination=5, ajax, env} />
+      </BOUCLE_resultats_documents>
+    </BOUCLE_total>
+  </div>
+</article>

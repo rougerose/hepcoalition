@@ -1,0 +1,10 @@
+<B_rubriques>
+  <section class="section[(#GRAND_TOTAL|<={#ENV{pagination}}|oui) section--sep]">
+    #ANCRE_PAGINATION
+    <h2 class="section_title">[(#ENV{rubriques}|count|singulier_ou_pluriel{local:info_recherche_rubrique, local:info_recherche_rubriques, nb})]</h2>
+    <BOUCLE_rubriques(RUBRIQUES){id_rubrique IN #ENV{rubriques}}{lang}{pagination #ENV{pagination, 5}}>
+      <INCLURE{fond=inclure/resume/rubrique, id_rubrique, lang} />
+    </BOUCLE_rubriques>
+      [<nav class='pagination' role='navigation'>(#PAGINATION)</nav>]
+  </section>
+</B_rubriques>

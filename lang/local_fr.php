@@ -73,6 +73,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'pays'                           => 'Pays',
 
    // R
+	 'recherche_label_aucun_resultat' => 'Aucun résultat disponible pour :',
+	 'recherche_label_resultat' => '1 résultat pour :',
+	 'recherche_label_resultats' => '@nb@ résulats pour :',
 
    // S
 	 'search_type_here' => 'Écrivez ici',

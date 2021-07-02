@@ -1,0 +1,14 @@
+<B_documents>
+  <section class="section[(#GRAND_TOTAL|<={#ENV{pagination}}|oui) section--sep]">
+    #ANCRE_PAGINATION
+    <h2 class="section_title">[(#ENV{documents}|count|singulier_ou_pluriel{local:info_recherche_document, local:info_recherche_documents, nb})]</h2>
+    <BOUCLE_documents(DOCUMENTS){id_document IN #ENV{documents}}{pagination #ENV{pagination, 5}}>
+      #SET{url_doc, ''}
+      <BOUCLE_article_lie(documents_liens ARTICLES){id_document}{objet=article}{articles.lang=#ENV{lang}}{!par date}{0,1}>
+        [(#SET{url_doc, #URL_ARTICLE|ancre_url{documents}})]
+      </BOUCLE_article_lie>
+      <INCLURE{fond=inclure/resume/document, id_document, url_doc=#GET{url_doc}, lang} />
+    </BOUCLE_documents>
+    [<nav class='pagination' role='navigation'>(#PAGINATION)</nav>]
+  </section>
+</B_documents>

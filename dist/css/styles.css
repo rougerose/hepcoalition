@@ -508,6 +508,9 @@ html{
 }
 
 .page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   border-top-width: 0.25rem;
   border-color: #c11f02;
 }
@@ -4113,7 +4116,7 @@ button.swiper-pagination-bullet {
 }
 
 .breadcrumb {
-  margin: 0 0 2rem;
+  margin: auto 0 2rem;
   font-size: 1.125rem;
   line-height: 1.25rem;
 }
@@ -4252,6 +4255,7 @@ body.has-overlay {
 }
 .modal--search {
   width: 100%;
+  max-width: 1052px;
   padding: 1.5rem 1.5rem 4rem;
 }
 
@@ -4422,6 +4426,28 @@ body.has-overlay {
   padding: 0.5rem;
   background-color: #19a1ac;
   transition: transform 0.4s ease;
+}
+
+.searchResults {
+  margin-bottom: auto;
+  height: 100%;
+  flex: 1;
+}
+
+.searchResults_header {
+  margin-bottom: 2rem;
+}
+
+.searchResults_title {
+  font-size: 16px;
+}
+
+.searchResults_term {
+  display: block;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #19a1ac;
 }
 
 .section {
