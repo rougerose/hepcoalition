@@ -37,9 +37,6 @@
         <span class="searchResults_term">#RECHERCHE</span>
       </h1>
     </header>
-    <p>ARTICLES [(#GET{articles}|count)]</p>
-    <p>RUBRIQUES [(#GET{rubriques}|count)]</p>
-    <p>DOCUMENT [(#GET{documents}|count)]</p>
     <BOUCLE_total(CONDITION){si #GET{total}|>{0}}>
 
       <BOUCLE_resultats_articles(CONDITION){si #GET{articles}|count|>{0}}>

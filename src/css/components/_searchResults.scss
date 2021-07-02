@@ -10,6 +10,10 @@
 
 .searchResults_header {
   margin-bottom: 2rem;
+
+  @include mq(xl) {
+    margin-bottom: 4rem;
+  }
 }
 
 .searchResults_title {
