@@ -27,7 +27,6 @@
     "@fontsource/almarai": "^4.4.2",
     "@fontsource/noto-sans-tc": "^4.4.5",
     "@fontsource/roboto-condensed": "^4.4.2",
-    "@rollup/plugin-multi-entry": "^4.0.0",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "autoprefixer": "latest",
     "browser-sync": "^2.26.14",
@@ -43,9 +42,11 @@
     "postcss-dir-pseudo-class": "^5.0.0",
     "postcss-logical": "^4.0.2",
     "rollup": "^2.52.1",
+    "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-terser": "^7.0.2",
     "sass-mq": "https://github.com/rougerose/sass-mq#v5.0.1-rougerose.001",
     "swiper": "^6.7.0",
-    "tailwindcss": "^2.2.2"
+    "tailwindcss": "^2.2.2",
+    "van11y-accessible-hide-show-aria": "^3.0.1"
   }
 }

@@ -10,7 +10,7 @@ const size = require("gulp-size");
 const sass = require("gulp-dart-sass");
 const rename = require("gulp-rename");
 const rollup = require("rollup");
-const multiEntry = require("@rollup/plugin-multi-entry");
+const copy = require("rollup-plugin-copy");
 const { nodeResolve } = require("@rollup/plugin-node-resolve");
 const { terser } = require("rollup-plugin-terser");
 
@@ -54,9 +54,17 @@ const js = function (done) {
     .rollup({
       input: config.js.src,
       plugins: [
-        // multiEntry(),
         nodeResolve(),
         terser(),
+        copy({
+          targets: [
+            {
+              src: "src/js/lib/van11y-accessible-hide-show-aria.min.js",
+              dest: "dist/js/lib",
+            },
+          ],
+          copyOnce: true,
+        }),
       ],
     })
     .then((bundle) => {
@@ -145,3 +153,5 @@ exports.default = series(clean, cssVendor, parallel(css, js), startServer, watch
 exports.build = series(clean, cssVendor, parallel(css, js));
 
 exports.fonts = series(fonts);
+
+exports.clean = clean;

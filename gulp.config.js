@@ -13,7 +13,17 @@ module.exports = {
     dist: "src/css/vendor",
   },
   html: {
-    src: ["*.html", "breadcrumb/*.html", "content/*.html", "footer/*.html", "head/*.html", "header/*.html", "inclure/**/*.html", "header/*.html", "overlay/*.html"],
+    src: [
+      "*.html",
+      "breadcrumb/*.html",
+      "content/*.html",
+      "footer/*.html",
+      "head/*.html",
+      "header/*.html",
+      "inclure/**/*.html",
+      "header/*.html",
+      "overlay/*.html",
+    ],
   },
   fonts: {
     src: [
@@ -46,7 +56,7 @@ module.exports = {
   //   dist: "dist/lib/",
   //   name: "libs.min.js",
   // },
-  clean: ["dist/lib/*.js", "dist/css/*.css", "dist/js/*.js", "!dist/"],
+  clean: ["dist/js/lib/*.js", "dist/css/*.css", "dist/js/*.js", "!dist/"],
   tasks: {
     css: true,
     cssVendor: false,
