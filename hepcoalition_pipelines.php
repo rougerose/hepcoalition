@@ -5,10 +5,15 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 }
 
 function hepcoalition_insert_head($flux) {
-	$js = find_in_path('dist/js/hepcoalition.js');
-	if ($js) {
-		$flux .= "\n" . '<script defer="true" src="' . $js . '" type="text/javascript"></script>';
-	}
+	// $files = array();
+	// $files[] = find_in_path('dist/js/lib/van11y-accessible-hide-show-aria.min.js');
+	// $files[] = find_in_path('dist/js/hepcoalition.js');
+
+	// foreach ($files as $file) {
+	// 	if ($file) {
+	// 		$flux .= "\n" . '<script defer="true" src="' . $file . '" type="text/javascript"></script>';
+	// 	}
+	// }
 
 	return $flux;
 }
