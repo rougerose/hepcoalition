@@ -4,6 +4,6 @@
     <BOUCLE_campaigns(RUBRIQUES){id_parent}{!par date}{id_rubrique !IN #ENV{rubriques_slider}}{pagination #ENV{pagination, 10}}>
       <INCLURE{fond=inclure/resume/campagne, id_rubrique} />
     </BOUCLE_campaigns>
-    [<nav class='pagination' role='navigation'>(#PAGINATION)</nav>]
+    [<nav class="pagination" role="navigation">(#PAGINATION)</nav>]
   </B_campaigns>
 </BOUCLE_rubrique_campaigns>

@@ -1,21 +1,21 @@
 <BOUCLE_rubrique_campagne(RUBRIQUES){id_rubrique}>
-  <article class="rubrique">
+  <article class="rubrique content">
     <div class="container">
-      <header class="rubrique_header">
+      <header class="rubrique_header content_header">
         <B_section>
-          <p class="rubrique_section-title">
+          <p class="rubrique_section-title content_section-title">
             <BOUCLE_section(HIERARCHIE){id_rubrique}{1, n}>
               <a href="#URL_RUBRIQUE">#TITRE</a>
             </BOUCLE_section>
           </p>
         </B_section>
-        <h1 class="rubrique_title">#TITRE</h1>
+        <h1 class="rubrique_title content_title">#TITRE</h1>
       </header>
       [<div class="rubrique_description spip-text">
         (#TEXTE)
       </div>]
-      [<div class="rubrique_logo thumbnail">
-        (#LOGO_RUBRIQUE|image_reduire{1004, 567}|image_recadre{1004, 567}|inserer_attribut{class, thumbnail_img})
+      [<div class="rubrique_logo content_logo thumbnail">
+        (#LOGO_RUBRIQUE|image_reduire{834, 471}|image_recadre{834, 471}|inserer_attribut{class, thumbnail_img})
       </div>]
     </div>
     <div class="rubrique_content">
