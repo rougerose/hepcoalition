@@ -1,4 +1,4 @@
 <BOUCLE_head_rubrique(RUBRIQUES){id_rubrique}>
-<title>[(#TITRE|textebrut)]</title>
+[(#ID_PARENT|=={0}?{<title>[(#NOM_SITE_SPIP|textebrut)]</title>, <title>[(#TITRE|textebrut)]</title>})]
 [<meta name="description" content="(#INTRODUCTION|textebrut|trim)" />]
 </BOUCLE_head_rubrique>
