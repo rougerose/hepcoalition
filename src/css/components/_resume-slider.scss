@@ -9,8 +9,13 @@
 .resume-slider_logo {
   margin-top: 0;
 
-  @include mq(md) {
+  @include mq(sm) {
     margin-inline: 0 0.75rem;
+  }
+
+  @include mq(lg) {
+    width: 60%;
+    max-width: 700px;
   }
 }
 
@@ -18,12 +23,18 @@
   margin-top: 1rem;
   color: $color-white;
 
-  @include mq(md) {
+  @include mq(sm) {
     margin-top: 0;
+  }
+
+  @include mq(lg) {
+    max-width: 40%;
   }
 }
 
 .resume-slider_titre {
+  font-size: 1.375rem; // 22px;
+  line-height: 1.5rem; // 24px;
 
   & a {
     &:hover {
