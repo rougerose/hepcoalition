@@ -18,12 +18,12 @@ if (!isset($GLOBALS['z_blocs'])) {
 // $GLOBALS['z_blocs'] = array('content','extra1','extra2','head','head_js','foot_js','header','footer','breadcrumb');
 
 # notes
-define('_NOTES_OUVRE_NOTE', '<span class="spip_note_ref">');
-define('_NOTES_FERME_NOTE', '&nbsp;</span>');
+// define('_NOTES_OUVRE_NOTE', '<span class="spip_note_ref">');
+// define('_NOTES_FERME_NOTE', '&nbsp;</span>');
 
-error_reporting(E_ALL^E_NOTICE);
-ini_set('display_errors', 'On');
-define('SPIP_ERREUR_REPORT', E_ALL);
+// error_reporting(E_ALL^E_NOTICE);
+// ini_set('display_errors', 'On');
+// define('SPIP_ERREUR_REPORT', E_ALL);
 // //$GLOBALS['taille_des_logs'] = 50000;
 // // define('_MAX_LOG', 500000);
 // define('_LOG_FILELINE', true);
