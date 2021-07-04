@@ -15,6 +15,9 @@
         <ul class="sitenavOverlay_list sitenavOverlay_list--sections">
           <BOUCLE_menu_sections(RUBRIQUES){id_parent=#ENV{id_secteur}}{lang}>
             <li class="sitenavOverlay_item sitenavOverlay_item--section"><a href="#URL_RUBRIQUE" [ class="(#ID_RUBRIQUE|=={#ENV{id_rubrique}}|oui)is-active"]>#TITRE</a>
+              <BOUCLE_mapCrowd(MOTS){id_rubrique}{technique=oui}{titre=mapcrowd}>
+                <p>[<a href="#URL_RUBRIQUE{#ID_RUBRIQUE}">(#DESCRIPTIF|PtoBR)</a>]</p>
+              </BOUCLE_mapCrowd>
               <B_menu_rubriques>
                 <ul class="sitenavOverlay_list sitenavOverlay_list--subsections">
                   <BOUCLE_menu_rubriques(RUBRIQUES){id_parent}{lang}>
