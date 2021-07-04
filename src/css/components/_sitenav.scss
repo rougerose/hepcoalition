@@ -3,7 +3,7 @@
 // ========================================
 
 // Variables
-$btn-padding: 0.5rem;  // 0.75rem;
+$btn-padding: 0.5rem;
 $icon-caret-margin: 0.5rem;
 
 .sitenav {
@@ -51,7 +51,7 @@ $icon-caret-margin: 0.5rem;
   // &--sections {}
 
   &--subsections {
-    flex-direction: column;
+    // flex-direction: column;
     position: absolute;
     z-index: 0;
     inset-block-start: 100%;
@@ -97,7 +97,6 @@ $icon-caret-margin: 0.5rem;
   &--section {
     position: relative;
     display: flex;
-    position: relative;
     flex: 1 1 auto;
     margin-inline-start: 0.5rem;
 
@@ -122,14 +121,15 @@ $icon-caret-margin: 0.5rem;
     margin-inline-start: $icon-caret-margin;
     transition: transform 0.3s ease;
 
-    path {
+    & path {
       stroke: $color-primary-500;
     }
   }
 
   & [aria-expanded="true"] {
     & svg {
-      transform: scaleY(-1);
+      transform: rotate(180deg);
+      transform-origin: 50% 50%;
     }
   }
 }

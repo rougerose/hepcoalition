@@ -56,8 +56,7 @@
     grid-column: 1 / span 2;
   }
 
-  & a,
-  & span {
+  & a {
     display: inline-block;
     margin-bottom: 0.25rem;
     transition: color 0.3s ease;
@@ -67,9 +66,9 @@
     &:hover {
       color: $color-primary-100;
     }
-  }
 
-  & span.active {
-    color: $color-primary-100;
+    &.is-active {
+      color: $color-primary-100;
+    }
   }
 }
