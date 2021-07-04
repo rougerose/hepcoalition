@@ -2,6 +2,7 @@
 // resume
 // ========================================
 
+@use "sass:color";
 
 .resume {
   display: flex;
@@ -67,12 +68,12 @@
   margin-top: 0.5rem;
   font-size: 1.125rem;
   line-height: 1.5rem;
-  color: $color-primary-700;
+  color: $color-primary-800;
 }
 
 .resume_desc,
 .resume_metas {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   line-height: 1.375rem; // 22px
 }
 
@@ -95,11 +96,12 @@
 }
 
 .resume_metas {
+  margin-top: 0.75rem;
   font-weight: 300;
   font-size: 0.875rem; // 14px;
   line-height: 1rem;
   text-transform: uppercase;
-  color: $color-primary-600;
+  color: color.grayscale($color-primary-300);
 
   & > time {
     &::after {
@@ -125,7 +127,7 @@
 
 .resume_list-articles {
   list-style: square;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   padding-inline-start: 1rem;
 
   & > li {

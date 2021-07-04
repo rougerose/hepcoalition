@@ -22,7 +22,7 @@
   font-size: 1.25rem; // 20px;
   line-height: 1.25rem; // 20px;
   margin-top: 0.5rem; // 8px;
-  color: $color-primary-700;
+  color: $color-primary-800;
 
   @include mq(md) {
     font-size: 1.5rem; // 24px;
@@ -96,5 +96,28 @@
 }
 
 .article_chapo {
-  font-size: 20px;
+  font-size: 1.25rem; // 20px;
+  line-height: 1.75rem; // 28px;
+}
+
+.article_notes.spip-text {
+  max-width: 80%;
+  margin-top: 2rem;
+
+  & h2 {
+    border-bottom: 1px solid rgba($color-primary-500, 0.3);
+    margin-bottom: 0.75rem;
+    font-size: 1.25rem; // 20px;
+    line-height: 1.25rem;
+    color: $color-primary-500;
+  }
+
+  & p {
+    font-size: 0.9375rem; // 15px;
+    line-height: 1.25rem; // 20px;
+  }
+
+  & .spip_note {
+    padding-inline: 0.25rem;
+  }
 }
