@@ -1,4 +1,4 @@
-<nav class="breadcrumb">
+<nav class="breadcrumb" aria-label="Breadcrumb">
   <div class="container">
     <h2 class="sr-only"><:local:you_are_here_label:></h2>
     <ul class="breadcrumb_list">
@@ -7,7 +7,7 @@
         <BOUCLE_hierarchie(HIERARCHIE){id_article}>
           [(#ID_RUBRIQUE|=={#_breadcrumb:ID_SECTEUR}|?{'', <li class="breadcrumb_item"><a href="#URL_RUBRIQUE" class="breadcrumb_link">[(#TITRE|couper{60})]</a></li>})]
         </BOUCLE_hierarchie>
-        <li class="breadcrumb_item is-active">[(#TITRE|couper{60})]</li>
+        <li class="breadcrumb_item is-active" aria-current="page">[(#TITRE|couper{60})]</li>
       </BOUCLE_breadcrumb>
     </ul>
   </div>
