@@ -14,12 +14,11 @@
       <div class="modal_content sitenavOverlay_menu">
         <ul class="sitenavOverlay_list sitenavOverlay_list--sections">
           <BOUCLE_menu_sections(RUBRIQUES){id_parent=#ENV{id_secteur}}{lang}>
-            <li class="sitenavOverlay_item sitenavOverlay_item--section">[(#URL_RUBRIQUE|lien_ou_expose{#TITRE, #ENV{id_rubrique}|=={#ID_RUBRIQUE}|?{span.active}})]
+            <li class="sitenavOverlay_item sitenavOverlay_item--section"><a href="#URL_RUBRIQUE" [ class="(#ID_RUBRIQUE|=={#ENV{id_rubrique}}|oui)is-active"]>#TITRE</a>
               <B_menu_rubriques>
                 <ul class="sitenavOverlay_list sitenavOverlay_list--subsections">
                   <BOUCLE_menu_rubriques(RUBRIQUES){id_parent}{lang}>
-                    <li class="sitenavOverlay_item">[(#URL_RUBRIQUE|lien_ou_expose{#TITRE,
-                      #ENV{id_rubrique}|=={#ID_RUBRIQUE}|?{span.active}})]</li>
+                    <li class="sitenavOverlay_item"><a href="#URL_RUBRIQUE"[ (#EXPOSE{class="is-active" ,''})]>#TITRE</a></li>
                     </BOUCLE_menu_rubriques>
                 </ul>
               </B_menu_rubriques>
