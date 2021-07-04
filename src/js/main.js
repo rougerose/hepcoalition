@@ -211,3 +211,29 @@ if (calendars) {
     });
   });
 }
+
+/**
+ * Panneau dépliant pour les traductions d'article
+ *
+ */
+const articleTranslations = document.querySelector(".translations");
+
+if (articleTranslations) {
+  const heading = articleTranslations.querySelector("h2");
+  const list = articleTranslations.querySelector(".translations_list");
+
+  heading.classList.add("translations_heading--js");
+
+  // Le panneau est d'emblée ouvert pour les fenêtres > à 768px.
+  if (window.matchMedia("(min-width: 48em)").matches) {
+    list.classList.add("is-opened");
+  }
+
+  // classe spécifique plutôt que la classe par défaut (js-expand)
+  // qui provoque un déclenchement immédiat au chargement de la page.
+  const toggleArticleTranslations = van11yAccessibleHideShowAria({
+    HIDESHOW_EXPAND: "translations_heading",
+    HIDESHOW_BUTTON_EXPAND_STYLE: "translations_btn",
+  });
+  toggleArticleTranslations.attach();
+}

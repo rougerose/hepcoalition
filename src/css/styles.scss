@@ -24,7 +24,7 @@
 @import "swiper/components/navigation/navigation";
 
 // Components //
-@tailwind components;
+// @tailwind components;
 @import "components/container";
 @import "components/link";
 @import "components/sitenav";
@@ -47,7 +47,11 @@
 @import "components/resume-slider";
 @import "components/resume-event-slider";
 @import "components/thumbnail";
+@import "components/content";
 @import "components/rubrique";
+@import "components/article";
+@import "components/article-event";
+@import "components/translations";
 @import "components/spip-text";
 @import "components/spip-admin";
 

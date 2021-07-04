@@ -1,0 +1,17 @@
+// ========================================
+// article-event
+// ========================================
+
+// .article-event {}
+
+.article-event_title {
+  margin-bottom: 0.625rem;
+  font-size: 1.5rem; // 24px;
+  color: $color-primary-500;
+}
+
+.article-event_date {
+  font-weight: 700;
+  font-size: 1.25rem; // 20px
+  color: $color-primary-500;
+}

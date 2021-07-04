@@ -1,0 +1,15 @@
+<BOUCLE_event(EVENEMENTS){id_evenement}{tout}>
+  <div class="article-event h-event" itemscope itemtype="http://schema.org/Event">
+    <meta itemprop="startDate" content="[(#DATE_DEBUT|date_iso)]" />
+    <meta itemprop="endDate" content="[(#DATE_FIN|date_iso)]" />
+    <h2 class="article-event_title" itemprop="name">#TITRE</h2>
+    [<p class="article-event_date">(#DATE_DEBUT|affdate_debut_fin{#DATE_FIN, #HORAIRE, hcal})</p>]
+    [<div class="article-event_desc" itemprop="description">(#DESCRIPTIF)</div>]
+    [(#LIEU|ou{#ADRESSE})
+      <div class="article-event_location" itemprop="location">
+        [<p>(#LIEU)</p>]
+        [<div>(#ADRESSE)</div>]
+      </div>
+    ]
+  </div>
+</BOUCLE_event>

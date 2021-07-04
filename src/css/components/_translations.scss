@@ -1,0 +1,91 @@
+// ========================================
+// translations
+// ========================================
+
+// .translations {}
+
+.translations_heading {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin-inline-start: -0.5rem;
+  font-weight: 400;
+
+  &--js {
+    padding: 0;
+  }
+
+  & svg {
+    width: 1em;
+    height: 1em;
+    margin-inline-start: 0.5rem;
+    margin-bottom: 2px;
+    transition: transform 0.3s ease;
+    transform-origin: 50% 50%;
+
+    & path {
+      stroke: $color-black;
+    }
+  }
+
+  // & button {
+  //   display: flex;
+  //   align-items: center;
+  //   background-color: transparent;
+  //   transition: background 0.3s ease;
+  // }
+}
+
+// bouton ajouté par le js van11yAccessibleHideShowAria
+.translations_btn {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  transition: background 0.3s ease;
+
+  & span {
+    display: none;
+  }
+
+  &:hover {
+    background-color: $color-primary-500;
+  }
+
+  &[aria-expanded="true"] {
+    & svg {
+      transform: rotate(-180deg);
+      transform-origin: 50% 50%;
+    }
+  }
+}
+
+.translations_list {
+  transition: visibility 0s ease, max-height 0.5s linear, opacity 0.5s ease, transform 0.5s ease;
+  max-height: 80em;
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0s, 0s, 0s, 0s;
+
+  &[data-hidden="true"] {
+    visibility: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition-duration: 0s, 0.25s, 0.25s, 0.25s;
+    transform: translateY(-1rem);
+    transition-delay: 0.11s, 0s, 0s, 0s;
+  }
+}
+
+.translations_item {
+  margin: 0.625rem 0;
+  display: flex;
+}
+
+.translations_lang-label {
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: $color-primary-500;
+}
