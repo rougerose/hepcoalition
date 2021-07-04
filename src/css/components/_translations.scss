@@ -3,6 +3,7 @@
 // ========================================
 
 // .translations {}
+@use "sass:color";
 
 .translations_heading {
   display: flex;
@@ -20,20 +21,13 @@
     height: 1em;
     margin-inline-start: 0.5rem;
     margin-bottom: 2px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
     transform-origin: 50% 50%;
 
     & path {
-      stroke: $color-black;
+      stroke: #737373;
     }
   }
-
-  // & button {
-  //   display: flex;
-  //   align-items: center;
-  //   background-color: transparent;
-  //   transition: background 0.3s ease;
-  // }
 }
 
 // bouton ajouté par le js van11yAccessibleHideShowAria
@@ -42,7 +36,7 @@
   display: flex;
   align-items: center;
   background-color: transparent;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 
   & span {
     display: none;
@@ -50,11 +44,16 @@
 
   &:hover {
     background-color: $color-primary-500;
+    color: $color-black;
+
+    & svg path {
+      stroke: $color-black;
+    }
   }
 
   &[aria-expanded="true"] {
     & svg {
-      transform: rotate(-180deg);
+      transform: rotate(360deg);
       transform-origin: 50% 50%;
     }
   }
@@ -87,5 +86,5 @@
   margin-right: 0.5rem;
   text-transform: uppercase;
   font-weight: 400;
-  color: $color-primary-500;
+  color: color.grayscale($color-primary-500);
 }

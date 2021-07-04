@@ -2,6 +2,8 @@
 // article
 // ========================================
 
+@use "sass:color";
+
 // .article {}
 
 // .article_header {}
@@ -59,7 +61,7 @@
   font-weight: 300;
   font-size: 0.9375rem; // 15px;
   line-height: 1.25rem; // 20px;
-  // color: $color-primary-600;
+  color: color.grayscale($color-primary-500);
 
   @include mq(sm) {
     width: 83%;
@@ -91,4 +93,8 @@
 
 .article_translations {
   margin-top: 1rem;
+}
+
+.article_chapo {
+  font-size: 20px;
 }
