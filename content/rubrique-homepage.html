@@ -4,7 +4,7 @@
   (#SET{idSlider, #VAL{slider-}|concat{#ENV{id_rubrique}}})
 ]
 <BOUCLE_slider(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
-  <div class="section">#ID_SELECTION
+  <div class="section">
     <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}{0,1}>
       <INCLURE{fond=inclure/sliders/slider-rubrique, id_selection} />
     </BOUCLE_slider_contenu>
