@@ -1,10 +1,10 @@
 [(#REM)
   <!-- Sélections slider -->
 ][
-  (#SET{idSlider, #VAL{slider-}|concat{#ENV{lang}}})
+  (#SET{idSlider, #VAL{slider-}|concat{#ENV{id_rubrique}}})
 ]
 <BOUCLE_slider(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
-  <div class="section">
+  <div class="section">#ID_SELECTION
     <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}{0,1}>
       <INCLURE{fond=inclure/sliders/slider-rubrique, id_selection} />
     </BOUCLE_slider_contenu>
@@ -15,20 +15,24 @@
 <!-- Agenda -->
 ]
 <BOUCLE_rubrique_agenda(RUBRIQUES){id_secteur}{agenda=1}>
-  <section class="section">
-    <div class="container">
-      <h1 class="section_title"><:local:agenda:></h1>
-    </div>
-    <BOUCLE_agenda(EVENEMENTS){statut=publie}{id_rubrique}{lang}{date_fin>=#ENV{date}}{par date_debut}{0,1}> </BOUCLE_agenda>
-      <INCLURE{fond=inclure/sliders/slider-calendar, id_rubrique, lang} />
-    </B_agenda>
-  </section>
+  <B_agenda>
+    <section class="section">
+      <div class="container">
+        <h1 class="section_title"><:local:agenda:></h1>
+      </div>
+      <BOUCLE_agenda(EVENEMENTS){statut=publie}{id_rubrique}{lang}{date_fin>=#ENV{date}}{par date_debut}{0,1}> </BOUCLE_agenda>
+        <INCLURE{fond=inclure/sliders/slider-calendar, id_rubrique, lang} />
+    </section>
+  </B_agenda>
 </BOUCLE_rubrique_agenda>
 
 
 [(#REM)
-<!-- Recent materials -->
-][(#SET{idRecentMaterials, #VAL{recent-materials-}|concat{#ENV{lang}}})]
+<!--
+  Recent materials.
+  Si la sélection n'existe pas, spip affiche les 5 derniers articles du secteur.
+-->
+][(#SET{idRecentMaterials, #VAL{recent-materials-}|concat{#ENV{id_rubrique}}})]
 <BOUCLE_recent_materials(SELECTIONS){id_rubrique}{identifiant=#GET{idRecentMaterials}}>
   <section class="section">
     <div class="container">
@@ -39,3 +43,12 @@
     </div>
   </section>
 </BOUCLE_recent_materials>
+  <section class="section">
+    <div class="container">
+      <h1 class="section_title"><:local:materials_recent:></h1>
+      <BOUCLE_recent_materials_articles(ARTICLES){id_secteur}{lang}{!par date}{0, 5}>
+        <INCLURE{fond=inclure/resume/article, id_article, lang} />
+      </BOUCLE_recent_materials_articles>
+    </div>
+  </section>
+<//B_recent_materials>
