@@ -7,11 +7,11 @@
     <div class="sitefooter_logo">
       <a href="#URL_SITE_SPIP"><INCLURE{fond=img/HepCoalition.svg} /></a>
     </div>
-    <div class="sitefooter_about">
+    <section class="sitefooter_about">
       <h2 class="sitefooter_heading"><:local:about_us:></h2>
       [<div class="spip-text">(#DESCRIPTIF_SITE_SPIP)</div>]
-    </div>
-    <div class="sitefooter_nav">
+    </section>
+    <nav class="sitefooter_nav">
       <ul class="sitenav-footer_list sitenav-footer_list--sections">
         <BOUCLE_menu_sections(RUBRIQUES){id_parent=#GET{idsecteur}}{lang}>
           <li class="sitenav-footer_item sitenav-footer_item--section"><a class="sitefooter_heading" href="#URL_RUBRIQUE">#TITRE</a>
@@ -28,8 +28,8 @@
           </li>
         </BOUCLE_menu_sections>
       </ul>
-    </div>
-    <div class="sitefooter_social">
+    </nav>
+    <section class="sitefooter_social">
       <h2 class="sitefooter_heading"><:local:follow_us:></h2>
       <ul>
         <li>
@@ -45,10 +45,10 @@
           </a>
         </li>
       </ul>
-    </div>
-    <div class="sitefooter_contact">
+    </section>
+    <section class="sitefooter_contact">
       <h2 class="sitefooter_heading"><:local:contact:></h2>
       <a href="#"><:local:email_send_label:></a>
-    </div>
+    </section>
   </div>
 </div>
