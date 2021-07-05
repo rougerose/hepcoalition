@@ -2,9 +2,9 @@
   <div class="container">
     <h2 class="sr-only"><:local:you_are_here_label:></h2>
     <ul class="breadcrumb_list">
-      <BOUCLE_composition_section(CONDITION){si #COMPOSITION|=={section}}>
+      <BOUCLE_composition_homepage(CONDITION){si #COMPOSITION|=={homepage}}>
         <li class="breadcrumb_item is-active"><:accueil_site:></li>
-      </BOUCLE_composition_section>
+      </BOUCLE_composition_homepage>
         <BOUCLE_breadcrumb(RUBRIQUES){id_rubrique}>
           <li class="breadcrumb_item"><a href="#URL_SITE_SPIP" class="breadcrumb_link"><:accueil_site:></a></li>
           <BOUCLE_hierarchie(HIERARCHIE){id_rubrique}>
@@ -12,7 +12,7 @@
           </BOUCLE_hierarchie>
           <li class="breadcrumb_item is-active" aria-current="page">[(#TITRE|couper{60})]</li>
         </BOUCLE_breadcrumb>
-      <//B_composition_section>
+      <//B_composition_homepage>
     </ul>
   </div>
 </nav>
