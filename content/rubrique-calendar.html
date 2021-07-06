@@ -33,7 +33,7 @@
           <div class="container">
             <h2 class="section_title">[(#GET{date_fin}|affdate_periode{#GET{affichage_duree}})]</h2>
           </div>
-          <div class="slider-calendar">
+          <div class="slider-calendar-annual">
             <div class="container swiper-container slider-calendar_container">
               <div class="swiper-wrapper slider_list slider-calendar_list">
                 <BOUCLE_annee_n_plus_1(EVENEMENTS){id_rubrique}{!evenement_passe #GET{date_fin}}{par date_debut}>

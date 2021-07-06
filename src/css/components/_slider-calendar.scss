@@ -21,6 +21,23 @@
 
 .slider-calendar_list {
   margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.slider-calendar_list,
+.slider-calendar_item {
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    width: 100%;
+    background-color: $color-primary-500;
+  }
 }
 
 .slider-calendar_item {
@@ -42,18 +59,6 @@
     border-radius: 50%;
     background-color: $color-white;
     transform: translate(-50%, 50%);
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    width: 100%;
-    background-color: $color-primary-500;
   }
 
   @include mq(sm) {
