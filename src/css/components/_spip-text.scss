@@ -38,8 +38,8 @@
       text-align: left;
       padding-top: 1rem;
       padding-inline-start: 0.5rem;
-      font-size: 14px;
-      line-height: 16px;
+      font-size: 0.875rem; //14px;
+      line-height: 1rem; //16px;
       border-left: 1px solid rgba(color.grayscale($color-primary-500), 0.3);
       color: color.grayscale($color-primary-500);
     }

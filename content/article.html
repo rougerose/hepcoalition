@@ -35,10 +35,19 @@
           </B_traductions>
         </aside>
         <div class="article_wrapper-text">
-          [<div class="article_chapo spip-text">(#CHAPO|image_reduire{1400, 0})</div>]
-          [<div class="article_text spip-text">(#TEXTE|image_reduire{1400, 0})</div>]
+          <div itemprop="text">
+            [<div class="article_chapo spip-text">(#CHAPO|image_reduire{1400, 0})</div>]
+            [<div class="article_text spip-text">(#TEXTE|image_reduire{1400, 0})</div>]
+          </div>
+
+          [(#REM) <!-- Documents liés --> ]
+          <BOUCLE_documents(DOCUMENTS){id_article}{vu=non}{0,1}>
+            <INCLURE{fond=inclure/documents/documents-article, id_article}/>
+          </BOUCLE_documents>
+
+          [(#REM) <!-- Notes --> ]
           [<aside class="article_notes spip-text">
-            <h2 class=""><:info_notes:></h2>
+            <h2><:info_notes:></h2>
             (#NOTES)
           </aside>]
         </div>

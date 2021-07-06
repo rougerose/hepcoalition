@@ -1,0 +1,15 @@
+#SET{class_variante, ''}
+<BOUCLE_article(ARTICLES){id_article}>
+  <aside id="documents" class="article_documents documents-article">
+    <h2 class="documents-article_heading"><:medias:titre_documents_joints:></h2>
+    <div class="documents-article_list">
+      <BOUCLE_documents_article(DOCUMENTS){id_article}{vu=non}{par num titre, titre, id_document}>
+        <BOUCLE_img(CONDITION){si #TYPE_DOCUMENT|match{jpg|gif|png}}>
+          <INCLURE{fond=inclure/documents/document-image-article, id_document}/>
+        </BOUCLE_img>
+          <INCLURE{fond=inclure/documents/document-file-article, id_document}/>
+        <//B_img>
+      </BOUCLE_documents_article>
+    </div>
+  </aside>
+</BOUCLE_article>
