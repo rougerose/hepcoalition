@@ -19,35 +19,75 @@
 
   // Images insérées dans le texte
   & .spip_document {
-    display: flex;
-    justify-content: center;
-    max-width: 700px;
-    width: 100%;
-    margin: 0 auto 3rem;
 
+    &_center {
+      display: flex;
+      justify-content: center;
+      max-width: 700px;
+      width: 100%;
+      margin: 0 auto 3rem;
 
-    // & figure {}
+      & figcaption {
+        // contraindre la largeur du bloc à celle de l'image
+        box-sizing: border-box;
+        width: 0;
+        min-width: 100%;
+      }
+    }
 
-    // & img {}
+    &_right {
+      float: right;
+      margin-bottom: 1.5rem;
+      margin-inline-start: 1.5rem;
+      max-width: 50%;
+    }
+
+    &_left {
+      float: left;
+      margin-bottom: 1.5rem;
+      margin-inline-end: 1.5rem;
+      max-width: 50%;
+    }
+
+    & img {
+      padding: 0.5rem;
+      box-shadow: 0 0 3px 0 rgba($color-primary-800, 0.3);
+    }
+
+    &_avec_legende {
+      padding: 0.5rem;
+      box-shadow: 0 0 3px 0 rgba($color-primary-800, 0.3);
+
+      & img {
+        padding: 0;
+        box-shadow: none;
+      }
+    }
 
     & figcaption {
-      // contraindre la largeur du bloc à celle de l'image
-      box-sizing: border-box;
-      width: 0;
-      min-width: 100%;
       text-align: left;
-      padding-top: 1rem;
-      padding-inline-start: 0.5rem;
+      padding-top: 0.5rem;
+      // padding-inline-start: 0.5rem;
+      // border-left: 1px solid rgba(color.grayscale($color-primary-500), 0.3);
       font-size: 0.875rem; //14px;
       line-height: 1rem; //16px;
-      border-left: 1px solid rgba(color.grayscale($color-primary-500), 0.3);
       color: color.grayscale($color-primary-500);
     }
   }
 
-  // p + image
-  & p + .spip_document {
-    margin-top: 3rem;
+  // un bloc texte + image
+  & ul,
+  & ol,
+  & p,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6,
+  & blockquote {
+    & + .spip_document_center {
+      margin-top: 3rem;
+    }
   }
 
   // Intertitres
