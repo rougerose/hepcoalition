@@ -36,6 +36,13 @@
         </aside>
         <div class="article_wrapper-text">
           <div itemprop="text">
+            <B_event>
+              <div class="article_text spip-text">
+                <BOUCLE_event(EVENEMENTS){id_article}{si #COMPOSITION|=={calendar}}>
+                  <INCLURE{fond=inclure/evenement-article, id_evenement} />
+                </BOUCLE_event>
+              </div>
+            </B_event>
             [<div class="article_chapo spip-text">(#CHAPO|image_reduire{1400, 0})</div>]
             [<div class="article_text spip-text">(#TEXTE|image_reduire{1400, 0})</div>]
           </div>
