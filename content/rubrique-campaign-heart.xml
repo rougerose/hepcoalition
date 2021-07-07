@@ -2,4 +2,5 @@
   <nom><multi>[fr]Rubrique Campagne "Have a heart…"  [en]"Have a heart…" section</multi></nom>
   <description><multi>[fr]Composition pour la rubrique de la campagne "Have a heart…" [en]Layout for the subsection "Have a heart…" campaign</multi></description>
   <icon>images/objet-liste-contenus.png</icon>
+  <branche type="article" composition="campaign" />
 </composition>
