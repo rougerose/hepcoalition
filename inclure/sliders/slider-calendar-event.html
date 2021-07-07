@@ -7,9 +7,7 @@
       [<p class="resume-event-slider_date"><time datetime="[(#_event:DATE_DEBUT|date_iso)]">(#_event:DATE_DEBUT|affdate)</time></p>]
       <h2 class="resume-event-slider_title"><a href="#URL_ARTICLE" class="resume_link">#TITRE</a></h2>
       [<div class="resume-event-slider_desc">
-        <p>(#INTRODUCTION{100}|PtoBR) <a href="#URL_ARTICLE" class="resume_link-more"><span>
-              <:local:more:>
-            </span></a></p>
+        <p>(#INTRODUCTION|couper{250}|PtoBR) <a href="#URL_ARTICLE" class="resume_link-more"><span><:local:more:></span></a></p>
       </div>]
     </BOUCLE_article_evenement>
   </article>

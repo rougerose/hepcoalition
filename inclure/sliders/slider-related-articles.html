@@ -1,0 +1,19 @@
+<B_related_articles_campaign>
+  <aside class="article_related related">
+    <h2 class="related_heading"><:local:related_materials:></h2>
+    <div class="slider-related">
+      <div class="swiper-container slider-related_container">
+        <div class="swiper-wrapper slider_list slider-related_list">
+          <BOUCLE_related_articles_campaign(ARTICLES){lang}{id_rubrique}{exclus}{!par date}>
+            <div class="swiper-slide slider_item slider-related_item">
+              <INCLURE{fond=inclure/resume/article-related, id_article} />
+            </div>
+          </BOUCLE_related_articles_campaign>
+        </div>
+        [(#REM)
+          <!-- pagination --> ]
+        <div class="slider_pagination slider-related_pagination swiper-pagination"></div>
+      </div>
+    </div>
+  </aside>
+</B_related_articles_campaign>

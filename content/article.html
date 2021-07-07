@@ -1,4 +1,5 @@
 <BOUCLE_article(ARTICLES){id_article}>
+  #SET{tags, #ARRAY}
   <article class="article content" itemscope itemtype="http://schema.org/Article">
     <div class="container">
       <header class="article_header">
@@ -17,10 +18,20 @@
       </div>]
       <div class="article_content">
         <aside class="article_aside">
-          <div class="article_meta">
+          <div class="article_metas">
             <INCLURE{fond=inclure/auteurs-article, id_article}/>
-            <p><time class="article_meta-date" itemprop="dateCreated" datetime="[(#DATE|date_iso)]">[(#DATE|affdate)]</time></p>
+            <p><time class="article_metas-date" itemprop="dateCreated" datetime="[(#DATE|date_iso)]">[(#DATE|affdate)]</time></p>
           </div>
+          <B_tags>
+            <div class="article_metas">
+              <ul class="article_metas-tag-list">
+                <BOUCLE_tags(MOTS){id_article}{par titre}>
+                  [(#SET{tags, #GET{tags}|push{#ID_MOT}})]
+                  <li class="article_metas-tag-item spip-text"><a href="#URL_MOT" rel="tag">#TITRE</a></li>
+                </BOUCLE_tags>
+              </ul>
+            </div>
+          </B_tags>
           <B_traductions>
             <div class="article_translations translations">
               <h2 class="translations_heading"><:local:translations:> <INCLURE{fond=img/icons/icon-caret-64.svg} /></h2>
@@ -59,6 +70,13 @@
           </aside>]
         </div>
       </div>
+      <BOUCLE_related(CONDITION){si #COMPOSITION|=={campaign}}>
+        <INCLURE{fond=inclure/sliders/slider-related-articles, id_rubrique, id_article, lang} />
+      </BOUCLE_related>
+        <BOUCLE_condition_tags(CONDITION){si #GET{tags}|count|>{1}}>
+          <INCLURE{fond=inclure/resumes/articles-related-mots, mots=#GET{tags}, id_article, lang}/>
+        </BOUCLE_condition_tags>
+      <//B_related>
     </div>
   </article>
 </BOUCLE_article>

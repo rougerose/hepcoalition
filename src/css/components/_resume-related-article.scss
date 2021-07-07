@@ -1,0 +1,27 @@
+// ========================================
+// resume-related-article
+// ========================================
+
+.resume-related-article {
+  padding-top: 0.5rem;
+  line-height: 1.375rem; // 22px
+}
+
+.resume-related-article_logo {
+  margin-bottom: 1rem;
+}
+
+.resume-related-article_title {
+  font-size: 1.25rem; // 20px
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.resume-related-article_subtitle {
+  font-size: 1.125rem;
+  color: $color-primary-800;
+}
+
+.resume-related-article_desc {
+  margin-top: 0.5rem;
+}

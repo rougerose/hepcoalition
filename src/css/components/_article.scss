@@ -77,14 +77,29 @@
   }
 }
 
-.article_meta {
+.article_metas,
+.article_metas-tag-list {
   display: flex;
   flex-wrap: wrap;
 }
 
-// .article_meta-date {}
+// .article_metas-date {}
 
-.article_meta-auteurs {
+.article_metas-tag-list {
+  margin-top: 1rem;
+}
+
+.article_metas-tag-item {
+  margin-inline-end: 0.5rem;
+
+  &::before {
+    content: "#";
+    font-weight: 400;
+    color: color.grayscale($color-primary-500);
+  }
+}
+
+.article_metas-auteurs {
   &::after {
     content: "\2022";
     margin-inline-end: 0.25rem;

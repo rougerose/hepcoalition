@@ -108,6 +108,11 @@ const evaluerNombreSlides = (wrapper) => {
   return slides.length > 1 ? true : false;
 };
 
+/**
+ * Définir le premier slide à afficher
+ * (il possède la classe .is-coming)
+ *
+ */
 const definirPremierSlide = (wrapper) => {
   let slides = wrapper.querySelectorAll(".swiper-slide");
   let slidesArray = Array.prototype.slice.call(slides),
@@ -119,7 +124,6 @@ const definirPremierSlide = (wrapper) => {
       break;
     }
   }
-
   return slideIndex;
 };
 
@@ -133,6 +137,7 @@ const sliderRubrique = document.querySelector(".slider-rubrique");
 if (sliderRubrique) {
   const sliderRubriqueWrapper =
     sliderRubrique.querySelector(".swiper-container");
+
   const swiperRubrique = new Swiper(sliderRubriqueWrapper, {
     slidesPerView: "auto",
     loop: evaluerNombreSlides(sliderRubriqueWrapper),
@@ -141,6 +146,7 @@ if (sliderRubrique) {
         centeredSlides: true,
       },
     },
+    watchOverflow: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -153,23 +159,6 @@ if (sliderRubrique) {
 }
 
 /**
- * Slider Calendar
- * Composition rubirque-homepage, rubrique-news
- */
-const sliderCalendar = new Swiper(
-  ".slider-calendar-selection .swiper-container",
-  {
-    slidesPerView: "auto",
-    grabCursor: true,
-    resistanceRatio: 0.4,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  }
-);
-
-/**
  * Slider Rubrique campagne Have a heart
  */
 const sliderHaveAHeart = new Swiper(
@@ -178,6 +167,7 @@ const sliderHaveAHeart = new Swiper(
     slidesPerView: 1,
     centeredSlides: true,
     loop: true,
+    watchOverflow: true,
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -189,6 +179,41 @@ const sliderHaveAHeart = new Swiper(
   }
 );
 
+/**
+ * Slider Related Materials (squelette Article)
+ */
+const sliderRelatedMaterials = new Swiper(".slider-related .swiper-container", {
+  slidesPerView: "auto",
+  grabCursor: true,
+  resistanceRatio: 0.4,
+  watchOverflow: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+/**
+ * Slider Calendar
+ * Composition rubirque-homepage, rubrique-news
+ */
+const sliderCalendar = new Swiper(
+  ".slider-calendar-selection .swiper-container",
+  {
+    slidesPerView: "auto",
+    grabCursor: true,
+    resistanceRatio: 0.4,
+    watchOverflow: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  }
+);
+
+/**
+ * Sliders rubrique-calendar (version année par année)
+ */
 const calendars = document.querySelectorAll(
   ".rubrique-content--calendar .slider-calendar-annual"
 );
@@ -204,6 +229,7 @@ if (calendars) {
       initialSlide: definirPremierSlide(wrapper),
       grabCursor: true,
       resistanceRatio: 0.4,
+      watchOverflow: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
