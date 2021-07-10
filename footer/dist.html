@@ -1,5 +1,5 @@
-#SET{idsecteur, #ENV{id_secteur}}
-<BOUCLE_secteur(RUBRIQUES){lang}{racine}{si #GET{idsecteur}|=={''}}>
+#SET{idsecteur, #ENV{id_secteur, 0}}
+<BOUCLE_secteur(RUBRIQUES){lang}{racine}{si #GET{idsecteur}|=={0}}>
   #SET{idsecteur, #ID_RUBRIQUE}
 </BOUCLE_secteur>
 <div class="container">
@@ -46,9 +46,11 @@
         </li>
       </ul>
     </section>
-    <section class="sitefooter_contact">
-      <h2 class="sitefooter_heading"><:local:contact:></h2>
-      <a href="#"><:local:email_send_label:></a>
-    </section>
+    <BOUCLE_contact(ARTICLES){page=contact}>
+      <section class="sitefooter_contact">
+        <h2 class="sitefooter_heading"><:local:contact:></h2>
+        <a href="#URL_ARTICLE"><:local:email_send_label:></a>
+      </section>
+    </BOUCLE_contact>
   </div>
 </div>

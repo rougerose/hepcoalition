@@ -1,9 +1,9 @@
-#SET{idsecteur, #ENV{id_secteur}}
+#SET{idsecteur, #ENV{id_secteur, 0}}
 <div class="container">
   <nav class="sitenav">
     <a class="sitenav_logo" href="#URL_SITE_SPIP"><INCLURE{fond=img/HepCoalition.svg} /></a>
     <div id="mainNav" class="sitenav_group sitenav_group--nav">
-      <BOUCLE_secteur(RUBRIQUES){lang}{racine}{si #GET{idsecteur}|=={''}}>
+      <BOUCLE_secteur(RUBRIQUES){lang}{racine}{si #GET{idsecteur}|=={0}}>
         #SET{idsecteur, #ID_RUBRIQUE}
       </BOUCLE_secteur>
       <INCLURE{fond=inclure/sitenav/sitenav_list, id_secteur=#GET{idsecteur}, env} />
