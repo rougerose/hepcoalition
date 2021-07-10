@@ -20,6 +20,10 @@
   text-transform: uppercase;
   font-size: 1.5rem; // 24px
   color: $color-primary-500;
+
+  &--search {
+    color: $color-primary-800;
+  }
 }
 
 .section_more {

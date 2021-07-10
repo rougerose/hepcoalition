@@ -1,0 +1,35 @@
+[(#REM)
+  <!-- Variables -->
+]#SET{total, 0}
+#SET{articles, #ARRAY}
+#SET{rubriques, #ARRAY}
+<BOUCLE_mot(MOTS){id_mot}>
+
+<BOUCLE_articles(ARTICLES){id_mot}{lang}>
+    [(#SET{articles, #GET{articles}|push{#ID_ARTICLE}})]
+  </BOUCLE_articles>
+  <BOUCLE_rubriques(RUBRIQUES){id_mot}{lang}>
+    [(#SET{rubriques, #GET{rubriques}|push{#ID_RUBRIQUE}})]
+  </BOUCLE_rubriques>
+  [(#SET{total, #GET{articles}|count|plus{#GET{rubriques}|count}})]
+
+  <article class="tag content">
+    <div class="container">
+      <header class="tag_header">
+        <h1 class="tag_title content_title">#TITRE</h1>
+      </header>
+      [<div class="tag_description spip-text">
+        (#TEXTE)
+      </div>]
+      <BOUCLE_total(CONDITION){si #GET{total}|>{0}}>
+        <BOUCLE_resultats_articles(CONDITION){si #GET{articles}|count|>{0}}>
+          <INCLURE{fond=inclure/recherche/articles, articles=#GET{articles}, pagination=5, ajax, env} />
+        </BOUCLE_resultats_articles>
+
+        <BOUCLE_resultats_rubriques(CONDITION){si #GET{rubriques}|count|>{0}}>
+          <INCLURE{fond=inclure/recherche/rubriques, rubriques=#GET{rubriques}, pagination=5, ajax, env} />
+        </BOUCLE_resultats_rubriques>
+      </BOUCLE_total>
+    </div>
+  </article>
+</BOUCLE_mot>

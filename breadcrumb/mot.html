@@ -1,0 +1,13 @@
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <h2 class="sr-only"><:local:you_are_here_label:></h2>
+    <ul class="breadcrumb_list">
+      <li class="breadcrumb_item">
+        <a href="#URL_SITE_SPIP" class="breadcrumb_link"><:accueil_site:></a>
+      </li>
+      <BOUCLE_mot(MOTS){id_mot}>
+        <li class="breadcrumb_item is-active" aria-current="page"><:mots_clef|label_ponctuer:> #TITRE</li>
+      </BOUCLE_mot>
+    </ul>
+  </div>
+</nav>

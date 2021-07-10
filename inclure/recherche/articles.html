@@ -1,7 +1,7 @@
 <B_articles>
   <section class="section[(#GRAND_TOTAL|<={#ENV{pagination}}|oui) section--sep]">
     #ANCRE_PAGINATION
-    <h2 class="section_title">[(#ENV{articles}|count|singulier_ou_pluriel{local:info_recherche_article, local:info_recherche_articles, nb})]</h2>
+    <h2 class="section_title section_title--search">[(#ENV{articles}|count|singulier_ou_pluriel{local:info_recherche_article, local:info_recherche_articles, nb})]</h2>
     <BOUCLE_articles(ARTICLES){id_article IN #ENV{articles}}{lang}{pagination #ENV{pagination, 5}}>
       <INCLURE{fond=inclure/resume/article, id_article, lang, class=resume--recent-material}/>
     </BOUCLE_articles>
