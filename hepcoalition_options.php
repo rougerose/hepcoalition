@@ -4,6 +4,8 @@ if (!defined('_ECRIRE_INC_VERSION')) {
   return;
 }
 
+define('_DEV_VERSION_SPIP_COMPAT', '3.2.99');
+
 if (!isset($GLOBALS['z_blocs'])) {
 	$GLOBALS['z_blocs'] = array(
 		'content',
