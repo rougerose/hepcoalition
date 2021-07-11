@@ -5,6 +5,6 @@
     <BOUCLE_articles(ARTICLES){id_article IN #ENV{articles}}{lang}{pagination #ENV{pagination, 5}}>
       <INCLURE{fond=inclure/resume/article, id_article, lang, class=resume--recent-material}/>
     </BOUCLE_articles>
-    [<nav class='pagination' role='navigation'>(#PAGINATION)</nav>]
+    [<nav class="pagination" role="navigation">(#PAGINATION)</nav>]
   </section>
 </B_articles>

@@ -3,6 +3,7 @@
   #SET{articles, #ARRAY}
   #SET{rubriques, #ARRAY}
   #SET{documents, #ARRAY}
+  #SET{mots, #ARRAY}
 
 [(#REM) <!-- Récupérer les résultats --> ]
   <BOUCLE_articles(ARTICLES){recherche}{!par points}{lang}>
@@ -19,13 +20,15 @@
       [(#SET{documents, #GET{documents}|push{#ID_DOCUMENT}})]
     </BOUCLE_articles_lies>
   </BOUCLE_documents>
+  <BOUCLE_mots(MOTS){recherche}{!par points}>
+    [(#SET{mots, #GET{mots}|push{#ID_MOT}})]</BOUCLE_mots>
 
 [(#REM) <!-- Calculer la somme des résultats --> ]
   [(#SET{total, #GET{articles}|count
     |plus{#GET{rubriques}|count}
     |plus{#GET{documents}|count}
+    |plus{#GET{mots}|count}
   })]
-
 <article class="searchResults">
   <div class="container">
     <header class="searchResults_header">
@@ -46,6 +49,10 @@
       <BOUCLE_resultats_rubriques(CONDITION){si #GET{rubriques}|count|>{0}}>
         <INCLURE{fond=inclure/recherche/rubriques, rubriques=#GET{rubriques}, pagination=5, ajax, env} />
       </BOUCLE_resultats_rubriques>
+
+      <BOUCLE_resultats_mots(CONDITION){si #GET{mots}|count|>{0}}>
+        <INCLURE{fond=inclure/recherche/mots, mots=#GET{mots}, pagination=5, ajax, env} />
+      </BOUCLE_resultats_mots>
 
       <BOUCLE_resultats_documents(CONDITION){si #GET{documents}|count|>{0}}>
         <INCLURE{fond=inclure/recherche/documents, documents=#GET{documents}, pagination=5, ajax, env} />

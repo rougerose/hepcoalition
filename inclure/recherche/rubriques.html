@@ -5,6 +5,6 @@
     <BOUCLE_rubriques(RUBRIQUES){id_rubrique IN #ENV{rubriques}}{lang}{pagination #ENV{pagination, 5}}>
       <INCLURE{fond=inclure/resume/rubrique, id_rubrique, lang} />
     </BOUCLE_rubriques>
-      [<nav class='pagination' role='navigation'>(#PAGINATION)</nav>]
+      [<nav class="pagination" role="navigation">(#PAGINATION)</nav>]
   </section>
 </B_rubriques>

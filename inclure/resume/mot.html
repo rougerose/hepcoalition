@@ -1,0 +1,10 @@
+<BOUCLE_resume_mot(MOTS){id_mot}>
+  <article class="resume[ (#ENV{class})]">
+    <div class="resume_texte">
+      <h2 class="resume_title"><a href="#URL_MOT" class="resume_link">#TITRE</a></h2>
+      [<div class="resume_desc">
+        <p>(#INTRODUCTION|couper{250}) <a href="#URL_MOT" class="resume_link-more"><span><:local:more:></span></a></p>
+      </div>]
+    </div>
+  </article>
+</BOUCLE_resume_mot>
