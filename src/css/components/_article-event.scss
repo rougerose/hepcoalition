@@ -5,9 +5,13 @@
 // .article-event {}
 
 .article-event_title {
-  margin-bottom: 0.625rem;
-  font-size: 1.5rem; // 24px;
   color: $color-primary-500;
+
+  .spip-text & {
+    margin-top: 0;
+    margin-bottom: 0.625rem;
+    font-size: 1.5rem; // 24px;
+  }
 }
 
 .article-event_date {
