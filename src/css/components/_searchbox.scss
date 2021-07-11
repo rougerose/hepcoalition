@@ -16,25 +16,29 @@ $searchbox-btn-width: 6.5rem;
 }
 
 .searchbox_label {
-  display: block;
+  // display: block;
   text-transform: uppercase;
-  color: $color-primary-500;
 
-  .searchbox--sitenavOverlay &,
-  .searchbox--modal & {
-    margin-bottom: 0.25rem;
+  .form & {
+    color: $color-primary-500;
   }
+
+  // .searchbox--sitenavOverlay &,
+  // .searchbox--modal & {
+  //   margin-bottom: 0.25rem;
+  // }
 }
 
 .searchbox_input {
-  width: 100%;
-  border: 0;
   margin: 0;
-  padding: 0.5rem;
   padding-inline-end: calc(#{$searchbox-btn-width} + 0.5rem);
   -webkit-appearance: none;
-  background-color: rgba($color-white, 0.1);
   transition: background-color 0.3s ease-in;
+
+  .form & {
+    border: 0;
+    background-color: rgba($color-white, 0.1);
+  }
 
   &::placeholder {
     color: $color-white;
@@ -69,7 +73,7 @@ $searchbox-btn-width: 6.5rem;
 
 .searchbox_btn {
   position: absolute;
-  inset-block-end: 1px;
+  inset-block-end: 0;
   inset-inline-start: 100%;
   width: $searchbox-btn-width;
   padding: 0.5rem;
