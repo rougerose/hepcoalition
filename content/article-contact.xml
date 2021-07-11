@@ -1,0 +1,5 @@
+<composition>
+  <nom><multi>[fr]Contact [en]Contact</multi></nom>
+  <description><multi>[fr]Composition pour l'article Contact [en]Layout for the Contact article</multi></description>
+  <icon>images/objet-simple.png</icon>
+</composition>
