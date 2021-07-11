@@ -1,3 +1,7 @@
+#SET{idsecteur, #ENV{id_secteur, 0}}
+<BOUCLE_secteur(RUBRIQUES){lang}{racine}{si #GET{idsecteur}|=={0}}>
+  #SET{idsecteur, #ID_RUBRIQUE}
+</BOUCLE_secteur>
 <div id="modalMenu" class="modal modal--menu" data-title="#NOM_SITE_SPIP <:local:navigation:>">
   <div class="container">
     <nav class="sitenavOverlay">
@@ -13,7 +17,7 @@
       </div>
       <div class="modal_content sitenavOverlay_menu">
         <ul class="sitenavOverlay_list sitenavOverlay_list--sections">
-          <BOUCLE_menu_sections(RUBRIQUES){id_parent=#ENV{id_secteur}}{lang}>
+          <BOUCLE_menu_sections(RUBRIQUES){id_parent=#GET{idsecteur}}{lang}>
             <li class="sitenavOverlay_item sitenavOverlay_item--section"><a href="#URL_RUBRIQUE" [ class="(#ID_RUBRIQUE|=={#ENV{id_rubrique}}|oui)is-active"]>#TITRE</a>
               <BOUCLE_mapCrowd(MOTS){id_rubrique}{technique=oui}{titre=mapcrowd}>
                 <p>[<a href="#URL_RUBRIQUE{#ID_RUBRIQUE}">(#DESCRIPTIF|PtoBR)</a>]</p>
@@ -27,7 +31,7 @@
               </B_menu_rubriques>
             </li>
           </BOUCLE_menu_sections>
-            <li class="sitenavOverlay_item sitenavOverlay_item--section sitenavOverlay_item--search">#FORMULAIRE_RECHERCHE{'', searchbox--sitenavOverlay}
+            <li class="sitenavOverlay_item sitenavOverlay_item--section sitenavOverlay_item--search">#FORMULAIRE_RECHERCHE{'', form searchbox--sitenavOverlay}
             </li>
         </ul>
       </div>
