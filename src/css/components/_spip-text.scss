@@ -54,23 +54,26 @@
       box-shadow: 0 0 3px 0 rgba($color-primary-800, 0.3);
     }
 
-    &_avec_legende {
+    & figcaption {
+      text-align: left;
+      padding-top: 0.5rem;
+      font-size: 0.875rem; //14px;
+      line-height: 1.125rem; //18px;
+      color: color.grayscale($color-primary-500);
+    }
+  }
+
+  & .spip_documents {
+    & .oembed {
       padding: 0.5rem;
       box-shadow: 0 0 3px 0 rgba($color-primary-800, 0.3);
-
-      & img {
-        padding: 0;
-        box-shadow: none;
-      }
     }
 
     & figcaption {
       text-align: left;
       padding-top: 0.5rem;
-      // padding-inline-start: 0.5rem;
-      // border-left: 1px solid rgba(color.grayscale($color-primary-500), 0.3);
       font-size: 0.875rem; //14px;
-      line-height: 1rem; //16px;
+      line-height: 1.125rem; //18px;
       color: color.grayscale($color-primary-500);
     }
   }
@@ -195,7 +198,6 @@
 
   & th {
     background: rgba($color-primary-500, 0.99);
-    // color: $color-white;
     font-weight: bold;
   }
 
