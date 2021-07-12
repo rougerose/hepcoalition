@@ -19,6 +19,9 @@
       <div class="article_content">
         <aside class="article_aside">
           <div class="article_metas">
+            <BOUCLE_formulaire_missing(CONDITION){si #FORMULAIRE_FORMIDABLE{missing_petition}}>
+              <INCLURE{inclure/campaign_missing_form, id_article} />
+            </BOUCLE_formulaire_missing>
             <div class="article_metas-date-auteurs">
               <INCLURE{fond=inclure/auteurs-article, id_article}/>
               <p><time class="article_metas-date" itemprop="dateCreated" datetime="[(#DATE|date_iso)]">[(#DATE|affdate)]</time></p>
@@ -34,7 +37,7 @@
             <B_traductions>
               <div class="article_translations translations">
                 <h2 class="translations_heading"><:local:translations:> <INCLURE{fond=img/icons/icon-caret-64.svg} /></h2>
-                <ul class="translations_list js-to_expand">
+                <ul class="translations_list translations_list--#LANG_DIR js-to_expand">
                   <BOUCLE_traductions(ARTICLES){traduction}{exclus}{par lang}>
                     <li class="translations_item spip-text" lang="#LANG" xml:lang="#LANG" dir="#LANG_DIR">
                       <span class="translations_lang-label">[(#LANG)]</span> <span><a href="[(#URL_ARTICLE|parametre_url{lang,#LANG})]" rel="alternate" hreflang="#LANG" itemprop="translationOfWork">[(#TITRE)]</a></span>

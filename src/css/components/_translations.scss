@@ -75,6 +75,18 @@
     transform: translateY(-1rem);
     transition-delay: 0.11s, 0s, 0s, 0s;
   }
+
+  &--ltr {
+    & li[dir="rtl"] {
+      justify-content: flex-end;
+    }
+  }
+
+  &--rtl {
+    & li[dir="ltr"] {
+      justify-content: flex-start;
+    }
+  }
 }
 
 .translations_item {
@@ -83,7 +95,7 @@
 }
 
 .translations_lang-label {
-  margin-right: 0.5rem;
+  margin-inline-end: 0.5rem;
   text-transform: uppercase;
   font-weight: 400;
   color: color.grayscale($color-primary-500);
