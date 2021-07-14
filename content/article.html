@@ -19,8 +19,8 @@
       <div class="article_content">
         <aside class="article_aside">
           <div class="article_metas">
-            <BOUCLE_formulaire_missing(CONDITION){si #FORMULAIRE_FORMIDABLE{missing_petition}}>
-              <INCLURE{inclure/campaign_missing_form, id_article} />
+            <BOUCLE_formulaire_missing(CONDITION){si #COMPOSITION|=={campaign-missing}}>
+              <INCLURE{fond=inclure/campaign-missing-form, id_article} />
             </BOUCLE_formulaire_missing>
             <div class="article_metas-date-auteurs">
               <INCLURE{fond=inclure/auteurs-article, id_article}/>
@@ -71,6 +71,12 @@
             <h2><:info_notes:></h2>
             (#NOTES)
           </aside>]
+
+          [(#REM)
+            <!-- Signataires Missing -->
+          ]<BOUCLE_supporters_missing(CONDITION){si #COMPOSITION|=={campaign-missing}}>
+            <INCLURE{fond=inclure/campaign-missing-supporters, id_article} />
+          </BOUCLE_supporters_missing>
         </div>
       </div>
       <BOUCLE_related(CONDITION){si #COMPOSITION|=={campaign}}>

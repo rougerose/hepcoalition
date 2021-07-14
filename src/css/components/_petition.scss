@@ -1,0 +1,66 @@
+// ========================================
+// petition
+// ========================================
+
+// [1] .petition-form
+// [2] .petition-supporters
+
+
+@use "sass:color";
+$bg-color: color.scale($color-primary-700, $lightness: 80%, $saturation: -40%);
+
+// [1] petition-form
+// ========================================
+
+.petition-form {
+  padding: 0.5rem;
+  margin-top: -0.25rem; // compenser la marge haute de .article-aside
+  margin-bottom: 2rem;
+  color: $color-primary-800;
+  background-color: $bg-color;
+  line-height: 1.5rem;
+
+  // .formulaire_formidable_missing_petition
+  & .formulaire_formidable {
+    & input[type="text"],
+    & select {
+      border: 1px solid $bg-color;
+
+      &:focus {
+        border-color: $color-primary-700;
+      }
+    }
+
+    & label {
+      color: $color-primary-800;
+    }
+  }
+}
+
+.petition-form_heading {
+  font-size: 1.75rem;
+}
+
+.petition-form_count {
+  font-size: 1.125rem;
+  margin-top: 0.75rem;
+}
+
+.petition-form_wrapper {
+  margin-top: 1rem;
+}
+
+
+// [2] petition-supporters
+// ========================================
+
+.petition-supporters {
+  margin-top: 4rem;
+}
+
+.petition-supporters_heading {
+  .spip-text & {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid $color-primary-500;
+  }
+}

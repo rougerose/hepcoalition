@@ -1,0 +1,190 @@
+// ========================================
+// formulaire_spip
+// ========================================
+
+// [1] Styles communs
+// [2] .formulaire_contact
+// [3] .formulaire_recherche
+
+@use "sass:color";
+
+// [1] Styles communs
+// ========================================
+
+.formulaire_spip {
+  legend {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: $color-primary-500;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: $color-primary-700;
+  }
+
+  input,
+  textarea,
+  select {
+    border-radius: 0.25rem;
+    appearance: none;
+    transition: border-color ease 0.3s;
+  }
+
+  select {
+    appearance: auto;
+  }
+
+  input[type="text"],
+  input[type="search"],
+  textarea,
+  select {
+    padding: 0.5rem;
+    width: 100%;
+    outline: currentColor none medium;
+  }
+
+  input[type="submit"],
+  button[type="submit"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: $color-primary-500;
+    color: $color-white;
+    box-shadow: 0 3px 5px -1px rgba($color-black, 0.2);
+    transition: background 0.3s ease;
+
+    &:hover {
+      background-color: $color-primary-400;
+    }
+  }
+
+  .editer {
+    margin-bottom: 1.5rem;
+  }
+
+  .erreur_message {
+    color: $color-secondary-600;
+    font-style: italic;
+  }
+}
+
+// [2] formulaire_contact
+// ========================================
+
+.formulaire_spip {
+  &.formulaire_contact {
+    & input[type="text"],
+    textarea {
+      border: 1px solid color.grayscale($color-primary-100);
+      transition: border 0.3s ease;
+
+      &:focus {
+        border-color: $color-primary-600;
+      }
+    }
+
+    .reponse_formulaire {
+      padding: 0.25rem 0.5rem;
+      border-radius: 5px;
+
+      &.reponse_formulaire_erreur {
+          color: $color-secondary-500;
+          border: 2px solid $color-secondary-500;
+      }
+
+      &.reponse_formulaire_ok {
+          border: 2px solid $color-primary-500;
+      }
+    }
+
+    .previsu {
+      border-bottom: 1px solid $color-primary-500;
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+// [3] formulaire_recherche
+// ========================================
+
+// reference https://css-tricks.com/show-search-button-when-search-field-is-non-empty
+
+$searchbox-btn-width: 6.5rem;
+
+// .searchbox {
+//   &--sitenavOverlay {}
+// }
+
+.searchbox_form {
+  position: relative;
+  overflow: hidden;
+}
+
+.searchbox_label {
+  text-transform: uppercase;
+
+  .formulaire_spip & {
+    color: $color-primary-500;
+  }
+}
+
+.searchbox_input {
+  margin: 0;
+  padding-inline-end: calc(#{$searchbox-btn-width} + 0.5rem);
+  -webkit-appearance: none;
+  transition: background-color 0.3s ease-in;
+
+  .formulaire_spip & {
+    border: 0;
+    background-color: rgba($color-white, 0.1);
+  }
+
+  &::placeholder {
+    color: $color-white;
+  }
+
+  &:focus {
+    color: $color-black;
+    background-color: rgba($color-white, 1);
+  }
+
+  [dir="ltr"] &:not(:placeholder-shown) {
+    & ~ .searchbox_btn {
+      transform: translateX(-100%);
+    }
+  }
+
+  [dir="rtl"] &:not(:placeholder-shown) {
+    & ~ .searchbox_btn {
+      transform: translateX(100%);
+    }
+  }
+
+  .searchbox--modal & {
+    background-color: rgba($color-white, 0.5);
+    border: 1px solid rgba($color-primary-500, 0.2);
+
+    &:focus {
+      border-color: $color-primary-500;
+    }
+
+    &::placeholder {
+      color: $color-black;
+    }
+  }
+}
+
+.searchbox_btn {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 100%;
+  width: $searchbox-btn-width;
+  padding: 0.5rem;
+  background-color: $color-primary-500;
+  transition: transform 0.4s ease;
+}

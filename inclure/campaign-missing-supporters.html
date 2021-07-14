@@ -1,0 +1,43 @@
+#CACHE{0}
+<BOUCLE_article(ARTICLES){id_article}>
+  #SET{noms, #ARRAY} #SET{supporters, #ARRAY} #SET{idformulaire, ''}
+  <BOUCLE_formulaire(FORMULAIRES){identifiant=missing_petition}>
+    #SET{idformulaire, #ID_FORMULAIRE}
+    <BOUCLE_supporters_total(FORMULAIRES_REPONSES){id_formulaire}{statut=publie}>
+      <BOUCLE_supporters_data(FORMULAIRES_REPONSES_CHAMPS){id_formulaires_reponse}{nom=input_2}>
+        [(#SET{supporters, #GET{supporters}|array_merge{#ARRAY{r#ID_FORMULAIRES_REPONSE,#VALEUR}}})]
+      </BOUCLE_supporters_data>
+    </BOUCLE_supporters_total>
+    [(#SET{supporters, #GET{supporters}|filtre_natcasesort})]
+
+    <B_supporters>
+      <aside class="article_petition petition-supporters">
+        #ANCRE_PAGINATION
+        <div class="spip-text">
+          [<h2 class="petition-supporters_heading">(#GRAND_TOTAL|singulier_ou_pluriel{local:signatories_singular, local:signatories_plural, nb})</h2>]
+          <table >
+            <thead>
+              <tr>
+                <th>[(#_formulaire:SAISIES|unserialize|saisies_chercher{input_2}|table_valeur{options/label}|typo)]</th>
+                <th>[(#_formulaire:SAISIES|unserialize|saisies_chercher{input_4}|table_valeur{options/label}|typo)]</th>
+                <th>[(#_formulaire:SAISIES|unserialize|saisies_chercher{pays_1}|table_valeur{options/label}|typo)]</th>
+              </tr>
+            </thead>
+            <tbody>
+              <BOUCLE_supporters(DATA){source table, #GET{supporters}}{pagination 40}>
+                <tr>
+                  <BOUCLE_supporters_reponses(FORMULAIRES_REPONSES){id_formulaire=#GET{idformulaire}}{id_formulaires_reponse=#CLE|substr{1}}>
+                    <td>[<strong>(#VOIR_REPONSE{input_2, brut})</strong>][ (#VOIR_REPONSE{input_1, brut})]</td>
+                    <td>[(#VOIR_REPONSE{input_4, brut})]</td>
+                    <td>[(#INFO_NOM{pays, #VOIR_REPONSE{pays_1, brut}})]</td>
+                  </BOUCLE_supporters_reponses>
+                </tr>
+              </BOUCLE_supporters>
+            </tbody>
+          </table>
+        </div>
+        [<nav class="pagination" role="navigation">(#PAGINATION)</nav>]
+      </aside>
+    </B_supporters>
+  </BOUCLE_formulaire>
+</BOUCLE_article>
