@@ -31,7 +31,12 @@ $icon-caret-margin: 0.5rem;
 }
 
 .sitenav_list {
+  display: none;
   font-size: 1.125rem; // 18px
+
+  @include mq(lg) {
+    display: flex;
+  }
 
   & a,
   & button {
