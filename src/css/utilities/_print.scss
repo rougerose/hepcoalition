@@ -1,0 +1,115 @@
+@use "sass:meta";
+@use "sass:color";
+
+/*!
+ * Gutenberg
+ *
+ * MIT Fabien Sa
+ * https://github.com/BafS/Gutenberg
+ */
+
+// Variables
+@import 'gutenberg-css/scss/variables';
+
+$base-font-family: "HepC", #{meta.inspect($font-family-sans-serif)};
+$headers-font-family: "HepC", #{meta.inspect($font-family-sans-serif)};
+// $page-padding-left: 1.8cm;
+// $page-padding-right: 1.8cm;
+$page-padding-top: 1.8cm;
+$page-padding-bottom: 1.8cm;
+
+// Normalize
+// @import 'normalize.css/normalize';
+
+@import 'utilities/print-reset';
+@import 'gutenberg-css/scss/pagination';
+@import 'gutenberg-css/scss/page';
+@import 'gutenberg-css/scss/reformat';
+@import 'gutenberg-css/scss/utilities';
+
+
+//
+// HepCoalition print css
+//
+
+// .container
+
+.container {
+  padding: 0;
+  max-width: 100%;
+}
+
+// .page
+.page {
+  border-top: none;
+}
+
+// .sitenav
+.sitenav {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.sitenav_logo {
+  width: 45%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// article
+
+.article_content {
+  display: block;
+}
+
+.article_metas {
+  width: 85%;
+  margin: 0 auto 3rem;
+  padding: 1rem 0 0.5rem;
+  border: 1px solid rgba($color-primary-700, 0.3);
+  border-width: 1px 0;
+
+  & p {
+    margin-bottom: 0;
+  }
+}
+
+.article_aside,
+.article_wrapper-text {
+  max-width: 100%;
+}
+
+// document-article
+.document-article_title {
+  & a {
+    border: none;
+  }
+}
+
+// translations
+.translations_heading {
+  font-size: 1rem;
+}
+
+// spip-text
+
+.spip-text {
+  & a {
+    border: none;
+  }
+
+  & .texteencadre-spip {
+    background-color: transparent;
+    border: 2px solid $color-primary-800;
+    color: $color-black;
+  }
+}
+
+// hidden elements
+.page_footer,
+.sitenav_group,
+.content_section-title,
+.spip-admin-float {
+  display: none;
+}
