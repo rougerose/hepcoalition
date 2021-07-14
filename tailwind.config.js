@@ -30,15 +30,15 @@ module.exports = {
       xl: "1100px",
     },
     extend: {
-      colors: {
-        primary: {
-          500: "#19a1ac",
-          900: "#0a3f43",
-        },
-        secondary: {
-          500: "#c11f02",
-        },
-      },
+      // colors: {
+      //   primary: {
+      //     500: "#19a1ac",
+      //     900: "#0a3f43",
+      //   },
+      //   secondary: {
+      //     500: "#c11f02",
+      //   },
+      // },
       fontSize: {
         "2xs": ".625rem",
       },
