@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "gulp",
-    "build": "NODE_ENV=production gulp build",
-    "postinstall": "gulp fonts"
+    "build": "NODE_ENV=production gulp build"
   },
   "browserslist": [
     "defaults"
@@ -25,7 +24,7 @@
   "devDependencies": {
     "@accede-web/overlay": "^1.0.2",
     "@fontsource/almarai": "^4.4.2",
-    "@fontsource/noto-sans-tc": "^4.4.5",
+    "@fontsource/noto-sans-sc": "^4.5.0",
     "@fontsource/roboto-condensed": "^4.4.2",
     "@rollup/plugin-node-resolve": "^13.0.0",
     "autoprefixer": "^10.3.1",

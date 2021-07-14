@@ -26,6 +26,7 @@ module.exports = {
     ],
   },
   fonts: {
+    clean: ["dist/fonts/*"],
     src: [
       {
         src: "node_modules/@fontsource/roboto-condensed/files/roboto-condensed-{latin,cyrillic}-*.{woff,woff2}",
@@ -35,12 +36,19 @@ module.exports = {
         src: "node_modules/@fontsource/almarai/files/almarai-arabic-*.{woff,woff2}",
         name: "almarai",
       },
+      // {
+      //   src: [
+      //     "node_modules/@fontsource/noto-sans-tc/files/noto-sans-tc-{0..119}-{300,400,700}-normal.woff2",
+      //     "node_modules/@fontsource/noto-sans-tc/files/noto-sans-tc-all-{300,400,700}-normal.woff",
+      //   ],
+      //   name: "noto-sans-tc",
+      // },
       {
         src: [
-          "node_modules/@fontsource/noto-sans-tc/files/noto-sans-tc-{0..119}-*.woff2",
-          "node_modules/@fontsource/noto-sans-tc/files/noto-sans-tc-all-*.woff",
+          "node_modules/@fontsource/noto-sans-sc/files/noto-sans-sc-{0..119}-{300,400,700}-normal.woff2",
+          "node_modules/@fontsource/noto-sans-sc/files/noto-sans-sc-all-{300,400,700}-normal.woff",
         ],
-        name: "noto-sans-tc",
+        name: "noto-sans-sc",
       },
     ],
     dist: "dist/fonts",

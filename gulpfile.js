@@ -83,22 +83,22 @@ const fonts = function (done) {
   for (const font of config.fonts.src) {
     fs.access("./dist/fonts/" + font.name, (err) => {
       if (err) {
-        return src(font.src)
-          .pipe(
-            rename(function (path) {
-              return {
-                dirname: font.name,
-                basename: path.basename,
-                extname: path.extname,
-              };
-            })
-          )
-          .pipe(dest(config.fonts.dist));
-      } else {
-        return done();
+        copy_files(font);
       }
     });
   }
+  return done();
+}
+
+function copy_files(font) {
+  return src(font.src)
+    .pipe(rename(function (path) {
+      return {
+        dirname: font.name,
+        basename: path.basename,
+        extname: path.extname,
+      };
+    })).pipe(dest(config.fonts.dist));
 }
 
 // Task: Clean
@@ -108,6 +108,12 @@ const clean = function (done) {
   del.sync(config.clean);
 
   // Signal completion
+  return done();
+};
+
+// Task: Clean fonts
+const cleanFonts = function (done) {
+  del.sync(config.fonts.clean);
   return done();
 };
 
@@ -155,3 +161,5 @@ exports.build = series(clean, cssVendor, parallel(css, js));
 exports.fonts = series(fonts);
 
 exports.clean = clean;
+
+exports.cleanFonts = cleanFonts;
