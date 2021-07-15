@@ -3773,14 +3773,17 @@ body.has-overlay {
   color: #000;
 }
 
-.searchbox_btn {
+.formulaire_spip.searchbox .searchbox_btn {
   position: absolute;
-  inset-block-end: 0;
+  bottom: 1px;
   inset-inline-start: 100%;
   width: 6.5rem;
   padding: 0.5rem;
   background-color: #19a1ac;
   transition: transform 0.4s ease;
+}
+.formulaire_spip.searchbox--sitenavOverlay .searchbox_btn {
+  bottom: 0;
 }
 
 .petition-form {
