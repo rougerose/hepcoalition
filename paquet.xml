@@ -22,7 +22,6 @@
     <necessite compatibilite="[1.3.2;[" nom="interface_traduction_objets" />
     <necessite compatibilite="[2.3.5;[" nom="oembed" />
     <necessite compatibilite="[1.5.5;[" nom="pages" />
-    <necessite compatibilite="[0.16.7;[" nom="contact" />
     <necessite compatibilite="[3.4.3;[" nom="pays" />
     <necessite compatibilite="[5.0.0;[" nom="formidable" />
 </paquet>

@@ -28,11 +28,13 @@
             [<div class="article_chapo spip-text">(#CHAPO|image_reduire{1400, 0})</div>]
             [<div class="article_text spip-text">(#TEXTE|image_reduire{1400, 0})</div>]
           </div>
-          [<div class="article_formulaire-contact form form--contact">
-            <div class="ajax">
-              (#FORMULAIRE_CONTACT)
-            </div>
-          </div>]
+          <BOUCLE_auteur_hepcoalition(AUTEURS){id_article}{0,1}>
+            [<div class="article_formulaire-contact form form--contact">
+              <div class="ajax">
+                (#FORMULAIRE_ECRIRE_AUTEUR)
+              </div>
+            </div>]
+          </BOUCLE_auteur_hepcoalition>
 
           [(#REM) <!-- Documents liés --> ]
           <BOUCLE_documents(DOCUMENTS){id_article}{vu=non}{0,1}>

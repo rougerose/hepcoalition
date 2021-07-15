@@ -3,7 +3,7 @@
 // ========================================
 
 // [1] Styles communs
-// [2] .formulaire_contact
+// [2] .formulaire_ecrire_auteur
 // [3] .formulaire_recherche
 
 @use "sass:color";
@@ -39,6 +39,7 @@
 
   input[type="text"],
   input[type="search"],
+  input[type="email"],
   textarea,
   select {
     padding: 0.5rem;
@@ -86,13 +87,14 @@
   }
 }
 
-// [2] formulaire_contact
+// [2] formulaire_ecrire_auteur
 // ========================================
 
 .formulaire_spip {
-  &.formulaire_contact {
+  &.formulaire_ecrire_auteur {
     & input[type="text"],
-    textarea {
+    & input[type="email"],
+    & textarea {
       border: 1px solid color.grayscale($color-primary-100);
       transition: border 0.3s ease;
 

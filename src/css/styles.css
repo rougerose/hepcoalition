@@ -3673,6 +3673,7 @@ body.has-overlay {
 }
 .formulaire_spip input[type=text],
 .formulaire_spip input[type=search],
+.formulaire_spip input[type=email],
 .formulaire_spip textarea,
 .formulaire_spip select {
   padding: 0.5rem;
@@ -3713,16 +3714,14 @@ body.has-overlay {
   border: 2px solid #19a1ac;
 }
 
-.formulaire_spip.formulaire_contact input[type=text],
-.formulaire_spip.formulaire_contact textarea {
+.formulaire_spip.formulaire_ecrire_auteur input[type=text], .formulaire_spip.formulaire_ecrire_auteur input[type=email], .formulaire_spip.formulaire_ecrire_auteur textarea {
   border: 1px solid #bcbcbc;
   transition: border 0.3s ease;
 }
-.formulaire_spip.formulaire_contact input[type=text]:focus,
-.formulaire_spip.formulaire_contact textarea:focus {
+.formulaire_spip.formulaire_ecrire_auteur input[type=text]:focus, .formulaire_spip.formulaire_ecrire_auteur input[type=email]:focus, .formulaire_spip.formulaire_ecrire_auteur textarea:focus {
   border-color: #15868f;
 }
-.formulaire_spip.formulaire_contact .previsu {
+.formulaire_spip.formulaire_ecrire_auteur .previsu {
   border-bottom: 1px solid #19a1ac;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
