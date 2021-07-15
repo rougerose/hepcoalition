@@ -3152,6 +3152,7 @@ button.swiper-pagination-bullet {
   outline: 1px dotted;
 }
 .sitenav_list--subsections {
+  flex-direction: column;
   position: absolute;
   z-index: 0;
   inset-block-start: 100%;
@@ -4542,7 +4543,7 @@ body.has-overlay {
   line-height: 1.75rem;
 }
 
-.article_text h2 :first-child, .article_text h3 :first-child, .article_text h4 :first-child, .article_text h5 :first-child, .article_text h6 :first-child {
+.article_text h2:first-child, .article_text h3:first-child, .article_text h4:first-child, .article_text h5:first-child, .article_text h6:first-child {
   margin-top: 0;
 }
 
