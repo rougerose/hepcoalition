@@ -5,7 +5,6 @@ const { gulp, src, dest, watch, series, parallel } = require("gulp");
 const browserSync = require("browser-sync");
 const del = require("del");
 const postcss = require("gulp-postcss");
-const csso = require("gulp-csso");
 const size = require("gulp-size");
 const sass = require("gulp-dart-sass");
 const rename = require("gulp-rename");
@@ -24,7 +23,6 @@ const css = function (done) {
       .pipe(sass({includePaths: ["node_modules"]}))
       .pipe(dest(config.css.src))
       .pipe(postcss())
-      // .pipe(csso())
       .pipe(size({ title: "CSS", gzip: true, showFiles: true }))
       .pipe(dest(config.css.dist))
       .pipe(browserSync.stream())
