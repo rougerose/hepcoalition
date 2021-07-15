@@ -36,13 +36,6 @@ module.exports = {
         src: "node_modules/@fontsource/almarai/files/almarai-arabic-*.{woff,woff2}",
         name: "almarai",
       },
-      // {
-      //   src: [
-      //     "node_modules/@fontsource/noto-sans-tc/files/noto-sans-tc-{0..119}-{300,400,700}-normal.woff2",
-      //     "node_modules/@fontsource/noto-sans-tc/files/noto-sans-tc-all-{300,400,700}-normal.woff",
-      //   ],
-      //   name: "noto-sans-tc",
-      // },
       {
         src: [
           "node_modules/@fontsource/noto-sans-sc/files/noto-sans-sc-{0..119}-{300,400,700}-normal.woff2",
@@ -59,18 +52,12 @@ module.exports = {
     dist: "dist/js/",
     name: "hepcoalition.js",
   },
-  // jsConcat: {
-  //   src: ["src/lib/swiper/swiper-bundle.min.js"],
-  //   dist: "dist/lib/",
-  //   name: "libs.min.js",
-  // },
   clean: ["dist/js/lib/*.js", "dist/css/*.css", "dist/js/*.js", "!dist/"],
   tasks: {
     css: true,
     cssVendor: false,
     fonts: true,
     js: true,
-    // jsConcat: false,
     clean: true,
     reload: true,
   },
