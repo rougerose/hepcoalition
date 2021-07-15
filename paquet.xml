@@ -1,6 +1,6 @@
 <paquet
     categorie="squelette"
-    compatibilite="[4.0.0-alpha;4.9.*]"
+    compatibilite="[4.0.0;4.9.*]"
     etat="dev"
     logo="img/HepC-logo-plugin-128.png"
     prefix="hepcoalition"
