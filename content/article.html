@@ -82,7 +82,7 @@
       <BOUCLE_related(CONDITION){si #COMPOSITION|=={campaign}}>
         <INCLURE{fond=inclure/sliders/slider-related-articles, id_rubrique, id_article, lang} />
       </BOUCLE_related>
-        <BOUCLE_condition_tags(CONDITION){si #GET{tags}|count|>{1}}>
+        <BOUCLE_condition_tags(CONDITION){si #GET{tags}|count|>={1}}>
           <INCLURE{fond=inclure/resumes/articles-related-mots, mots=#GET{tags}, id_article, lang}/>
         </BOUCLE_condition_tags>
       <//B_related>
