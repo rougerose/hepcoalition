@@ -2,7 +2,9 @@
 // sitenavOverlay
 // ========================================
 
-// .sitenavOverlay {}
+.sitenavOverlay {
+  padding-top: 1.25rem;
+}
 
 .sitenavOverlay_header {
   display: grid;
@@ -25,6 +27,7 @@
 
 .sitenavOverlay_list {
   &--sections {
+
     display: grid;
     gap: 2rem 1rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -54,6 +57,7 @@
 
   &--search {
     grid-column: 1 / span 2;
+    margin-bottom: 2rem;
   }
 
   & a {
