@@ -23,4 +23,5 @@
     <necessite compatibilite="[1.5.5;[" nom="pages" />
     <necessite compatibilite="[3.4.3;[" nom="pays" />
     <necessite compatibilite="[5.0.0;[" nom="formidable" />
+    <necessite compatibilite="[2.3.13;[" nom="metasplus" />
 </paquet>
