@@ -20,7 +20,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ['"HepC"', ...defaultTheme.fontFamily.sans],
+      sans: ['"HepC", "Noto Sans SC", "Almarai"', ...defaultTheme.fontFamily.sans],
       mono: defaultTheme.fontFamily.mono,
     },
     screens: {
