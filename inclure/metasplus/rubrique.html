@@ -1,0 +1,7 @@
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+  #SET{titre, #TITRE}
+  [(#ID_RUBRIQUE|=={#ID_SECTEUR}|?{
+    #SET{titre, #NOM_SITE_SPIP}
+  })]
+  <INCLURE{fond=inclure/metasplus/dist, titre=#GET{titre}} />
+</BOUCLE_rubrique>
