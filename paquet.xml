@@ -12,7 +12,7 @@
     <necessite compatibilite="[3.0.0;[" nom="Zcore" />
     <necessite compatibilite="[4.3.4;[" nom="agenda" />
     <necessite compatibilite="[3.9.3;[" nom="compositions" />
-    <necessite compatibilite="[4.3.4;[" nom="critere_mots" />
+    <necessite compatibilite="[4.3.5;[" nom="critere_mots" />
     <necessite compatibilite="[2.0.0;[" nom="mots_techniques" />
     <necessite compatibilite="[1.9.8;[" nom="selections_editoriales" />
     <necessite compatibilite="[3.6.4;[" nom="typoenluminee" />
