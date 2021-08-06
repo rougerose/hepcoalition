@@ -1,6 +1,9 @@
 # fichiers systemes
 .DS_Store
 
+#vscode
+.vscode/*
+
 # yarn
 node_modules
 .yarn/*
