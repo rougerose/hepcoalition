@@ -51,9 +51,9 @@
                   <INCLURE{fond=inclure/resume/campagne, id_rubrique, lang} />
                 </BOUCLE_campaigns>
               </BOUCLE_rubrique_campaigns>
-                <BOUCLE_dernier_article(ARTICLES){id_rubrique}{0,2}>
+                <BOUCLE_derniers_articles(ARTICLES){!par date}{lang}{id_rubrique}{0,2}>
                   <INCLURE{fond=inclure/resume/article, id_article, lang} />
-                </BOUCLE_dernier_article>
+                </BOUCLE_derniers_articles>
               <//B_rubrique_campaigns>
             <//B_selections_slider>
             <div class="section_more">
