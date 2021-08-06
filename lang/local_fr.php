@@ -48,7 +48,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'info_recherche_pas_de_resultat' => 'Aucun résultat',
 
    // L
-	 'langues_label' => 'Langues',
 	 'langue_preferee_titre' => 'Sélectionnez votre langue préférée',
    'lastest_news'                   => "Dernières actualités",
    'latest_publications'            => 'Dernières publications',
