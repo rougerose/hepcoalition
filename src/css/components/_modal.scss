@@ -2,6 +2,8 @@
 // modal
 // ========================================
 
+$boxshadow: 0 15px 35px rgba($color-primary-900, 0.3), 0 5px 10px rgba($color-primary-900, 0.8);
+
 .modal {
   display: flex;
   flex-direction: column;
@@ -25,7 +27,7 @@
     width: 100%;
     max-width: 37.5rem; // 600px
     border-radius: 0.25rem;
-    box-shadow: 0 25px 50px -12px rgba(0,0,0, 0.25);
+    box-shadow: $boxshadow;
   }
 
   &--menu {
@@ -65,6 +67,8 @@
     width: 100%;
     max-width: 1052px;
     padding: 1.5rem 1.5rem 4rem;
+    border-radius: 0.25rem;
+    box-shadow: $boxshadow;
   }
 }
 
