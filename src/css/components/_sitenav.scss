@@ -65,18 +65,45 @@ $icon-caret-margin: 0.5rem;
     z-index: 0;
     inset-block-start: 100%;
     inset-inline-start: 0;
-    margin-block-start: 0.25rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+    margin-block-start: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     visibility: hidden;
     min-width: 100%;
     width: auto;
     background-color: $color-white;
-    box-shadow: 0px 5px 10px 0 rgba($color-black, 0.15), 0 3px 6px rgba($color-black, 0.10);
+    border: 2px solid $color-green-gray-50;
+    box-shadow: 0px 5px 10px rgba($color-green-gray-400, 0.15), 0 3px 6px rgba($color-green-gray-400, 0.10);
+    border-radius: 0.25rem;
     transform: translateY(-2rem);
     opacity: 0;
     transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 
+    // arrow tooltip
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 24px;
+      width: 0;
+      height: 0;
+      border: solid transparent;
+    }
+
+    &::before {
+      margin-left: -15px;
+      border-width: 15px;
+      border-bottom-color: $color-green-gray-50;
+    }
+
+    &::after {
+      margin-left: -12px;
+      border-width: 12px;
+      border-bottom-color: $color-white;
+    }
+
+    // dropdown
     &[aria-hidden="false"] {
       visibility: visible;
       opacity: 1;
@@ -88,6 +115,7 @@ $icon-caret-margin: 0.5rem;
     & > li {
       &:first-child a {
         padding-left: 0.75rem;
+
         &::before {
           display: none;
         }
@@ -97,9 +125,7 @@ $icon-caret-margin: 0.5rem;
     & a {
       display: block;
       white-space: nowrap;
-      padding: 0 1rem 0.25rem 1.25rem;
-      // padding: 0 1.25rem 0 1.25rem;
-
+      padding: 0 1.25rem 0.25rem 1.25rem;
     }
   }
 }
