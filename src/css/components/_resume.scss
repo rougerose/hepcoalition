@@ -68,7 +68,7 @@
   margin-top: 0.5rem;
   font-size: 1.125rem;
   line-height: 1.5rem;
-  color: $color-primary-800;
+  color: $color-primary-600;
 }
 
 .resume_desc,
@@ -101,7 +101,8 @@
   font-size: 0.875rem; // 14px;
   line-height: 1rem;
   text-transform: uppercase;
-  color: color.grayscale($color-primary-300);
+  color: $color-green-gray-300;
+  // color: color.grayscale($color-primary-300);
 
   & > time {
     &::after {
