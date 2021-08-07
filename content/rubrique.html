@@ -40,8 +40,10 @@
           <!-- Aperçu sous-rubriques -->
         ]<BOUCLE_apercu_sousrubriques(RUBRIQUES){id_parent}{par num titre, titre}>
           <section class="section">
-            <h2 class="section_title"><a href="#URL_RUBRIQUE">#TITRE</a></h2>
-            [<div>(#DESCRIPTIF)</div>]
+            <div class="section_header">
+              <h2 class="section_title"><a href="#URL_RUBRIQUE">#TITRE</a></h2>
+              [<div class="section_description">(#DESCRIPTIF)</div>]
+            </div>
             [(#SET{idSlider, #VAL{slider-}|concat{#ID_RUBRIQUE}})]
             <B_selections_slider>
               <BOUCLE_selections_slider(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
