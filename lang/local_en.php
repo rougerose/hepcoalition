@@ -48,6 +48,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'info_recherche_pas_de_resultat' => 'No result',
 
    // L
+	 'label_ponctuer' => '@label@:',
 	 'langue_preferee_titre' => 'Select your preferred language',
    'lastest_news'                   => "Lastest news",
    'latest_publications'            => 'Latest publications',
@@ -82,6 +83,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
    // S
 	 'search_type_here' => 'Type here',
+	 'see_all_materials' => 'see all materials',
    'share'                          => 'Share',
    'signatories_coalition'          => "Signatories",
    'signatories_singular'           => "1 supporter",

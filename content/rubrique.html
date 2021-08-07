@@ -41,6 +41,7 @@
         ]<BOUCLE_apercu_sousrubriques(RUBRIQUES){id_parent}{par num titre, titre}>
           <section class="section">
             <h2 class="section_title"><a href="#URL_RUBRIQUE">#TITRE</a></h2>
+            [<div>(#DESCRIPTIF)</div>]
             [(#SET{idSlider, #VAL{slider-}|concat{#ID_RUBRIQUE}})]
             <B_selections_slider>
               <BOUCLE_selections_slider(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
@@ -54,7 +55,7 @@
               </BOUCLE_dernier_article>
             <//B_selections_slider>
             <div class="section_more">
-              <a href="#URL_RUBRIQUE" class="link-all link-all--section">xx SEE ALL xx</a>
+              <a href="#URL_RUBRIQUE" class="link-all link-all--section">[(#TITRE|label_ponctuer) <:local:see_all_materials:>]</a>
             </div>
           </section>
         </BOUCLE_apercu_sousrubriques>
