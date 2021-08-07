@@ -10,7 +10,7 @@
     <B_secteur_langue>
       <ul class="langlist">
         <BOUCLE_secteur_langue(RUBRIQUES){racine}{par lang}>
-          <li xml:lang="#LANG" lang="#LANG" dir="#LANG_DIR" class="langlist_item [(#EXPOSE)]">
+          <li xml:lang="#LANG" lang="#LANG" dir="#LANG_DIR" class="langlist_item[(#LANG|=={#ENV{lang}}|oui) on]">
             [(#EXPOSE{'', <a
               href="[(#VAL{converser}|generer_url_action{redirect=#URL_RUBRIQUE}|parametre_url{var_lang, #LANG})]" class="langlist_link" rel="alternate" hreflang="#LANG">})][(#LANG|traduire_nom_langue)]#EXPOSE{'', </a>}
           </li>
