@@ -60,17 +60,25 @@
               [<div class="section_description">(#DESCRIPTIF)</div>]
             </div>
             [(#SET{idSlider, #VAL{slider-}|concat{#ID_RUBRIQUE}})]
-            <B_selections_slider>
-              <BOUCLE_selections_slider(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
-                <BOUCLE_selection_article(SELECTIONS_CONTENUS){id_selection}{0,1}>
-                  <INCLURE{fond=inclure/selections/recent-materials, id_selection} />
-                </BOUCLE_selection_article>
-              </BOUCLE_selections_slider>
-            </B_selections_slider>
-              <BOUCLE_dernier_article(ARTICLES){id_rubrique}{!par date}{lang}{0,1}>
+            [(#SET{idSelection, 0})]
+            [(#REM)
+              <!-- Vérifier si une sélection existe et qu'elle n'est pas vide -->
+            ]
+            <BOUCLE_selection(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
+              <BOUCLE_articles_selection(SELECTIONS_CONTENUS){id_selection}{0,1}>
+                [(#SET{idSelection, #ID_SELECTION})]
+              </BOUCLE_articles_selection>
+            </BOUCLE_selection>
+            [(#REM)
+            <!-- Afficher la sélection, sinon les 2 derniers articles de la rubrique -->
+            ]
+            <BOUCLE_test_selection(CONDITION){si #GET{idSelection}|>{0}}>
+              <INCLURE{fond=inclure/selections/recent-materials, id_selection=#GET{idSelection}} />
+            </BOUCLE_test_selection>
+              <BOUCLE_derniers_articles(ARTICLES){id_rubrique}{!par date}{lang}{0,2}>
                 <INCLURE{fond=inclure/resume/article, id_article, lang} />
-              </BOUCLE_dernier_article>
-            <//B_selections_slider>
+              </BOUCLE_derniers_articles>
+            <//B_test_selection>
             <div class="section_more">
               <a href="#URL_RUBRIQUE" class="link-all link-all--section">[(#TITRE|label_ponctuer) <:local:see_all_materials:>]</a>
             </div>

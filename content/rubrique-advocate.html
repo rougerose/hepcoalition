@@ -42,23 +42,35 @@
               [<div class="section_description">(#DESCRIPTIF)</div>]
             </div>
             [(#SET{idSlider, #VAL{slider-}|concat{#ID_RUBRIQUE}})]
-            <B_selections_slider>
-              <BOUCLE_selections_slider(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
-                <BOUCLE_selection_article(SELECTIONS_CONTENUS){id_selection}{0,2}>
-                  <INCLURE{fond=inclure/selections/recent-materials, id_selection} />
-                </BOUCLE_selection_article>
-              </BOUCLE_selections_slider>
-            </B_selections_slider>
+            [(#SET{idSelection, 0})]
+            [(#REM)
+            <!-- Vérifier si une sélection existe et qu'elle n'est pas vide -->
+            ]
+            <BOUCLE_selection(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
+              <BOUCLE_articles_selection(SELECTIONS_CONTENUS){id_selection}{0,1}>
+                [(#SET{idSelection, #ID_SELECTION})]
+              </BOUCLE_articles_selection>
+            </BOUCLE_selection>
+            [(#REM)
+            <!--
+              Afficher la sélection [1]. Sinon les 2 derniers articles de la rubrique, avec un test supplementaire pour la sous-rubrique Campaigns qui nécessite d'afficher des rubriques et non des articles.
+
+              [1] S'il s'agit d'une sélection issue d'une rubrique Campagne, le contenu s'affiche comme un simple article. Ce qui est une sorte de régression par rapport à l'affichage utilisé par le squelette resume/campagne, mais il n'y a pas de manière simple de différencier une sous-rubrique Campagne d'une autre sous-rubrique.
+            -->
+            ]
+            <BOUCLE_test_selection(CONDITION){si #GET{idSelection}|>{0}}>
+              <INCLURE{fond=inclure/selections/recent-materials, id_selection=#GET{idSelection}} />
+            </BOUCLE_test_selection>
               <BOUCLE_rubrique_campaigns(CONDITION){si #COMPOSITION|=={campaigns}}>
                 <BOUCLE_campaigns(RUBRIQUES){id_parent}{!par date}{0,2}>
                   <INCLURE{fond=inclure/resume/campagne, id_rubrique, lang} />
                 </BOUCLE_campaigns>
               </BOUCLE_rubrique_campaigns>
-                <BOUCLE_derniers_articles(ARTICLES){!par date}{lang}{id_rubrique}{0,2}>
+                <BOUCLE_derniers_articles(ARTICLES){id_rubrique}{!par date}{lang}{0,2}>
                   <INCLURE{fond=inclure/resume/article, id_article, lang} />
                 </BOUCLE_derniers_articles>
               <//B_rubrique_campaigns>
-            <//B_selections_slider>
+            <//B_test_selection>
             <div class="section_more">
               <a href="#URL_RUBRIQUE" class="link-all link-all--section">[(#TITRE|label_ponctuer) <:local:see_all_materials:>]</a>
             </div>
