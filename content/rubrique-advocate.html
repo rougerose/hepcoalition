@@ -53,9 +53,9 @@
             </BOUCLE_selection>
             [(#REM)
             <!--
-              Afficher la sélection [1]. Sinon les 2 derniers articles de la rubrique, avec un test supplementaire pour la sous-rubrique Campaigns qui nécessite d'afficher des rubriques et non des articles.
+              Afficher la sélection (1). Sinon les 2 derniers articles de la rubrique, avec un test supplementaire pour la sous-rubrique Campaigns qui nécessite d'afficher des rubriques et non des articles.
 
-              [1] S'il s'agit d'une sélection issue d'une rubrique Campagne, le contenu s'affiche comme un simple article. Ce qui est une sorte de régression par rapport à l'affichage utilisé par le squelette resume/campagne, mais il n'y a pas de manière simple de différencier une sous-rubrique Campagne d'une autre sous-rubrique.
+              (1) S'il s'agit d'une sélection issue d'une rubrique Campagne, le contenu s'affiche comme un simple article. Ce qui est une sorte de régression par rapport à l'affichage utilisé par le squelette resume/campagne, mais il n'y a pas de manière simple de différencier une sous-rubrique Campagne d'une autre sous-rubrique.
             -->
             ]
             <BOUCLE_test_selection(CONDITION){si #GET{idSelection}|>{0}}>
