@@ -4,11 +4,11 @@
   (#SET{idSlider, #VAL{slider-}|concat{#ENV{id_rubrique}}})
 ]
 <BOUCLE_slider(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
-  <div class="section">
-    <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}{0,1}>
+  <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}{0,1}>
+    <div class="section">
       <INCLURE{fond=inclure/sliders/slider-rubrique, id_selection} />
-    </BOUCLE_slider_contenu>
-  </div>
+    </div>
+  </BOUCLE_slider_contenu>
 </BOUCLE_slider>
 
 [(#REM)
@@ -30,25 +30,26 @@
 [(#REM)
 <!--
   Recent materials.
-  Si la sélection n'existe pas, spip affiche les 5 derniers articles du secteur.
+  Si la sélection n'existe pas ou si elle ne contient aucun contenu,
+  Spip affiche les 5 derniers articles du secteur.
 -->
 ][(#SET{idRecentMaterials, #VAL{recent-materials-}|concat{#ENV{id_rubrique}}})]
+[(#SET{idSelection, 0})]
 <BOUCLE_recent_materials(SELECTIONS){id_rubrique}{identifiant=#GET{idRecentMaterials}}>
-  <section class="section">
-    <div class="container">
-      <h1 class="section_title"><:local:materials_recent:></h1>
-      <BOUCLE_recent_materials_contenu(SELECTIONS_CONTENUS){id_selection}{0,1}>
-        <INCLURE{fond=inclure/selections/recent-materials, id_selection} />
-      </BOUCLE_recent_materials_contenu>
-    </div>
-  </section>
+  <BOUCLE_recent_materials_contenu(SELECTIONS_CONTENUS){id_selection}{0,1}>
+    [(#SET{idSelection, #ID_SELECTION})]
+  </BOUCLE_recent_materials_contenu>
 </BOUCLE_recent_materials>
-  <section class="section">
-    <div class="container">
-      <h1 class="section_title"><:local:materials_recent:></h1>
-      <BOUCLE_recent_materials_articles(ARTICLES rubriques){articles.id_secteur}{rubriques.agenda=0}{lang}{!par date}{0, 5}>
-        <INCLURE{fond=inclure/resume/article, id_article, lang} />
-      </BOUCLE_recent_materials_articles>
+
+<section class="section">
+  <div class="container">
+    <h1 class="section_title"><:local:materials_recent:></h1>
+      <BOUCLE_test_selection_recent_materials(CONDITION){si #GET{idSelection}|>{0}}>
+        <INCLURE{fond=inclure/selections/recent-materials, id_selection=#GET{idSelection}} />
+      </BOUCLE_test_selection_recent_materials>
+        <BOUCLE_recent_materials_automatique(ARTICLES rubriques){articles.id_secteur}{rubriques.agenda=0}{lang}{!par date}{0, 5}>
+          <INCLURE{fond=inclure/resume/article, id_article, lang} />
+        </BOUCLE_recent_materials_automatique>
+      <//B_test_selection_recent_materials>
     </div>
   </section>
-<//B_recent_materials>
