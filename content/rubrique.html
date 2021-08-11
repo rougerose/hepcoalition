@@ -61,7 +61,7 @@
               <INCLURE{fond=inclure/selections/recent-materials, id_selection=#GET{idSelection}} />
             </BOUCLE_test_selection>
               <BOUCLE_derniers_articles(ARTICLES){id_rubrique}{!par date}{lang}{0,2}>
-                <INCLURE{fond=inclure/resume/article, id_article, lang} />
+                <INCLURE{fond=inclure/resume/article, id_article, lang, class=resume--recent-material} />
               </BOUCLE_derniers_articles>
             <//B_test_selection>
             <div class="section_more">

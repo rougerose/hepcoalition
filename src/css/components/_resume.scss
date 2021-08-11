@@ -8,17 +8,20 @@
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 
   &--recent-material {
-    margin-bottom: 0;
 
-    &::after {
-      content: "";
-      width: calc(50% - 16px);
-      height: 1px;
-      margin: 3rem auto 0.5rem;
-      background-color: rgba($color-primary-500, 0.4);
+    & + & {
+      margin-top: 4rem;
+
+      &::before {
+        content: "";
+        width: calc(50% - 16px);
+        height: 1px;
+        margin: 0 auto 4rem;
+        background-color: rgba($color-primary-500, 0.4);
+      }
     }
   }
 
@@ -29,7 +32,7 @@
     &--recent-material {
       margin-bottom: 4rem;
 
-      &::after {
+      &::before {
         display: none;
       }
     }

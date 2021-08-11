@@ -1871,16 +1871,16 @@ body.has-overlay {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
-.resume--recent-material {
-  margin-bottom: 0;
+.resume--recent-material + .resume--recent-material {
+  margin-top: 4rem;
 }
-.resume--recent-material::after {
+.resume--recent-material + .resume--recent-material::before {
   content: "";
   width: calc(50% - 16px);
   height: 1px;
-  margin: 3rem auto 0.5rem;
+  margin: 0 auto 4rem;
   background-color: rgba(25, 161, 172, 0.4);
 }
 @media (min-width: 35.5em) {
@@ -1891,7 +1891,7 @@ body.has-overlay {
   .resume--recent-material {
     margin-bottom: 4rem;
   }
-  .resume--recent-material::after {
+  .resume--recent-material::before {
     display: none;
   }
 }
