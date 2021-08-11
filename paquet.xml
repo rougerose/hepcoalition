@@ -4,7 +4,7 @@
     etat="dev"
     logo="img/HepC-logo-plugin-128.png"
     prefix="hepcoalition"
-    version="3.0.2"
+    version="3.0.3"
 >
     <nom>HepCoalition</nom>
     <auteur lien="http://rouge-rose.net">christophe le drean</auteur>
