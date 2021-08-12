@@ -1,6 +1,6 @@
 <BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
   #SET{titre, #TITRE}
-  #SET{desc, #TEXTE}
+  #SET{desc, #INTRODUCTION}
   [(#ID_RUBRIQUE|=={#ID_SECTEUR}|?{
     #SET{titre, #NOM_SITE_SPIP}
    [(#SET{desc, #DESCRIPTIF_SITE_SPIP|couper{400}})]
