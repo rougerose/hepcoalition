@@ -43,6 +43,7 @@
         <section class="section">
           <div class="container">
             <h2 class="section_title"><a href="#URL_RUBRIQUE">#TITRE</a></h2>
+            [<div class="section_description">(#TEXTE)</div>]
           </div>
           <BOUCLE_agenda(EVENEMENTS){statut=publie}{id_rubrique}{lang}{date_fin>=#ENV{date}}{par date_debut}{0,1}> </BOUCLE_agenda>
             <INCLURE{fond=inclure/sliders/slider-calendar, id_rubrique, lang} />
