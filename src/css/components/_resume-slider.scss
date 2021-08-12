@@ -54,3 +54,11 @@
     }
   }
 }
+
+.resume-slider_metas {
+  color: $color-primary-200;
+
+  & a:hover {
+    color: $color-white;
+  }
+}

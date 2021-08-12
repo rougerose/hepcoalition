@@ -2036,6 +2036,13 @@ body.has-overlay {
   color: #fff;
 }
 
+.resume-slider_metas {
+  color: #62e7ea;
+}
+.resume-slider_metas a:hover {
+  color: #fff;
+}
+
 .resume-event-slider {
   padding-bottom: 2rem;
   line-height: 1.375rem;
