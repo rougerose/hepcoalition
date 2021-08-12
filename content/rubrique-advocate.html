@@ -62,7 +62,7 @@
               <INCLURE{fond=inclure/selections/recent-materials, id_selection=#GET{idSelection}} />
             </BOUCLE_test_selection>
               <BOUCLE_rubrique_campaigns(CONDITION){si #COMPOSITION|=={campaigns}}>
-                <BOUCLE_campaigns(RUBRIQUES){id_parent}{par num titre}{0,2}>
+                <BOUCLE_campaigns(RUBRIQUES){id_parent}{!par num titre}{0,2}>
                   <INCLURE{fond=inclure/resume/campagne, id_rubrique, lang} />
                 </BOUCLE_campaigns>
               </BOUCLE_rubrique_campaigns>

@@ -5,6 +5,15 @@
       [<div class="resume_desc">
         <p>(#DESCRIPTIF|couper{250}) <a href="#URL" class="resume_link-more"><span><:local:more:></span></a></p>
       </div>]
+      <BOUCLE_condition_rubrique(CONDITION){si #OBJET|=={rubrique}}>
+        <B_articles_campagne>
+          <ul class="resume_list-articles">
+            <BOUCLE_articles_campagne(ARTICLES){id_rubrique}{lang}{par num titre}>
+              <li class="resume_list-article"><a href="#URL_ARTICLE">#TITRE</a></li>
+              </BOUCLE_articles_campagne>
+          </ul>
+        </B_articles_campagne>
+      </BOUCLE_condition_rubrique>
       <p class="resume_metas">
         [(#OBJET|=={article}|oui)
           #INCLURE{fond=inclure/selections/recent-materials-meta-article, id_article=#ID_OBJET} ]
