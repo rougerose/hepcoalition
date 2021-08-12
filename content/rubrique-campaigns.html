@@ -29,7 +29,7 @@
       [(#REM) <!-- Sous-rubriques --> ]
       <B_sousrubriques>
         <div class="container">
-          <BOUCLE_sousrubriques(RUBRIQUES){id_parent}{par num titre}{id_rubrique !IN #GET{rubriques_slider}}{0,1}> </BOUCLE_sousrubriques>
+          <BOUCLE_sousrubriques(RUBRIQUES){id_parent}{!par num titre}{id_rubrique !IN #GET{rubriques_slider}}{0,1}> </BOUCLE_sousrubriques>
             <INCLURE{fond=inclure/resumes/campagnes, id_rubrique, rubriques_slider=#GET{rubriques_slider}, pagination=5, ajax, env} />
         </div>
       </B_sousrubriques>
