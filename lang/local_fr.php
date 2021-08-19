@@ -20,7 +20,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'email'                          => 'e-mail',
    'email_send'                     => "Nous envoyer un <a href='@urlcontact@' class='spip_out'>email</a>",
    'email_send_label'                     => "Envoyez-nous un email",
-	 'events_all' => 'Tous les événéments',
+	 'events_all' => 'Tous les événements',
 
 	 // F
 	 'fermer' => 'Fermer',
@@ -53,6 +53,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'latest_publications'            => 'Dernières publications',
 
    //M
+	 'materials_section' => 'Documents dans cette section',
+	 'materials_recent' => 'Dernières publications',
+	 'materials_related' => "Publications d'intérêt",
+	 'materials_see_all' => 'toutes les publications',
    'message_404_title'              => "Page indisponible.",
    'message_404_desc'               => "Nous sommes désolé-e-s, la page que vous recherchez n'est pas disponible.<br />Revenir à <a href='@urlsite@' class='spip_out'>la page d'accueil du site</a>.",
    'more'                           => 'La suite',
@@ -77,7 +81,6 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	 'recherche_label_resultats' => '@nb@ résulats pour :',
 
    // S
-	 'see_all_materials' => 'tous les articles',
 	 'search_type_here' => 'Écrivez ici',
    'share'                          => 'Partager',
    'signatories_coalition'          => "Signataires",

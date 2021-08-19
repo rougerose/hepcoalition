@@ -56,6 +56,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    //M
 	 'materials_section' => 'Materials in this section',
 	 'materials_recent' => 'Recent materials',
+	 'materials_related' => 'Related materials',
+	 'materials_see_all' => 'all materials',
    'message_404_title'              => "Page not found.",
    'message_404_desc'               => "Sorry, but the page you are looking for has not been found.<br />Go back to <a href='@urlsite@' class='spip_out'>home page</a>.",
    'more'                           => 'More',
@@ -79,11 +81,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	 'recherche_label_aucun_resultat' => "Couldn't find any results for:",
 	 'recherche_label_resultat' => '1 result for:',
 	 'recherche_label_resultats' => '@nb@ results for:',
-	 'related_materials' => 'Related materials',
 
    // S
 	 'search_type_here' => 'Type here',
-	 'see_all_materials' => 'see all materials',
    'share'                          => 'Share',
    'signatories_coalition'          => "Signatories",
    'signatories_singular'           => "1 supporter",
@@ -98,6 +98,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'tags'                           => 'Keywords',
    'translations'                   => 'Translations',
 
+	 // Y
 	 'you_are_here_label' => 'You are here:',
 );
 ?>
