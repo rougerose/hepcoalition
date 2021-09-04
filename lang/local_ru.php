@@ -56,7 +56,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	 'materials_section' => 'Материалы в этом разделе',
 	 'materials_recent' => 'Последние публикации',
 	 'materials_related' => 'Другие публикации по теме',
-	//  'materials_see_all' => '',
+	 'materials_see_all' => 'Все публикации',
    'message_404_title'              => "Страница не найдена",
    'message_404_desc'               => "Приносим свои извинения, запрашиваемая страница не найдена.<br /> Вернуться на  <a href='@urlsite@' class='spip_out'>главную страницу сайта</a>.",
    'more'                           => 'Читать дальше',

@@ -57,7 +57,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 			'materials_section' => 'Materiales en esta sección',
 			'materials_recent' => 'Materiales recientes',
 			'materials_related' => 'Materiales relacionados',
-			// 'materials_see_all' => '',
+			'materials_see_all' => 'todos los materiales',
       'message_404_title'              => "Pagina no disponible.",
       'message_404_desc'               => "Disculpe, la página que usted busca no está disponible. <br /> Regrese a <a href='@urlsite@' class='spip_out'>página de incio</a>.",
       'more'                           => 'Leer más',

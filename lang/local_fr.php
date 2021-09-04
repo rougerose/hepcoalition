@@ -53,9 +53,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'latest_publications'            => 'Dernières publications',
 
    //M
-	 'materials_section' => 'Documents dans cette section',
+	 'materials_section' => 'Publications dans cette rubrique',
 	 'materials_recent' => 'Dernières publications',
-	 'materials_related' => "Publications d'intérêt",
+	 'materials_related' => 'Publications liées',
 	 'materials_see_all' => 'toutes les publications',
    'message_404_title'              => "Page indisponible.",
    'message_404_desc'               => "Nous sommes désolé-e-s, la page que vous recherchez n'est pas disponible.<br />Revenir à <a href='@urlsite@' class='spip_out'>la page d'accueil du site</a>.",
