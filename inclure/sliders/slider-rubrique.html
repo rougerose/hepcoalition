@@ -2,7 +2,7 @@
   <div class="slider slider-rubrique">
     <div class="slider_container slider-rubrique_container swiper-container [swiper-container-(#LANG_DIR)]">
       <div class="swiper-wrapper slider_list slider-rubrique_list">
-        <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}>
+        <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}{par rang}>
           <div class="swiper-slide slider_item slider-rubrique_item">
             <article class="resume resume-slider">
               [<div class="resume_logo resume-slider_logo"><a href="[(#URL)]">(#LOGO_SELECTIONS_CONTENU|image_reduire{700,395}|image_recadre{700,395})</a></div>]
