@@ -14,6 +14,7 @@
 
     @include mq(md) {
       gap: 2rem 1.5rem;
+      grid-template-columns: repeat(6, 1fr);
     }
   }
 
