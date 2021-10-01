@@ -13,14 +13,14 @@
     </section>
     <nav class="sitefooter_nav">
       <ul class="sitenav-footer_list sitenav-footer_list--sections">
-        <BOUCLE_menu_sections(RUBRIQUES){id_parent=#GET{idsecteur}}{lang}>
+        <BOUCLE_menu_sections(RUBRIQUES){par num titre}{id_parent=#GET{idsecteur}}{lang}>
           <li class="sitenav-footer_item sitenav-footer_item--section"><a class="sitefooter_heading" href="#URL_RUBRIQUE">#TITRE</a>
             <BOUCLE_mapCrowd(MOTS){id_rubrique}{technique=oui}{titre=mapcrowd}>
               <p>[<a href="#URL_RUBRIQUE{#ID_RUBRIQUE}">(#DESCRIPTIF|PtoBR)</a>]</p>
             </BOUCLE_mapCrowd>
             <B_menu_rubriques>
               <ul class="sitenav-footer_list sitenav-footer_list--subsections">
-                <BOUCLE_menu_rubriques(RUBRIQUES){id_parent}{lang}>
+                <BOUCLE_menu_rubriques(RUBRIQUES){id_parent}{par num titre}{lang}>
                   <li class="sitenav-footer_item"><a href="#URL_RUBRIQUE">#TITRE</a></li>
                 </BOUCLE_menu_rubriques>
               </ul>
