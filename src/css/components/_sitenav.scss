@@ -239,8 +239,7 @@ $icon-caret-margin: 0.5rem;
 
 @include mq(desktop) {
   .sitenav {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 0 1.5rem;
+    grid-template-columns: 300px repeat(5, minmax(0, 1fr));
   }
 
   .sitenav_group {
@@ -248,7 +247,7 @@ $icon-caret-margin: 0.5rem;
       display: flex;
       justify-content: flex-end;
       grid-row: 2/3;
-      grid-column: 3/7;
+      grid-column: 2/7;
     }
 
     &--btns {
