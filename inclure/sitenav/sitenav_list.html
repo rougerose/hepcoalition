@@ -1,10 +1,10 @@
 <ul class="sitenav_list sitenav_list--sections clicky-menu">
-  <BOUCLE_menu_sections(RUBRIQUES){id_parent=#ENV{id_secteur}}{par num titre}{lang}>
+  <BOUCLE_menu_sections(RUBRIQUES){id_parent=#ENV{id_secteur}}{par num titre}{lang=#ENV{langue}}>
     <B_menu_rubriques>
-      <li class="sitenav_item sitenav_item--section">
+      <li class="sitenav_item sitenav_item--section"[(#ENV{langue_afficher}|oui) lang="#ENV{langue}" dir="#ENV{direction}"]>
         <a href="#"[ (#EXPOSE{class="is-active",''})]>#TITRE <INCLURE{fond=img/icons/icon-caret-64.svg} />
         </a>
-        <ul id="section-#ID_RUBRIQUE-subsections" class="sitenav_list sitenav_list--subsections">
+        <ul id="section-#ID_RUBRIQUE-subsections" class="sitenav_list sitenav_list--subsections"[(#ENV{langue_afficher}|oui) lang="#ENV{langue}" dir="#ENV{direction}"]>
           <li class="sitenav_item"><a href="#URL_RUBRIQUE"[ class="(#ID_RUBRIQUE|=={#ENV{id_rubrique}}|oui)is-active"]>#TITRE</a></li>
           <BOUCLE_menu_rubriques(RUBRIQUES){id_parent}{par num titre}{lang}>
             <li class="sitenav_item"><a href="#URL_RUBRIQUE"[ (#EXPOSE{class="is-active",''})]>#TITRE</a></li>
@@ -12,10 +12,10 @@
         </ul>
       </li>
     </B_menu_rubriques>
-      <li class="sitenav_item sitenav_item--section"><a href="#URL_RUBRIQUE"[ class="(#ID_RUBRIQUE|=={#ENV{id_rubrique}}|oui)is-active"]>#TITRE</a></li>
+      <li class="sitenav_item sitenav_item--section"[(#ENV{langue_afficher}|oui) lang="#ENV{langue}" dir="#ENV{direction}"]><a href="#URL_RUBRIQUE"[ class="(#ID_RUBRIQUE|=={#ENV{id_rubrique}}|oui)is-active"]>#TITRE</a></li>
     <//B_menu_rubriques>
   </BOUCLE_menu_sections>
-    <li class="sitenav_item sitenav_item--section">
-      <a href="#" data-open-modal-id="modalSearch"><:info_rechercher:></a>
-    </li>
+  <li class="sitenav_item sitenav_item--section">
+    <a href="#" data-open-modal-id="modalSearch"><:info_rechercher:></a>
+  </li>
 </ul>

@@ -40,7 +40,7 @@
                 <ul class="translations_list translations_list--#LANG_DIR js-to_expand">
                   <BOUCLE_traductions(ARTICLES){traduction}{exclus}{par lang}>
                     <li class="translations_item spip-text" lang="#LANG" xml:lang="#LANG" dir="#LANG_DIR">
-                      <span class="translations_lang-label">[(#LANG)]</span> <span><a href="[(#URL_ARTICLE|parametre_url{lang,#LANG})]" rel="alternate" hreflang="#LANG" itemprop="translationOfWork">[(#TITRE)]</a></span>
+                      <span class="translations_lang-label">[(#LANG)]</span> <span><a href="#URL_ARTICLE" rel="alternate" hreflang="#LANG" itemprop="translationOfWork">[(#TITRE)]</a></span>
                     </li>
                   </BOUCLE_traductions>
                 </ul>

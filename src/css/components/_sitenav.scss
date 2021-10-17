@@ -63,8 +63,11 @@ $icon-caret-margin: 0.5rem;
     flex-direction: column;
     position: absolute;
     z-index: 0;
-    inset-block-start: 100%;
-    inset-inline-start: 0;
+    // Plus de navigation en mode rtl
+    left: 0;
+    top: 100%;
+    // inset-block-start: 100%;
+    // inset-inline-start: 0;
     margin-block-start: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -161,6 +164,11 @@ $icon-caret-margin: 0.5rem;
       transition: color 0.3s ease;
     }
 
+    // Forcer l'alignement à gauche des items imbriqués
+    & ul[dir="ltr"] {
+      text-align: left;
+    }
+
     &:last-child {
       margin-inline-end: $btn-padding * -1;
     }
@@ -169,7 +177,7 @@ $icon-caret-margin: 0.5rem;
   & svg {
     width: 1em;
     height: 1em;
-    margin-inline-start: $icon-caret-margin;
+    margin-left: $icon-caret-margin;
     transition: transform 0.3s ease;
 
     & path {

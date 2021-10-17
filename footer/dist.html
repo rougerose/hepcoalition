@@ -1,7 +1,12 @@
 #SET{idsecteur, #ENV{id_secteur, 0}}
+#SET{langue_afficher, ''} #SET{langue, #ENV{lang}} #SET{direction, #ENV{lang_dir, #LANG_DIR}}
+<BOUCLE_test_lang_racine(RUBRIQUES){lang}{racine}> </BOUCLE_test_lang_racine>
+  #SET{langue_afficher, ' '} #SET{langue, en} #SET{direction, ltr}
+<//B_test_lang_racine>
 <BOUCLE_secteur(RUBRIQUES){lang}{racine}{si #GET{idsecteur}|=={0}}>
   #SET{idsecteur, #ID_RUBRIQUE}
 </BOUCLE_secteur>
+[(#GET{langue_afficher}?{oui,non})]
 <div class="container">
   <div class="sitefooter">
     <div class="sitefooter_logo">
@@ -13,15 +18,15 @@
     </section>
     <nav class="sitefooter_nav">
       <ul class="sitenav-footer_list sitenav-footer_list--sections">
-        <BOUCLE_menu_sections(RUBRIQUES){par num titre}{id_parent=#GET{idsecteur}}{lang}>
-          <li class="sitenav-footer_item sitenav-footer_item--section"><a class="sitefooter_heading" href="#URL_RUBRIQUE">#TITRE</a>
+        <BOUCLE_menu_sections(RUBRIQUES){par num titre}{id_parent=#GET{idsecteur}}{lang=#GET{langue}}>
+          <li class="sitenav-footer_item sitenav-footer_item--section"[(#GET{langue_afficher}|oui) lang="#GET{langue}" dir="#GET{direction}"]><a class="sitefooter_heading" href="#URL_RUBRIQUE">#TITRE</a>
             <BOUCLE_mapCrowd(MOTS){id_rubrique}{technique=oui}{titre=mapcrowd}>
-              <p>[<a href="#URL_RUBRIQUE{#ID_RUBRIQUE}">(#DESCRIPTIF|PtoBR)</a>]</p>
+              <p [(#GET{langue_afficher}|oui) lang="#GET{langue}" dir="#GET{direction}"]>[<a href="#URL_RUBRIQUE{#ID_RUBRIQUE}">(#DESCRIPTIF|PtoBR)</a>]</p>
             </BOUCLE_mapCrowd>
             <B_menu_rubriques>
               <ul class="sitenav-footer_list sitenav-footer_list--subsections">
                 <BOUCLE_menu_rubriques(RUBRIQUES){id_parent}{par num titre}{lang}>
-                  <li class="sitenav-footer_item"><a href="#URL_RUBRIQUE">#TITRE</a></li>
+                  <li class="sitenav-footer_item"[(#GET{langue_afficher}|oui) lang="#GET{langue}" dir="#GET{direction}"]><a href="#URL_RUBRIQUE">#TITRE</a></li>
                 </BOUCLE_menu_rubriques>
               </ul>
             </B_menu_rubriques>

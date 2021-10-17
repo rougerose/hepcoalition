@@ -808,8 +808,8 @@ button.swiper-pagination-bullet {
   flex-direction: column;
   position: absolute;
   z-index: 0;
-  inset-block-start: 100%;
-  inset-inline-start: 0;
+  left: 0;
+  top: 100%;
   margin-block-start: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -882,13 +882,16 @@ button.swiper-pagination-bullet {
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
+.sitenav_item--section ul[dir=ltr] {
+  text-align: left;
+}
 .sitenav_item--section:last-child {
   margin-inline-end: -0.5rem;
 }
 .sitenav_item svg {
   width: 1em;
   height: 1em;
-  margin-inline-start: 0.5rem;
+  margin-left: 0.5rem;
   transition: transform 0.3s ease;
 }
 .sitenav_item svg path {
@@ -2448,10 +2451,19 @@ body.has-overlay {
   transition-delay: 0.11s, 0s, 0s, 0s;
 }
 .translations_list--ltr li[dir=rtl] {
-  justify-content: flex-end;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.translations_list--ltr .translations_lang-label {
+  margin-right: 0.5rem;
+  margin-left: 0;
 }
 .translations_list--rtl li[dir=ltr] {
-  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+.translations_list--rtl .translations_lang-label {
+  margin-left: 0.5rem;
+  margin-right: 0;
 }
 
 .translations_item {
@@ -2460,7 +2472,6 @@ body.has-overlay {
 }
 
 .translations_lang-label {
-  margin-inline-end: 0.5rem;
   text-transform: uppercase;
   font-weight: 400;
   color: #636363;

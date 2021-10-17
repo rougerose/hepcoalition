@@ -7,9 +7,6 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 // plugin Langue préférée : langue par défaut.
 define('_LANGUE_PREFEREE_DEFAUT', 'en');
 
-// forcer la langue du visiteur
-$GLOBALS['forcer_lang'] = true;
-
 define('_DEV_VERSION_SPIP_COMPAT', '3.2.99');
 
 if (!isset($GLOBALS['z_blocs'])) {
