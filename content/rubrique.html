@@ -32,7 +32,7 @@
         [(#REM)
           <!-- Materials -->
         ]
-        <BOUCLE_materials(ARTICLES){id_rubrique}{id_article !IN #GET{articles_slider}}{0,1}>
+        <BOUCLE_materials(ARTICLES){id_rubrique}{lang}{id_article !IN #GET{articles_slider}}{0,1}>
           <INCLURE{fond=inclure/resumes/articles, articles_slider=#GET{articles_slider}, pagination=10, ajax, env} />
         </BOUCLE_materials>
 
