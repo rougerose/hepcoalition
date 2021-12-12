@@ -64,6 +64,10 @@
   }
 
   & .spip_documents {
+    &.oembed {
+      margin: 3rem auto;
+    }
+
     & .oembed {
       padding: 0.5rem;
       box-shadow: 0 0 3px 0 rgba($color-primary-800, 0.3);

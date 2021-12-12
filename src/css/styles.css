@@ -2532,6 +2532,9 @@ body.has-overlay {
   line-height: 1.125rem;
   color: #636363;
 }
+.spip-text .spip_documents.oembed {
+  margin: 3rem auto;
+}
 .spip-text .spip_documents .oembed {
   padding: 0.5rem;
   box-shadow: 0 0 3px 0 rgba(13, 81, 86, 0.3);
