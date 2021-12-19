@@ -78,7 +78,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // R
 	 'recherche_label_aucun_resultat' => 'Aucun résultat disponible pour :',
 	 'recherche_label_resultat' => '1 résultat pour :',
-	 'recherche_label_resultats' => '@nb@ résulats pour :',
+	 'recherche_label_resultats' => '@nb@ résultats pour :',
 
    // S
 	 'search_type_here' => 'Écrivez ici',
