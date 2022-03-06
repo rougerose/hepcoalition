@@ -1,0 +1,230 @@
+// ========================================
+// spip-text
+// ========================================
+
+@use "sass:color";
+
+// styles des contenus issus des champs textes de Spip
+
+.spip-text {
+  & a {
+    color: currentColor;
+    border-bottom: 2px solid $color-primary-500;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-primary-500;
+    }
+  }
+
+  // Images insérées dans le texte
+  & .spip_document {
+
+    &_center {
+      display: flex;
+      justify-content: center;
+      max-width: 700px;
+      width: 100%;
+      margin: 0 auto 3rem;
+
+      & figcaption {
+        // contraindre la largeur du bloc à celle de l'image
+        box-sizing: border-box;
+        width: 0;
+        min-width: 100%;
+      }
+    }
+
+    &_right {
+      float: right;
+      margin-bottom: 1.5rem;
+      margin-inline-start: 1.5rem;
+      max-width: 50%;
+    }
+
+    &_left {
+      float: left;
+      margin-bottom: 1.5rem;
+      margin-inline-end: 1.5rem;
+      max-width: 50%;
+    }
+
+    & img {
+      padding: 0.5rem;
+      box-shadow: 0 0 3px 0 rgba($color-primary-800, 0.3);
+    }
+
+    & figcaption {
+      text-align: left;
+      padding-top: 0.5rem;
+      font-size: 0.875rem; //14px;
+      line-height: 1.125rem; //18px;
+      color: color.grayscale($color-primary-500);
+    }
+  }
+
+  & .spip_documents {
+    &.oembed {
+      margin: 3rem auto;
+    }
+
+    & .oembed {
+      padding: 0.5rem;
+      box-shadow: 0 0 3px 0 rgba($color-primary-800, 0.3);
+    }
+
+    & figcaption {
+      text-align: left;
+      padding-top: 0.5rem;
+      font-size: 0.875rem; //14px;
+      line-height: 1.125rem; //18px;
+      color: color.grayscale($color-primary-500);
+    }
+  }
+
+  // un bloc texte + image
+  & ul,
+  & ol,
+  & p,
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6,
+  & blockquote {
+    & + .spip_document_center {
+      margin-top: 3rem;
+    }
+  }
+
+  // Intertitres
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    margin-top: 2.25rem;
+    margin-bottom: 0.75rem;
+    color: $color-primary-500;
+  }
+
+  & h2 {
+    font-size: 1.75rem; // 28px;
+  }
+
+  & h3 {
+    font-size: 1.5rem; // 24px;
+  }
+
+  & h4 {
+    font-size: 1.375rem; // 22px
+  }
+
+  & h5 {
+    font-size: 1.25rem; // 20px;
+  }
+
+  & h6 {
+    font-size: 1.25rem; // 20px
+    font-style: italic;
+  }
+
+  // plugin typo enluminée
+  & .caractencadre-spip {
+    color: $color-primary-500;
+  }
+
+  & .caractencadre2-spip {
+    color: $color-primary-700;
+  }
+
+  & .texteencadre-spip {
+    margin-bottom: 1.5rem;
+    background-color: $color-primary-900;
+    padding: 0.75rem 1.5rem;
+    color: $color-white;
+  }
+
+  & .spip-block-right {
+    margin-bottom: 1.5rem;
+    text-align: right;
+  }
+
+  // hr
+  & hr {
+    margin: 3rem 0;
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, $color-white 0%, $color-primary-500 50%, $color-white 100%);
+  }
+
+  // listes
+  & ul,
+  & ol {
+    margin-bottom: 1.5rem;
+    margin-inline-start: 1rem;
+
+    & li {
+      &::marker {
+        color: $color-secondary-500;
+      }
+    }
+  }
+
+  & ul {
+    list-style-type: square;
+
+    & ul {
+      margin-bottom: 0;
+    }
+  }
+
+  & p + ul,
+  & p + ol {
+    margin-top: -1.5rem;
+  }
+
+  & ol {
+    list-style-type: decimal;
+  }
+
+  // Tableaux
+  & table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+  & tr:nth-of-type(even) {
+    background: rgba($color-primary-300, 0.3);
+  }
+
+  & th {
+    background: rgba($color-primary-500, 0.99);
+    font-weight: bold;
+  }
+
+  & td,
+  & th {
+    padding: 6px;
+    border: 1px solid rgba($color-primary-700, 0.5);
+    text-align: left;
+  }
+
+  & caption {
+    color: $color-primary-700;
+  }
+
+  // Citations
+  & q {
+    font-style: italic;
+  }
+
+  & blockquote {
+    border-left: 2px solid $color-primary-700;
+    margin-inline-start: 1rem;
+    padding-inline-start: 1rem;
+    font-size: 1rem;
+  }
+}

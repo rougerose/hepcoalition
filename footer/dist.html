@@ -1,19 +1,61 @@
-<div class="wrapper">
-    <div class="grid">
-        <div class="grid__item desk-two-thirds push--desk-one-third">
-            <div class="grid">
-                <div class="grid__item desk-one-half">
-                    <h1 class="hN"><:local:about_us:></h1>
-                    #DESCRIPTIF_SITE_SPIP
-                </div><!-- 
-             --><div class="grid__item desk-one-half">
-                    <h1 class="hN"><:local:contact:></h1>
-                    <p><:local:email_send{urlcontact=#URL_PAGE{contact}}:></p>
-                    <h1 class="hN"><:local:follow_us:></h1>
-                    <p><a href="https://www.facebook.com/pages/HepCoalition/507087822649379" class="icon"><i class="fa fa-facebook-square fa-3x"></i></a> <a href="https://twitter.com/hepCoalition" class="icon"><i class="fa fa-twitter fa-3x"></i></a></p>
-                    <INCLURE{fond=inclure/logo-site,bloc=footer} />
-                </div>
-            </div>
-        </div>
+#SET{idsecteur, #ENV{id_secteur, 0}}
+#SET{langue_afficher, ''} #SET{langue, #ENV{lang}} #SET{direction, #ENV{lang_dir, #LANG_DIR}}
+<BOUCLE_test_lang_racine(RUBRIQUES){lang}{racine}> </BOUCLE_test_lang_racine>
+  #SET{langue_afficher, ' '} #SET{langue, en} #SET{direction, ltr}
+<//B_test_lang_racine>
+<BOUCLE_secteur(RUBRIQUES){lang}{racine}{si #GET{idsecteur}|=={0}}>
+  #SET{idsecteur, #ID_RUBRIQUE}
+</BOUCLE_secteur>
+
+<div class="container">
+  <div class="sitefooter">
+    <div class="sitefooter_logo">
+      <a href="#URL_SITE_SPIP"><INCLURE{fond=img/HepCoalition.svg} /></a>
     </div>
+    <section class="sitefooter_about">
+      <h2 class="sitefooter_heading"><:local:about_us:></h2>
+      [<div class="spip-text">(#DESCRIPTIF_SITE_SPIP)</div>]
+    </section>
+    <nav class="sitefooter_nav">
+      <ul class="sitenav-footer_list sitenav-footer_list--sections">
+        <BOUCLE_menu_sections(RUBRIQUES){par num titre}{id_parent=#GET{idsecteur}}{lang=#GET{langue}}>
+          <li class="sitenav-footer_item sitenav-footer_item--section"[(#GET{langue_afficher}|oui) lang="#GET{langue}" dir="#GET{direction}"]><a class="sitefooter_heading" href="#URL_RUBRIQUE">#TITRE</a>
+            <BOUCLE_mapCrowd(MOTS){id_rubrique}{technique=oui}{titre=mapcrowd}>
+              <p [(#GET{langue_afficher}|oui) lang="#GET{langue}" dir="#GET{direction}"]>[<a href="#URL_RUBRIQUE{#ID_RUBRIQUE}">(#DESCRIPTIF|PtoBR)</a>]</p>
+            </BOUCLE_mapCrowd>
+            <B_menu_rubriques>
+              <ul class="sitenav-footer_list sitenav-footer_list--subsections">
+                <BOUCLE_menu_rubriques(RUBRIQUES){id_parent}{par num titre}{lang}>
+                  <li class="sitenav-footer_item"[(#GET{langue_afficher}|oui) lang="#GET{langue}" dir="#GET{direction}"]><a href="#URL_RUBRIQUE">#TITRE</a></li>
+                </BOUCLE_menu_rubriques>
+              </ul>
+            </B_menu_rubriques>
+          </li>
+        </BOUCLE_menu_sections>
+      </ul>
+    </nav>
+    <section class="sitefooter_social">
+      <h2 class="sitefooter_heading"><:local:follow_us:></h2>
+      <ul>
+        <li>
+          <a href="https://twitter.com/hepCoalition" rel="external">
+            <INCLURE{fond=img/icons/icon-twitter-k-24.svg} />
+            <span class="sr-only"><:local:label_hepcoalition_on_twitter:></span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/hepCoalition-507087822649379" rel="external">
+            <INCLURE{fond=img/icons/icon-facebook-k-24.svg} />
+            <span class="sr-only"><:local:label_hepcoalition_on_facebook:></span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <BOUCLE_contact(ARTICLES){page=contact}>
+      <section class="sitefooter_contact">
+        <h2 class="sitefooter_heading"><:local:contact:></h2>
+        <a href="#URL_ARTICLE"><:local:email_send_label:></a>
+      </section>
+    </BOUCLE_contact>
+  </div>
 </div>

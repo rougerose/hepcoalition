@@ -1,0 +1,55 @@
+[(#REM)
+  <!-- Sélections slider -->
+][
+  (#SET{idSlider, #VAL{slider-}|concat{#ENV{id_rubrique}}})
+]
+<BOUCLE_slider(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
+  <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}{0,1}>
+    <div class="section">
+      <INCLURE{fond=inclure/sliders/slider-rubrique, id_selection} />
+    </div>
+  </BOUCLE_slider_contenu>
+</BOUCLE_slider>
+
+[(#REM)
+<!-- Agenda -->
+]
+<BOUCLE_rubrique_agenda(RUBRIQUES){id_secteur}{agenda=1}>
+  <B_agenda>
+    <section class="section">
+      <div class="container">
+        <h1 class="section_title"><:local:agenda:></h1>
+      </div>
+      <BOUCLE_agenda(EVENEMENTS){statut=publie}{id_rubrique}{lang}{date_fin>=#ENV{date}}{par date_debut}{0,1}> </BOUCLE_agenda>
+        <INCLURE{fond=inclure/sliders/slider-calendar, id_rubrique, lang} />
+    </section>
+  </B_agenda>
+</BOUCLE_rubrique_agenda>
+
+
+[(#REM)
+<!--
+  Recent materials.
+  Si la sélection n'existe pas ou si elle ne contient aucun contenu,
+  Spip affiche les 5 derniers articles du secteur.
+-->
+][(#SET{idRecentMaterials, #VAL{recent-materials-}|concat{#ENV{id_rubrique}}})]
+[(#SET{idSelection, 0})]
+<BOUCLE_recent_materials(SELECTIONS){id_rubrique}{identifiant=#GET{idRecentMaterials}}>
+  <BOUCLE_recent_materials_contenu(SELECTIONS_CONTENUS){id_selection}{0,1}>
+    [(#SET{idSelection, #ID_SELECTION})]
+  </BOUCLE_recent_materials_contenu>
+</BOUCLE_recent_materials>
+
+<section class="section">
+  <div class="container">
+    <h1 class="section_title"><:local:materials_recent:></h1>
+      <BOUCLE_test_selection_recent_materials(CONDITION){si #GET{idSelection}|>{0}}>
+        <INCLURE{fond=inclure/selections/recent-materials, id_selection=#GET{idSelection}} />
+      </BOUCLE_test_selection_recent_materials>
+        <BOUCLE_recent_materials_automatique(ARTICLES rubriques){articles.id_secteur}{rubriques.agenda=0}{lang}{!par date}{0, 5}>
+          <INCLURE{fond=inclure/resume/article, id_article, lang, class=resume--recent-material} />
+        </BOUCLE_recent_materials_automatique>
+      <//B_test_selection_recent_materials>
+    </div>
+  </section>

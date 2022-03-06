@@ -1,0 +1,82 @@
+<BOUCLE_rubrique_subsection(RUBRIQUES){id_rubrique}>
+  <article class="rubrique content">
+    <div class="container">
+      <header class="rubrique_header">
+        <BOUCLE_section(HIERARCHIE){id_rubrique}{1,1}>
+          <p class="rubrique_section-title content_section-title"><a href="#URL_RUBRIQUE">#TITRE</a></p>
+        </BOUCLE_section>
+        <h1 class="rubrique_title content_title">#TITRE</h1>
+      </header>
+      [<div class="rubrique_description spip-text">
+        (#TEXTE)
+      </div>]
+    </div>
+    <div class="rubrique_content">
+      [(#REM)
+        <!-- Sélections slider -->
+      ][(#SET{idSlider, #VAL{slider-}|concat{#ID_RUBRIQUE}})][(#SET{articles_slider, #ARRAY})]
+      <BOUCLE_slider(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
+        <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}>
+          [(#OBJET|=={article}|oui) [(#SET{articles_slider, #GET{articles_slider}|push{#ID_OBJET}})] ]
+        </BOUCLE_slider_contenu>
+          <div class="section">
+            <INCLURE{fond=inclure/sliders/slider-rubrique, id_selection} />
+          </div>
+        </B_slider_contenu>
+      </BOUCLE_slider>
+
+      <div class="container">
+        [(#REM)
+          <!-- Materials -->
+        ]
+        <BOUCLE_materials(ARTICLES){id_rubrique}{id_article !IN #GET{articles_slider}}{0,1}>
+          <INCLURE{fond=inclure/resumes/articles, articles_slider=#GET{articles_slider}, pagination=10, ajax, env} />
+        </BOUCLE_materials>
+
+        [(#REM)
+          <!-- Aperçu sous-rubriques -->
+        ]<BOUCLE_apercu_sousrubriques(RUBRIQUES){id_parent}{par num titre, titre}>
+          <section class="section">
+            <div class="section_header">
+              <h2 class="section_title"><a href="#URL_RUBRIQUE">#TITRE</a></h2>
+              [<div class="section_description">(#TEXTE)</div>]
+            </div>
+            [(#SET{idSlider, #VAL{slider-}|concat{#ID_RUBRIQUE}})]
+            [(#SET{idSelection, 0})]
+            [(#REM)
+            <!-- Vérifier si une sélection existe et qu'elle n'est pas vide -->
+            ]
+            <BOUCLE_selection(SELECTIONS){id_rubrique}{identifiant=#GET{idSlider}}>
+              <BOUCLE_articles_selection(SELECTIONS_CONTENUS){id_selection}{0,1}>
+                [(#SET{idSelection, #ID_SELECTION})]
+              </BOUCLE_articles_selection>
+            </BOUCLE_selection>
+            [(#REM)
+            <!--
+              Afficher la sélection (1). Sinon les 2 derniers articles de la rubrique, avec un test supplementaire pour la sous-rubrique Campaigns qui nécessite d'afficher des rubriques et non des articles.
+
+              (1) S'il s'agit d'une sélection issue d'une rubrique Campagne, le contenu s'affiche comme un simple article. Ce qui est une sorte de régression par rapport à l'affichage utilisé par le squelette resume/campagne, mais il n'y a pas de manière simple de différencier une sous-rubrique Campagne d'une autre sous-rubrique.
+            -->
+            ]
+            <BOUCLE_test_selection(CONDITION){si #GET{idSelection}|>{0}}>
+              <INCLURE{fond=inclure/selections/recent-materials, id_selection=#GET{idSelection}} />
+            </BOUCLE_test_selection>
+              <BOUCLE_rubrique_campaigns(CONDITION){si #COMPOSITION|=={campaigns}}>
+                <BOUCLE_campaigns(RUBRIQUES){id_parent}{!par num titre}{0,2}>
+                  <INCLURE{fond=inclure/resume/campagne, id_rubrique, lang} />
+                </BOUCLE_campaigns>
+              </BOUCLE_rubrique_campaigns>
+                <BOUCLE_derniers_articles(ARTICLES){id_rubrique}{!par date}{lang}{0,2}>
+                  <INCLURE{fond=inclure/resume/article, id_article, lang, class=resume--recent-material} />
+                </BOUCLE_derniers_articles>
+              <//B_rubrique_campaigns>
+            <//B_test_selection>
+            <div class="section_more">
+              <a href="#URL_RUBRIQUE" class="link-all link-all--section">[(#TITRE|label_ponctuer) <:local:materials_see_all:>]</a>
+            </div>
+          </section>
+        </BOUCLE_apercu_sousrubriques>
+      </div>
+    </div>
+  </article>
+</BOUCLE_rubrique_subsection>

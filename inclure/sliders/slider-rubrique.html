@@ -1,0 +1,39 @@
+<B_slider_contenu>
+  <div class="slider slider-rubrique">
+    <div class="slider_container slider-rubrique_container swiper-container [swiper-container-(#LANG_DIR)]">
+      <div class="swiper-wrapper slider_list slider-rubrique_list">
+        <BOUCLE_slider_contenu(SELECTIONS_CONTENUS){id_selection}{par rang}>
+          <div class="swiper-slide slider_item slider-rubrique_item">
+            <article class="resume resume-slider">
+              [<div class="resume_logo resume-slider_logo"><a href="[(#URL)]">(#LOGO_SELECTIONS_CONTENU|image_reduire{700,395}|image_recadre{700,395})</a></div>]
+              <div class="resume_texte resume-slider_texte">
+                <h1 class="resume_titre resume-slider_titre"><a href="#URL">#TITRE</a></h1>
+                [<div class="resume_desc resume-slider_desc"><p>(#DESCRIPTIF|couper{250}) <a href="#URL" class="resume_link-more"><span><:local:more:></span></a></p></div>]
+                <p class="resume_metas resume-slider_metas">
+                  [(#OBJET|=={article}|oui)
+                    #INCLURE{fond=inclure/selections/recent-materials-meta-article, id_article=#ID_OBJET} ]
+                  [(#OBJET|=={rubrique}|oui)
+                    #INCLURE{fond=inclure/selections/recent-materials-meta-rubrique, id_rubrique=#ID_OBJET} ]
+                  [(#LISTE{article, rubrique}|find{#OBJET}|non)
+                    [<time datetime="[(#MAJ|date_iso)]">(#MAJ|affdate)</time>]
+                  ]
+                </p>
+              </div>
+            </article>
+          </div>
+        </BOUCLE_slider_contenu>
+      </div>
+      [(#REM)
+      <!-- pagination --> ]
+      <div class="slider_pagination slider-rubrique_pagination swiper-pagination"></div>
+      [(#REM)
+      <!-- navigation --> ]
+      <div class="slider_navigation slider-rubrique_navigation">
+        <div class="container">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</B_slider_contenu>

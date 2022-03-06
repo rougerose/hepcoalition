@@ -1,72 +1,91 @@
 <BOUCLE_article(ARTICLES){id_article}>
-<article class="self objet article hentry grid__item">
-   <div class="grid">
-      <div class="grid__item eight-twelfths portable-one-whole desk-eight-twelfths push--desk-four-twelfths">
-         <header class="landmark">
-            <h1 class="self__titre entry-title titre hN">
-               #TITRE[ <span class="soustitre">(#SOUSTITRE)</span>]
-            </h1>
-         </header>
+  #SET{tags, #ARRAY}
+  <article class="article content" itemscope itemtype="http://schema.org/Article">
+    <div class="container">
+      <header class="article_header">
+        <B_section>
+          <p class="article_section-title content_section-title">
+            <BOUCLE_section(HIERARCHIE){id_article}{1, n}>
+                <a href="#URL_RUBRIQUE">#TITRE</a>
+            </BOUCLE_section>
+          </p>
+        </B_section>
+        <h1 class="article_title content_title" itemprop="headline name">#TITRE</h1>
+        [<p class="article_subtitle">(#SOUSTITRE)</p>]
+      </header>
+      [<div class="article_logo content_logo thumbnail">
+        (#LOGO_ARTICLE|image_reduire{700, 395}|image_recadre{700, 395}|inserer_attribut{class, thumbnail_img}|inserer_attribut{itemprop, image})
+      </div>]
+      <div class="article_content">
+        <aside class="article_aside">
+          <div class="article_metas">
+            <BOUCLE_formulaire_missing(CONDITION){si #COMPOSITION|=={campaign-missing}}>
+              <INCLURE{fond=inclure/campaign-missing-form, id_article} />
+            </BOUCLE_formulaire_missing>
+            <div class="article_metas-date-auteurs">
+              <INCLURE{fond=inclure/auteurs-article, id_article}/>
+              <p><time class="article_metas-date" itemprop="dateCreated" datetime="[(#DATE|date_iso)]">[(#DATE|affdate)]</time></p>
+            </div>
+            <B_tags>
+              <ul class="article_metas-tag-list">
+                <BOUCLE_tags(MOTS){id_article}{par titre}>
+                  [(#SET{tags, #GET{tags}|push{#ID_MOT}})]
+                  <li class="article_metas-tag-item spip-text"><a href="#URL_MOT" rel="tag">#TITRE</a></li>
+                </BOUCLE_tags>
+              </ul>
+            </B_tags>
+            <B_traductions>
+              <div class="article_translations translations">
+                <h2 class="translations_heading"><:local:translations:> <INCLURE{fond=img/icons/icon-caret-64.svg} /></h2>
+                <ul class="translations_list translations_list--#LANG_DIR js-to_expand">
+                  <BOUCLE_traductions(ARTICLES){traduction}{exclus}{par lang}>
+                    <li class="translations_item spip-text" lang="#LANG" xml:lang="#LANG" dir="#LANG_DIR">
+                      <span class="translations_lang-label">[(#LANG)]</span> <span><a href="#URL_ARTICLE" rel="alternate" hreflang="#LANG" itemprop="translationOfWork">[(#TITRE)]</a></span>
+                    </li>
+                  </BOUCLE_traductions>
+                </ul>
+              </div>
+            </B_traductions>
+          </div>
+        </aside>
+        <div class="article_wrapper-text">
+          <div itemprop="text">
+            <B_event>
+              <div class="article_text spip-text">
+                <BOUCLE_event(EVENEMENTS){id_article}{si #COMPOSITION|=={calendar}}>
+                  <INCLURE{fond=inclure/evenement-article, id_evenement} />
+                </BOUCLE_event>
+              </div>
+            </B_event>
+            [<div class="article_chapo spip-text">(#CHAPO|image_reduire{1400, 0})</div>]
+            [<div class="article_text spip-text">(#TEXTE|image_reduire{1400, 0})</div>]
+          </div>
+
+          [(#REM) <!-- Documents liés --> ]
+          <BOUCLE_documents(DOCUMENTS){id_article}{vu=non}{0,1}>
+            <INCLURE{fond=inclure/documents/documents-article, id_article}/>
+          </BOUCLE_documents>
+
+          [(#REM) <!-- Notes --> ]
+          [<aside class="article_notes spip-text">
+            <h2><:info_notes:></h2>
+            (#NOTES)
+          </aside>]
+
+          [(#REM)
+            <!-- Signataires Missing -->
+          ]<BOUCLE_supporters_missing(CONDITION){si #COMPOSITION|=={campaign-missing}}>
+            <INCLURE{fond=inclure/campaign-missing-supporters, id_article} />
+          </BOUCLE_supporters_missing>
+        </div>
       </div>
-      <!-- /.grid__item -->
-      [<div class="grid__item">
-         (#ENV{carousel}|=={oui}|oui)
-         #INCLURE{fond=liste/carousel-images,id_article}
-      </div><!-- /.grid__item -->]
-   </div>
-   <!-- /.grid -->
-   <div class="grid grid--rev">
-      <div class="grid__item eight-twelfths portable-one-whole desk-eight-twelfths">
-         
-         <B_ev>
-         <div class="evenements">
-            <BOUCLE_ev(EVENEMENTS){id_article}>
-            #INCLURE{fond=inclure/resume/evenement-article,id_evenement}
-            </BOUCLE_ev>
-         </div>
-         </B_ev>
-
-         <div class="self__body entry-content contenu surlignable">
-            [<div class="chapo txt landmark">
-               (#CHAPO|image_reduire{701,0})
-            </div><!-- .chapeau -->]
-            [<div class="texte txt">
-               (#TEXTE|image_reduire{701,0})
-            </div><!-- .texte -->]
-            [(#PAGE|=={contact}|oui)
-               [(#FORMULAIRE_ECRIRE_AUTEUR)]]
-
-            [(#REM) Gestion du portfolio et des documents ]
-               [(#INCLURE{fond=inclure/documents,id_article,lang,carousel=#ENV{carousel}})]
-            
-            [<aside class="notes txt">
-               <div class="grid">
-                  <div class="grid__item desk-one-half">
-                     <h1 class="hN intertitre spip"><:info_notes:></h1>
-                     (#NOTES)
-                  </div>
-               </div>
-            </aside>]
-         </div><!-- .self__body -->
-      </div><!-- /.grid__item --><div class="grid__item four-twelfths portable-one-whole desk-four-twelfths">
-         [<div class="self__logo">(#ENV{carousel}|non)
-            [(#LOGO_ARTICLE|inserer_attribut{class,media-logo})]
-         </div><!-- /.self__logo -->]
-
-         <aside class="meta">
-            <ul class="liste--bloc">
-               [(#MODELE{article-auteurs})]
-               <li class="meta-item meta-updated"><time class="updated" datetime="[(#DATE|affdate{Y-m-d})]">[(#DATE|affdate)]</time></li>
-               [(#MODELE{article-self-traductions})]
-               [(#INCLURE{fond=liste/mots-objet,id_article,lang})]
-               [(#PLUGIN{socialtags}|oui)
-               <li class="meta-item meta-share">
-                  <h1 id="share" class="hN share"><:local:share:></h1>
-               </li>]
-            </ul>
-         </aside>
-
-      </div><!-- /.grid__item -->
-   </div><!-- /.grid -->
-</article><!-- .self -->
+      <BOUCLE_related(CONDITION){si #COMPOSITION|=={campaign}}>
+        <INCLURE{fond=inclure/sliders/slider-related-articles, id_rubrique, id_article, lang} />
+      </BOUCLE_related>
+        <BOUCLE_condition_tags(CONDITION){si #GET{tags}|count|>={1}}>
+          <INCLURE{fond=inclure/resumes/articles-related-mots, mots=#GET{tags}, id_article, lang}/>
+        </BOUCLE_condition_tags>
+      <//B_related>
+    </div>
+  </article>
 </BOUCLE_article>

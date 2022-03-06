@@ -1,0 +1,31 @@
+// ========================================
+// sitenav-footer
+// ========================================
+
+
+// .sitenav-footer {}
+
+.sitenav-footer_list {
+
+  &--sections {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1rem;
+
+    @include mq(md) {
+      gap: 2rem 1.5rem;
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  &--subsections {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.sitenav-footer_item {
+  & a {
+    display: inline-block;
+  }
+}

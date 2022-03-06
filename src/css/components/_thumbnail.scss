@@ -1,0 +1,19 @@
+// ========================================
+// thumbnail
+// ========================================
+
+
+// .thumbnail {}
+
+.thumbnail_img {
+  box-shadow: 0 0 3px 0 rgba($color-primary-800, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.thumbnail_link {
+  &:hover {
+    & .thumbnail_img {
+      box-shadow: 0 0 9px 1px rgba($color-primary-600, 0.6);
+    }
+  }
+}

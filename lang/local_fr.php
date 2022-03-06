@@ -19,10 +19,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // E
    'email'                          => 'e-mail',
    'email_send'                     => "Nous envoyer un <a href='@urlcontact@' class='spip_out'>email</a>",
-   // F
+   'email_send_label'                     => "Envoyez-nous un email",
+	 'events_all' => 'Tous les événements',
+
+	 // F
+	 'fermer' => 'Fermer',
    'follow_us'                      => "Suivez-nous", // on Facebook
 
    // H
+	 'hepcoalition_on_facebook_label' => 'HepCoalition sur Facebook',
+	 'hepcoalition_on_twitter_label' => 'HepCoalition sur Twitter',
    'home'                           => 'Accueil',
 
    // I
@@ -42,10 +48,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'info_recherche_pas_de_resultat' => 'Aucun résultat',
 
    // L
+	 'langue_preferee_titre' => 'Sélectionnez votre langue préférée',
    'lastest_news'                   => "Dernières actualités",
    'latest_publications'            => 'Dernières publications',
 
    //M
+	 'materials_section' => 'Publications dans cette rubrique',
+	 'materials_recent' => 'Dernières publications',
+	 'materials_related' => 'Publications liées',
+	 'materials_see_all' => 'toutes les publications',
    'message_404_title'              => "Page indisponible.",
    'message_404_desc'               => "Nous sommes désolé-e-s, la page que vous recherchez n'est pas disponible.<br />Revenir à <a href='@urlsite@' class='spip_out'>la page d'accueil du site</a>.",
    'more'                           => 'La suite',
@@ -65,8 +76,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'pays'                           => 'Pays',
 
    // R
+	 'recherche_label_aucun_resultat' => 'Aucun résultat disponible pour :',
+	 'recherche_label_resultat' => '1 résultat pour :',
+	 'recherche_label_resultats' => '@nb@ résultats pour :',
 
    // S
+	 'search_type_here' => 'Écrivez ici',
    'share'                          => 'Partager',
    'signatories_coalition'          => "Signataires",
    'signatories_singular'           => "1 signataire",
@@ -80,6 +95,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
    // T
    'tags'                           => 'Mots-clés',
-   'translations'                    => 'Traductions'
+   'translations'                    => 'Traductions',
+
+	 'you_are_here_label' => 'Vous êtes ici&nbsp;:',
 );
 ?>

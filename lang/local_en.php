@@ -19,11 +19,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // E
    'email'                          => 'e-mail',
    'email_send'                     => "Send us an <a href='@urlcontact@' class='spip_out'>email</a>",
+   'email_send_label'                     => "Send us an email",
+	 'events_all' => 'All events',
 
    // F
+	 'fermer' => 'Close',
    'follow_us'                      => "Follow us",
 
    // H
+	 'hepcoalition_on_facebook_label' => 'HepCoalition on Facebook',
+	 'hepcoalition_on_twitter_label' => 'HepCoalition on Twitter',
    'home'                           => 'home',
 
    // I
@@ -43,10 +48,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'info_recherche_pas_de_resultat' => 'No result',
 
    // L
+	 'label_ponctuer' => '@label@:',
+	 'langue_preferee_titre' => 'Select your preferred language',
    'lastest_news'                   => "Lastest news",
    'latest_publications'            => 'Latest publications',
 
    //M
+	 'materials_section' => 'Materials in this section',
+	 'materials_recent' => 'Recent materials',
+	 'materials_related' => 'Related materials',
+	 'materials_see_all' => 'all materials',
    'message_404_title'              => "Page not found.",
    'message_404_desc'               => "Sorry, but the page you are looking for has not been found.<br />Go back to <a href='@urlsite@' class='spip_out'>home page</a>.",
    'more'                           => 'More',
@@ -67,8 +78,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    //'press_release'                  => 'Press release',
 
    // R
+	 'recherche_label_aucun_resultat' => "Couldn't find any results for:",
+	 'recherche_label_resultat' => '1 result for:',
+	 'recherche_label_resultats' => '@nb@ results for:',
 
    // S
+	 'search_type_here' => 'Type here',
    'share'                          => 'Share',
    'signatories_coalition'          => "Signatories",
    'signatories_singular'           => "1 supporter",
@@ -82,5 +97,8 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // T
    'tags'                           => 'Keywords',
    'translations'                   => 'Translations',
+
+	 // Y
+	 'you_are_here_label' => 'You are here:',
 );
 ?>

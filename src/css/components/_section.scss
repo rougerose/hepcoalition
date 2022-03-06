@@ -1,0 +1,72 @@
+// ========================================
+// section
+// ========================================
+
+//
+// Section s'entend au sens de rubriques du site
+//
+
+.section {
+  margin-bottom: 6rem;
+
+  @include mq(sm) {
+    &--sep {
+      border-bottom: 1px solid rgba($color-primary-500, 0.4);
+    }
+  }
+}
+
+.section_header {
+  margin-bottom: 3rem;
+}
+
+.section_title {
+  text-transform: uppercase;
+  font-size: 1.5rem; // 24px
+  color: $color-primary-500;
+
+  &--search {
+    color: $color-primary-800;
+  }
+}
+
+.section_description {
+  margin-top: 0.5rem;
+  font-size: 18px;
+  color: $color-primary-600;
+}
+
+.section_more {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+
+  &::before,
+  &::after {
+    position: absolute;
+    inset-inline: 0 auto;
+    left: 0;
+    top: 50%;
+    content: "";
+    width: 50%;
+    height: 1px;
+    background-color: rgba($color-primary-500, 0.4);
+  }
+
+  &::after {
+    inset-inline: auto 0;
+  }
+}
+
+// section-selections
+// ========================================
+
+// .section-selections {}
+
+
+// section-events
+// ========================================
+
+// .section-events {}
+// .section-events_title {}

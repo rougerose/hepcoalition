@@ -19,6 +19,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // E
    'email'                          => '电子邮件',
    'email_send'                     => "请用 <a href='@urlcontact@' class='spip_out'>电子邮件</a>与我们联络",
+   'email_send_label'                     => "请用 电子邮件 与我们联络",
 
    // F
    'follow_us'                      => "请在脸书",

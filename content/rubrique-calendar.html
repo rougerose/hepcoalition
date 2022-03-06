@@ -1,0 +1,84 @@
+#SET{date_courante, #ENV{date}}
+
+<BOUCLE_rubrique_subsection(RUBRIQUES){id_rubrique}>
+[(#REM) <!-- Variables --> ]
+    #SET{affichage_duree, #ENV{affichage_duree, #CONFIG{agenda/affichage_duree, 12}}}
+    #SET{affichage_debut, #CONFIG{agenda/affichage_debut, #ENV{affichage_debut, date_jour}}}
+    #SET{date_debut, #ENV{date_debut, #ENV{date}}|agenda_date_debut_liste{#GET{affichage_debut}}}
+    #SET{date_prev, #GET{date_debut}|agenda_moisdecal{#GET{affichage_duree}|mult{-1}, 'Y-m-d H:i:00'}}
+    #SET{date_fin, #GET{date_debut}|agenda_moisdecal{#GET{affichage_duree}, 'Y-m-d H:i:00'}}
+    [(#SET{annee_actuelle, [(#DATE|annee)]})]
+
+    [(#REM) <!-- Identifier l'année du plus ancien événement --> ]
+    <BOUCLE_premier_ev(EVENEMENTS){id_rubrique}{0,1}>
+      [(#SET{annee_premier, #DATE_DEBUT|annee})]
+    </BOUCLE_premier_ev>
+
+  <article class="rubrique content">
+    <div class="container">
+      <header class="rubrique_header">
+        <BOUCLE_section(HIERARCHIE){id_rubrique}{1,1}>
+          <p class="rubrique_section-title content_section-title"><a href="#URL_RUBRIQUE">#TITRE</a></p>
+        </BOUCLE_section>
+        <h1 class="rubrique_title content_title">#TITRE</h1>
+      </header>
+      [<div class="rubrique_description spip-text">
+        (#TEXTE)
+      </div>]
+    </div>
+    <div class="rubrique_content rubrique-content--calendar">
+      [(#REM) <!-- Année n+1 --> ]
+      <B_annee_n_plus_1>
+        <section class="section">
+          <div class="container">
+            <h2 class="section_title">[(#GET{date_fin}|affdate_periode{#GET{affichage_duree}})]</h2>
+          </div>
+          <div class="slider-calendar-annual">
+            <div class="container swiper-container slider-calendar_container">
+              <div class="swiper-wrapper slider_list slider-calendar_list">
+                <BOUCLE_annee_n_plus_1(EVENEMENTS){id_rubrique}{!evenement_passe #GET{date_fin}}{par date_debut}>
+                  <div class="swiper-slide slider_item slider-calendar_item">
+                    <INCLURE{fond=inclure/sliders/slider-calendar-event, id_evenement} />
+                  </div>
+                </BOUCLE_annee_n_plus_1>
+              </div>
+              [(#REM)
+                <!-- pagination --> ]
+              <div class="slider_pagination slider-calendar_pagination swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+      </B_annee_n_plus_1>
+
+      [(#REM) <!-- Année courante et précédentes --> ]
+
+      <BOUCLE_annuelle(DATA){enum #GET{annee_actuelle}, #GET{annee_premier}}>
+        [(#SET{date_debut, #VALEUR|concat{-01-01}|agenda_moisdecal{0}})]
+        [(#SET{date_fin, #VALEUR|concat{-01-01}|agenda_moisdecal{12}})]
+        [(#SET{id_calendar, #VAL{calendar}|concat{#VALEUR}})]
+        #SET{active, 0}
+        <B_evenements_annee>
+          <section class="section">
+            <div class="container">
+              <h2 class="section_title">#VALEUR</h2>
+            </div>
+            <div id="#GET{id_calendar}" class="slider-calendar-annual">
+              <div class="container swiper-container slider-calendar_container">
+                <div class="swiper-wrapper slider_list slider-calendar_list">
+                  <BOUCLE_evenements_annee(EVENEMENTS){id_rubrique}{!evenement_passe #GET{date_debut}}{!evenement_a_venir #GET{date_fin}}{par date_debut}>
+                    [(#DATE_FIN|>={#GET{date_courante}}|oui) #SET{active, 1} ]
+                    <div class="swiper-slide slider_item slider-calendar_item[ (#GET{active}|=={1}?{is-coming})]">
+                      <INCLURE{fond=inclure/sliders/slider-calendar-event, id_evenement} />
+                    </div>
+                  </BOUCLE_evenements_annee>
+                </div>
+                [(#REM) <!-- pagination --> ]
+                <div class="slider_pagination slider-calendar_pagination swiper-pagination"></div>
+              </div>
+            </div>
+          </section>
+        </B_evenements_annee>
+      </BOUCLE_annuelle>
+    </div>
+  </article>
+</BOUCLE_rubrique_subsection>

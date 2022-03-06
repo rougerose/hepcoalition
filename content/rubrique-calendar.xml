@@ -1,0 +1,6 @@
+<composition>
+  <nom><multi>[fr]Rubrique Agenda [en]Calendar section</multi></nom>
+  <description><multi>[fr]Composition pour la rubrique Agenda [en]Layout for Calendar section</multi></description>
+  <icon>images/objet-liste-contenus.png</icon>
+  <branche type="article" composition="calendar" />
+</composition>

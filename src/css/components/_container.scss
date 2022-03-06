@@ -1,0 +1,20 @@
+// ========================================
+// container
+// ========================================
+
+// Ne pas utiliser le composant .container de tailwindcss
+// car il est appliqué un max-width identique au mediaquery
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+  max-width: 1052px;
+
+  @include mq(md) {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}

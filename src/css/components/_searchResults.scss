@@ -1,0 +1,26 @@
+// ========================================
+// searchResults
+// ========================================
+
+// .searchResults {}
+
+.searchResults_header {
+  margin-bottom: 2rem;
+
+  @include mq(xl) {
+    margin-bottom: 4rem;
+  }
+}
+
+.searchResults_title {
+  font-size: 16px;
+  color: $color-primary-900;
+}
+
+.searchResults_term {
+  display: block;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  color: $color-primary-500;
+}

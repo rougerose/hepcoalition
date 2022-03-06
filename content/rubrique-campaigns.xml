@@ -1,5 +1,6 @@
 <composition>
-   <nom>Rubrique Campaigns</nom>
-   <description>Composition adaptée pour la rubrique Campaigns.</description>
-   <icon>images/composition-test.png</icon>
+  <nom><multi>[fr]Rubrique Campagnes [en]Campaigns subsection</multi></nom>
+  <description><multi>[fr]Composition pour la sous-rubrique Campagnes [en]Layout for Campaigns subsection</multi></description>
+  <icon>images/objet-liste-contenus.png</icon>
+  <branche type="rubrique" composition="campaign" />
 </composition>

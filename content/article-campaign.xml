@@ -1,0 +1,5 @@
+<composition>
+  <nom><multi>[fr]Article Campagne [en]Campaign Article</multi></nom>
+  <description><multi>[fr]Composition pour les articles d'une campagne [en]Layout for articles in a campaign section</multi></description>
+  <icon>images/objet-liste-contenus.png</icon>
+</composition>

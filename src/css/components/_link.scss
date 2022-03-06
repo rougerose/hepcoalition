@@ -1,0 +1,51 @@
+
+.link-all {
+  display: block;
+  padding: 0.5rem;
+  line-height: 1rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $color-white;
+  background-color: $color-primary-500;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 3px 5px -1px rgba($color-black, 0.2);
+
+  &:hover {
+    background-color: $color-primary-400;
+    color: $color-white;
+  }
+
+  &--events {
+    position: absolute;
+    inset-inline-end: 0;
+    bottom: 0;
+    z-index: 2;
+    transform: translateY(50%);
+
+    @include mq(container) {
+      inset-inline-end: 0.375rem;
+    }
+  }
+
+  &--section {
+    position: relative;
+    z-index: 2;
+
+    &::before,
+    &::after {
+      position: absolute;
+      inset-inline: -2rem auto;
+      top: 0;
+      content: "";
+      width: 2rem;
+      height: 100%;
+      background-color: $color-white;
+    }
+
+    &::after {
+      inset-inline: auto -2rem;
+      left: auto;
+    }
+  }
+}

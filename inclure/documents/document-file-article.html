@@ -1,0 +1,16 @@
+<BOUCLE_document_file(DOCUMENTS){id_document}>
+  <figure class="documents-article_item document-article">
+    [(#LOGO_DOCUMENT{vignette}|?{
+      [(#SET{logo, #LOGO_DOCUMENT|image_reduire{192, 108}|extraire_attribut{src}})],
+      [(#SET{logo, #LOGO_DOCUMENT|extraire_attribut{src}})]
+    })]
+    [<a href="#URL_DOCUMENT" class=""><img src="(#GET{logo})" alt="" class="document-article_img"></a>]
+    <figcaption class="document-article_caption">
+      [<h3 class="document-article_title"><a href="#URL_DOCUMENT">(#TITRE|sinon{<:medias:info_document:>})</a></h3>]
+      <div class="document-article_desc">
+        [<div>(#DESCRIPTIF)</div>]
+        <p>#TYPE_DOCUMENT[ &ndash; (#TAILLE|taille_en_octets)]</p>
+      </div>
+    </figcaption>
+  </figure>
+</BOUCLE_document_file>

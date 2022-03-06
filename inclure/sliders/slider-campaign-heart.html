@@ -1,0 +1,24 @@
+<B_slider_contenu>
+  <div class="slider slider-portfolio slider-portfolio--heartCampaign">
+    <div class="slider_container slider-portfolio_container swiper-container [swiper-container-(#LANG_DIR)]">
+      <div class="swiper-wrapper slider_list slider-portfolio_list">
+        <BOUCLE_slider_contenu(DOCUMENTS){id_rubrique}{mode=document}{media=image}>
+          <div class="swiper-slide slider_item slider-portfolio_item">
+            [<img src="(#FICHIER|image_reduire{1052,0}|image_recadre{1052,0}|extraire_attribut{src})">]
+          </div>
+        </BOUCLE_slider_contenu>
+      </div>
+      [(#REM)
+      <!-- pagination --> ]
+      <div class="slider_pagination slider-portfolio_pagination swiper-pagination"></div>
+      [(#REM)
+      <!-- navigation --> ]
+      <div class="slider_navigation slider-portfolio_navigation">
+        <div class="container">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</B_slider_contenu>

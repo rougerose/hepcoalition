@@ -1,0 +1,5 @@
+<composition>
+  <nom><multi>[fr]Événement [en]Event</multi></nom>
+  <description><multi>[fr]Composition pour les articles de la rubrique Calendrier [en]Layout for articles in Calendar sections</multi></description>
+  <icon>images/objet-liste-contenus.png</icon>
+</composition>

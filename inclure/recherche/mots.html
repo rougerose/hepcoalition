@@ -1,0 +1,10 @@
+<B_mots>
+  <section class="section[(#GRAND_TOTAL|<={#ENV{pagination}}|oui) section--sep]">
+    #ANCRE_PAGINATION
+    <h2 class="section_title section_title--search">[(#ENV{mots}|count|singulier_ou_pluriel{local:info_recherche_mot, local:info_recherche_mots, nb})]</h2>
+    <BOUCLE_mots(MOTS){id_mot IN #ENV{mots}}{pagination #ENV{pagination, 5}}>
+      <INCLURE{fond=inclure/resume/mot, id_mot} />
+    </BOUCLE_mots>
+    [<nav class="pagination" role="navigation">(#PAGINATION)</nav>]
+  </section>
+</B_mots>

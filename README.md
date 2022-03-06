@@ -1,3 +1,3 @@
-# Hepcoalition.org #
+# hepcoalition.org
 
-Squelettes Spip.
+Squelettes SPIP pour le site [hepcoalition.org](https://hepcoalition.org)

@@ -1,0 +1,21 @@
+<B_related_articles_mots>
+  <aside class="article_related related">
+    <h2 class="related_heading">
+      <:local:materials_related:>
+    </h2>
+    <div class="slider-related">
+      <div class="swiper-container slider-related_container">
+        <div class="swiper-wrapper slider_list slider-related_list">
+          <BOUCLE_related_articles_mots(ARTICLES){!id_article}{lang}{mots 0.5 !tri}{0,10}>
+            <div class="swiper-slide slider_item slider-related_item">
+              <INCLURE{fond=inclure/resume/article-related, id_article} />
+            </div>
+          </BOUCLE_related_articles_mots>
+        </div>
+        [(#REM)
+          <!-- pagination --> ]
+        <div class="slider_pagination slider-related_pagination swiper-pagination"></div>
+      </div>
+    </div>
+  </aside>
+</B_related_articles_mots>

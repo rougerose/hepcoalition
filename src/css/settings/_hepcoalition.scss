@@ -1,0 +1,53 @@
+// ========================================
+// HepCoalition settings
+// ========================================
+
+//! Attention aux variables à reporter également dans tailwind.config.js
+
+// Mediaqueries
+$mq-breakpoints: (
+  sm: 568px,
+  md: 768px,
+  lg: 800px,
+  xl: 1100px,
+
+  // Tweakpoints
+  desktop: 980px,
+  container: 1052px,
+);
+
+
+// Couleurs
+$color-black: #000;
+$color-white: #fff;
+
+$color-primary-100: #78ffff;
+$color-primary-200: #62e7ea;
+$color-primary-300: #4dcfd5;
+$color-primary-400: #36b8c1;
+$color-primary-500: #19a1ac;
+$color-primary-600: #15868f;
+$color-primary-700: #116b73;
+$color-primary-800: #0d5156;
+$color-primary-900: #0a3f43;
+
+$color-secondary-100: #ffd2ca;
+// $color-secondary-100: #f5dac5;
+$color-secondary-200: #faac9f;
+// $color-secondary-200: #eab4ab;
+$color-secondary-300: #f7826d;
+// $color-secondary-300: #e08f81;
+$color-secondary-400: #eb6047;
+// $color-secondary-400: #d66a56;
+$color-secondary-500: #c11f02;
+$color-secondary-600: #a11a02;
+$color-secondary-700: #811501;
+$color-secondary-800: #611001;
+$color-secondary-900: #400a01;
+
+$color-green-gray-50: hsl(183, 14%, 93%);
+$color-green-gray-100: hsl(183, 14%, 85%);
+$color-green-gray-200: hsl(183, 13%, 74%);
+$color-green-gray-300: hsl(183, 14%, 67%);
+$color-green-gray-400: hsl(183, 14%, 53%);
+$color-green-gray-500: hsl(183, 14%, 39%);

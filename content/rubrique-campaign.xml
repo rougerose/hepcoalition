@@ -1,0 +1,6 @@
+<composition>
+  <nom><multi>[fr]Rubrique d'une campagne [en]A campaign subsection</multi></nom>
+  <description><multi>[fr]Composition pour la rubrique d'une campagne [en]Layout for the campaign subsection</multi></description>
+  <icon>images/objet-liste-contenus.png</icon>
+  <branche type="article" composition="campaign" />
+</composition>

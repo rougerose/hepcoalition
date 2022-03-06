@@ -1,0 +1,35 @@
+// ========================================
+// pagination
+// ========================================
+
+.pagination {
+  margin-top: 2rem;
+  background-color: rgba($color-primary-400, 0.3);
+}
+
+.pagination-items {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+
+  @include mq(xl) {
+    font-size: 1rem;
+    line-height: 1rem;;
+  }
+}
+
+.pagination-item {
+  margin: 0 0.125rem;
+}
+
+.pagination-item-label {
+  display: inline-block;
+  padding: 0.5rem 0.5rem 0.4rem;
+
+  &.on {
+    font-weight: 700;
+    background-color: $color-primary-500;
+  }
+}

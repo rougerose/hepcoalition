@@ -1,0 +1,21 @@
+<section id="modalLanguage" class="modal modal--language">
+  <header class="modal_header modal_header--language">
+    <h2 id="modal_language_title" class="modal_title" data-label=""><:local:langue_preferee_titre:></h2>
+    <button class="hamburger hamburger--squeeze modal_btnClose is-active" type="button">
+      <span class="hamburger-label sr-only"><:local:fermer:></span>
+      <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+    </button>
+  </header>
+  <div class="modal_content modal_content--language">
+    <B_secteur_langue>
+      <ul class="langlist">
+        <BOUCLE_secteur_langue(RUBRIQUES){racine}{par lang}>
+          <li xml:lang="#LANG" lang="#LANG" dir="#LANG_DIR" class="langlist_item[(#LANG|=={#ENV{lang}}|oui) on]">
+            [(#EXPOSE{'', <a
+              href="[(#VAL{converser}|generer_url_action{redirect=#URL_RUBRIQUE}|parametre_url{var_lang, #LANG})]" class="langlist_link" rel="alternate" hreflang="#LANG">})][(#LANG|traduire_nom_langue)]#EXPOSE{'', </a>}
+          </li>
+          </BOUCLE_secteur_langue>
+      </ul>
+    </B_secteur_langue>
+  </div>
+</section>

@@ -1,0 +1,37 @@
+// ========================================
+// font-face : chinois traditionnel
+// ========================================
+
+@use "tools/font-face" as NotoSansTC;
+
+@import "settings/unicode-noto-sans-tc";
+
+@include NotoSansTC.fontFace(
+  $fontName: "hepC",
+  $fontId: "noto-sans-tc",
+  $fontDir: "../fonts/noto-sans-tc",
+  $weight: 300,
+  $display: swap,
+  $style: normal,
+  $unicodeMap: $unicode,
+);
+
+@include NotoSansTC.fontFace(
+  $fontName: "hepC",
+  $fontId: "noto-sans-tc",
+  $fontDir: "../fonts/noto-sans-tc",
+  $weight: 400,
+  $display: swap,
+  $style: normal,
+  $unicodeMap: $unicode,
+);
+
+@include NotoSansTC.fontFace(
+  $fontName: "hepC",
+  $fontId: "noto-sans-tc",
+  $fontDir: "../fonts/noto-sans-tc",
+  $weight: 700,
+  $display: swap,
+  $style: normal,
+  $unicodeMap: $unicode,
+);

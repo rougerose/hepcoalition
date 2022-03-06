@@ -1,0 +1,78 @@
+// ========================================
+// sitenavOverlay
+// ========================================
+
+.sitenavOverlay {
+  padding-top: 1.25rem;
+}
+
+.sitenavOverlay_header {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0 1rem;
+  align-items: center;
+}
+
+.sitenavOverlay_menu {
+  padding-top: 4rem;
+  color: $color-white;
+  visibility: hidden;
+  transition: visibility 0.1s ease 0s;
+
+  &.is-visible {
+    visibility: visible;
+    transition: visibility 0.2s ease 0.5s;
+  }
+}
+
+.sitenavOverlay_list {
+  &--sections {
+
+    display: grid;
+    gap: 2rem 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  // &--subsections {}
+}
+
+.sitenavOverlay_item {
+
+  &--section {
+    transform: translateX(-20px);
+    opacity: 0;
+    transition: opacity 0s ease 0s, transform 0s ease 0s;
+
+    > a,
+    > span {
+      text-transform: uppercase;
+      color: $color-primary-500;
+    }
+
+    .sitenavOverlay_menu.is-visible & {
+      transform: translateX(0);
+      opacity: 1;
+      transition: opacity 0.3s ease 0.7s, transform 0.5s ease 0.7s;
+    }
+  }
+
+  &--search {
+    grid-column: 1 / span 2;
+    margin-bottom: 2rem;
+  }
+
+  & a {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    transition: color 0.3s ease;
+  }
+
+  & a {
+    &:hover {
+      color: $color-primary-100;
+    }
+
+    &.is-active {
+      color: $color-primary-100;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+// ========================================
+// documents-article
+// ========================================
+
+.documents-article {
+  margin-top: 4rem;
+}
+
+.documents-article_heading {
+  border-bottom: 1px solid $color-primary-500;
+  margin-top: 2.25rem;
+  margin-bottom: 1.5rem;
+  color: $color-primary-500;
+  font-size: 1.75rem; // 28px;
+}
+
+.documents-article_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 160px);
+  gap: 1rem;
+
+  @include mq(lg) {
+    grid-template-columns: repeat(auto-fill, 216px);
+  }
+}
+
+// .documents-article_item {}

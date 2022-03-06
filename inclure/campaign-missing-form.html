@@ -1,0 +1,14 @@
+<BOUCLE_article(ARTICLES){id_article}>
+  <BOUCLE_formulaire(FORMULAIRES){identifiant=missing_petition}>
+    <BOUCLE_reponses(FORMULAIRES_REPONSES){id_formulaire}{statut=publie}>
+      [(#SET{total, #TOTAL_BOUCLE})]
+    </BOUCLE_reponses>
+    <div class="article_petition petition-form">
+      <h2 class="petition-form_heading"><:local:sign_on:></h2>
+      [<p class="petition-form_count">
+        (#GET{total}|singulier_ou_pluriel{local:signatories_singular_with, local:signatories_plural_with,nb})
+      </p>]
+      [<div class="petition-form_wrapper ajax">(#FORMULAIRE_FORMIDABLE{missing_petition})</div>]
+    </div>
+  </BOUCLE_formulaire>
+</BOUCLE_article>

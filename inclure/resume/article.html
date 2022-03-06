@@ -1,21 +1,17 @@
-<BOUCLE_article(ARTICLES){id_article}>
-<article id="resume-art-#ID_ARTICLE" class="hentry resume article cf">
-  <div class="resume--body cf">
-    <header>
-      <h1 class="entry-title hN">
-        <a href="#URL_ARTICLE" rel="bookmark">#TITRE</a>
-        [<span class="soustitre">(#SOUSTITRE)</span>]
-      </h1>
-    </header>
-    <div class="entry-logo">
-      [<a href="#URL_ARTICLE">(#LOGO_ARTICLE|inserer_attribut{class,media-logo})</a>]
+<BOUCLE_resume_article(ARTICLES){id_article}{lang=#ENV{lang}}>
+  <article class="resume[ (#ENV{class})]">
+    <div class="resume_texte">
+      <h2 class="resume_title"><a href="#URL_ARTICLE" class="resume_link">#TITRE</a></h2>
+      [<p class="resume_subtitle">(#SOUSTITRE)</p>]
+      [<div class="resume_desc">
+        <p>(#INTRODUCTION|couper{250}) <a href="#URL_ARTICLE" class="resume_link-more"><span><:local:more:></span></a></p>
+      </div>]
+      <p class="resume_metas">
+        [(#INCLURE{fond=inclure/selections/recent-materials-meta-article, id_article})]
+      </p>
     </div>
-    <div class="entry-content[(#LOGO_ARTICLE|oui) plus-logo]">
-     [<p>(#INTRODUCTION{300}|PtoBR) <a href="#URL_ARTICLE" class="more"><:local:more:></a></p>]
-    </div>
-    <div class="meta">
-      <time class="meta-item updated" datetime="[(#DATE|affdate{Y-m-d})]">[(#DATE|affdate)]</time>
-    </div>
-  </div>
-</article>
-</BOUCLE_article>
+    [<div class="resume_logo thumbnail">
+      <a href="#URL_ARTICLE" class="thumbnail_link">(#LOGO_ARTICLE|image_reduire{450, 254}|image_recadre{450, 254}|inserer_attribut{class, thumbnail_img})</a>
+    </div>]
+  </article>
+</BOUCLE_resume_article>

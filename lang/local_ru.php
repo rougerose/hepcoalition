@@ -19,11 +19,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // E
    'email'                          => 'эл. почта',
    'email_send'                     => "<a href='@urlcontact@' class='spip_out'>Присылайте свои письма</a>",
+   'email_send_label'                     => "Присылайте свои письма",
+	 'events_all' => 'Все мероприятия',
 
    // F
    'follow_us'                      => "следите за нами", // on Facebook
+	 'fermer' => 'Закрыть',
 
    // H
+	 'hepcoalition_on_facebook_label' => 'HepCoalition в Facebook',
+	 'hepcoalition_on_twitter_label' => 'HepCoalition в Twitter',
    'home'                           => 'на главную',
 
    // I
@@ -43,10 +48,15 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'info_recherche_pas_de_resultat' => 'не найдено',
 
    // L
+	 'langue_preferee_titre' => 'Выберите язык',
    'lastest_news'                   => "Новости",
    'latest_publications'            => 'публикации',
 
    // M
+	 'materials_section' => 'Материалы в этом разделе',
+	 'materials_recent' => 'Последние публикации',
+	 'materials_related' => 'Другие публикации по теме',
+	 'materials_see_all' => 'Все публикации',
    'message_404_title'              => "Страница не найдена",
    'message_404_desc'               => "Приносим свои извинения, запрашиваемая страница не найдена.<br /> Вернуться на  <a href='@urlsite@' class='spip_out'>главную страницу сайта</a>.",
    'more'                           => 'Читать дальше',
@@ -66,8 +76,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'pays'                           => 'страна',
 
    // R
+	 'recherche_label_aucun_resultat' => "По вашему запросу материалы не найдены:",
+	 'recherche_label_resultat' => '1 результат поиска:',
+	 'recherche_label_resultats' => '@nb@ результатов поиска:',
 
    // S
+	 'search_type_here' => 'Введите текст',
    'share'                          => 'поделиться',
    'signatories_coalition'          => "подписанты",
    'signatories_singular'           => "1 поддерживающий",
@@ -84,6 +98,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // T
    'tags'                           => 'тэги',
    'translations'                   => 'Перевод',
+
+	 // Y
+	 'you_are_here_label' => 'Вы находитесь здесь:',
 
 );
 ?>

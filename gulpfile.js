@@ -1,47 +1,163 @@
-'use strict';
+// https://github.com/florianbouvot/gulp-boilerplate
 
-// gulp
-var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    autoprefixer = require('gulp-autoprefixer'),
-    nano = require('gulp-cssnano'),
-    plumber = require('gulp-plumber');
+const config = require("./gulp.config.js");
+const { gulp, src, dest, watch, series, parallel } = require("gulp");
+const browserSync = require("browser-sync");
+const del = require("del");
+const postcss = require("gulp-postcss");
+const size = require("gulp-size");
+const sass = require("gulp-dart-sass");
+const rename = require("gulp-rename");
+const rollup = require("rollup");
+const copy = require("rollup-plugin-copy");
+const { nodeResolve } = require("@rollup/plugin-node-resolve");
+const { terser } = require("rollup-plugin-terser");
 
-// CSS: sass; concat;
-gulp.task('css', function () {
-  gulp.src(['css/scss/hepcoalition.scss','css/scss/hepcoalition-rtl.scss'])
-      .pipe(plumber())
-      .pipe(sass({ outputStyle: 'expanded' }))
-      .pipe(sass({ sourceMap: false }))
-      .pipe(sass({ sourceComments: true }))
-      .pipe(autoprefixer())
-      //.pipe(nano())
-      .pipe(gulp.dest('css'));
-});
+// Task: CSS
+const css = function (done) {
+  // Make sure this feature is activated before running
+  if (!config.tasks.css) return done();
 
-gulp.task('minifycss', function() {
-  gulp.src(['css/hepcoalition-rtl.css','css/hepcoalition.css'])
-      .pipe(nano())
-      .pipe(gulp.dest('css'));
-});
+  return (
+    src(config.css.src + "**/*.scss")
+      .pipe(sass({includePaths: ["node_modules"]}))
+      .pipe(dest(config.css.src))
+      .pipe(postcss())
+      .pipe(size({ title: "CSS", gzip: true, showFiles: true }))
+      .pipe(dest(config.css.dist))
+      .pipe(browserSync.stream())
+  );
+};
 
-// minifyjs : uglify;
-gulp.task('minifyjs', function () {
-  gulp.src(['js/hepcoalition.js'])
-      .pipe(uglify())
-      .pipe(concat('hepcoalition.min.js'))
-      .pipe(gulp.dest('./js'));
-});
+const cssVendor = function (done) {
+  // Make sure this feature is activated before running
+  if (!config.tasks.cssVendor) return done();
 
-// watch
-gulp.task('watch', function () {
-  gulp.watch('css/scss/*scss', ['css']);
-});
+  return src(config.cssVendor.src)
+    .pipe(
+      rename({
+        prefix: "_",
+        extname: ".scss",
+      })
+    )
+    .pipe(dest(config.cssVendor.dist));
+};
 
+// Task: JS
+const js = function (done) {
+  // Make sure this feature is activated before running
+	if (!config.tasks.js) return done();
 
-// tâches
-gulp.task('default', ['css']);
-gulp.task('minijs', ['minifyjs']);
-gulp.task('minicss', ['minifycss']);
+  return rollup
+    .rollup({
+      input: config.js.src,
+      plugins: [
+        nodeResolve(),
+        terser(),
+        copy({
+          targets: [
+            {
+              src: "src/js/lib/van11y-accessible-hide-show-aria.min.js",
+              dest: "dist/js/lib",
+            },
+          ],
+          copyOnce: true,
+        }),
+      ],
+    })
+    .then((bundle) => {
+      return bundle.write({
+        file: config.js.dist + config.js.name,
+        format: "iife",
+      });
+    });
+}
+
+const fonts = function (done) {
+  if (!config.tasks.fonts) return done();
+
+  let fs = require("fs");
+
+  for (const font of config.fonts.src) {
+    fs.access("./dist/fonts/" + font.name, (err) => {
+      if (err) {
+        copy_files(font);
+      }
+    });
+  }
+  return done();
+}
+
+function copy_files(font) {
+  return src(font.src)
+    .pipe(rename(function (path) {
+      return {
+        dirname: font.name,
+        basename: path.basename,
+        extname: path.extname,
+      };
+    })).pipe(dest(config.fonts.dist));
+}
+
+// Task: Clean
+const clean = function (done) {
+  if (!config.tasks.clean) return done();
+
+  del.sync(config.clean);
+
+  // Signal completion
+  return done();
+};
+
+// Task: Clean fonts
+const cleanFonts = function (done) {
+  del.sync(config.fonts.clean);
+  return done();
+};
+
+// Task: Server
+const startServer = function (done) {
+  if (!config.tasks.reload) return done();
+
+  // Initialize BrowserSync
+  browserSync.init({
+    proxy: config.server.proxy,
+  });
+
+  // Signal completion
+  done();
+};
+
+// Reload the browser when files change
+const reloadBrowser = function (done) {
+  // Make sure this feature is activated before running
+  if (!config.tasks.reload) return done();
+
+  browserSync.reload();
+
+  // Signal completion
+  done();
+};
+
+// Watch for changes
+const watchSource = function (done) {
+  watch(config.css.src + "**/*.scss", series(css));
+  watch(config.tailwind, series(css));
+  watch(config.js.watch, series(js, reloadBrowser));
+  watch(config.html.src, reloadBrowser);
+
+  // Signal completion
+  done();
+};
+
+// Default task
+exports.default = series(clean, cssVendor, parallel(css, js), startServer, watchSource);
+
+// Build task
+exports.build = series(clean, cssVendor, parallel(css, js));
+
+exports.fonts = series(fonts);
+
+exports.clean = clean;
+
+exports.cleanFonts = cleanFonts;

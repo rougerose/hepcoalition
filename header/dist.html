@@ -1,5 +1,24 @@
-<INCLURE{fond=inclure/logo-site,bloc=header} />
-<INCLURE{fond=nav/nav-site,env} />
-<nav id="nav-lang" class="nav-lang__container">
-    #INCLURE{fond=formulaires/menu_lang,env}
-</nav>
+#SET{idsecteur, #ENV{id_secteur, 0}}
+#SET{langue_afficher, ''} #SET{langue, #ENV{lang}} #SET{direction, #ENV{lang_dir, #LANG_DIR}}
+<BOUCLE_test_lang_racine(RUBRIQUES){lang}{racine}> </BOUCLE_test_lang_racine>
+  #SET{langue_afficher, ' '} #SET{langue, en} #SET{direction, ltr}
+<//B_test_lang_racine>
+<div class="container">
+  <nav class="sitenav">
+    <a class="sitenav_logo no-reformat" href="#URL_SITE_SPIP"><INCLURE{fond=img/HepCoalition.svg} /></a>
+    <div id="mainNav" class="sitenav_group sitenav_group--nav">
+      <BOUCLE_secteur(RUBRIQUES){lang}{racine}{si #GET{idsecteur}|=={0}}>
+        #SET{idsecteur, #ID_RUBRIQUE}
+      </BOUCLE_secteur>
+      <INCLURE{fond=inclure/sitenav/sitenav_list, id_secteur=#GET{idsecteur}, langue_afficher=#GET{langue_afficher}, langue=#GET{langue}, direction=#GET{direction}, env} />
+    </div>
+    <div class="sitenav_group sitenav_group--btns">
+      <button class="sitenav_triggerModalLanguage" data-open-modal-id="modalLanguage" type="button">
+        <INCLURE{fond=img/icons/icon-langues-64.svg, class=sitenav_languageIcon} /> [(#LANG|traduire_nom_langue)]
+      </button>
+      <button class="hamburger hamburger--squeeze sitenav_triggerMenu" data-open-modal-id="modalMenu" type="button">
+        <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+      </button>
+    </div>
+  </nav>
+</div>

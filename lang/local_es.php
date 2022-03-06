@@ -19,11 +19,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
       // E
       'email'                          => 'e-mail',
       'email_send'                     => "Envíenos un <a href='@urlcontact@' class='spip_out'>e-mail</a>",
+      'email_send_label'                     => "Envíenos un e-mail",
+			'events_all' => 'Todos los eventos',
 
       // F
+			'fermer' => 'Cerrar',
       'follow_us'                      => "Síganos",
 
       // H
+			'hepcoalition_on_facebook_label' => 'HepCoalition en Facebook',
+			'hepcoalition_on_twitter_label' => 'HepCoalition en Twitter',
       'home'                           => 'Inicio',
 
       // I
@@ -43,10 +48,16 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
       'info_recherche_pas_de_resultat' => 'Ningún resultado',
 
       // L
+			'label_ponctuer' => '@label@:',
+			'langue_preferee_titre' => 'Seleccione su idioma preferido',
       'lastest_news'                   => "Últimas noticias",
       'latest_publications'            => 'Últimas publicaciones',
 
       //M
+			'materials_section' => 'Materiales en esta sección',
+			'materials_recent' => 'Materiales recientes',
+			'materials_related' => 'Materiales relacionados',
+			'materials_see_all' => 'todos los materiales',
       'message_404_title'              => "Pagina no disponible.",
       'message_404_desc'               => "Disculpe, la página que usted busca no está disponible. <br /> Regrese a <a href='@urlsite@' class='spip_out'>página de incio</a>.",
       'more'                           => 'Leer más',
@@ -67,8 +78,12 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
       //'press_release'                  => 'Comunicado de prensa',
 
       // R
+			'recherche_label_aucun_resultat' => 'No se encontró resultado para:',
+			'recherche_label_resultat' => '1 resultado encontrado para:',
+			'recherche_label_resultats' => '@nb@ resultados encontrados para:',
 
       // S
+			'search_type_here' => 'Escriba aquí',
       'share'                          => 'Compartir',
       'signatories_coalition'          => "Firmantes",
       'signatories_singular'           => "1 apoyo",
@@ -84,7 +99,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
       // T
       'tags'                           => 'Etiquetas',
-      'translations'                   => 'Traducciones'
+      'translations'                   => 'Traducciones',
+
+			// Y
+			'you_are_here_label' => 'Usted está aquí:',
 
 );
 ?>
