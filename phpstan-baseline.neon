@@ -1,0 +1,16 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Function autoriser not found\\.$#"
+			count: 1
+			path: hepcoalition_autorisations.php
+
+		-
+			message: "#^Function _T not found\\.$#"
+			count: 1
+			path: hepcoalition_pipelines.php
+
+		-
+			message: "#^Function _request not found\\.$#"
+			count: 1
+			path: hepcoalition_pipelines.php
