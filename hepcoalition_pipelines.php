@@ -4,16 +4,22 @@ if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }
 
+function hepcoalition_formulaire_verifier($flux) {
+	if ($flux['args']['form'] == 'configurer_hepcoalition') {
+		$activation = _request('matomo_activation');
+		$code = _request('matomo_code');
+
+		if ($activation == 'on' && $code == '') {
+			$flux['data']['matomo_code'] = _T('info_obligatoire');
+		}
+	}
+	return $flux;
+}
+
 function hepcoalition_insert_head($flux) {
-	// $files = array();
-	// $files[] = find_in_path('dist/js/lib/van11y-accessible-hide-show-aria.min.js');
-	// $files[] = find_in_path('dist/js/hepcoalition.js');
-
-	// foreach ($files as $file) {
-	// 	if ($file) {
-	// 		$flux .= "\n" . '<script defer="true" src="' . $file . '" type="text/javascript"></script>';
-	// 	}
-	// }
-
+	$matomo_code = lire_config('hepcoalition/matomo_code');
+	if (strstr($matomo_code, '<script>')) {
+		$flux .= "\n" . $matomo_code . "\n";
+	}
 	return $flux;
 }

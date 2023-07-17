@@ -1,11 +1,12 @@
 <?php
 
-if (!defined('_ECRIRE_INC_VERSION')) return;
+if (!defined('_ECRIRE_INC_VERSION')) { return;
+}
 
-$GLOBALS[$GLOBALS['idx_lang']] = array(
+$GLOBALS[$GLOBALS['idx_lang']] = [
    // A
    'agenda'                         => 'Agenda',
-   'about_us'                       => "À propos",
+   'about_us'                       => 'À propos',
 
    // B
    'by'                             => 'Par',
@@ -13,18 +14,20 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // C
    'campaigns_all'                  => 'Toutes les campagnes',
    'campaign_last'                  => 'Dernière campagne',
+	 'cfg_titre' => 'Configuration',
+	 'cfg_description' => 'Copier ici le code de suivi statistiques Matomo.',
    'contact'                        => 'Contact',
    'credits_design'                 => "Design & développement <a href='@urldesign@'>christophe le drean</a> avec <a href='@urlspip@'>spip</a>",
 
    // E
    'email'                          => 'e-mail',
    'email_send'                     => "Nous envoyer un <a href='@urlcontact@' class='spip_out'>email</a>",
-   'email_send_label'                     => "Envoyez-nous un email",
+   'email_send_label'                     => 'Envoyez-nous un email',
 	 'events_all' => 'Tous les événements',
 
 	 // F
 	 'fermer' => 'Fermer',
-   'follow_us'                      => "Suivez-nous", // on Facebook
+   'follow_us'                      => 'Suivez-nous', // on Facebook
 
    // H
 	 'hepcoalition_on_facebook_label' => 'HepCoalition sur Facebook',
@@ -49,7 +52,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
    // L
 	 'langue_preferee_titre' => 'Sélectionnez votre langue préférée',
-   'lastest_news'                   => "Dernières actualités",
+   'lastest_news'                   => 'Dernières actualités',
    'latest_publications'            => 'Dernières publications',
 
    //M
@@ -57,7 +60,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	 'materials_recent' => 'Dernières publications',
 	 'materials_related' => 'Publications liées',
 	 'materials_see_all' => 'toutes les publications',
-   'message_404_title'              => "Page indisponible.",
+   'message_404_title'              => 'Page indisponible.',
    'message_404_desc'               => "Nous sommes désolé-e-s, la page que vous recherchez n'est pas disponible.<br />Revenir à <a href='@urlsite@' class='spip_out'>la page d'accueil du site</a>.",
    'more'                           => 'La suite',
 
@@ -83,9 +86,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // S
 	 'search_type_here' => 'Écrivez ici',
    'share'                          => 'Partager',
-   'signatories_coalition'          => "Signataires",
-   'signatories_singular'           => "1 signataire",
-   'signatories_plural'             => "@nb@ signataires",
+   'signatories_coalition'          => 'Signataires',
+   'signatories_singular'           => '1 signataire',
+   'signatories_plural'             => '@nb@ signataires',
    'signatories_plural_with'        => 'Avec @nb@ signataires',
    'signatories_singular_with'      => 'Avec 1 signataire',
    'sign_on'                        => 'Signez',
@@ -98,5 +101,4 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    'translations'                    => 'Traductions',
 
 	 'you_are_here_label' => 'Vous êtes ici&nbsp;:',
-);
-?>
+];

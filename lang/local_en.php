@@ -1,8 +1,9 @@
 <?php
 
-if (!defined('_ECRIRE_INC_VERSION')) return;
+if (!defined('_ECRIRE_INC_VERSION')) { return;
+}
 
-$GLOBALS[$GLOBALS['idx_lang']] = array(
+$GLOBALS[$GLOBALS['idx_lang']] = [
    // A
    'agenda'                         => 'Calendar',
    'about_us'                       => 'About us',
@@ -13,18 +14,20 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // C
    'campaigns_all'                  => 'All campaigns',
    'campaign_last'                  => 'Recent campaign',
+	 'cfg_titre' => 'Configuration',
+	 'cfg_description' => 'Copy the Matomo statistics tracking code here.',
    'contact'                        => 'Contact',
    'credits_design'                 => "Design & development <a href='@urldesign@'>christophe le drean</a> with <a href='@urlspip@'>Spip</a>",
 
    // E
    'email'                          => 'e-mail',
    'email_send'                     => "Send us an <a href='@urlcontact@' class='spip_out'>email</a>",
-   'email_send_label'                     => "Send us an email",
+   'email_send_label'                     => 'Send us an email',
 	 'events_all' => 'All events',
 
    // F
 	 'fermer' => 'Close',
-   'follow_us'                      => "Follow us",
+   'follow_us'                      => 'Follow us',
 
    // H
 	 'hepcoalition_on_facebook_label' => 'HepCoalition on Facebook',
@@ -50,7 +53,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // L
 	 'label_ponctuer' => '@label@:',
 	 'langue_preferee_titre' => 'Select your preferred language',
-   'lastest_news'                   => "Lastest news",
+   'lastest_news'                   => 'Lastest news',
    'latest_publications'            => 'Latest publications',
 
    //M
@@ -58,7 +61,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	 'materials_recent' => 'Recent materials',
 	 'materials_related' => 'Related materials',
 	 'materials_see_all' => 'all materials',
-   'message_404_title'              => "Page not found.",
+   'message_404_title'              => 'Page not found.',
    'message_404_desc'               => "Sorry, but the page you are looking for has not been found.<br />Go back to <a href='@urlsite@' class='spip_out'>home page</a>.",
    'more'                           => 'More',
 
@@ -85,9 +88,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
    // S
 	 'search_type_here' => 'Type here',
    'share'                          => 'Share',
-   'signatories_coalition'          => "Signatories",
-   'signatories_singular'           => "1 supporter",
-   'signatories_plural'             => "@nb@ supporters",
+   'signatories_coalition'          => 'Signatories',
+   'signatories_singular'           => '1 supporter',
+   'signatories_plural'             => '@nb@ supporters',
    'signatories_plural_with'        => 'With @nb@ supporters',
    'signatories_singular_with'      => 'With 1 supporter',
    'sign_on'                        => 'Sign on',
@@ -100,5 +103,4 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	 // Y
 	 'you_are_here_label' => 'You are here:',
-);
-?>
+];

@@ -10,15 +10,17 @@ define('_LANGUE_PREFEREE_DEFAUT', 'en');
 //define('_DEV_VERSION_SPIP_COMPAT', '3.2.99');
 
 if (!isset($GLOBALS['z_blocs'])) {
-	$GLOBALS['z_blocs'] = array(
+	$GLOBALS['z_blocs'] = [
 		'content',
 		'head',
 		'head_js',
 		'header',
 		'footer',
 		'breadcrumb',
-	);
+	];
 }
+
+define('_DEBUG_AUTORISER', true);
 
 // error_reporting(E_ALL^E_NOTICE);
 // ini_set('display_errors', 'On');
