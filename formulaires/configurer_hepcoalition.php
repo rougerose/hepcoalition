@@ -10,7 +10,7 @@ function formulaires_configurer_hepcoalition_saisies() {
 			'saisie' => 'case',
 			'options' => [
 				'nom' => 'matomo_activation',
-				'label_case' => 'Activer l insertion du code',
+				'label_case' => '<:local:cfg_matomo_activation_label:>',
 				'conteneur_class' => 'pleine_largeur'
 
 			]
@@ -19,8 +19,8 @@ function formulaires_configurer_hepcoalition_saisies() {
 			'saisie' => 'textarea',
 			'options' => [
 				'nom' => 'matomo_code',
-				'label' => 'Le code de suivi',
-				'explication' => 'Copier dans ce champ le code javascript de Matomo',
+				'label' => '<:local:cfg_matomo_code_label:>',
+				'explication' => '<:local:cfg_matomo_code_explication:>',
 			]
 		],
 	];
