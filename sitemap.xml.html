@@ -1,0 +1,69 @@
+[(#REM)
+
+	Exemple tres simple de sitemap.xml accessible via URL_SITE_SPIP/sitemap.xml
+	(copier htaccess.txt en .htaccess pour en beneficier)
+
+	Ce sitemap affiche la liste des rubriques, breves et articles, en se limitant a 1000 rubriques, 1000 breves et 2000 articles pour des raisons
+	de performances.
+
+	Duree de reindexation et priorite ne sont pas precisees,
+	sauf pour l'accueil.
+
+	Mais si date_modif est recente (1 jour) on l'indique, pour que ce
+	soit reindexe en priorite
+
+	un critère annee permet de lister les articles d'une année pour contourner la limite de 2000 items  du sitemap general
+	sitemap.xml?annee=1981
+
+
+	(On pose un cache a zero pour echapper au test _IS_BOT)
+
+][(#REM)
+	HepCoalition.org : sitemap modifié
+	-> pages d'accueil par langue
+	-> toute l'arborescence des rubriques et leurs traduction
+	-> suppression des brèves
+	-> articles et objets ne sont pas modifiés
+]#HTTP_HEADER{Content-Type: text/xml; charset=utf-8}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+[(#REM) Accueil]
+<BOUCLE_accueil(RUBRIQUES){par num titre, titre}{racine}>
+<url>
+	[<loc>(#URL_RUBRIQUE|url_absolue)</loc>]
+	<BOUCLE_soeurs(RUBRIQUES){meme_parent}{par num titre, titre}>
+		<xhtml:link
+			rel="alternate"
+			hreflang="#LANG"
+			href="[(#URL_RUBRIQUE|url_absolue)]" />
+	</BOUCLE_soeurs>
+	<changefreq>hourly</changefreq>
+</url>
+</BOUCLE_accueil>
+
+[(#REM) Rubriques]
+<BOUCLE_racine(RUBRIQUES){par num titre, titre}{racine}{si #ENV{annee}|non}>
+	<INCLURE{fond=inclure/sitemap-rubriques, id_parent=#ID_RUBRIQUE}/>
+</BOUCLE_racine>
+
+[(#REM) Articles]
+[(#SET{recent,[(#VAL{Y-m-d H:i:s}|date{#VAL{"-1 day"}|strtotime})]})]
+<BOUCLE_a(ARTICLES){annee?}{!par date_modif}{!par date}{0,2000}>
+<url>
+	[<loc>(#URL_ARTICLE|url_absolue)</loc>]
+	<BOUCLE_a_trad(ARTICLES){traduction}>
+		<xhtml:link rel="alternate" hreflang="[(#LANG)]" href="[(#URL_ARTICLE|url_absolue)]" />
+	</BOUCLE_a_trad>
+	[(#DATE_MODIF**|>{#GET{recent}}
+|?{[<lastmod>(#DATE_MODIF**|date_iso)</lastmod>]})]
+</url>
+</BOUCLE_a>
+
+[(#REM) Extensions de sitemap par des plugins]
+<BOUCLE_objets(DATA){source table,#REM|lister_tables_objets_sql}{si #ENV{annee}|non}>
+	#SET{fond,#VAL{sitemap-}|concat{#VALEUR{table_objet}}}
+	[(#GET{fond}|trouver_fond|oui)#INCLURE*{fond=#GET{fond}}]
+</BOUCLE_objets>
+
+</urlset>
