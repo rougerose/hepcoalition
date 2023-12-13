@@ -1,0 +1,9 @@
+<BOUCLE_rubriques(RUBRIQUES){par num titre, titre}{id_parent?}{id_rubrique?}{par num titre, titre}>
+<url>
+	[<loc>(#URL_RUBRIQUE|url_absolue)</loc>]
+	<BOUCLE_trad(RUBRIQUES){traduction}{par lang}>
+		<xhtml:link rel="alternate" hreflang="#LANG" href="[(#URL_RUBRIQUE|url_absolue)]" />
+	</BOUCLE_trad>
+</url>
+<INCLURE{fond=inclure/sitemap-rubriques, id_parent=#ID_RUBRIQUE}/>
+</BOUCLE_rubriques>
