@@ -20,13 +20,13 @@ if (!isset($GLOBALS['z_blocs'])) {
 	];
 }
 
-define('_DEBUG_AUTORISER', true);
+
 
 // error_reporting(E_ALL^E_NOTICE);
 // ini_set('display_errors', 'On');
 // define('SPIP_ERREUR_REPORT', E_ALL);
-// //$GLOBALS['taille_des_logs'] = 50000;
-// // define('_MAX_LOG', 500000);
+//$GLOBALS['taille_des_logs'] = 50000;
+// define('_MAX_LOG', 500000);
 // define('_LOG_FILELINE', true);
 // define('_LOG_FILTRE_GRAVITE', 8);
 // define('_DEBUG_AUTORISER', true);
